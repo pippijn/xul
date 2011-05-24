@@ -18,7 +18,7 @@ Revision: 2001/07/31
 
     <!-- import xml:lang -->
     <!-- fix schemaLocation later -->
-	 <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/namespace.xsd"/>
+	 <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
 
     <!-- define the structure module attribute group -->
     <attributeGroup name="structureModuleAttrs">

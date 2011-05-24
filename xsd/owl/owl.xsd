@@ -1,0 +1,1175 @@
+<!DOCTYPE xs:schema [
+<!ENTITY PN_CHARS_BASE "[A-Z]|[a-z]|[&amp;#x00C0;-&amp;#x00D6;]|[&amp;#x00D8;-&amp;#x00F6;]|[&amp;#x00F8;-&amp;#x02FF;]|[&amp;#x0370;-&amp;#x037D;]|[&amp;#x037F;-&amp;#x1FFF;]|[&amp;#x200C;-&amp;#x200D;]|[&amp;#x2070;-&amp;#x218F;]|[&amp;#x2C00;-&amp;#x2FEF;]|[&amp;#x3001;-&amp;#xD7FF;]|[&amp;#xF900;-&amp;#xFDCF;]|[&amp;#xFDF0;-&amp;#xFFFD;]|[&amp;#x10000;-&amp;#xEFFFF;]">
+	<!ENTITY PN_CHARS_U    "&amp;PN_CHARS_BASE;|_">
+	<!ENTITY PN_CHARS      "&amp;PN_CHARS_U;|\-|[0-9]|&amp;#x00B7;|[&amp;#x0300;-&amp;#x036F;]|[&amp;#x203F;-&amp;#x2040;]">
+	<!ENTITY PN_PREFIX     "(&amp;PN_CHARS_BASE;)((&amp;PN_CHARS;|\.)*(&amp;PN_CHARS;  ))?">
+	<!ENTITY PN_LOCAL	     "(&amp;PN_CHARS_U;|[0-9])((&amp;PN_CHARS;|\.)*(&amp;PN_CHARS;))?">
+	<!ENTITY PNAME_NS      "(&amp;PN_PREFIX;)?:">
+	<!ENTITY PNAME_LN	     "(&amp;PNAME_NS;)(&amp;PN_LOCAL;)">
+	<!ENTITY PrefixedName  "(&amp;PNAME_LN;)|(&amp;PNAME_NS;)">
+	]>
+<!--  From: http://www.w3.org/TR/rdf-sparql-query/#grammar 
+  The entities implement productions [95] (PN_CHARS_BASE), [96] (PN_CHARS_U), [98] (PN_CHARS), [99] (PN_PREFIX),
+  [100] (PN_LOCAL), [71] (PNAME_NS), [72] (PNAME_LN) and  [68] (PrefixedName)
+
+  PN_PREFIX is roughly equivalent to NCName.-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:owl="http://www.w3.org/2002/07/owl#"
+	targetNamespace="http://www.w3.org/2002/07/owl#" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="../xml/xml.xsd"/>
+
+	<!-- The ontology -->
+
+	<xs:complexType name="Prefix">
+		<xs:attribute name="name" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="&amp;PN_PREFIX;|"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="IRI" type="xs:anyURI" use="required"/>
+	</xs:complexType>
+	<xs:element name="Prefix" type="owl:Prefix"/>
+
+	<xs:complexType name="Import">
+		<xs:simpleContent>
+			<xs:extension base="xs:anyURI">
+				<xs:attributeGroup ref="xml:specialAttrs"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="Import" type="owl:Import"/>
+
+	<xs:complexType name="Ontology">
+		<xs:sequence>
+			<xs:element ref="owl:Prefix" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="owl:Import" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="owl:ontologyAnnotations"/>
+			<xs:group ref="owl:Axiom" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="ontologyIRI" type="xs:anyURI" use="optional"/>
+		<xs:attribute name="versionIRI" type="xs:anyURI" use="optional"/>
+		<xs:attributeGroup ref="xml:specialAttrs"/>
+	</xs:complexType>
+	<xs:element name="Ontology" type="owl:Ontology">
+		<xs:unique name="prefix">
+			<xs:selector xpath="owl:Prefix"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+
+	<!-- Entities, anonymous individuals, and literals -->
+
+	<!-- Note that the "Entity" group does not have a corresponding abstract type.
+		 This is due to the fact that XML Schema does not support multiple inheritence.
+		 "owl:Class" is both an entity and a class expression. The authors of this schema
+		 determined it was more useful to be able to retrieve "owl:Class" in such queries
+		 as schema(*, owl:ClassExpression).
+		  -->
+  <xs:group name="Entity">
+	  <xs:choice>
+		  <xs:element ref="owl:Class"/>
+		  <xs:element ref="owl:Datatype"/>
+		  <xs:element ref="owl:ObjectProperty"/>
+		  <xs:element ref="owl:DataProperty"/>
+		  <xs:element ref="owl:AnnotationProperty"/>
+		  <xs:element ref="owl:NamedIndividual"/>
+	  </xs:choice>
+  </xs:group>
+
+  <!-- This is the type for the attribute. The complex type for the element is capitalized. -->
+  <xs:simpleType name="abbreviatedIRI">
+	  <xs:restriction base="xs:string">
+		  <xs:pattern value="&amp;PrefixedName;"/>
+	  </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Class">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+			  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Class" type="owl:Class"/>
+
+  <xs:complexType name="Datatype">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+			  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Datatype" type="owl:Datatype"/>
+
+  <xs:complexType name="ObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyExpression">
+			  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+			  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectProperty" type="owl:ObjectProperty"/>
+
+  <xs:complexType name="DataProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyExpression">
+			  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+			  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataProperty" type="owl:DataProperty"/>
+
+  <xs:complexType name="AnnotationProperty">
+	  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+	  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:element name="AnnotationProperty" type="owl:AnnotationProperty"/>
+
+  <xs:complexType name="Individual" abstract="true">
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="Individual">
+	  <xs:choice>
+		  <xs:element ref="owl:NamedIndividual"/>
+		  <xs:element ref="owl:AnonymousIndividual"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="NamedIndividual">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Individual">
+			  <xs:attribute name="IRI" type="xs:anyURI" use="optional"/>
+			  <xs:attribute name="abbreviatedIRI" type="owl:abbreviatedIRI" use="optional"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NamedIndividual" type="owl:NamedIndividual"/>
+
+  <xs:complexType name="AnonymousIndividual">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Individual">
+			  <xs:attribute name="nodeID" type="xs:NCName" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymousIndividual" type="owl:AnonymousIndividual"/>
+
+  <xs:complexType name="Literal">
+	  <xs:simpleContent>
+		  <xs:extension base="xs:string">
+			  <xs:attribute name="datatypeIRI" type="xs:anyURI"/>
+			  <xs:attributeGroup ref="xml:specialAttrs"/>
+		  </xs:extension>
+	  </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="Literal" type="owl:Literal"/>
+
+  <!-- Declarations -->
+
+  <xs:complexType name="Declaration">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:Entity"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Declaration" type="owl:Declaration"/>
+
+  <!-- Object property expressions -->
+
+  <xs:complexType name="ObjectPropertyExpression" abstract="true">
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="ObjectPropertyExpression">
+	  <xs:choice>
+		  <xs:element ref="owl:ObjectProperty"/>
+		  <xs:element ref="owl:ObjectInverseOf"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="ObjectInverseOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyExpression">
+			  <xs:sequence>
+				  <xs:element ref="owl:ObjectProperty"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectInverseOf" type="owl:ObjectInverseOf"/>
+
+  <!-- Data property expressions -->
+
+  <xs:complexType name="DataPropertyExpression" abstract="true">
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="DataPropertyExpression">
+	  <xs:sequence>
+		  <xs:element ref="owl:DataProperty"/>
+	  </xs:sequence>
+  </xs:group>
+
+  <!-- Data ranges -->
+
+  <xs:complexType name="DataRange" abstract="true">
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="DataRange">
+	  <xs:choice>
+		  <xs:element ref="owl:Datatype"/>
+		  <xs:element ref="owl:DataIntersectionOf"/>
+		  <xs:element ref="owl:DataUnionOf"/>
+		  <xs:element ref="owl:DataComplementOf"/>
+		  <xs:element ref="owl:DataOneOf"/>
+		  <xs:element ref="owl:DatatypeRestriction"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="DataIntersectionOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataRange" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataIntersectionOf" type="owl:DataIntersectionOf"/>
+
+  <xs:complexType name="DataUnionOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataRange" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataUnionOf" type="owl:DataUnionOf"/>
+
+  <xs:complexType name="DataComplementOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataRange"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataComplementOf" type="owl:DataComplementOf"/>
+
+  <xs:complexType name="DataOneOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:sequence>
+				  <xs:element ref="owl:Literal" minOccurs="1" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataOneOf" type="owl:DataOneOf"/>
+
+  <xs:complexType name="DatatypeRestriction">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataRange">
+			  <xs:sequence>
+				  <xs:element ref="owl:Datatype"/>
+				  <xs:element name="FacetRestriction" type="owl:FacetRestriction" minOccurs="1"
+					  maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DatatypeRestriction" type="owl:DatatypeRestriction"/>
+
+  <xs:complexType name="FacetRestriction">
+	  <xs:sequence>
+		  <xs:element ref="owl:Literal"/>
+	  </xs:sequence>
+	  <xs:attribute name="facet" type="xs:anyURI" use="required"/>
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+
+  <!-- Class expressions -->
+
+  <xs:complexType name="ClassExpression" abstract="true">
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="ClassExpression">
+	  <xs:choice>
+		  <xs:element ref="owl:Class"/>
+		  <xs:element ref="owl:ObjectIntersectionOf"/>
+		  <xs:element ref="owl:ObjectUnionOf"/>
+		  <xs:element ref="owl:ObjectComplementOf"/>
+		  <xs:element ref="owl:ObjectOneOf"/>
+		  <xs:element ref="owl:ObjectSomeValuesFrom"/>
+		  <xs:element ref="owl:ObjectAllValuesFrom"/>
+		  <xs:element ref="owl:ObjectHasValue"/>
+		  <xs:element ref="owl:ObjectHasSelf"/>
+		  <xs:element ref="owl:ObjectMinCardinality"/>
+		  <xs:element ref="owl:ObjectMaxCardinality"/>
+		  <xs:element ref="owl:ObjectExactCardinality"/>
+		  <xs:element ref="owl:DataSomeValuesFrom"/>
+		  <xs:element ref="owl:DataAllValuesFrom"/>
+		  <xs:element ref="owl:DataHasValue"/>
+		  <xs:element ref="owl:DataMinCardinality"/>
+		  <xs:element ref="owl:DataMaxCardinality"/>
+		  <xs:element ref="owl:DataExactCardinality"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="ObjectIntersectionOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectIntersectionOf" type="owl:ObjectIntersectionOf"/>
+
+  <xs:complexType name="ObjectUnionOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectUnionOf" type="owl:ObjectUnionOf"/>
+
+  <xs:complexType name="ObjectComplementOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectComplementOf" type="owl:ObjectComplementOf"/>
+
+  <xs:complexType name="ObjectOneOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:Individual" minOccurs="1" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectOneOf" type="owl:ObjectOneOf"/>
+
+  <xs:complexType name="ObjectSomeValuesFrom">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectSomeValuesFrom" type="owl:ObjectSomeValuesFrom"/>
+
+  <xs:complexType name="ObjectAllValuesFrom">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectAllValuesFrom" type="owl:ObjectAllValuesFrom"/>
+
+  <xs:complexType name="ObjectHasValue">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:Individual"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectHasValue" type="owl:ObjectHasValue"/>
+
+  <xs:complexType name="ObjectHasSelf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectHasSelf" type="owl:ObjectHasSelf"/>
+
+  <xs:complexType name="ObjectMinCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectMinCardinality" type="owl:ObjectMinCardinality"/>
+
+  <xs:complexType name="ObjectMaxCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectMaxCardinality" type="owl:ObjectMaxCardinality"/>
+
+  <xs:complexType name="ObjectExactCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectExactCardinality" type="owl:ObjectExactCardinality"/>
+
+  <xs:complexType name="DataSomeValuesFrom">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression" minOccurs="1" maxOccurs="unbounded"/>
+				  <xs:group ref="owl:DataRange"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataSomeValuesFrom" type="owl:DataSomeValuesFrom"/>
+
+  <xs:complexType name="DataAllValuesFrom">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression" minOccurs="1" maxOccurs="unbounded"/>
+				  <xs:group ref="owl:DataRange"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataAllValuesFrom" type="owl:DataAllValuesFrom"/>
+
+  <xs:complexType name="DataHasValue">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:element ref="owl:Literal"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataHasValue" type="owl:DataHasValue"/>
+
+  <xs:complexType name="DataMinCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:DataRange" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataMinCardinality" type="owl:DataMinCardinality"/>
+
+  <xs:complexType name="DataMaxCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:DataRange" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataMaxCardinality" type="owl:DataMaxCardinality"/>
+
+  <xs:complexType name="DataExactCardinality">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassExpression">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:DataRange" minOccurs="0" maxOccurs="1"/>
+			  </xs:sequence>
+			  <xs:attribute name="cardinality" type="xs:nonNegativeInteger" use="required"/>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataExactCardinality" type="owl:DataExactCardinality"/>
+
+  <!-- Axioms -->
+
+  <xs:complexType name="Axiom" abstract="true">
+	  <xs:sequence>
+		  <xs:group ref="owl:axiomAnnotations"/>
+	  </xs:sequence>
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:group name="Axiom">
+	  <xs:choice>
+		  <xs:element ref="owl:Declaration"/>
+		  <xs:group ref="owl:ClassAxiom"/>
+		  <xs:group ref="owl:ObjectPropertyAxiom"/>
+		  <xs:group ref="owl:DataPropertyAxiom"/>
+		  <xs:element ref="owl:DatatypeDefinition"/>
+		  <xs:element ref="owl:HasKey"/>
+		  <xs:group ref="owl:Assertion"/>
+		  <xs:group ref="owl:AnnotationAxiom"/>
+	  </xs:choice>
+  </xs:group>
+
+  <!-- Class expression axioms -->
+
+  <xs:complexType name="ClassAxiom" abstract="true">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom"/>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:group name="ClassAxiom">
+	  <xs:choice>
+		  <xs:element ref="owl:SubClassOf"/>
+		  <xs:element ref="owl:EquivalentClasses"/>
+		  <xs:element ref="owl:DisjointClasses"/>
+		  <xs:element ref="owl:DisjointUnion"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="SubClassOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression"/>
+				  <!-- This is the subexpression -->
+				  <xs:group ref="owl:ClassExpression"/>
+				  <!-- This is the superexpression -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubClassOf" type="owl:SubClassOf"/>
+
+  <xs:complexType name="EquivalentClasses">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EquivalentClasses" type="owl:EquivalentClasses"/>
+
+  <xs:complexType name="DisjointClasses">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisjointClasses" type="owl:DisjointClasses"/>
+
+  <xs:complexType name="DisjointUnion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ClassAxiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:Class"/>
+				  <xs:group ref="owl:ClassExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisjointUnion" type="owl:DisjointUnion"/>
+
+  <!-- Object property axioms -->
+
+  <xs:complexType name="ObjectPropertyAxiom" abstract="true">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom"/>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:group name="ObjectPropertyAxiom">
+	  <xs:choice>
+		  <xs:element ref="owl:SubObjectPropertyOf"/>
+		  <xs:element ref="owl:EquivalentObjectProperties"/>
+		  <xs:element ref="owl:DisjointObjectProperties"/>
+		  <xs:element ref="owl:InverseObjectProperties"/>
+		  <xs:element ref="owl:ObjectPropertyDomain"/>
+		  <xs:element ref="owl:ObjectPropertyRange"/>
+		  <xs:element ref="owl:FunctionalObjectProperty"/>
+		  <xs:element ref="owl:InverseFunctionalObjectProperty"/>
+		  <xs:element ref="owl:ReflexiveObjectProperty"/>
+		  <xs:element ref="owl:IrreflexiveObjectProperty"/>
+		  <xs:element ref="owl:SymmetricObjectProperty"/>
+		  <xs:element ref="owl:AsymmetricObjectProperty"/>
+		  <xs:element ref="owl:TransitiveObjectProperty"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="SubObjectPropertyOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:choice>
+					  <!-- This is the subproperty expression or the property chain -->
+					  <xs:group ref="owl:ObjectPropertyExpression"/>
+					  <xs:element name="ObjectPropertyChain" type="owl:ObjectPropertyChain"/>
+				  </xs:choice>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <!-- This is the superproperty expression -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubObjectPropertyOf" type="owl:SubObjectPropertyOf"/>
+
+  <xs:complexType name="ObjectPropertyChain">
+	  <xs:sequence>
+		  <xs:group ref="owl:ObjectPropertyExpression" minOccurs="2" maxOccurs="unbounded"/>
+	  </xs:sequence>
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+
+  <xs:complexType name="EquivalentObjectProperties">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EquivalentObjectProperties" type="owl:EquivalentObjectProperties"/>
+
+  <xs:complexType name="DisjointObjectProperties">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisjointObjectProperties" type="owl:DisjointObjectProperties"/>
+
+  <xs:complexType name="ObjectPropertyDomain">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectPropertyDomain" type="owl:ObjectPropertyDomain"/>
+
+  <xs:complexType name="ObjectPropertyRange">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectPropertyRange" type="owl:ObjectPropertyRange"/>
+
+  <xs:complexType name="InverseObjectProperties">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression" minOccurs="2" maxOccurs="2"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InverseObjectProperties" type="owl:InverseObjectProperties"/>
+
+  <xs:complexType name="FunctionalObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FunctionalObjectProperty" type="owl:FunctionalObjectProperty"/>
+
+  <xs:complexType name="InverseFunctionalObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InverseFunctionalObjectProperty" type="owl:InverseFunctionalObjectProperty"/>
+
+  <xs:complexType name="ReflexiveObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReflexiveObjectProperty" type="owl:ReflexiveObjectProperty"/>
+
+  <xs:complexType name="IrreflexiveObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IrreflexiveObjectProperty" type="owl:IrreflexiveObjectProperty"/>
+
+  <xs:complexType name="SymmetricObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SymmetricObjectProperty" type="owl:SymmetricObjectProperty"/>
+
+  <xs:complexType name="AsymmetricObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AsymmetricObjectProperty" type="owl:AsymmetricObjectProperty"/>
+
+  <xs:complexType name="TransitiveObjectProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:ObjectPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransitiveObjectProperty" type="owl:TransitiveObjectProperty"/>
+
+  <!-- Data property axioms -->
+
+  <xs:complexType name="DataPropertyAxiom" abstract="true">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom"/>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:group name="DataPropertyAxiom">
+	  <xs:choice>
+		  <xs:element ref="owl:SubDataPropertyOf"/>
+		  <xs:element ref="owl:EquivalentDataProperties"/>
+		  <xs:element ref="owl:DisjointDataProperties"/>
+		  <xs:element ref="owl:DataPropertyDomain"/>
+		  <xs:element ref="owl:DataPropertyRange"/>
+		  <xs:element ref="owl:FunctionalDataProperty"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="SubDataPropertyOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <!-- This is the subproperty expression -->
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <!-- This is the superproperty expression -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubDataPropertyOf" type="owl:SubDataPropertyOf"/>
+
+  <xs:complexType name="EquivalentDataProperties">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EquivalentDataProperties" type="owl:EquivalentDataProperties"/>
+
+  <xs:complexType name="DisjointDataProperties">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisjointDataProperties" type="owl:DisjointDataProperties"/>
+
+  <xs:complexType name="DataPropertyDomain">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:ClassExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataPropertyDomain" type="owl:DataPropertyDomain"/>
+
+  <xs:complexType name="DataPropertyRange">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:DataRange"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataPropertyRange" type="owl:DataPropertyRange"/>
+
+  <xs:complexType name="FunctionalDataProperty">
+	  <xs:complexContent>
+		  <xs:extension base="owl:DataPropertyAxiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FunctionalDataProperty" type="owl:FunctionalDataProperty"/>
+
+  <!-- Datatype definitions -->
+
+  <xs:complexType name="DatatypeDefinition">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:Datatype"/>
+				  <xs:group ref="owl:DataRange"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DatatypeDefinition" type="owl:DatatypeDefinition"/>
+
+  <!-- Key axioms -->
+
+  <xs:complexType name="HasKey">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression"/>
+				  <xs:group ref="owl:ObjectPropertyExpression" minOccurs="0" maxOccurs="unbounded"/>
+				  <xs:group ref="owl:DataPropertyExpression" minOccurs="0" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HasKey" type="owl:HasKey"/>
+
+  <!-- Assertions -->
+
+  <xs:complexType name="Assertion" abstract="true">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom"/>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:group name="Assertion">
+	  <xs:choice>
+		  <xs:element ref="owl:SameIndividual"/>
+		  <xs:element ref="owl:DifferentIndividuals"/>
+		  <xs:element ref="owl:ClassAssertion"/>
+		  <xs:element ref="owl:ObjectPropertyAssertion"/>
+		  <xs:element ref="owl:NegativeObjectPropertyAssertion"/>
+		  <xs:element ref="owl:DataPropertyAssertion"/>
+		  <xs:element ref="owl:NegativeDataPropertyAssertion"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="SameIndividual">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:Individual" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SameIndividual" type="owl:SameIndividual"/>
+
+  <xs:complexType name="DifferentIndividuals">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:Individual" minOccurs="2" maxOccurs="unbounded"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DifferentIndividuals" type="owl:DifferentIndividuals"/>
+
+  <xs:complexType name="ClassAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:ClassExpression"/>
+				  <xs:group ref="owl:Individual"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClassAssertion" type="owl:ClassAssertion"/>
+
+  <xs:complexType name="ObjectPropertyAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the source invididual  -->
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the target individual -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectPropertyAssertion" type="owl:ObjectPropertyAssertion"/>
+
+  <xs:complexType name="NegativeObjectPropertyAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:ObjectPropertyExpression"/>
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the source invididual  -->
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the target individual -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NegativeObjectPropertyAssertion" type="owl:NegativeObjectPropertyAssertion"/>
+
+  <xs:complexType name="DataPropertyAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the source invididual  -->
+				  <xs:element ref="owl:Literal"/>
+				  <!-- This is the target individual -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataPropertyAssertion" type="owl:DataPropertyAssertion"/>
+
+  <xs:complexType name="NegativeDataPropertyAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Assertion">
+			  <xs:sequence>
+				  <xs:group ref="owl:DataPropertyExpression"/>
+				  <xs:group ref="owl:Individual"/>
+				  <!-- This is the source invididual  -->
+				  <xs:element ref="owl:Literal"/>
+				  <!-- This is the target individual -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NegativeDataPropertyAssertion" type="owl:NegativeDataPropertyAssertion"/>
+
+  <!-- Annotations  -->
+
+  <xs:complexType name="IRI">
+	  <xs:simpleContent>
+		  <xs:extension base="xs:anyURI">
+			  <xs:attributeGroup ref="xml:specialAttrs"/>
+		  </xs:extension>
+	  </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="IRI" type="owl:IRI"/>
+
+  <xs:complexType name="AbbreviatedIRI">
+	  <xs:simpleContent>
+		  <xs:extension base="owl:abbreviatedIRI">
+			  <xs:attributeGroup ref="xml:specialAttrs"/>
+		  </xs:extension>
+	  </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="AbbreviatedIRI" type="owl:AbbreviatedIRI"/>
+
+  <xs:group name="AnnotationSubject">
+	  <xs:choice>
+		  <xs:element ref="owl:IRI"/>
+		  <xs:element ref="owl:AbbreviatedIRI"/>
+		  <xs:element ref="owl:AnonymousIndividual"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:group name="AnnotationValue">
+	  <xs:choice>
+		  <xs:element ref="owl:IRI"/>
+		  <xs:element ref="owl:AbbreviatedIRI"/>
+		  <xs:element ref="owl:AnonymousIndividual"/>
+		  <xs:element ref="owl:Literal"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="Annotation">
+	  <xs:sequence>
+		  <xs:group ref="owl:annotationAnnotations"/>
+		  <xs:element ref="owl:AnnotationProperty"/>
+		  <xs:group ref="owl:AnnotationValue"/>
+	  </xs:sequence>
+	  <xs:attributeGroup ref="xml:specialAttrs"/>
+  </xs:complexType>
+  <xs:element name="Annotation" type="owl:Annotation"/>
+
+  <xs:group name="axiomAnnotations">
+	  <xs:sequence>
+		  <xs:element ref="owl:Annotation" minOccurs="0" maxOccurs="unbounded"/>
+	  </xs:sequence>
+  </xs:group>
+
+  <xs:group name="ontologyAnnotations">
+	  <xs:sequence>
+		  <xs:element ref="owl:Annotation" minOccurs="0" maxOccurs="unbounded"/>
+	  </xs:sequence>
+  </xs:group>
+
+  <xs:group name="annotationAnnotations">
+	  <xs:sequence>
+		  <xs:element ref="owl:Annotation" minOccurs="0" maxOccurs="unbounded"/>
+	  </xs:sequence>
+  </xs:group>
+
+  <!-- Annotation axioms -->
+
+  <xs:complexType name="AnnotationAxiom" abstract="true">
+	  <xs:complexContent>
+		  <xs:extension base="owl:Axiom"/>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:group name="AnnotationAxiom">
+	  <xs:choice>
+		  <xs:element ref="owl:AnnotationAssertion"/>
+		  <xs:element ref="owl:SubAnnotationPropertyOf"/>
+		  <xs:element ref="owl:AnnotationPropertyDomain"/>
+		  <xs:element ref="owl:AnnotationPropertyRange"/>
+	  </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="AnnotationAssertion">
+	  <xs:complexContent>
+		  <xs:extension base="owl:AnnotationAxiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:AnnotationProperty"/>
+				  <xs:group ref="owl:AnnotationSubject"/>
+				  <xs:group ref="owl:AnnotationValue"/>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnnotationAssertion" type="owl:AnnotationAssertion"/>
+
+  <xs:complexType name="SubAnnotationPropertyOf">
+	  <xs:complexContent>
+		  <xs:extension base="owl:AnnotationAxiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:AnnotationProperty"/>
+				  <!-- This is the subproperty -->
+				  <xs:element ref="owl:AnnotationProperty"/>
+				  <!-- This is the superproperty -->
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubAnnotationPropertyOf" type="owl:SubAnnotationPropertyOf"/>
+
+  <xs:complexType name="AnnotationPropertyDomain">
+	  <xs:complexContent>
+		  <xs:extension base="owl:AnnotationAxiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:AnnotationProperty"/>
+				  <xs:choice>
+					  <xs:element ref="owl:IRI"/>
+					  <xs:element ref="owl:AbbreviatedIRI"/>
+				  </xs:choice>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnnotationPropertyDomain" type="owl:AnnotationPropertyDomain"/>
+
+  <xs:complexType name="AnnotationPropertyRange">
+	  <xs:complexContent>
+		  <xs:extension base="owl:AnnotationAxiom">
+			  <xs:sequence>
+				  <xs:element ref="owl:AnnotationProperty"/>
+				  <xs:choice>
+					  <xs:element ref="owl:IRI"/>
+					  <xs:element ref="owl:AbbreviatedIRI"/>
+				  </xs:choice>
+			  </xs:sequence>
+		  </xs:extension>
+	  </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnnotationPropertyRange" type="owl:AnnotationPropertyRange"/>
+
+</xs:schema>
