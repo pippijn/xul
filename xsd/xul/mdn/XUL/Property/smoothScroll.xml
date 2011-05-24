@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="smoothScroll"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("smoothScroll")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Can be set to enable or disable smooth scrolling for the corresponding <a title="en/XUL/arrowscrollbox" href="/en/XUL/arrowscrollbox">arrowscrollbox</a>. If not set explicitly, it will fall back to the <span class="script">template.XULAttr("smoothscroll")</span> attribute and then to the <code>toolkit.scrollbox.smoothScroll</code> preference. Currently, smooth scrolling supports horizontal arrowscrollboxes only. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/smoothScroll" } ) </span></p>
+</div></body></content>

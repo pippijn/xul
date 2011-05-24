@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onpaneload"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onpaneload")</span> </dt><dd> Type: <em>script code</em> </dd><dd> Code defined here is called when the pane has been loaded, much like the <code>load</code> event for a window. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/onpaneload", "ja": "ja/XUL/Attribute/onpaneload" } ) </span></p>
+</div></body></content>

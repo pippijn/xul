@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="onchange"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("onchange")</span></dt> <dd>Type: <em>script code</em></dd> <dd>The code in the <code>onchange</code> attribute is called when the value of the element is changed.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/onchange", "fr": "fr/XUL/Attributs/onchange", "ja": "ja/XUL/Attribute/onchange", "pl": "pl/XUL/Atrybut/onchange" } ) </span></p>
+</div></body></content>

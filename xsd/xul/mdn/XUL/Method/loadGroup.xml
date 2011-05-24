@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="loadGroup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("loadGroup", "( group )")</span> </dt><dd> <strong><span class="highlightred">Not in Firefox</span></strong> </dd><dd> Return type: <em>the first tab</em> </dd><dd> Loads a group of pages into multiple tabs. They are either appended or replaced depending on the state of the preference <code>browser.tabs.loadGroup</code>. The argument should be an array of objects, one for each document to load. The objects may be defined in script and contain a <code>URI</code> property for the URL of the page to load. A <code>referrerURI</code> property may also be optionally used to set the referrer page. This function returns a reference to the first tab loaded. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/loadGroup" } ) </span></p>
+</div></body></content>

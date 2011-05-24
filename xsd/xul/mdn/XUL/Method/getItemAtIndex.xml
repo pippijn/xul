@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="getItemAtIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("getItemAtIndex", "( index )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> Returns the element that is at the specified index. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getItemAtIndex", "pl": "pl/XUL/Metoda/getItemAtIndex" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,23 @@
+<content type="application/x.deki0805+xml" title="observes"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>The <code>observes</code> element can be used to listen to a <span class="script">template.XULElem("broadcaster")</span> and receive events and attributes from it. The <code>observes</code> element should be placed inside the element that wants to observe the broadcaster. When an observed attribute is modified on the broadcaster, the attribute's value will be forwarded and set on the parent element of the observer.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Broadcasters_and_Observers">XUL tutorial</a>.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "attribute")</span>, <span class="script">template.PrefAnch("a-", "element")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInc("attribute")</span>
+<span class="script">template.XULAttrInc("element")</span>
+<span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<p>TBD
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/observes", "pl": "pl/XUL/observes" } ) </span></body></content>

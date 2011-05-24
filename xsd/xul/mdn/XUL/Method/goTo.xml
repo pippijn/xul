@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="goTo"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("goTo", "( pageID )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> This method is used to change which page is currently displayed, specified by the <var>pageID</var> argument. The page will be changed regardless of the value of <span class="script">template.XULProp("canAdvance")</span> or <span class="script">template.XULProp("canRewind")</span>. The <span class="script">template.XULAttr("onwizardback")</span> and <span class="script">template.XULAttr("onwizardnext")</span> code is not called when using this function. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/goTo" } ) </span></p>
+</div></body></content>

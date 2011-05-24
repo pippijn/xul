@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="height"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("height")</span> </dt><dd> Type: <em>string</em> (representing an integer) </dd><dd> The preferred height of the element in pixels. The actual displayed height may be different if the element or its contents have a minimum or maximum height. The CSS height property may also be used. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/height", "ja": "ja/XUL/Attribute/height", "pl": "pl/XUL/Atrybut/height" } ) </span></p>
+</div></body></content>

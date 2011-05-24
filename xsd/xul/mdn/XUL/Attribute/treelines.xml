@@ -1,0 +1,5 @@
+<content type="application/x.deki0805+xml" title="treelines"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("treelines")</span> <span class="script">template.gecko_minversion_inline("1.9.1")</span><br />
+</dt><dd> Type: <em>boolean</em> </dd><dd> When set to <code>true</code>, lines are drawn connecting the lines in the tree; when <code>false</code>, the lines are not drawn. This is <code>false</code> by default.<br />
+</dd></dl></body></content>

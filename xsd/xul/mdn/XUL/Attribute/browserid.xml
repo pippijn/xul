@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="browserid"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("browserid")</span> </dt><dd> Type: <em>string</em> </dd><dd> The ID of the browser element to which the <span class="script">template.XULElem("findbar")</span> is attached.  This attribute is only used when the findbar is constructed.  You should use the <span class="script">template.XULProp("browser")</span> property to get and set this value from a script.<br />
+</dd></dl></body></content>

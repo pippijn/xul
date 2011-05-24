@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="preferenceElements"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("preferenceElements")</span> </dt><dd> Type: <em>DOM Nodelist</em> </dd><dd> Holds a list of the UI elements in the pane that are attached to preferences. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/preferenceElements" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="buttonpack"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("buttonpack")</span> </dt><dd> Type: <em>string</em> </dd><dd> The value of the <span class="script">template.XULAttr("pack")</span> attribute for the box containing the buttons. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonpack", "pl": "pl/XUL/Atrybut/buttonpack" } ) </span></p>
+</div></body></content>

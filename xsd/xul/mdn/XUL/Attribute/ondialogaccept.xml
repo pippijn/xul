@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="ondialogaccept"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("ondialogaccept")</span> </dt><dd> Type: <em>script code</em> </dd><dd> The code in this attribute is called when the accept button is pressed, or when the <span class="script">template.XULMeth("acceptDialog")</span> method is called. If the handler returns <code>true</code>, the dialog will indeed go away, but if it returns <code>false</code> it will not. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/ondialogaccept" } ) </span></p>
+</div></body></content>

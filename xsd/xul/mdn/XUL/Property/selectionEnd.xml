@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectionEnd"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("selectionEnd")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Get or set the end of the selected portion of the field's text. Use in conjuction with the <span class="script">template.XULProp("selectionStart")</span> property. The value specifies the index of the character after the selection. If this value is equal to the value of the <span class="script">template.XULProp("selectionStart")</span> property, no text is selected, but the value indicates the position of the caret (cursor) within the textbox. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selectionEnd" } ) </span></p>
+</div></body></content>

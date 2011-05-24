@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="ensureElementIsVisible"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("ensureElementIsVisible", "( element )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If the specified element is not currently visible to the user, the displayed items are scrolled so that it is. If the item is already visible, no scrolling occurs. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/ensureElementIsVisible", "pl": "pl/XUL/Metoda/ensureElementIsVisible" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="getNotificationWithValue"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("getNotificationWithValue", "( value )")</span> </dt><dd> Return type: <em>notification element</em> </dd><dd> Retrieve the <a title="en/XUL/notification" href="/en/XUL/notification">notification</a> with a particular value. The value is specified when adding the notification with <a title="en/XUL/Method/appendNotification" href="/en/XUL/Method/appendNotification">appendNotification</a>. If no matching value is found, returns <code>null</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getNotificationWithValue" } ) </span></p>
+</div></body></content>

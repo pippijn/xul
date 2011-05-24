@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="hidechrome"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("hidechrome")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set this attribute to <code>true</code> to have the chrome including the titlebar hidden. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/hidechrome", "ja": "ja/XUL/Attribute/hidechrome", "pl": "pl/XUL/Atrybut/hidechrome" } ) </span></p>
+</div></body></content>

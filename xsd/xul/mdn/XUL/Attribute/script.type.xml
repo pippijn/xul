@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="script.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("script.type", "type")</span></dt> <dd>Type: <em>language content type</em></dd> <dd>The language of the script. Usually, you would set this to <code>application/javascript</code>.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/script.type" } ) </span></p>
+</div></body></content>

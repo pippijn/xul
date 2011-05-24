@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="getSessionValueAt"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("getSessionValueAt", "( session, index )")</span> </dt><dd> Return type: <em>result value</em> </dd><dd> Returns the result value at the specified <var>index</var> for a specific <var>session</var>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getSessionValueAt" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="openPopupAtScreen"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("openPopupAtScreen", "( x, y, isContextMenu )")</span> <span class="script">template.Fx_minversion_inline(3)</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Open the popup at a specific screen position specified by x and y. This position may be adjusted if it would cause the popup to be off of the screen. The x and y coordinates are measured in CSS pixels.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/openPopupAtScreen", "ja": "ja/XUL/Method/openPopupAtScreen", "pl": "pl/XUL/Metoda/openPopupAtScreen" } ) </span></p>
+</div></body></content>

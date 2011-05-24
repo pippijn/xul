@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="triggerNode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("triggerNode")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em><span class="script">interface("nsIDOMNode")</span></em></dd> <dd>This read-only property holds the DOM node that generated the event triggering the opening of the popup. The value is <code>null</code> if the popup isn't open.</dd>
+</dl></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="preferencePanes"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("preferencePanes")</span> </dt><dd> Type: <em>DOM NodeList</em> </dd><dd> Holds a list of all the <span class="script">template.XULElem("prefpane")</span> elements in the window. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/preferencePanes" } ) </span></p>
+</div></body></content>

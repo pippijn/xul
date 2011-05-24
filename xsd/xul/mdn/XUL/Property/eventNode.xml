@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="eventNode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("eventNode")</span> </dt><dd> Type: <em>EventTarget</em> </dd><dd> Indicates the node where keyboard navigation events listener is set up. The initial value for this property is determined by the value of the <span class="script">template.XULAttr("eventnode")</span> attribute. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/eventNode" } ) </span></p>
+</div></body></content>

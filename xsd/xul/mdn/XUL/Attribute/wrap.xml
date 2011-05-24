@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="wrap"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("wrap")</span> </dt><dd> Type: <em>string</em> </dd><dd> Set this attribute to the value <code>off</code> to disable word wrapping in the textbox. If this attribute is not specified, word wrapping is enabled. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/wrap", "pl": "pl/XUL/Atrybut/wrap" } ) </span></p>
+</div></body></content>

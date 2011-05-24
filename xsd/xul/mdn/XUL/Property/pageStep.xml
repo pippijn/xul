@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="pageStep"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("pageStep")</span> </dt><dd> Type: <em>integer</em> </dd><dd> This property returns the number of pages that the user has navigated through so far, meaning that the user would press the Back button this many times to go back to the beginning. This property is different than <span class="script">template.XULProp("pageIndex")</span>, because pages are not necessarily navigated in order. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/pageStep" } ) </span></p>
+</div></body></content>

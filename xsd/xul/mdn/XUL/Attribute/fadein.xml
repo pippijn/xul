@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="fadein"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("fadein")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>This attribute is set to <code>true</code> if the tab is fading in or out. This typically means that the tab is in the process of appearing or disappearing.</dd>
+</dl></body></content>

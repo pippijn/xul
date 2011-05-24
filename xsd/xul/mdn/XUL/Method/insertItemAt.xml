@@ -1,0 +1,41 @@
+<content type="application/x.deki0805+xml" title="insertItemAt"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("insertItemAt", "( index, label, value )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> This method creates a new item and inserts it at the specified position. You may optionally set a value. The new item element is returned. </dd></dl>
+<div class="noinclude">
+<p><strong>Note:</strong> You cannot insert an item to an index that does not exist, eg: trying to insert an item at the end with <code>element.getRowCount() + 1</code></p>
+<h3 name="Example">Example</h3>
+<pre>&lt;!-- This example inserts at the selected item or appends, then selects the newly created item --&gt;
+&lt;script language="javascript"&gt;
+function insertItemToList(){
+
+    var myListBox = document.getElementById('myListBox');
+
+    // create a date to get some labels and values
+    var someDate = new Date();
+
+    if(myListBox.selectedIndex == -1){
+        // no item was selected in list so append to the end
+        myListBox.appendItem( someDate.toLocaleTimeString(), someDate.getTime() );
+        var newIndex = myListBox.getRowCount()  -1
+    }else{
+        // item was selected so insert at the selected item
+        var newIndex =  myListBox.selectedIndex;
+        myListBox.insertItemAt(newIndex, someDate.toLocaleTimeString(), someDate.getTime());
+    }
+
+    // select the newly created item
+    myListBox.selectedIndex = newIndex;
+}
+&lt;/script&gt;
+
+&lt;button label="Insert item at selected" oncommand="insertItemToList()"/&gt;
+&lt;listbox id="myListBox"&gt;
+    &lt;listitem label="foo"/&gt;
+&lt;/listbox&gt;
+</pre>
+<h3 name="See_also">See also</h3>
+<p><code><a title="en/XUL/Method/appendItem" href="/en/XUL/Method/appendItem">appendItem()</a></code> and <code><a title="en/XUL/Method/removeItemAt" href="/en/XUL/Method/removeItemAt">removeItemAt()</a></code></p>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/insertItemAt", "pl": "pl/XUL/Metoda/insertItemAt" } ) </span></p>
+</div></body></content>

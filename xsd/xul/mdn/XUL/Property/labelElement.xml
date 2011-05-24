@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="labelElement"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("labelElement")</span> </dt><dd> Type: <em><span class="script">template.XULElem("label")</span> element</em> </dd><dd> The <span class="script">template.XULElem("label")</span> element associated with the control. This is set when a label has a <span class="script">template.XULAttr("control")</span> attribute pointing to this element. This property will be <code>null</code> when no label is associated with the control. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/labelElement" } ) </span></p>
+</div></body></content>

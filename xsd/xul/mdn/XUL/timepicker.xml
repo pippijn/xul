@@ -1,0 +1,25 @@
+<content type="application/x.deki0805+xml" title="timepicker"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<p><span class="script">template.Fx_minversion_header(3)</span></p>
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>The timepicker is used to allow the user to enter a time. It contains three fields to enter the hour, minute and second. Arrow buttons next to the fields allow the values to be adjusted with the mouse. A fourth textbox appears for 12 hour clocks which allows selection of AM or PM.</p>
+<p>To specify the initial, use the value attribute set to a value of either the form HH:MM:SS or HH:MM. The value may be retrieved and changed using the value property or the dateValue property. The former specifies the time as a string of the form HH:MM:SS whereas the latter specifies the time as a <a title="en/Core_JavaScript_1.5_Reference/Global_Objects/Date" href="/en/JavaScript/Reference/Global_Objects/Date">Date</a> object. In addition, the hour, minute and second properties may be used to retrieve and modify each component of the time separately.</p>
+<p>The change event is fired whenever the time is changed.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "hideseconds")</span>, <span class="script">template.PrefAnch("a-", "timepicker.increment", "increment")</span>, <span class="script">template.PrefAnch("a-", "readonly")</span>, <span class="script">template.PrefAnch("a-", "tabindex")</span>, <span class="script">template.PrefAnch("a-", "timepicker.value", "value")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "amIndicator")</span>, <span class="script">template.PrefAnch("p-", "dateValue")</span>, <span class="script">template.PrefAnch("p-", "disabled")</span>, <span class="script">template.PrefAnch("p-", "hideSeconds")</span>, <span class="script">template.PrefAnch("p-", "hour")</span>, <span class="script">template.PrefAnch("p-", "hourLeadingZero")</span>, <span class="script">template.PrefAnch("p-", "increment")</span>, <span class="script">template.PrefAnch("p-", "is24HourClock")</span>, <span class="script">template.PrefAnch("p-", "isPM")</span>, <span class="script">template.PrefAnch("p-", "minute")</span>, <span class="script">template.PrefAnch("p-", "minuteLeadingZero")</span>, <span class="script">template.PrefAnch("p-", "pmIndicator")</span>, <span class="script">template.PrefAnch("p-", "readOnly")</span>, <span class="script">template.PrefAnch("p-", "second")</span>, <span class="script">template.PrefAnch("p-", "secondLeadingZero")</span>, <span class="script">template.PrefAnch("p-", "tabIndex")</span>, <span class="script">template.PrefAnch("p-", "timepicker.value", "value")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<pre>
+&lt;timepicker value="12:05"/&gt;
+</pre>
+<p><img src="/@api/deki/files/142/=Controlguide-timepicker.png" alt="Image:Controlguide-timepicker.png" class="internal" /></p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("disabled")</span> <span class="script">template.XULAttrInc("hideseconds")</span> <span class="script">template.XULAttrInc("readonly")</span> <span class="script">template.XULAttrInc("timepicker.increment")</span> <span class="script">template.XULAttrInc("tabindex")</span> <span class="script">template.XULAttrInc("timepicker.value")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("amIndicator")</span> <span class="script">template.XULPropInc("dateValue")</span> <span class="script">template.XULPropInc("disabled")</span> <span class="script">template.XULPropInc("hideSeconds")</span> <span class="script">template.XULPropInc("hour")</span> <span class="script">template.XULPropInc("hourLeadingZero")</span> <span class="script">template.XULPropInc("increment")</span> <span class="script">template.XULPropInc("is24HourClock")</span> <span class="script">template.XULPropInc("isPM")</span> <span class="script">template.XULPropInc("minute")</span> <span class="script">template.XULPropInc("minuteLeadingZero")</span> <span class="script">template.XULPropInc("pmIndicator")</span> <span class="script">template.XULPropInc("readOnly")</span> <span class="script">template.XULPropInc("second")</span> <span class="script">template.XULPropInc("secondLeadingZero")</span> <span class="script">template.XULPropInc("tabIndex")</span> <span class="script">template.XULPropInc("timepicker.value")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIDOMXULControlElement")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/timepicker", "ja": "ja/XUL/timepicker", "pl": "pl/XUL/timepicker" } ) </span></p></body></content>

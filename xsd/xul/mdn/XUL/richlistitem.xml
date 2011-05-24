@@ -1,0 +1,19 @@
+<content type="application/x.deki0805+xml" title="richlistitem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>An individual item in a <span class="script">template.XULElem("richlistbox")</span>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "searchlabel")</span>, <span class="script">template.PrefAnch("a-", "selected")</span>, <span class="script">template.PrefAnch("a-", "tabindex")</span>, <span class="script">template.PrefAnch("a-", "value")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessible")</span>, <span class="script">template.PrefAnch("p-", "control")</span>, <span class="script">template.PrefAnch("p-", "disabled")</span>, <span class="script">template.PrefAnch("p-", "richlistitem.label", "label")</span>, <span class="script">template.PrefAnch("p-", "selected")</span>, <span class="script">template.PrefAnch("p-", "tabIndex")</span>, <span class="script">template.PrefAnch("p-", "value")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("disabled")</span> <span class="script">template.XULAttrInc("searchlabel")</span> <span class="script">template.XULAttrInc("selected")</span> <span class="script">template.XULAttrInc("tabindex")</span> <span class="script">template.XULAttrInc("value")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("accessible")</span> <span class="script">template.XULPropInc("control")</span> <span class="script">template.XULPropInc("disabled")</span> <span class="script">template.XULPropInc("richlistitem.label")</span> <span class="script">template.XULPropInc("searchLabel")</span> <span class="script">template.XULPropInc("selected")</span> <span class="script">template.XULPropInc("tabIndex")</span> <span class="script">template.XULPropInc("value")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span>, <span class="script">interface("nsIDOMXULSelectControlItemElement")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/richlistitem", "ja": "ja/XUL/richlistitem", "pl": "pl/XUL/richlistitem" } ) </span></p></body></content>

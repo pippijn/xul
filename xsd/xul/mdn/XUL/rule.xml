@@ -1,0 +1,22 @@
+<content type="application/x.deki0805+xml" title="rule"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A rule is used in a <span class="script">template.XULElem("template")</span>. The children of the <code>rule</code> are used to declare the conditions in which the rule matches and the content that is generated. A rule may contain <span class="script">template.XULElem("where")</span>, <span class="script">template.XULElem("binding")</span> and/or <span class="script">template.XULElem("action")</span> elements. A condition is defined used a <span class="script">template.XULElem("where")</span> element. For each result that matches all of the conditions, content within the rule's <span class="script">template.XULElem("action")</span> body is generated. The <span class="script">template.XULElem("bindings")</span> element is optional and may specify additional variable bindings to be used.
+</p><p>When no <span class="script">template.XULElem("query")</span> element is used in a template, a default query is used and the simple query syntax may be used for RDF datasources. For more information about this, see the <a href="en/XUL/Template_Guide/Simple_Query_Syntax">Simple Query Syntax</a>.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "iscontainer")</span>, <span class="script">template.PrefAnch("a-", "isempty")</span>, <span class="script">template.PrefAnch("a-", "parent")</span>, <span class="script">template.PrefAnch("a-", "parsetype")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInherited()</span>
+<span class="script">template.XULAttrInc("iscontainer")</span>
+<span class="script">template.XULAttrInc("isempty")</span>
+<span class="script">template.XULAttrInc("parent")</span>
+<span class="script">template.XULAttrInc("parsetype")</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/rule", "pl": "pl/XUL/rule" } ) </span></body></content>

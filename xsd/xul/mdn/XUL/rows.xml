@@ -1,0 +1,18 @@
+<content type="application/x.deki0805+xml" title="rows"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>Defines the rows of a <span class="script">template.XULElem("grid")</span>. Child <span class="script">template.XULElem("row")</span> elements define the individual rows to appear in the grid. Each child of a <code>rows</code> element should be a <span class="script">template.XULElem("row")</span> element.</p>
+<p>The <code>rows</code> element may be nested inside another <code>rows</code> element. The children of these nested rows are counted as normal rows as if they were part of the parent. However, nesting <code>rows</code> elements allows groups of rows to have a separate appearance such as a different border, or separate scrolling may be defined for these rows.</p>
+<p>Non-row related elements placed inside a <code>rows</code> element occupy the full width of the grid and are placed in their corresponding positions between the rows.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Grids" href="/en/XUL_Tutorial/Grids">XUL tutorial</a>.</p>
+<h3 name="Example">Example</h3>
+<p>See <span class="script">template.XULElem("grid")</span> for an example.</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl><dt>Elements </dt><dd> <span class="script">template.XULElem("grid")</span>, <span class="script">template.XULElem("columns")</span>, <span class="script">template.XULElem("column")</span>, <span class="script">template.XULElem("row")</span>. </dd></dl>
+
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/rows", "pl": "pl/XUL/rows" } ) </span></p></body></content>

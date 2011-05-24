@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onwizardfinish"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onwizardfinish")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This should be set to code which is called when the user presses the Finish button, which would appear in place of the Next button on the last page of the wizard. Return <code>true</code> to allow the wizard to be closed, accepting any values entered on the pages, or return <code>false</code> to prevent the wizard from being closed. Use the <span class="script">template.XULProp("canAdvance")</span> property to indicate to the user (by disabling the Finish button) that they cannot end the wizard. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onwizardfinish" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+require "pageids.pm";
+
+if (@ARGV) {
+   s/\.xml$// for @ARGV;
+   print "$pageids{$_}\n"
+      for @ARGV
+} else {
+   print "$_.xml\n"
+      for keys %pageids
+}

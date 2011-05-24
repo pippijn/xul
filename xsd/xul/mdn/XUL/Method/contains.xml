@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="contains"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("contains", "( item )")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Return type: <em>boolean</em> </dd><dd> Returns <code>true</code> if the <span class="script">template.XULElem("menulist")</span> contains the specified <span class="script">template.XULElem("menuitem")</span> as one of its items. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/contains" } ) </span></p>
+</div></body></content>

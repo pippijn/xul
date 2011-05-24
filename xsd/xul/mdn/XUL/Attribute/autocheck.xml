@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="autocheck"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("autocheck")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If this attribute is <code>true</code> or left out, the checked state of the button will be switched each time the button is pressed. If this attribute is <code>false</code>, the checked state must be adjusted manually. When autocheck is true, the button type should be "checkbox" or "radio". </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/autocheck", "pl": "pl/XUL/Atrybut/autocheck" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="contextMenu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("contextMenu")</span></dt> <dd>Type: <em>popup element id</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("contextmenu")</span> attribute. Note that the value of this property does <em>not</em> reflect the value of the <span class="script">template.XULAttr("context")</span> attribute, which is otherwise identical to the contextmenu attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/contextMenu", "ja": "ja/XUL/Property/contextMenu", "pl": "pl/XUL/W\u0142asno\u015b\u0107/contextMenu" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="removeSession"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("removeSession", "( session )")</span></dt> <dd>Return type: <em>???</em></dd> <dd>Removes a session object from the autocomplete widget. The argument should be an object which implements the <span class="script">interface("nsIAutoCompleteSession")</span> interface.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeSession" } ) </span></p>
+</div></body></content>

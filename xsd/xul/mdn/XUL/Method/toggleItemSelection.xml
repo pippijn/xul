@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="toggleItemSelection"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("toggleItemSelection", "( item )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If the specified item is selected, it is deselected. If it is not selected, it is selected. Other items in the list box that are selected are not affected, and retain their selected state. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/toggleItemSelection", "ja": "ja/XUL/Method/toggleItemSelection" } ) </span></p>
+</div></body></content>

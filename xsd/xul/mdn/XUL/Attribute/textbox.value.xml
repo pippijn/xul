@@ -1,0 +1,11 @@
+<content type="application/x.deki0805+xml" title="textbox.value"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("textbox.value", "value")</span> </dt><dd> Type: <em>string</em> </dd><dd> The default value entered in a textbox. The attribute only holds the default value and is never modified when the user enters text. To get the updated value, use the <span class="script">template.XULProp("value")</span> property. For number boxes, the default is 0 or the minimum value returned by the <code>min</code> property, whichever is higher. </dd></dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">template.XULAttr("value")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/textbox.value" } ) </span></p>
+</div></body></content>

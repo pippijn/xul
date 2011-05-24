@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="externalToolbars"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("externalToolbars")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>array of elements</em></dd> <dd>An array of external toolbars; that is, <span class="script">XULElem("toolbar")</span> elements that should be considered to be members of this <span class="script">XULElem("toolbox")</span>, even if they are not actually children of the toolbox.</dd>
+</dl></body></content>

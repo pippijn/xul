@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="drawintitlebar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("drawintitlebar")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If this attribute is <code>true</code>, the top of the window's content area will begin at the top edge of the title bar, instead of below the title bar. This allows the window to draw in the title bar. This is supported only from <span class="script">xulelem("window")</span> elements, and is ignored on platforms that don't support drawing into the title bar.</dd>
+</dl></body></content>

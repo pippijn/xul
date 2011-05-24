@@ -1,0 +1,23 @@
+<content type="application/x.deki0805+xml" title="content"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>This element should appear inside a <span class="script">template.XULElem("query")</span> element. A rule's query should contain one and only one content element. The content element should also have a <span class="script">template.XULAttr("uri")</span> attribute. It is used to bind a variable to a content node during matching. When using a tree with the <span class="script">template.XULAttr("flags")</span> attribute set to <code>dont-build-content</code>, use a <span class="script">template.XULElem("treeitem")</span> element instead.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Advanced_Rules">XUL tutorial</a>.
+</p>
+<dl><dt> Properties
+</dt><dd> <span class="script">template.PrefAnch("p-", "tag")</span>, <span class="script">template.PrefAnch("p-", "uri")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInherited()</span>
+<span class="script">template.XULPropInc("tag")</span>
+<span class="script">template.XULPropInc("uri")</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<p>TBD
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/content", "pl": "pl/XUL/content" } ) </span></body></content>

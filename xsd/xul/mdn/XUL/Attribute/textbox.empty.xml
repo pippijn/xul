@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="textbox.empty"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("textbox.empty", "empty")</span> <span class="script">Fx_minversion_inline(3)</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Presence of this attribute indicates that the <a title="en/XUL/Property/emptyText" href="/en/XUL/Property/emptyText">emptyText</a> is now being displayed. Can be used for styling purposes.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/empty", "ja": "ja/XUL/Attribute/textbox.empty" } ) </span></p>
+</div></body></content>

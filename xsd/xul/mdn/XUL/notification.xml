@@ -1,0 +1,44 @@
+<content type="application/x.deki0805+xml" title="notification"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>The notification is used to display an informative message. It will normally be used as part of a <a href="en/XUL/notificationbox">notificationbox</a>. The box includes a button which the user can use to close the box.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "image")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "priority")</span>, <span class="script">template.PrefAnch("a-", "persistence")</span>, <span class="script">template.PrefAnch("a-", "notification.type", "type")</span>, <span class="script">template.PrefAnch("a-", "value")</span>
+</dd></dl>
+<dl><dt> Properties
+</dt><dd> <span class="script">template.PrefAnch("p-", "accessibleType")</span>, <span class="script">template.PrefAnch("p-", "control")</span>, <span class="script">template.PrefAnch("p-", "image")</span>, <span class="script">template.PrefAnch("p-", "label")</span>, <span class="script">template.PrefAnch("p-", "priority")</span>, <span class="script">template.PrefAnch("p-", "persistence")</span>, <span class="script">template.PrefAnch("p-", "type")</span>, <span class="script">template.PrefAnch("p-", "value")</span>
+</dd></dl>
+<dl><dt> Methods
+</dt><dd> <span class="script">template.PrefAnch("m-", "close")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<pre>
+&lt;notification label="This is a warning"/&gt;
+</pre>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInherited()</span>
+<span class="script">template.XULAttrInc("image")</span>
+<span class="script">template.XULAttrInc("label")</span>
+<span class="script">template.XULAttrInc("persistence")</span>
+<span class="script">template.XULAttrInc("priority")</span>
+<span class="script">template.XULAttrInc("notification.type")</span>
+<span class="script">template.XULAttrInc("value")</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInherited()</span>
+<span class="script">template.XULPropInc("accessibleType")</span>
+<span class="script">template.XULPropInc("image")</span>
+<span class="script">template.XULPropInc("label")</span>
+<span class="script">template.XULPropInc("persistence")</span>
+<span class="script">template.XULPropInc("priority")</span>
+<span class="script">template.XULPropInc("type")</span>
+<span class="script">template.XULPropInc("value")</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInherited()</span>
+<span class="script">template.XULMethInc("close")</span>
+</p>
+<h3 name="Related"> Related </h3>
+<dl><dt> Elements </dt><dd> <span class="script">template.XULElem("notificationbox")</span>
+</dd></dl>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/notification", "pl": "pl/XUL/notification" } ) </span></body></content>

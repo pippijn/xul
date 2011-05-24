@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="searchlabel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("searchlabel")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em>string</em> </dd><dd> Text used for 'find-as-you-type' (FAYT) searching. In situations where the search text is ambiguous or missing, searchlabel can be used to give context to FAYT. If searchlabel is not present, FAYT falls back to use the <a title="en/XUL/Property/richlistitem.label" href="/en/XUL/Property/richlistitem.label">label</a> property. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/searchlabel" } ) </span></p>
+</div></body></content>

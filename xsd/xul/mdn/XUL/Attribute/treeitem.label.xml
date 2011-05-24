@@ -1,0 +1,11 @@
+<content type="application/x.deki0805+xml" title="treeitem.label"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("treeitem.label", "label")</span> </dt><dd> Type: <em>string</em> </dd><dd> For <span class="script">template.XULElem("tree")</span>s with only a single <a title="en/XUL/treecol" href="/en/XUL/treecol">column</a>, the label may be placed directly on the <span class="script">template.XULElem("treeitem")</span> without the need for a <span class="script">template.XULElem("treerow")</span> and <span class="script">template.XULElem("treecell")</span> inside. </dd></dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">template.XULAttr("label")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/treeitem.label", "pl": "pl/XUL/Atrybut/treeitem.label" } ) </span></p>
+</div></body></content>

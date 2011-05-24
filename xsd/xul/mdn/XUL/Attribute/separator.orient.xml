@@ -1,0 +1,13 @@
+<content type="application/x.deki0805+xml" title="separator.orient"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("separator.orient", "orient")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> Used to specify whether the <code><span class="script">template.XULElem("separator")</span></code> is a horizontal or vertical separator. Note that the values are the reverse of what seems more likely. </dd></dl>
+<ul> <li><code>horizontal</code>: The separator separates vertically placed elements.</li> <li><code>vertical</code>: The separator separates horizontally placed elements.</li>
+</ul>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><code><span class="script">template.XULAttr("orient")</span></code></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/separator.orient", "pl": "pl/XUL/Atrybut/separator.orient" } ) </span></p>
+</div></body></content>

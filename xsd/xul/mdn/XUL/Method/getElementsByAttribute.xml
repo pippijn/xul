@@ -1,0 +1,9 @@
+<content type="application/x.deki0805+xml" title="getElementsByAttribute"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl> <dt><span class="script">template.XULMeth2("getElementsByAttribute", "( attrib, value )")</span></dt> <dd>Return type: <em>DOM NodeList</em></dd> <dd>Returns a <code><a href="en/DOM/NodeList" title="en/DOM/NodeList">NodeList</a></code> of all the child elements of the element that have the attribute given by the first argument set to the value given by the second argument. If the second argument is '*', the method will match the given attribute set to any value. Note that like most <code>NodeList</code>s (but unlike the <code>NodeList</code> returned by <code><a href="en/DOM/document.querySelectorAll" title="en/DOM/document.querySelectorAll">querySelectorAll</a></code>), the <code>NodeList</code> returned by this method is <a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#td-live" title="http://www.w3.org/TR/DOM-Level-3-Core/core.html#td-live" class=" external">live</a>.</dd>
+</dl>
+<dl> <dd>Note that this method is only available on XUL elements; it is not part of the <a class=" external" title="http://www.w3.org/TR/#tr_DOM" href="http://www.w3.org/TR/#tr_DOM">W3C DOM</a>.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/getElementsByAttribute", "ja": "ja/XUL/Method/getElementsByAttribute", "pl": "pl/XUL/Metoda/getElementsByAttribute" } ) </span></p>
+</div></body></content>

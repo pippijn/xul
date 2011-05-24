@@ -1,0 +1,39 @@
+<content type="application/x.deki0805+xml" title="dialog"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>This element should be used in place of the <span class="script">template.XULElem("window")</span> element for dialog boxes. The <span class="script">template.XULAttr("buttons")</span> attribute may be used to set which buttons should appear in the dialog box. These buttons will be placed in the correct locations for the user's platform.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Creating_Dialogs" href="/en/XUL_Tutorial/Creating_Dialogs">XUL tutorial</a> and <a title="en/Code_snippets/Dialogs_and_Prompts" href="/en/Code_snippets/Dialogs_and_Prompts">Dialogs and prompts</a> (code snippets).</p>
+<dl><dt> Attributes </dt><dd> <span class="script">template.PrefAnch("a-", "buttonaccesskeyaccept")</span>, <span class="script">template.PrefAnch("a-", "buttonaccesskeycancel")</span>, <span class="script">template.PrefAnch("a-", "buttonaccesskeydisclosure")</span>, <span class="script">template.PrefAnch("a-", "buttonaccesskeyextra1")</span>, <span class="script">template.PrefAnch("a-", "buttonaccesskeyextra2")</span>, <span class="script">template.PrefAnch("a-", "buttonaccesskeyhelp")</span>, <span class="script">template.PrefAnch("a-", "buttonalign")</span>, <span class="script">template.PrefAnch("a-", "buttondir")</span>, <span class="script">template.PrefAnch("a-", "buttondisabledaccept")</span>, <span class="script">template.PrefAnch("a-", "buttonlabelaccept")</span>, <span class="script">template.PrefAnch("a-", "buttonlabelcancel")</span>, <span class="script">template.PrefAnch("a-", "buttonlabeldisclosure")</span>, <span class="script">template.PrefAnch("a-", "buttonlabelextra1")</span>, <span class="script">template.PrefAnch("a-", "buttonlabelextra2")</span>, <span class="script">template.PrefAnch("a-", "buttonlabelhelp")</span>, <span class="script">template.PrefAnch("a-", "buttonorient")</span>, <span class="script">template.PrefAnch("a-", "buttonpack")</span>, <span class="script">template.PrefAnch("a-", "buttons")</span>, <span class="script">template.PrefAnch("a-", "defaultButton")</span>, <span class="script">template.PrefAnch("a-", "ondialogaccept")</span>, <span class="script">template.PrefAnch("a-", "ondialogcancel")</span>, <span class="script">template.PrefAnch("a-", "ondialogdisclosure")</span>, <span class="script">template.PrefAnch("a-", "ondialogextra1")</span>, <span class="script">template.PrefAnch("a-", "ondialogextra2")</span>, <span class="script">template.PrefAnch("a-", "ondialoghelp")</span>, <span class="script">template.PrefAnch("a-", "title")</span> </dd></dl> <dl><dt> Properties </dt><dd> <span class="script">template.PrefAnch("p-", "buttons")</span>, <span class="script">template.PrefAnch("p-", "defaultButton")</span> </dd></dl> <dl><dt> Methods </dt><dd> <span class="script">template.PrefAnch("m-", "acceptDialog")</span>, <span class="script">template.PrefAnch("m-", "cancelDialog")</span>, <span class="script">template.PrefAnch("m-", "centerWindowOnScreen")</span>, <span class="script">template.PrefAnch("m-", "getButton")</span>, <span class="script">template.PrefAnch("m-", "moveToAlertPosition")</span> </dd></dl>
+<h3 name="Examples">Examples</h3>
+<div class="float-right"><img class="internal" alt="Image:XUL_ref_dialog.png" src="/@api/deki/files/453/=XUL_ref_dialog.png" /></div>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+&lt;dialog id="donothing" title="Dialog example"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save"
+   ondialogaccept="return doOK();"
+   ondialogcancel="return doCancel();"&gt;
+    
+    &lt;dialogheader title="Options" description="My preferences"/&gt;
+    &lt;groupbox&gt;
+      &lt;caption label="Colour"/&gt;
+      &lt;radiogroup&gt;
+        &lt;radio label="Red"/&gt;
+        &lt;radio label="Green" selected="true"/&gt;
+        &lt;radio label="Blue"/&gt;
+      &lt;/radiogroup&gt;
+      &lt;label value="Nickname"/&gt;
+      &lt;textbox /&gt;
+   &lt;/groupbox&gt;
+&lt;/dialog&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("activetitlebarcolor")</span> <span class="script">template.XULAttrInc("buttonaccesskeyaccept")</span> <span class="script">template.XULAttrInc("buttonaccesskeycancel")</span> <span class="script">template.XULAttrInc("buttonaccesskeydisclosure")</span> <span class="script">template.XULAttrInc("buttonaccesskeyextra1")</span> <span class="script">template.XULAttrInc("buttonaccesskeyextra2")</span> <span class="script">template.XULAttrInc("buttonaccesskeyhelp")</span> <span class="script">template.XULAttrInc("buttonalign")</span> <span class="script">template.XULAttrInc("buttondir")</span> <span class="script">template.XULAttrInc("buttondisabledaccept")</span> <span class="script">template.XULAttrInc("buttonlabelaccept")</span> <span class="script">template.XULAttrInc("buttonlabelcancel")</span> <span class="script">template.XULAttrInc("buttonlabeldisclosure")</span> <span class="script">template.XULAttrInc("buttonlabelextra1")</span> <span class="script">template.XULAttrInc("buttonlabelextra2")</span> <span class="script">template.XULAttrInc("buttonlabelhelp")</span> <span class="script">template.XULAttrInc("buttonorient")</span> <span class="script">template.XULAttrInc("buttonpack")</span> <span class="script">template.XULAttrInc("buttons")</span> <span class="script">template.XULAttrInc("defaultButton")</span> <span class="script">template.XULAttrInc("inactivetitlebarcolor")</span> <span class="script">template.XULAttrInc("ondialogaccept")</span> <span class="script">template.XULAttrInc("ondialogcancel")</span> <span class="script">template.XULAttrInc("ondialogdisclosure")</span> <span class="script">template.XULAttrInc("ondialogextra1")</span> <span class="script">template.XULAttrInc("ondialogextra2")</span> <span class="script">template.XULAttrInc("ondialoghelp")</span> <span class="script">template.XULAttrInc("title")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("buttons")</span> <span class="script">template.XULPropInc("defaultButton")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInherited()</span> <span class="script">template.XULMethInc("acceptDialog")</span> <span class="script">template.XULMethInc("cancelDialog")</span> <span class="script">template.XULMethInc("centerWindowOnScreen")</span> <span class="script">template.XULMethInc("getButton")</span> <span class="script">template.XULMethInc("moveToAlertPosition")</span></p>
+<h3 name="Related">Related</h3>
+<dl><dt> Elements </dt><dd> <span class="script">template.XULElem("dialogheader")</span> </dd></dl>
+<p><span class="script"> wiki.languages( { "es": "es/XUL/dialog", "ja": "ja/XUL/dialog", "pl": "pl/XUL/dialog" } ) </span></p></body></content>

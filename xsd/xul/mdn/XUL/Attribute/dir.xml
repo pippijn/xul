@@ -1,0 +1,12 @@
+<content type="application/x.deki0805+xml" title="dir"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("dir")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The direction in which the child elements of the element are placed. <ul> <li><code>normal</code>: For scales, the scale's values are ordered from left to right (for horizontal scales) or from top to bottom (for vertical scales)  For other elements, the elements are placed left to right or top to bottom in the order they appear in the XUL code.</li> <li><code>reverse</code>: For scales, the scale's values are ordered from right to left (for horizontal scales) or from bottom to top (for vertical scales). For other elements, they are placed right to left or bottom to top. This is reverse of the order in which they appear in the XUL code.</li> </ul> </dd>
+</dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">XULAttr("resizer.dir")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/dir", "ja": "ja/XUL/Attribute/dir", "pl": "pl/XUL/Atrybut/dir" } ) </span></p>
+</div></body></content>

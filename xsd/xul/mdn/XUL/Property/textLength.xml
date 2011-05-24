@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="textLength"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("textLength")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Holds the length of the text entered in the textbox. This property is read-only. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/textLength" } ) </span></p>
+</div></body></content>

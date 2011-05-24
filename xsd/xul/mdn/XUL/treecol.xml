@@ -1,0 +1,64 @@
+<content type="application/x.deki0805+xml" title="treecol"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>A column of a <span class="script">XULElem("tree")</span>. It displays the column header and holds the size and other information about the column. You can also place <span class="script">XULElem("splitter")</span> elements between the columns to allow column resizing. You should always place an <span class="script">XULAttr("id")</span> attribute on a <code>treecol</code> element to ensure that the column positioning is handled properly.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Trees" href="/en/XUL_Tutorial/Trees">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "crop")</span>, <span class="script">PrefAnch("a-", "cycler")</span>, <span class="script">PrefAnch("a-", "dragging")</span>, <span class="script">PrefAnch("a-", "treecol.editable", "editable")</span>, <span class="script">PrefAnch("a-", "fixed")</span>, <span class="script">PrefAnch("a-", "hidden")</span>, <span class="script">PrefAnch("a-", "hideheader")</span>, <span class="script">PrefAnch("a-", "ignoreincolumnpicker")</span>, <span class="script">PrefAnch("a-", "label")</span>, <span class="script">PrefAnch("a-", "primary")</span>, <span class="script">PrefAnch("a-", "sort")</span>, <span class="script">PrefAnch("a-", "sortActive")</span>, <span class="script">PrefAnch("a-", "sortDirection")</span>, <span class="script">PrefAnch("a-", "treecol.src", "src")</span>, <span class="script">PrefAnch("a-", "treecol.type", "type")</span>, <span class="script">PrefAnch("a-", "treecol.width", "width")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "accessibleType")</span></dd>
+</dl>
+<dl> <dt>Style classes</dt> <dd><span class="script">PrefAnch("s-", "treecol-image")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<div class="float-right"><img alt="Image:Xul_tree_col_checked.png" class=" internal" src="/@api/deki/files/488/=Xul_tree_col_checked.png" /></div>
+<p>This example shows a checkbox in the first column, requires the style below.</p>
+<pre>
+&lt;tree flex="1" editable="true"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol label="Active" type="checkbox" editable="true"/&gt;
+    &lt;treecol label="Name" flex="1" /&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+      	&lt;treecell value="true"/&gt;
+        &lt;treecell label="Alice"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell value="false"/&gt;
+        &lt;treecell label="Bob"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+<p>To make the checkbox visible on some platforms, the following styles need to be added to the stylesheet (see <a title="en/XUL/Attribute/treecol.type" href="/en/XUL/Attribute/treecol.type">treecol.type</a>). On Firefox 2.x and 3.x, all operating systems other than Mac OS X already use these styles by default. If targeting Firefox for Mac OS X, be sure to use these styles but include your own checkbox image. However, <code><a rel="freelink" href="chrome://global/skin/checkbox/cbox-check.gif" class=" external">chrome://global/skin/checkbox/cbox-check.gif</a></code> <em>is</em> available in SeaMonkey on Mac OS X..</p>
+<pre>
+treechildren::-moz-tree-checkbox {
+  /* unchecked checkbox treecells. This style MUST come before treechildren::-moz-tree-checkbox(checked) otherwise it won't take effect.  */
+  list-style-image: none;
+}
+
+treechildren::-moz-tree-checkbox(checked){
+  /* css for checked cells. cbox-check.gif isn't available in Firefox 1, 2, and 3 on Mac OS X, so you should specify a URL to an image
+     in your extension or elsewhere. */
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInherited()</span> <span class="script">XULAttrInc("crop")</span> <span class="script">XULAttrInc("cycler")</span> <span class="script">XULAttrInc("dragging")</span> <span class="script">XULAttrInc("treecol.editable")</span> <span class="script">XULAttrInc("fixed")</span> <span class="script">XULAttrInc("hidden")</span> <span class="script">XULAttrInc("hideheader")</span> <span class="script">XULAttrInc("ignoreincolumnpicker")</span> <span class="script">XULAttrInc("label")</span> <span class="script">XULAttrInc("primary")</span> <span class="script">XULAttrInc("sort")</span> <span class="script">XULAttrInc("sortActive")</span> <span class="script">XULAttrInc("sortDirection")</span> <span class="script">XULAttrInc("treecol.src")</span> <span class="script">XULAttrInc("treecol.type")</span> <span class="script">XULAttrInc("treecol.width")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInc("accessibleType")</span> <span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Style_classes">Style classes</h3>
+<p>The following class may be used to style the element. This class should be used instead of changing the style of the element directly since it will fit more naturally with the user's selected theme.</p>
+<p><span class="script">XULStyleInc("treecol-image")</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">XULElem("tree")</span>, <span class="script">XULElem("treecols")</span>, <span class="script">XULElem("treechildren")</span>, <span class="script">XULElem("treeitem")</span>, <span class="script">XULElem("treerow")</span>, <span class="script">XULElem("treecell")</span> and <span class="script">XULElem("treeseparator")</span>.</dd> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "de": "de/XUL/treecol", "fr": "fr/XUL/treecol", "ja": "ja/XUL/treecol", "pl": "pl/XUL/treecol" } ) </span></p></body></content>

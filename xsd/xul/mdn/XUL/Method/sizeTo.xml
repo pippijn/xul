@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="sizeTo"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("sizeTo", "( width, height )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Changes the current size of the popup to the new <var>width</var> and <var>height</var>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/sizeTo", "ja": "ja/XUL/Method/sizeTo", "pl": "pl/XUL/Metoda/sizeTo" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="editor.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("editor.type", "type")</span> </dt><dd> Type: <em>string</em> </dd><dd> If set to the string <code>content-primary</code>, this editor becomes the primary content for the page. The window for the primary content can be retrieved more conveniently using <code>window.content</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/editor.type", "pl": "pl/XUL/Atrybut/editor.type" } ) </span></p>
+</div></body></content>

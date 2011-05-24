@@ -1,0 +1,15 @@
+<content type="application/x.deki0805+xml" title="queryset"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><span class="script">template.Fx_minversion_header(3)</span><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A container for <span class="script">template.XULElem("query")</span> elements when more than one query is used.
+</p><p>For more information, see <a href="en/XUL/Template_Guide/Multiple_Queries">Multiple Queries</a>.
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/queryset" } ) </span></body></content>

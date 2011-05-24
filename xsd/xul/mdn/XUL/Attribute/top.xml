@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="top"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("top")</span> </dt><dd> Type: <em>string</em> (representing an integer) </dd><dd> For elements placed directly within a <span class="script">template.XULElem("stack")</span>, specifies the pixel position of the top edge of the element relative to the top edge of the stack. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/top", "fr": "fr/XUL/Attributs/top" } ) </span></p>
+</div></body></content>

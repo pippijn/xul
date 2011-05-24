@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="browser.preferences"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("browser.preferences", "preferences")</span> </dt><dd> Type: <em><a title="en/nsIPrefService" href="/en/nsIPrefService">nsIPrefService</a></em> </dd><dd> This read-only property contains an <a title="en/NsIPref" href="/en/NsIPref">nsIPref</a> object for getting and setting user preferences. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/browser.preferences", "pl": "pl/XUL/W\u0142asno\u015b\u0107/browser.preferences" } ) </span></p>
+</div></body></content>

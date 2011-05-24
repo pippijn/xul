@@ -1,0 +1,46 @@
+<content type="application/x.deki0805+xml" title="toolbar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>A container which typically contains a row of buttons. It is a type of box that defaults to horizontal orientation. It can be collapsed with a <span class="script">template.XULElem("grippy")</span> when the <code>toolbar</code> is placed inside a <span class="script">template.XULElem("toolbox")</span>. The toolbar should always have an <span class="script">template.XULAttr("id")</span> attribute.</p>
+<div class="geckoVersionNote">
+<p><span class="script">gecko_callout_heading("2.0")</span></p>
+<p>Gecko 2.0 <span class="script">geckoRelease("2.0")</span> adds support for <strong>external toolbars</strong>. These are toolbars that are not children of a <span class="script">XULElem("toolbox")</span> element. You can associate an external toolbar with a toolbox for the purpose of managing your toolbars by setting the <span class="script">XULProp("toolboxid")</span> property on the toolbar.</p>
+</div>
+<p>The <code>chromeclass-toolbar</code> class may be used to create a toolbar where its visibility depends on the <code>toolbar</code> flag when opening the window with the <span class="script">domxref("window.open()")</span> method.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Toolbars" href="/en/XUL_Tutorial/Toolbars">XUL tutorial</a>.</p>
+<div class="geckoVersionNote">
+<p><span class="script">gecko_callout_heading("1.9.1")</span></p>
+<p>Starting in Gecko 1.9.1 <span class="script">geckoRelease("1.9.1")</span>, toolbar items are moved from the <span class="script">XULElem("toolbarpalette")</span> and added to the toolbar when a toolbar is first displayed. In earlier versions, a copy of each item was created and placed on the toolbar. This means that the palette now only contains items not already in the toolbar. This introduces a potential compatibility problem for extensions that depend on being able to identify all possible toolbar items by looking in the <span class="script">XULElem("toolbarpalette")</span>.</p>
+</div>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "autohide")</span>, <span class="script">template.PrefAnch("a-", "currentset")</span>, <span class="script">template.PrefAnch("a-", "customindex")</span>, <span class="script">template.PrefAnch("a-", "customizable")</span>, <span class="script">template.PrefAnch("a-", "defaultset")</span>, <span class="script">template.PrefAnch("a-", "grippyhidden")</span>, <span class="script">template.PrefAnch("a-", "grippytooltiptext")</span>, <span class="script">PrefAnch("a-", "iconsize")</span>, <span class="script">template.PrefAnch("a-", "toolbar.mode", "mode")</span>, <span class="script">template.PrefAnch("a-", "toolbarname")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessibleType")</span>, <span class="script">template.PrefAnch("p-", "currentSet")</span>, <span class="script">template.PrefAnch("p-", "firstPermanentChild")</span>, <span class="script">template.PrefAnch("p-", "lastPermanentChild")</span>, <span class="script">template.PrefAnch("p-", "toolbarName")</span>, <span class="script">PrefAnch("p-", "toolboxid")</span></dd>
+</dl>
+<dl> <dt>Methods</dt> <dd><span class="script">template.PrefAnch("m-", "insertItem")</span></dd>
+</dl>
+<dl> <dt>Style classes</dt> <dd><span class="script">template.PrefAnch("s-", "chromeclass-toolbar")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<div class="float-right"><img class="internal" alt="Image:XUL_ref_toolbar.png" src="/@api/deki/files/473/=XUL_ref_toolbar.png" /></div>
+<pre>
+&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton id="nav-users"  accesskey="U" label="Users"/&gt;
+    &lt;toolbarbutton id="nav-groups" accesskey="p" label="Groups"/&gt;
+    &lt;toolbarbutton id="nav-events" accesskey="E" label="Events" disabled="true"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("autohide")</span> <span class="script">template.XULAttrInc("currentset")</span> <span class="script">template.XULAttrInc("customindex")</span> <span class="script">template.XULAttrInc("customizable")</span> <span class="script">template.XULAttrInc("defaultset")</span> <span class="script">template.XULAttrInc("grippyhidden")</span> <span class="script">template.XULAttrInc("grippytooltiptext")</span> <span class="script">XULAttrInc("iconsize")</span> <span class="script">template.XULAttrInc("toolbar.mode")</span> <span class="script">template.XULAttrInc("toolbarname")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("accessibleType")</span> <span class="script">template.XULPropInc("currentSet")</span> <span class="script">template.XULPropInc("firstPermanentChild")</span> <span class="script">template.XULPropInc("lastPermanentChild")</span> <span class="script">template.XULPropInc("toolbarName")</span> <span class="script">XULPropInc("toolboxid")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInc("insertItem")</span> <span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Style_classes">Style classes</h3>
+<p><span class="script">template.XULStyleInc("chromeclass-toolbar")</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">template.XULElem("toolbarbutton")</span>, <span class="script">template.XULElem("toolbargrippy")</span>, <span class="script">template.XULElem("toolbaritem")</span>, <span class="script">template.XULElem("toolbarpalette")</span>, <span class="script">template.XULElem("toolbarseparator")</span>, <span class="script">template.XULElem("toolbarset")</span>, <span class="script">template.XULElem("toolbarspacer")</span>, <span class="script">template.XULElem("toolbarspring")</span>, <span class="script">template.XULElem("toolbox")</span></dd>
+</dl>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/toolbar", "pl": "pl/XUL/toolbar" } ) </span></p></body></content>

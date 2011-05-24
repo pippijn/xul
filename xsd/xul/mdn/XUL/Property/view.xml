@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="view"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("view")</span></dt> <dd>Type: <em><span class="script">interface("nsITreeView")</span></em></dd> <dd>The view for the <span class="script">XULElem("tree")</span>, which is the object which generates the data to be displayed. You can assign an object which implements <span class="script">interface("nsITreeView")</span> to this property. Trees built from RDF or those which use <span class="script">XULElem("treeitem")</span>s directly will already have a view. Functions available in the view allow one to retrieve the data within the cells, and determine which rows are nested within others. For a complete list of view functions, see the <span class="script">interface("nsITreeView")</span> interface.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/view", "pl": "pl/XUL/W\u0142asno\u015b\u0107/view" } ) </span></p>
+</div></body></content>

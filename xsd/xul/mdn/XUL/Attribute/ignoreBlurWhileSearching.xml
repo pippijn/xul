@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="ignoreblurwhilesearching"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("ignoreblurwhilesearching")</span><span class="script">fx_minversion_inline("1.0")</span><span class="script">tb_minversion_inline("3.0")</span><span style="border: 1px solid rgb(129, 129, 81); background-color: rgb(255, 255, 225); font-size: x-small; white-space: nowrap; padding:0px 2px;">Requires SeaMonkey 2.0</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, blur events are ignored while searching, which means that the autocomplete popup will not disappear.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/ignoreblurwhilesearching", "pl": "pl/XUL/Atrybut/ignoreblurwhilesearching" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="focusedItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("focusedItem")</span> </dt><dd> Type: <em><span class="script">template.XULElem("radio")</span> element</em> </dd><dd> Holds the currently focused item in the <span class="script">template.XULElem("radiogroup")</span>, which may or may not be the same as the selected item. You can change the focused item by setting this property. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/focusedItem" } ) </span></p>
+</div></body></content>

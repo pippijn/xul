@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="pageIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("pageIndex")</span> </dt><dd> Type: <em>integer</em> </dd><dd> This property returns the index of the currently selected page. You can change the selected page by modifying this property. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/pageIndex" } ) </span></p>
+</div></body></content>

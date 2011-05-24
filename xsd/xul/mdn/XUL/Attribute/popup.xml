@@ -1,0 +1,10 @@
+<content type="application/x.deki0805+xml" title="popup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("popup")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Should be set to the value of the <code><span class="script">template.XULAttr("id")</span></code> of the <code><span class="script">template.XULElem("popup")</span></code> element that should appear when the user clicks on the element. </dd></dl>
+<div class="noinclude">
+<h4 name="See_also">See also</h4>
+<p>More information on the <a title="en/XUL_Tutorial/Popup_Menus" href="/en/XUL_Tutorial/Popup_Menus">popup element in the XUL tutorial</a></p>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/popup", "ja": "ja/XUL/Attribute/popup" } ) </span></p>
+</div></body></content>

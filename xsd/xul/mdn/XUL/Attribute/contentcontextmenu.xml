@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="contentcontextmenu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("contentcontextmenu")</span> </dt><dd> Type: <em>id of a <span class="script">template.XULElem("menupopup")</span> element</em> </dd><dd> A reference to the context menu for the content area in the <span class="script">template.XULElem("tabbrowser")</span>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/contentcontextmenu" } ) </span></p>
+</div></body></content>

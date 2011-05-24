@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="removeNotification"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("removeNotification", "( item )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> Remove a notification, displaying the next one if the removed item is the current one. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeNotification" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,11 @@
+<content type="application/x.deki0805+xml" title="tabs.onselect"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("tabs.onselect", "onselect")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event is sent to the <span class="script">template.XULElem("tabs")</span> element when this tab is changed. </dd></dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">template.XULAttr("onselect")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/tabs.onselect" } ) </span></p>
+</div></body></content>

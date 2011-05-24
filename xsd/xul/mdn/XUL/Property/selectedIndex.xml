@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="selectedIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("selectedIndex")</span></dt> <dd>Type: <em>integer</em></dd> <dd>Returns the index of the currently selected item. You may select an item by assigning its index to this property. By assigning <code>-1</code> to this property, all items will be deselected. Returns -1 if no items are selected.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/selectedIndex", "ja": "ja/XUL/Property/selectedIndex" } ) </span></p>
+</div></body></content>

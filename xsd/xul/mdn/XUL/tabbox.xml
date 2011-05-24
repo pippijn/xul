@@ -1,0 +1,32 @@
+<content type="application/x.deki0805+xml" title="tabbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>A container used to display a set of tabbed pages of elements. A row of tabs is displayed at the top of tabbox which may be used to switch between each page. The <code>tabbox</code> should contain two children, the first a <span class="script">template.XULElem("tabs")</span> element which contains the tabs and the second a <span class="script">template.XULElem("tabpanels")</span> element which contains the contents of the pages.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Tabboxes" href="/en/XUL_Tutorial/Tabboxes">XUL tutorial</a>.</p>
+<dl><dt> Attributes </dt><dd> <span class="script">template.PrefAnch("a-", "eventnode")</span>, <span class="script">template.PrefAnch("a-", "handleCtrlPageUpDown")</span>, <span class="script">template.PrefAnch("a-", "handleCtrlTab")</span> </dd></dl> <dl><dt> Properties </dt><dd> <span class="script">template.PrefAnch("p-", "accessibleType")</span>, <span class="script">template.PrefAnch("p-", "eventNode")</span>, <span class="script">template.PrefAnch("p-", "handleCtrlPageUpDown")</span>, <span class="script">template.PrefAnch("p-", "handleCtrlTab")</span>, <span class="script">template.PrefAnch("p-", "selectedIndex")</span>, <span class="script">template.PrefAnch("p-", "selectedPanel")</span>, <span class="script">template.PrefAnch("p-", "selectedTab")</span>, <span class="script">template.PrefAnch("p-", "tabbox.tabs", "tabs")</span>, <span class="script">template.PrefAnch("p-", "tabpanels")</span> </dd></dl>
+<h3 name="Examples">Examples</h3>
+<pre>&lt;tabbox id="myTabList" selectedIndex="2"&gt;
+  &lt;tabs&gt;
+    &lt;tab label="A First tab"/&gt;
+    &lt;tab label="Second tab"/&gt;
+    &lt;tab label="Another tab"/&gt;
+    &lt;tab label="Last tab"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel First elements go here --&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel Second elements go here --&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;button label="Click me"/&gt;&lt;/tabpanel&gt;
+    &lt;tabpanel&gt;&lt;!-- tabpanel Fourth elements go here --&gt;&lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p><img class="internal" alt="Image:XUL_REF_tabboxes.gif" src="/@api/deki/files/434/=XUL_REF_tabboxes.gif" /></p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("eventnode")</span> <span class="script">template.XULAttrInc("handleCtrlPageUpDown")</span> <span class="script">template.XULAttrInc("handleCtrlTab")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("accessibleType")</span> <span class="script">template.XULPropInc("eventNode")</span> <span class="script">template.XULPropInc("handleCtrlPageUpDown")</span> <span class="script">template.XULPropInc("handleCtrlTab")</span> <span class="script">template.XULPropInc("selectedIndex")</span> <span class="script">template.XULPropInc("selectedPanel")</span> <span class="script">template.XULPropInc("selectedTab")</span> <span class="script">template.XULPropInc("tabbox.tabs")</span> <span class="script">template.XULPropInc("tabpanels")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl><dt>Elements </dt><dd><span class="script">template.XULElem("tabs")</span>, <span class="script">template.XULElem("tab")</span>, <span class="script">template.XULElem("tabpanels")</span>, <span class="script">template.XULElem("tabpanel")</span>. </dd></dl>
+
+<p><span class="script"> wiki.languages( { "de": "de/XUL/tabbox", "ja": "ja/XUL/tabbox", "pl": "pl/XUL/tabbox" } ) </span></p></body></content>

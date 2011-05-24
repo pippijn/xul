@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="checked"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("checked")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Indicates whether the element is checked or not. </dd><dd> Use <code>hasAttribute()</code> to determine whether this attribute is set instead of <code>getAttribute()</code>.</dd> <dd>For buttons, the <code>type</code> attribute must be set to <code>checkbox</code> or <code>radio</code> for this attribute to have any effect.</dd> </dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/checked", "ja": "ja/XUL/Attribute/checked", "pl": "pl/XUL/Atrybut/checked" } ) </span></p>
+</div></body></content>

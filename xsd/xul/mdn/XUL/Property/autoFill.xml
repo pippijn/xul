@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="autoFill"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("autoFill")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("autofill")</span> (or <span class="script">template.XULAttr("textbox.autoFill", "autoFill")</span>) attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/autoFill" } ) </span></p>
+</div></body></content>

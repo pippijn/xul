@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onpopupshowing"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onpopupshowing")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event is sent to a popup just before it is opened. This handler is usually used to dynamically set the contents when the user requests to display it. Returning <code>false</code> from this event handler prevents the popup from appearing. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/onpopupshowing", "ja": "ja/XUL/Attribute/onpopupshowing" } ) </span></p>
+</div></body></content>

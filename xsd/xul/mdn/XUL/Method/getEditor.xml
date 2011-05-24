@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="getEditor"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("getEditor", "( window )")</span></dt> <dd>Return type: <em><span class="script">interface("nsIEditor")</span></em></dd> <dd>Returns the editing interface for the editor which contains numerous methods for manipulating the document. Pass the editor's <code>contentWindow</code> as the argument.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getEditor", "pl": "pl/XUL/Metoda/getEditor" } ) </span></p>
+</div></body></content>

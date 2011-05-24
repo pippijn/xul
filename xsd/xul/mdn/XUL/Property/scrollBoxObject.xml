@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="scrollBoxObject"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("scrollBoxObject")</span></dt> <dd>Type: <em><span class="script">interface("nsIScrollBoxObject")</span></em></dd> <dd>The scroll box object implements the <span class="script">interface("nsIScrollBoxObject")</span> interface, which may be used to retrieve and adjust the scroll position of the list box.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/scrollBoxObject" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="handleCtrlPageUpDown"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("handleCtrlPageUpDown")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If set to <code>true</code> or omitted, the Control and Page Up or Page Down keys can be used to switch to the next or previous tab. If this attribute is set to <code>false</code>, these keys do not navigate between tabs. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/handleCtrlPageUpDown", "pl": "pl/XUL/Atrybut/handleCtrlPageUpDown" } ) </span></p>
+</div></body></content>

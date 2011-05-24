@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="getSession"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("getSession", "( index )")</span></dt> <dd>Return type: <em><span class="script">interface("nsIAutoCompleteSession")</span></em></dd> <dd>Returns the session object with the given index. This will return an object of type <span class="script">interface("nsIAutoCompleteSession")</span>.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getSession" } ) </span></p>
+</div></body></content>

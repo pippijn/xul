@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="current"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("current")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This attribute will be set to <code>true</code> if the <code>listitem</code> is the current item. This is typically used by a theme to customize the focus ring. To change the currently selected item in a <span class="script">template.XULElem("listbox")</span>, use the <code>listbox</code> property <span class="script">template.XULProp("selectedItem")</span>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/current" } ) </span></p>
+</div></body></content>

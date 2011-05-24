@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="panel.label"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("panel.label", "label")</span> <span class="script">template.Fx_minversion_inline(4)</span></dt> <dd>Type: <em>string</em></dd> <dd>For panels with titlebars, the label on the titlebar.</dd>
+</dl></body></content>

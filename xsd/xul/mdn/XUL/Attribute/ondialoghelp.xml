@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="ondialoghelp"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("ondialoghelp")</span> </dt><dd> Type: <em>script code</em> </dd><dd> The code in this attribute is called when the "help" button is pressed. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/ondialoghelp" } ) </span></p>
+</div></body></content>

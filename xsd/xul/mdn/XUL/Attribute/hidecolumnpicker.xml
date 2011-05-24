@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="hidecolumnpicker"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("hidecolumnpicker")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> When set to <code>false</code>, a drop-down will appear in the upper right corner of the <span class="script">template.XULElem("tree")</span>, which the user may use to show and hide columns. When set to <code>true</code>, the column picker will be hidden. The default value is <code>false</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/hidecolumnpicker", "pl": "pl/XUL/Atrybut/hidecolumnpicker" } ) </span></p>
+</div></body></content>

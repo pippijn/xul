@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="buttonaccesskeycancel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("buttonaccesskeycancel")</span> </dt><dd> Type: <em>string</em> </dd><dd> The access key to use for the "cancel" button. </dd></dl>
+<p> </p>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonaccesskeycancel", "pl": "pl/XUL/Atrybut/buttonaccesskeycancel" } ) </span></p>
+</div></body></content>

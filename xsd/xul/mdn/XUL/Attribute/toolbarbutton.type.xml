@@ -1,0 +1,14 @@
+<content type="application/x.deki0805+xml" title="toolbarbutton.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("toolbarbutton.type", "type")</span></dt> <dd>Type: <em>string</em></dd> <dd>The type of button. If this attribute is not present, a normal button is created. You can set this attribute to the value <code>menu</code> to create a button with a <a title="en/XUL/menupopup" href="/en/XUL/menupopup">menu popup</a>. This will typically cause the button to be displayed differently.</dd>
+</dl>
+<ul> <li><code>menu</code>: Set the type attribute to the value <code>menu</code> to create a button with a menu popup. Place a <span class="script">template.XULElem("menupopup")</span> element inside the button in this case. The user may click anywhere on the button to open and close the menu.</li> <li><code>menu-button</code>: You can also use the value <code>menu-button</code> to create a button with a menu. Unlike the <code>menu</code> type, this type requires the user to press the arrow to open the menu, but a different command may be invoked when the main part of the button is pressed.</li> <li><code>checkbox</code>: Use this type to create a toggle button which will switch the <span class="script">template.XULAttr("checkState", "checked state")</span> each time the button is pressed.</li> <li><code>radio</code>: Use this type to create a radio button. You can also create a group of toolbarbuttons using this type and the attribute <span class="script">template.XULAttr("group", "group")</span>.</li>
+</ul>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">template.XULAttr("type")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/toolbarbutton.type" } ) </span></p>
+</div></body></content>

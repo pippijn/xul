@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="tree.inputField"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULProp("tree.inputField", "inputField")</span></dt> <dd>Type: <em>textbox element</em></dd> <dd>Read-only property that holds the <span class="script">template.XULElem("textbox")</span> that is used for editing.</dd>
+</dl>
+
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/tree.inputField" } ) </span></p></body></content>

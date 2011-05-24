@@ -1,0 +1,10 @@
+<content type="application/x.deki0805+xml" title="treecell.src"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("treecell.src", "src")</span></dt> <dd>Type: <em>image URL</em></dd> <dd>Set this to the URL of an image to appear in the tree cell. If this attribute is left out, no image appears. You can have both an image and a label.</dd>
+</dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><a title="en/XUL/Attribute/src" href="/en/XUL/Attribute/src">src</a></li> <li><a title="en/XUL/Attribute/treecol.src" href="/en/XUL/Attribute/treecol.src">treecol.src</a></li>
+</ul>
+</div>
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/treecell.src", "ja": "ja/XUL/Attribute/treecell.src", "pl": "pl/XUL/Atrybut/treecell.src" } ) </span></p></body></content>

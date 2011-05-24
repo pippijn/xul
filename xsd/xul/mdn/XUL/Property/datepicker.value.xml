@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="datepicker.value"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("datepicker.value", "value")</span> </dt><dd> Type: <em>string</em> </dd><dd> The currently selected date in the form <var>YYYY-MM-DD</var>. Unlike the <code><span class="script">template.XULProp("month")</span></code> property, months in this value range from 01 to 12. Set this property to change the selected date. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/datepicker.value", "ja": "ja/XUL/Property/datepicker.value" } ) </span></p>
+</div></body></content>

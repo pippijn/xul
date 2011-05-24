@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="textbox.value"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("textbox.value", "value")</span> </dt><dd> Type: <em>string</em> </dd><dd> Holds the current value of the textbox as a string. The current value may be modified by setting this property. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/textbox.value", "pl": "pl/XUL/W\u0142asno\u015b\u0107/textbox.value" } ) </span></p>
+</div></body></content>

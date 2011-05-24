@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="default"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("default")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the <span class="script">template.XULElem("tooltip")</span> is used as the default popup for displaying tooltips in the window. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/default", "pl": "pl/XUL/Atrybut/default" } ) </span></p>
+</div></body></content>

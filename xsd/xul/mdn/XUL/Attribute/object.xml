@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="object"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("object")</span></dt> <dd>Type: <em>string</em></dd> <dd>The object of the element. It can be a variable reference, an RDF resource URI, or an RDF literal value.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/object", "pl": "pl/XUL/Atrybut/object" } ) </span></p>
+</div></body></content>

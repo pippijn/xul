@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="validate"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("validate")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> This attribute indicates whether to load the image from the cache or not. This would be useful if the images are stored remotely or you plan on swapping the image frequently. The following values are accepted, or leave out the attribute entirely for default handling: </dd></dl>
+<ul> <li><code>always</code>: The image is always checked to see whether it should be reloaded.</li> <li><code>never</code>: The image will be loaded from the cache if possible.</li>
+</ul>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/validate" } ) </span></p>
+</div></body></content>

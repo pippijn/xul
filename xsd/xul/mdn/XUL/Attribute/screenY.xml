@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="screenY"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("screenY")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The vertical position at which the window appears on the screen. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/screenY", "ja": "ja/XUL/Attribute/screenY", "pl": "pl/XUL/Atrybut/screenY" } ) </span></p>
+</div></body></content>

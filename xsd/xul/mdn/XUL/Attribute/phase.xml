@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="phase"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("phase")</span> </dt><dd> Type: <em>string</em> </dd><dd> The event phase where the handler is invoked. This should be set to the value <code>capturing</code> to indicate during the event capturing phase or <code>target</code> to indicate at the target element or left out entirely for the bubbling phase. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/phase", "pl": "pl/XUL/Atrybut/phase" } ) </span></p>
+</div></body></content>

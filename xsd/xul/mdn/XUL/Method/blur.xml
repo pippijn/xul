@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="blur"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("blur", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If the focus is on the element, it is removed. The focus is not automatically placed on any other element. Essentially, this is used to call the <code>onblur</code> handler. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/blur", "ja": "ja/XUL/Method/blur", "pl": "pl/XUL/Metoda/blur" } ) </span></p>
+</div></body></content>

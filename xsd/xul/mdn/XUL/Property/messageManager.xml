@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="messageManager"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("messageManager")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>message manager object</em></dd> <dd>This read-only property returns the <a title="en/The message manager" href="/en/The_message_manager">message manager</a> object for the <span class="script">XULElem("browser")</span> element.</dd>
+</dl></body></content>

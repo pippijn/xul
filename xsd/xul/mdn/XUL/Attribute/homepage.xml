@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="homepage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("homepage")</span> </dt><dd> Type: <em>homepage URL</em> </dd><dd> This attribute allows you to set a homepage for the browser element. It does not have any correlation with the user's browser homepage; instead it is a convenient property to hold a home page. You can switch to this home page using the <span class="script">template.XULMeth("goHome")</span> method. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/homepage", "pl": "pl/XUL/Atrybut/homepage" } ) </span></p>
+</div></body></content>

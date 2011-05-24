@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectionStart"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("selectionStart")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Get or set the beginning of the selected portion of the field's text. Use in conjuction with the <span class="script">template.XULProp("selectionEnd")</span> property. The value specifies the index of the first selected character. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selectionStart" } ) </span></p>
+</div></body></content>

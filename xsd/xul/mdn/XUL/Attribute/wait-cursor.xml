@@ -1,0 +1,12 @@
+<content type="application/x.deki0805+xml" title="wait-cursor"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("wait-cursor")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Set this attribute to true to have the cursor switch to a waiting cursor while the mouse is hovering over the element. Usually, you would only use this on the <span class="script">XULElem("window")</span> element or other top-level elements. In order to revert to the normal cursor state call the method <code>removeAttribute("wait-cursor")</code> when the process effectively has ended otherwise the wait cursor might never appear.</dd>
+</dl>
+<div class="noinclude">
+<h4 name="See_also">See also</h4>
+<ul> <li><a title="Talk:En/XUL/Attribute/Wait-cursor" href="/Talk:En/XUL/Attribute/Wait-cursor">https://developer.mozilla.org/Talk:En/XUL/Attribute/Wait-cursor</a></li>
+</ul>
+<p>This seems to work instead of trying to set a wait-cursor attribute:</p>
+<p><code>window.setCursor('wait') and window.setCursor('auto')</code></p>
+</div>
+<div class="noinclude"><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/wait-cursor", "ja": "ja/XUL/Attribute/wait-cursor" } ) </span></div></body></content>

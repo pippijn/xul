@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="spellcheck"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("spellcheck")</span> <span class="script">template.Fx_minversion_inline("2.0.0.2")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, spell checking is enabled by default for the text box; if <code>false</code>, spell checking is disabled by default. </dd><dd> If not specified, this defaults to <code>false</code> </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/spellcheck" } ) </span></p>
+</div></body></content>

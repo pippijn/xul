@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="container"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("container")</span> </dt><dd> Type: <em>?</em> </dd><dd> A variable reference to a node that is expected to be a container. If the variable is the same as the <span class="script">template.XULAttr("uri")</span> attribute on the <span class="script">template.XULElem("content")</span> element, the resource must be a container element in order to match. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/container" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="searchSessions"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("searchSessions")</span> </dt><dd> Type: <em>space-separated list of session names</em> </dd><dd> Set to a keyword indicating what type of data to look up for autocomplete. You may set multiple types by separating their names by spaces. The following values are possible, although custom components may be installed which add others. </dd></dl>
+<ul> <li><code>history</code>: The user's URL history is searched.</li> <li><code>addrbook</code>: The user's address book is searched.</li> <li><code>ldap</code>: The user's LDAP directories are searched.</li>
+</ul>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/searchSessions" } ) </span></p>
+</div></body></content>

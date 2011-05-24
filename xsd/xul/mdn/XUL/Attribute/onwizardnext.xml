@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onwizardnext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onwizardnext")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This should be set to code which is called when the user presses the Next button. Return <code>true</code> to allow the next page to be displayed and <code>false</code> to disallow moving to the next page. Use the <span class="script">template.XULProp("canAdvance")</span> property to indicate to the user (by disabling the Next button) that they cannot go to the next page. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onwizardnext" } ) </span></p>
+</div></body></content>

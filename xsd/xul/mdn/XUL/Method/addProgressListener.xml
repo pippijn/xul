@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="addProgressListener"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("addProgressListener", "( listener )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Add a progress listener to the browser which will monitor loaded documents. The progress listener should implement the <span class="script">interface("nsIWebProgressListener")</span> interface.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/addProgressListener", "pl": "pl/XUL/Metoda/addProgressListener" } ) </span></p>
+</div></body></content>

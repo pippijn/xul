@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="select"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("select", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Selects all the text in the textbox. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/select", "ja": "ja/XUL/Method/select" } ) </span></p>
+</div></body></content>

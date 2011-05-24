@@ -1,0 +1,26 @@
+<content type="application/x.deki0805+xml" title="template"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>Used to declare a template for rule-based construction of elements. Elements are constructed from a datasource. For more information see the <span class="script">template.XULElem("rule")</span> element.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Templates">XUL tutorial</a>.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "template.container", "container")</span>, <span class="script">template.PrefAnch("a-", "member")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInc("template.container")</span>
+<span class="script">template.XULAttrInc("member")</span>
+<span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<p>TBD
+</p>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/template", "pl": "pl/XUL/template" } ) </span></body></content>

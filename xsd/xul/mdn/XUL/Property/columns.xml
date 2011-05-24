@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="columns"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("columns")</span></dt> <dd>Type: <em><span class="script">interface("nsITreeColumns")</span></em></dd> <dd>Returns the columns for the tree as an <span class="script">interface("nsITreeColumns")</span> object.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/columns" } ) </span></p>
+</div></body></content>

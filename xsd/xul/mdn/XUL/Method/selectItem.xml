@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("selectItem", "( item )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Deselects all of the currently selected items and selects the given item. A select event is sent after the selection is made. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/selectItem", "ja": "ja/XUL/Method/selectItem" } ) </span></p>
+</div></body></content>

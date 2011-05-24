@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="textValue"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("textValue")</span> </dt><dd> Type: <em>string</em> </dd><dd> Returns the content of the textbox. Equivalent to the <span class="script">template.XULProp("value")</span> property. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/textValue" } ) </span></p>
+</div></body></content>

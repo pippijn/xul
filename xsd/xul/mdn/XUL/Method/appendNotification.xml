@@ -1,0 +1,14 @@
+<content type="application/x.deki0805+xml" title="appendNotification"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("appendNotification", "( label , value , image , priority , buttons )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> Create a new notification and display it. If another notification is already present with a higher priority, the new notification will be added behind it. </dd></dl>
+<ul> <li>label - label to appear on the notification</li> <li>value - value used to identify the notification</li> <li>image - URL of image to appear on the notification</li> <li>priority - notification priority, see Priority Levels.</li> <li>buttons - array of button descriptions to appear on the notification.</li>
+</ul>
+<dl><dd><strong>Priority Levels</strong> : </dd></dl>
+<ul> <li>PRIORITY_INFO_LOW</li> <li>PRIORITY_INFO_MEDIUM</li> <li>PRIORITY_INFO_HIGH</li> <li>PRIORITY_WARNING_LOW</li> <li>PRIORITY_WARNING_MEDIUM</li> <li>PRIORITY_WARNING_HIGH</li> <li>PRIORITY_CRITICAL_LOW</li> <li>PRIORITY_CRITICAL_MEDIUM</li> <li>PRIORITY_CRITICAL_HIGH</li> <li>PRIORITY_CRITICAL_BLOCK</li>
+</ul>
+<dl><dd><strong>Buttons</strong> : </dd></dl> <dl><dd> The buttons argument is an array of button descriptions. Each description is an object with the following properties: </dd></dl>
+<ul> <li>accessKey - the accesskey to appear on the button</li> <li>callback - function to be called when the button is activated. This function is passed two arguments: <ul> <li>the &lt;notification&gt; the button is associated with</li> <li>the button description as passed to appendNotification.</li> </ul> </li> <li>label - the label to appear on the button</li> <li>popup - the id of a popup for the button. If null, the button is a button popup.</li>
+</ul>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/appendNotification", "pl": "pl/XUL/Metoda/appendNotification" } ) </span></p>
+</div></body></content>

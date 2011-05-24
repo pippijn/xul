@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="context"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("context")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Should be set to the value of the id of the popup element that should appear when the user context-clicks on the element. A context-click varies on each platform. Usually it will be a right click. You can use the special value '_child' to indicate the first <span class="script">template.XULElem("menupopup")</span> child of the element. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/context", "ja": "ja/XUL/Attribute/context" } ) </span></p>
+</div></body></content>

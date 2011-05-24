@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="statusbar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("statusbar")</span> </dt><dd> Type: <em>id of statusbar element</em> </dd><dd> If you set this attribute to the <span class="script">template.XULAttr("id")</span> of a <span class="script">template.XULElem("statusbar")</span> element, the label on the statusbar will update to the <span class="script">template.XULAttr("statustext")</span> of the items on the menu as the user moves the mouse over them. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/statusbar" } ) </span></p>
+</div></body></content>

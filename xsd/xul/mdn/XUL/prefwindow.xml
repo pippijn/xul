@@ -1,0 +1,102 @@
+<content type="application/x.deki0805+xml" title="prefwindow"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>A specialized window used for preference dialogs. This element should be used in place of the <span class="script">template.XULElem("window")</span> tag and should contain one or more <span class="script">template.XULElem("prefpane")</span> elements. A row of buttons appears across the preference dialog, one for each prefpane. Each pane will usually group together a set of related preferences. If there is only one <span class="script">template.XULElem("prefpane")</span>, the navigation area will be hidden.</p>
+<p>On platforms where the convention is to apply changes immediately, the preferences are adjusted as soon as the user interface element is changed. On other platforms, the preferences are not applied until the dialog is closed.</p>
+<p>You can open a preference window using a window's <code>openDialog</code> method as with other dialogs. You can pass the <span class="script">template.XULAttr("id")</span> of a particular pane as the fourth argument to <code>openDialog</code> to open a specific pane by default. You can also set the <span class="script">template.XULAttr("lastSelected")</span> attribute on the <code>prefwindow</code> tag to the <span class="script">template.XULAttr("id")</span> of the pane to start with. Normally, you would not set this attribute as it will be set automatically such that the default pane is the same as the one showing when the preferences dialog was last closed.</p>
+<p>More information is available in the <a title="en/Preferences_System" href="/en/Preferences/Preferences_system">Preferences System</a> article.</p>
+<p><strong>Important note for XULrunner-based applications</strong>: the Preferences System - part of the toolkit - still relies on two browser.* preferences.</p>
+<ol> <li>The first one is <code>browser.preferences.instantApply</code>, a boolean preference. The preference window will not run correctly if you do not set this preference in your application's defaults (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=485150" title="https://bugzilla.mozilla.org/show_bug.cgi?id=485150" class="link-https">bug 485150</a> for more information). A true value for this preference makes the preference window apply immediately the user choices, without waiting for the dialog to close with OK.</li> <li>The second preference is <code>browser.preferences.animateFadeIn</code>, again a boolean preference. This one can be safely omitted in XULrunner-based applications but you can override the default behavior (true for Mac OS X and false for other platforms) setting it.</li>
+</ol>
+<p><strong>Note for Mac OS X</strong>: a common way of opening modal windows on Mac OS X that are not attached as a sheet to the main window is to use <a title="en/XPCOM Interface Reference/nsIWindowWatcher" href="/en/XPCOM_Interface_Reference/nsIWindowWatcher"><code>nsIWindowWatcher.openWindow()</code></a> with a <code>null</code> parentWindow. This does not work with prefwindows, breaking the general behavior of the window and in particular the list of prefpanes. Prefer the classical <code>window.openDialog()</code> with the following window features: <code>"chrome,titlebar,toolbar,centerscreen,dialog=yes"</code>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "buttonalign")</span>, <span class="script">template.PrefAnch("a-", "buttondir")</span>, <span class="script">template.PrefAnch("a-", "buttonorient")</span>, <span class="script">template.PrefAnch("a-", "buttonpack")</span>, <span class="script">template.PrefAnch("a-", "buttons")</span>, <span class="script">template.PrefAnch("a-", "defaultButton")</span>, <span class="script">template.PrefAnch("a-", "lastSelected")</span>, <span class="script">template.PrefAnch("a-", "onbeforeaccept")</span>, <span class="script">template.PrefAnch("a-", "ondialogaccept")</span>, <span class="script">template.PrefAnch("a-", "ondialogcancel")</span>, <span class="script">template.PrefAnch("a-", "ondialogdisclosure")</span>, <span class="script">template.PrefAnch("a-", "ondialoghelp")</span>, <span class="script">template.PrefAnch("a-", "onpaneload")</span>, <span class="script">template.PrefAnch("a-", "title")</span>, <span class="script">template.PrefAnch("a-", "prefwindow.type", "type")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "buttons")</span>, <span class="script">template.PrefAnch("p-", "currentPane")</span>, <span class="script">template.PrefAnch("p-", "defaultButton")</span>, <span class="script">template.PrefAnch("p-", "lastSelected")</span>, <span class="script">template.PrefAnch("p-", "preferencePanes")</span>, <span class="script">template.PrefAnch("p-", "type")</span></dd>
+</dl>
+<dl> <dt>Methods</dt> <dd><span class="script">template.PrefAnch("m-", "acceptDialog")</span>, <span class="script">template.PrefAnch("m-", "addPane")</span>, <span class="script">template.PrefAnch("m-", "cancelDialog")</span>, <span class="script">template.PrefAnch("m-", "centerWindowOnScreen")</span>, <span class="script">template.PrefAnch("m-", "getButton")</span>, <span class="script">template.PrefAnch("m-", "openSubDialog")</span>, <span class="script">template.PrefAnch("m-", "openWindow")</span>, <span class="script">template.PrefAnch("m-", "showPane")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<pre class="eval">
+   &lt;?xml version="1.0"?&gt;
+   &lt;?xml-stylesheet href="<a rel="freelink" href="chrome://global/skin/" class=" external">chrome://global/skin/</a>" type="text/css"?&gt;   
+   &lt;prefwindow xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+     &lt;prefpane id="saveoptions" label="Backups"&gt;
+       &lt;preferences&gt;
+         &lt;preference id="pref-backup" name="myapp.mybackups" type="bool"/&gt;
+         &lt;preference id="pref-backupduration" name="myapp.mybackups.duration" type="int"/&gt;
+       &lt;/preferences&gt;
+       &lt;checkbox label="Automatically Save Backups" preference="pref-backup"/&gt;
+       &lt;textbox label="Duration:" preference="pref-backupduration"/&gt;
+     &lt;/prefpane&gt;
+   &lt;/prefwindow&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("activetitlebarcolor")</span> <span class="script">template.XULAttrInc("buttonalign")</span> <span class="script">template.XULAttrInc("buttondir")</span> <span class="script">template.XULAttrInc("buttonorient")</span> <span class="script">template.XULAttrInc("buttonpack")</span> <span class="script">template.XULAttrInc("buttons")</span> <span class="script">template.XULAttrInc("defaultButton")</span> <span class="script">template.XULAttrInc("inactivetitlebarcolor")</span> <span class="script">template.XULAttrInc("lastSelected")</span> <span class="script">template.XULAttrInc("onbeforeaccept")</span> <span class="script">template.XULAttrInc("ondialogaccept")</span> <span class="script">template.XULAttrInc("ondialogcancel")</span> <span class="script">template.XULAttrInc("ondialogdisclosure")</span> <span class="script">template.XULAttrInc("ondialoghelp")</span> <span class="script">template.XULAttrInc("onpaneload")</span> <span class="script">template.XULAttrInc("title")</span> <span class="script">template.XULAttrInc("prefwindow.type")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("buttons")</span> <span class="script">template.XULPropInc("currentPane")</span> <span class="script">template.XULPropInc("defaultButton")</span></p>
+<dl> <dt><code>instantApply</code> (readonly) </dt> <dd>Indicates whether the window is in "instant apply" mode. The value is read from <code>browser.preferences.instantApply</code> boolean user preference. (?? It's declared as a <code>&lt;field&gt;</code>, so you <em>can</em> set the value, however I don't believe it's valid to do that.)</dd>
+</dl>
+<p><span class="script">template.XULPropInc("lastSelected")</span> <span class="script">template.XULPropInc("preferencePanes")</span> <span class="script">template.XULPropInc("type")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInherited()</span> <span class="script">template.XULMethInc("acceptDialog")</span> <span class="script">template.XULMethInc("addPane")</span></p>
+<dl> <dt><code>animate(aOldPane, aNewPane)</code> </dt> <dd>This probably isn't a public method (?)</dd>
+</dl>
+<p><span class="script">template.XULMethInc("cancelDialog")</span> <span class="script">template.XULMethInc("centerWindowOnScreen")</span> <span class="script">template.XULMethInc("getButton")</span> <span class="script">template.XULMethInc("openSubDialog")</span> <span class="script">template.XULMethInc("openWindow")</span> <span class="script">template.XULMethInc("showPane")</span></p>
+<p> </p>
+<h2>Notes</h2>
+<h3>Usage patterns</h3>
+<h4>Opening/initializing a prefwindow</h4>
+<p>Note that you can define an <code>initWithParams()</code> function in your sub window - to handle parameters passed using <code>openWindow()</code> in case the window was already open. For example the Permissions Manager UI in Firefox uses the same window for three dialogs: Images, Software installation and Popups. It uses <code>initWithParams()</code> to change the dialog type without closing and re-opening it.</p>
+<p>The suggested usage pattern is as follows:</p>
+<pre class="deki-transform" function="syntax.javascript">
+// subwindow.js
+function onLoad(ev) {
+  // do some initialization...
+
+  initWithParams(window.arguments[0]); // we expect a single parameter to be passed to the window
+}
+
+function initWithParams(aParams) {
+  // this will also get called when an already open window is activated using openWindow()
+}</pre>
+<h4>Closing a prefwindow</h4>
+<p>Sometimes you need to do things when the <code>prefwindow</code> is closed, such as things that can't (or shouldn't) be handled as preferences, such as saving passwords or updating SQLite data. To do this, you can set the <code>prefwindow</code>'s <code>onunload</code> attribute to a function that will be run when the <code>prefwindow</code> is closed.</p>
+<pre class="deki-transform" function="syntax.xml">
+&lt;prefwindow
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="my-config-dialog"
+  title="My application: configuration"
+  onunload="onUnload(event.target)"&gt;
+&lt;/prefwindow&gt;</pre>
+<pre class="deki-transform" function="syntax.javascript">
+function onUnload(prefwindow) {
+  // Do actions there like saving values, password setting (that is not handled as a preference), etc.
+  return true;
+}
+</pre>
+<h3>Opening a modal sub dialog</h3>
+<p>A sub dialog can only be opened via <code>document.documentElement</code> and not via <code>window</code>. Therefore, an example call to <code>openSubDialog()</code> would look like this:</p>
+<pre class="eval">
+document.documentElement.openSubDialog("<a rel="freelink" href="chrome://myextension/content/options-sub.xul" class=" external">chrome://myextension/content/options-sub.xul</a>", "", null)
+</pre>
+<h3>Issues when using prefpanes in prefwindow</h3>
+<p>When you wish to put non-&lt;prefpane&gt; elements to prefwindow, you should place them after all of &lt;prefpane&gt;s. If you put other elements before the first &lt;prefpane&gt;, you possibly see strange behaviors about switching panes. This is due to <span class="script">template.Bug(296418)</span>.</p>
+<p>Should not:</p>
+<pre class="eval">
+&lt;prefwindow&gt;
+  &lt;script src="config.js"/&gt;
+  &lt;prefpane label="pane1" src="pane1.xul"/&gt;
+  &lt;prefpane label="pane2" src="pane2.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>Should:</p>
+<pre class="eval">
+&lt;prefwindow&gt;
+  &lt;prefpane label="pane1" src="pane1.xul"/&gt;
+  &lt;prefpane label="pane2" src="pane2.xul"/&gt;
+  &lt;script src="config.js"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<h3 name="Related">Related</h3>
+<p><span class="script">template.XULElem("prefpane")</span></p>
+<p><span class="script">template.Preferences_System_TOC()</span></p>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/prefwindow", "ja": "ja/XUL/prefwindow", "pl": "pl/XUL/prefwindow" } ) </span></p></body></content>

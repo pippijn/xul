@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="next"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("next")</span> </dt><dd> Type: <em>string <span class="script">template.XULElem("wizardpage")</span> id</em> </dd><dd> Set to the <span class="script">template.XULAttr("pageid")</span> of the next page after this one. When set, the page with this pageID is displayed when the Next button is pressed. This can be used to create wizards that do not have a linear sequence. If one of the pages has a <code>next</code> attribute, all of the pages should have one, except that last page. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/next" } ) </span></p>
+</div></body></content>

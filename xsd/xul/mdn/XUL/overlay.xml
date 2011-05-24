@@ -1,0 +1,27 @@
+<content type="application/x.deki0805+xml" title="overlay"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>An overlay is used when it is desirable for a block of content to be shared between several different windows. It can also be used to append or alter content in an existing window. An <code>overlay</code> is defined in a separate XUL file. Overlays are applied while the XUL is being loaded.</p>
+<p>Each element within the overlay is inserted at a location in the master window, determined by matching <span class="script">template.XULAttr("id")</span> attributes. For instance, if an element in an overlay has an <span class="script">template.XULAttr("id")</span> of <code>file_menu</code>, the corresponding element with the <span class="script">template.XULAttr("id")</span> <code>file_menu</code> in the master window that uses the overlay would be altered. Attributes declared in the overlay are added to that element and child elements are inserted into the window within that element. Elements directly inside the <code>overlay</code> element as children that do not have <span class="script">template.XULAttr("id")</span> attributes are appended to the master window. This allows the addition of scripts to the master window from the overlay.</p>
+<p>Overlays do not have their own <code>onload</code> event. Some initialization code, such as loading components and modules, may be placed directly in a script outside of a function. However it is unsafe to access DOM nodes before the window has loaded. Call the <a title="en/DOM/element.addEventListener" href="/en/DOM/element.addEventListener">addEventListener</a> method to listen to the <code>load</code> event for the window (which does not fire until the master window and all overlays are applied).</p>
+<p>Overlays may be applied to windows in other packages. Files, such as scripts, that are referenced from the overlay should be specified as absolute URLs. If you do specify a relative URL, it will be relative to the window that the overlay applies to, not the overlay's file.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Overlays" href="/en/XUL_Tutorial/Overlays">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "class")</span>, <span class="script">template.PrefAnch("a-", "id")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;overlay id="myOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+ &lt;menu id="file_menu"&gt;
+  &lt;menuitem name="Super Stream Player"/&gt;
+ &lt;/menu&gt;
+&lt;/overlay&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInc("class")</span> <span class="script">template.XULAttrInc("id")</span></p>
+<h3 name="Related">Related</h3>
+<ul> <li><a class="internal" title="En/XUL Overlays" href="/en/XUL_Overlays">XUL Overlays</a></li>
+</ul>
+<p> </p>
+<p> </p>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/overlay", "ja": "ja/XUL/overlay", "pl": "pl/XUL/overlay" } ) </span></p></body></content>

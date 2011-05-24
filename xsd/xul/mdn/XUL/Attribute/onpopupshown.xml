@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onpopupshown"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onpopupshown")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event is sent to a popup after it has been opened, much like the <code>onload</code> event is sent to a window when it is opened. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/onpopupshown", "ja": "ja/XUL/Attribute/onpopupshown" } ) </span></p>
+</div></body></content>

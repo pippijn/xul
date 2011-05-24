@@ -1,0 +1,43 @@
+<content type="application/x.deki0805+xml" title="grid"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>A grid is a layout type that arranges elements in rows and columns. The grid is expected to contain both a <span class="script">template.XULElem("columns")</span> element as a child which defines the structure of the columns and a <span class="script">template.XULElem("rows")</span> element as child to define the rows. The size and attributes defined on columns and rows will affect the size and placement of elements in each cell. Elements placed within both the columns and rows will be displayed, although usually only elements will be placed inside one of these. In is most common to place elements within the rows and use the columns only to define their flexibility and width. Whichever of the columns and rows is last in the grid is displayed on top; commonly the <span class="script">template.XULElem("columns")</span> element appears in the grid first.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Grids" href="/en/XUL_Tutorial/Grids">XUL tutorial</a>.</p>
+<h3 name="Example">Example</h3>
+<div class="float-right"><img class="internal" alt="Image:XUL_ref_grid.png" src="/@api/deki/files/458/=XUL_ref_grid.png" /></div>
+<pre>&lt;!-- groupbox containing a grid. 
+     The second column is twice as big as the first column --&gt;
+&lt;groupbox&gt;
+  &lt;caption label="Details"/&gt;
+  &lt;grid&gt;
+    &lt;columns&gt;
+      &lt;column flex="1"/&gt;
+      &lt;column flex="2"/&gt;
+    &lt;/columns&gt;
+    &lt;rows&gt;
+      &lt;row&gt;
+        &lt;label value="User name"/&gt;
+        &lt;textbox id="user"/&gt;
+      &lt;/row&gt;
+      &lt;row&gt;
+        &lt;label value="Group"/&gt;
+        &lt;menulist&gt;
+          &lt;menupopup&gt;
+            &lt;menuitem label="Accounts"/&gt;
+            &lt;menuitem label="Sales" selected="true"/&gt;
+            &lt;menuitem label="Support"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/menulist&gt;
+      &lt;/row&gt;
+    &lt;/rows&gt;
+  &lt;/grid&gt;
+&lt;/groupbox&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl><dt>Elements </dt><dd> <span class="script">template.XULElem("columns")</span>, <span class="script">template.XULElem("column")</span>, <span class="script">template.XULElem("rows")</span>, <span class="script">template.XULElem("row")</span>. </dd></dl>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/grid", "pl": "pl/XUL/grid" } ) </span></p></body></content>

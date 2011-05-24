@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="highlightNonMatches"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("highlightNonMatches")</span> <span class="script">template.Fx_minversion_inline(3.5)</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("highlightnonmatches")</span> attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/highlightNonMatches" } ) </span></p>
+</div></body></content>

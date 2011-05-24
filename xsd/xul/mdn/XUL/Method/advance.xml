@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="advance"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("advance", "( pageID )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Call this method to go to the next page. This is equivalent to pressing the Next button. The <span class="script">template.XULProp("canAdvance")</span> property must be set to <code>true</code> for the page to be changed. The code in the <span class="script">template.XULAttr("onwizardnext")</span> attribute is called before the page is changed. The <var>pageID</var> argument allows you to specify the index of the page to which to jump. Supply <code>null</code> as the argument to go to the next page in the sequence. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/advance", "pl": "pl/XUL/Metoda/advance" } ) </span></p>
+</div></body></content>

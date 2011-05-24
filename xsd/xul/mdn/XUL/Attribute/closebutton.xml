@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="closebutton"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("closebutton")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If this attribute is set to <code>true</code>, the <span class="script">template.XULElem("tabs")</span> row will have a "new tab" button and "close" button on the ends. This feature is used by the <span class="script">template.XULElem("tabbrowser")</span> to provide the facilities for adding and closing tabs. You can set an image to the "new tab" and "close" buttons by applying them to the <span class="script">template.XULStyle("tabs-newbutton")</span> and <span class="script">template.XULStyle("tabs-closebutton")</span> classes respectively.<br /> <span class="script">gecko_minversion_note("1.9.2", "This attribute is no longer supported starting with Gecko 1.9.2.")</span></dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/closebutton", "pl": "pl/XUL/Atrybut/closebutton" } ) </span></p>
+</div></body></content>

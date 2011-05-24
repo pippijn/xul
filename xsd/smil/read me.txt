@@ -1,0 +1,26 @@
+This schema version is a revised version of SMIL 2.0.
+
+It is a W3C Proposed Edited Recommendation, a revised edition of the Synchronized Multimedia Integration Language (SMIL) 2.0.
+
+These revised schema files incorporate the SMIL 2.0 Recommendation Errata listed at
+http://www.w3.org/2001/07/REC-SMIL20-20010731-errata
+
+The revised schema are the following.
+other files are unchanged.
+
+
+errata E26
+updated Schema
+http://www.w3.org/2001/SMIL20/smil20-linking.xsd
+
+
+errata E30
+updated Schema
+http://www.w3.org/2001/SMIL20/smil20-utility.xsd
+
+
+errata E35
+updated Schema
+http://www.w3.org/2001/SMIL20/smil20-language.xsd
+
+

@@ -1,0 +1,20 @@
+<content type="application/x.deki0805+xml" title="disabled"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("disabled")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Indicates whether the element is disabled or not. If this element is set to <code>true</code> the element is disabled. Disabled elements are usually drawn with grayed-out text. If the element is disabled, it does not respond to user actions, it cannot be focused, and the <code>command</code> event will not fire.<br /> <div class="noinclude">The element will, however, still respond to mouse events. To enable the element, leave this attribute out entirely as opposed to setting the value to <code>false</code>.</div> </dd> <dd>To get and set the value of this attribute from JavaScript code, better use the <span class="script">template.XULProp("disabled")</span> property.</dd>
+</dl>
+<div class="noinclude">
+<pre function="syntax.JavaScript" class="deki-transform">
+// Disabling an element
+document.getElementById('buttRemove').setAttribute("disabled", "true");
+
+// Enabling back an element while keeping the "disabled" attribute
+document.getElementById('buttRemove').setAttribute("disabled", "");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttRemove').removeAttribute("disabled");
+</pre>
+<p><span class="script">fx_minversion_note(3.5, "For <a class="internal" title="En/XUL/Keyset" href="/en/XUL/keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.")</span></p>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/disabled", "fr": "fr/XUL/Attributs/disabled", "ja": "ja/XUL/Attribute/disabled", "pl": "pl/XUL/Atrybut/disabled", "ru": "ru/XUL/Attribute/disabled" } ) </span></p>
+</div></body></content>

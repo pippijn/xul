@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectedItems"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("selectedItems")</span> </dt><dd> Type: <em>array of listitems</em> </dd><dd> Returns an array of the selected items in the list. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selectedItems" } ) </span></p>
+</div></body></content>

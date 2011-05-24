@@ -1,0 +1,16 @@
+<content type="application/x.deki0805+xml" title="binding"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>Should be contained within a <span class="script">XULElem("bindings")</span> element. A <code>binding</code> is used to bind a variable to a node. Like the <span class="script">XULElem("triple")</span> element in syntax, it can be used to bind a particular property of a matched node to a particular variable name. That name can then be used within the action of a rule.</p>
+<dl> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "object")</span>, <span class="script">PrefAnch("p-", "predicate")</span>, <span class="script">PrefAnch("p-", "subject")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInc("object")</span> <span class="script">XULPropInc("predicate")</span> <span class="script">XULPropInc("subject")</span> <span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<p>TBD</p>
+<p><span class="script"> wiki.languages( { "de": "de/XUL/binding", "ja": "ja/XUL/binding", "pl": "pl/XUL/binding" } ) </span></p></body></content>

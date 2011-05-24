@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="readonly"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("readonly")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If set to <code>true</code>, then the user cannot change the value of the element. However, the value may still be modified by a script.</dd> <div class="geckoVersionNote"><span class="script">gecko_callout_heading("2")</span> The <code>readonly</code> attribute did not work correctly on fields until Gecko 2.0</div>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/readonly", "ja": "ja/XUL/Attribute/readonly", "pl": "pl/XUL/Atrybut/readonly" } ) </span></p>
+</div></body></content>

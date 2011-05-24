@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="deck.selectedPanel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("deck.selectedPanel", "selectedPanel")</span></dt> <dd>Type: <em>element</em></dd> <dd>Holds a reference to the currently selected panel within a <span class="script">template.XULElem("deck")</span> element. Assigning a value to this property will modify the selected panel.</dd> <div class="warning">Do not hide panels; the deck element only understands visible panels.</div>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/deck.selectedPanel", "pl": "pl/XUL/W\u0142asno\u015b\u0107/deck.selectedPanel" } ) </span></p>
+</div></body></content>

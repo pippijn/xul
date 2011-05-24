@@ -1,0 +1,20 @@
+<content type="application/x.deki0805+xml" title="conditions"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p><span class="script">template.Deprecated_header()</span>
+</p><p>This element should appear directly inside a <span class="script">template.XULElem("rule")</span> element and is used to define conditions for the rule. Within the conditions can be placed <span class="script">template.XULElem("content")</span>, <span class="script">template.XULElem("member")</span> and <span class="script">template.XULElem("triple")</span> elements. These may have attributes whose value is a variable name beginning with a question mark (<code>?</code>). When evaluating the rule for a particular RDF resource, the variables are replaced with values from the resource. If all variables can be replaced, the rule matched.
+</p><p>This element is used with Firefox 2/Mozilla 1.8 and earlier instead of the <span class="script">template.XULElem("query")</span> element.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Advanced_Rules">XUL tutorial</a>.
+</p>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<p>TBD
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/conditions", "pl": "pl/XUL/conditions" } ) </span></body></content>

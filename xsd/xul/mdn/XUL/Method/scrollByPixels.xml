@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="scrollByPixels"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("scrollByPixels", "( pixels )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Scrolls the contents of the <span class="script">template.XULElem("arrowscrollbox")</span> by a certain number of pixels. Use a positive value as the pixels argument to scroll forward that many pixels, or a negative value to scroll backward that many pixels. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/scrollByPixels" } ) </span></p>
+</div></body></content>

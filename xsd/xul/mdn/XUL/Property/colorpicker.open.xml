@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="colorpicker.open"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("colorpicker.open", "open")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Returns <code>true</code> if the popup for a button-type <span class="script">template.XULElem("colorpicker")</span> is open. Set this property to <code>true</code> to open the popup or <code>false</code> to close the popup.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/colorpicker.open" } ) </span></p>
+</div></body></content>

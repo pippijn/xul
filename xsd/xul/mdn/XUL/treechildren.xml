@@ -1,0 +1,18 @@
+<content type="application/x.deki0805+xml" title="treechildren"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>This element is the body of the <span class="script">XULElem("tree")</span>. For content trees, the content will be placed inside this element. This element is also used to define container rows in the tree.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Trees" href="/en/XUL_Tutorial/Trees">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "alternatingbackground")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInc("alternatingbackground")</span> <span class="script">XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">XULElem("tree")</span>, <span class="script">XULElem("treecols")</span>, <span class="script">XULElem("treecol")</span>, <span class="script">XULElem("treeitem")</span>, <span class="script">XULElem("treerow")</span>, <span class="script">XULElem("treecell")</span> and <span class="script">XULElem("treeseparator")</span>.</dd>
+</dl>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/treechildren", "ja": "ja/XUL/treechildren", "pl": "pl/XUL/treechildren" } ) </span></p></body></content>

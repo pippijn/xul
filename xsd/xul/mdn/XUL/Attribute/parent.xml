@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="parent"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("parent")</span> </dt><dd> Type: <em>element tag name</em> </dd><dd> If set, the rule will only match the corresponding tag. This may be used to have separate rules for leaf and container nodes with different tags. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/parent" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="loadURIWithFlags"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("loadURIWithFlags", "( uri, flags, referrer, charset, postData )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Load a URL into the document, with the specified load flags, the given referrer, character set, and POST data. In addition to the flags allowed for the <span class="script">XULMeth2("reloadWithFlags")</span> method, the following flags are also valid: <ul> <li><code>LOAD_FLAGS_IS_REFRESH</code>: This flag is used when the URL is loaded because of a meta tag refresh or redirect.</li> <li><code>LOAD_FLAGS_IS_LINK</code>: This flag is used when the URL is loaded because a user clicked on a link. The HTTP Referer header is set accordingly.</li> <li><code>LOAD_FLAGS_BYPASS_HISTORY</code>: Do not add the URL to the session history.</li> <li><code>LOAD_FLAGS_REPLACE_HISTORY</code>: Replace the current URL in the session history with a new one. This flag might be used for a redirect.</li> </ul> </dd>
+</dl>
+<p>(See <span class="script">ifmethod("nsIWebNavigation","loadURI")</span> for details on the <code>referrer</code> and <code>postData</code> parameters.)</p>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/loadURIWithFlags", "pl": "pl/XUL/Metoda/loadURIWithFlags" } ) </span></p>
+</div></body></content>

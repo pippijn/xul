@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="template"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("template")</span> </dt><dd> Type: <em>element id</em> </dd><dd> For template generated elements, this attribute may optionally be placed on the root node (the element with the <span class="script">template.XULAttr("datasources")</span> attribute) to refer to a template that exists elsewhere in the XUL code. This template attribute should be set to the <span class="script">template.XULAttr("id")</span> of the <span class="script">template.XULElem("template")</span> element. This might be used to share a single template between multiple trees or menus. If this attribute is not specified, there should be a template element directly inside the node. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/template", "ja": "ja/XUL/Attribute/template" } ) </span></p>
+</div></body></content>

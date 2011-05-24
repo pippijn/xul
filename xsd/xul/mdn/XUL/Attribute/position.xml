@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="position"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("position")</span> </dt><dd> Type: <em>string</em> (representing an integer) </dd><dd> When an element is in an <span class="script">template.XULElem("overlay")</span>, the position is an index where the child is inserted. The position is one-based, so use a value of 1 to place the element at the beginning. This attribute is ignored if either an <span class="script">template.XULAttr("insertbefore")</span> or <span class="script">template.XULAttr("insertafter")</span> attribute matches an element. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/position", "ja": "ja/XUL/Attribute/position" } ) </span></p>
+</div></body></content>

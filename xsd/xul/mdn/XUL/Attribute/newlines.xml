@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="newlines"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("newlines")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em>string</em> </dd><dd> How the text box handles pastes with newlines in them. </dd></dl> <dl><dd> Possible values: <dl><dd><code>pasteintact</code>: Paste newlines unchanged </dd><dd><code>pastetofirst</code>: Paste text up to the first newline, dropping the rest of the text </dd><dd><code>replacewithcommas</code>: Pastes the text with the newlines replaced with commas </dd><dd><code>replacewithspaces</code>: Pastes the text with newlines replaced with spaces </dd><dd><code>strip</code>: Pastes the text with the newlines removed </dd><dd><code>stripsurroundingwhitespace</code>: Pastes the text with newlines and adjacent whitespace removed </dd></dl> </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/newlines" } ) </span></p>
+</div></body></content>

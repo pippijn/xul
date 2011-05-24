@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="minheight"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("minheight")</span> </dt><dd> Type: <em>string</em> (representing an integer) </dd><dd> The minimum height of the element. This corresponds to the min-height CSS property. </dd></dl>
+<p> </p>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/minheight", "ja": "ja/XUL/Attribute/minheight", "pl": "pl/XUL/Atrybut/minheight" } ) </span></p>
+</div></body></content>

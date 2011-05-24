@@ -1,0 +1,49 @@
+<content type="application/x.deki0805+xml" title="label"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>This element is used to provide a label for a control element. If the user clicks the label, it will move the focus to the associated control, specified with the <span class="script">template.PrefAnch("a-", "control")</span> attribute.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Adding_Labels_and_Images" href="/en/XUL_Tutorial/Adding_Labels_and_Images">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "accesskey")</span>, <span class="script">template.PrefAnch("a-", "control")</span>, <span class="script">template.PrefAnch("a-", "crop")</span>, <span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "href")</span>, <span class="script">template.PrefAnch("a-", "label.value", "value")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessKey")</span>, <span class="script">template.PrefAnch("p-", "accessibleType")</span>, <span class="script">template.PrefAnch("p-", "control")</span>, <span class="script">template.PrefAnch("p-", "crop")</span>, <span class="script">template.PrefAnch("p-", "disabled")</span>, <span class="script">template.PrefAnch("p-", "value")</span></dd>
+</dl>
+<dl> <dt>Style classes</dt> <dd><span class="script">template.PrefAnch("s-", "header")</span>, <span class="script">template.PrefAnch("s-", "indent")</span>, <span class="script">template.PrefAnch("s-", "monospace")</span>, <span class="script">template.PrefAnch("s-", "plain")</span>, <span class="script">template.PrefAnch("s-", "small-margin")</span>, <span class="script">template.PrefAnch("s-", "text-link")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<div class="float-right"><img src="/@api/deki/files/460/=XUL_ref_label.png" alt="Image:XUL_ref_label.png" class=" internal" /></div>
+<pre class="eval">
+&lt;label value="Email address" control="email"/&gt;
+&lt;textbox id="email"/&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("accesskey")</span> <span class="script">template.XULAttrInc("control")</span> <span class="script">template.XULAttrInc("crop")</span> <span class="script">template.XULAttrInc("disabled")</span> <span class="script">template.XULAttrInc("href")</span> <span class="script">template.XULAttrInc("label.value")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("accessKey")</span> <span class="script">template.XULPropInc("accessibleType")</span> <span class="script">template.XULPropInc("control")</span> <span class="script">template.XULPropInc("crop")</span> <span class="script">template.XULPropInc("disabled")</span> <span class="script">template.XULPropInc("value")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Style_classes">Style classes</h3>
+<p>The following classes may be used to style the element. These classes should be used instead of changing the style of the element directly since they will fit more naturally with the user's selected theme.</p>
+<p><span class="script">template.XULStyleInc("header")</span> <span class="script">template.XULStyleInc("indent")</span> <span class="script">template.XULStyleInc("monospace")</span> <span class="script">template.XULStyleInc("plain")</span> <span class="script">template.XULStyleInc("small-margin")</span> <span class="script">template.XULStyleInc("text-link")</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">template.XULElem("description")</span></dd>
+</dl>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.XULAttr("label")</span></dd>
+</dl>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span>, <span class="script">interface("nsIDOMXULLabelElement")</span></dd>
+</dl>
+<h3 name="User_notes">Notes</h3>
+<h4>Labels are not focusable</h4>
+<div class="geckoVersionNote">
+<p><span class="script">gecko_callout_heading("2.0")</span></p>
+<p>Starting in Gecko 2.0 <span class="script">geckoRelease("2.0")</span>, labels are properly not focusable. They used to incorrectly inherit from <span class="script">interface("nsIDOMXULControlElement")</span>.</p>
+</div>
+<h4>The caption is in the "value" attribute</h4>
+<p>Remember that the label element has a "value" attribute, unlike value in HTML whereas buttons, checkboxes use <code>label="foo"</code> as the attribute</p>
+<pre class="deki-transform" function="syntax.Xml">
+&lt;label label="A Caption"/&gt; &lt;-- wrong --&gt;
+&lt;label value="A Caption"/&gt;
+
+&lt;label value="Click the button"/&gt;
+&lt;button label="A Button"/&gt;
+&lt;checkbox label="A Decision" value="1"/&gt;
+</pre>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/label", "ja": "ja/XUL/label", "pl": "pl/XUL/label" } ) </span></p></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="ondialogcancel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("ondialogcancel")</span> </dt><dd> Type: <em>script code</em> </dd><dd> The code in this attribute is called when the "cancel" button is pressed or when the <span class="script">template.XULMeth("cancelDialog")</span> method is called. If the routine returns true, the dialog will indeed go away, but if it returns false it will not. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/ondialogcancel" } ) </span></p>
+</div></body></content>

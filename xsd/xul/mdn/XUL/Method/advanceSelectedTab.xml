@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="advanceSelectedTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("advanceSelectedTab", "( dir, wrap )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If the argument <var>dir</var> is set to <code>1</code>, the currently selected tab changes to the next tab. If the argument <var>dir</var> is set to <code>-1</code>, the currently selected tab changes to the previous tab. If the <var>wrap</var> argument is <code>true</code>, the adjustment will wrap around when the first or last tab is reached. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/advanceSelectedTab", "pl": "pl/XUL/Metoda/advanceSelectedTab" } ) </span></p>
+</div></body></content>

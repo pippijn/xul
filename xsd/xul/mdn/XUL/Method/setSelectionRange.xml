@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="setSelectionRange"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("setSelectionRange", "( start, end )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Sets the selected portion of the textbox, where the <var>start</var> argument is the index of the first character to select and the <var>end</var> argument is the index of the character after the selection. Set both arguments to the same value to move the cursor to the corresponding position without selecting text. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/setSelectionRange", "ja": "ja/XUL/Method/setSelectionRange", "pl": "pl/XUL/Metoda/setSelectionRange" } ) </span></p>
+</div></body></content>

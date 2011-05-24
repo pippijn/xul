@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="editingColumn"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("editingColumn")</span> <span class="script">Fx_minversion_inline("3")</span></dt> <dd>Type: <em><span class="script">interface("nsITreeColumn")</span></em></dd> <dd>The column of the <span class="script">XULElem("tree")</span> cell currently being edited, or <code>null</code> if there is no cell being edited.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/editingColumn" } ) </span></p>
+</div></body></content>

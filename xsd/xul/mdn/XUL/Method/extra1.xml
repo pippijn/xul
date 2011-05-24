@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="extra1"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("extra1", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Call this method to simulate clicking the extra1 button. The code in the <span class="script">template.XULAttr("onextra1")</span> attribute is called. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/extra1", "pl": "pl/XUL/Metoda/extra1" } ) </span></p>
+</div></body></content>

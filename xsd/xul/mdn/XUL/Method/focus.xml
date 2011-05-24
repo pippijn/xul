@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="focus"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl> <dt><span class="script">template.XULMeth2("focus", "()")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Assigns the focus to the element, if it can accept the focus. The <code>onfocus</code> handler is called if the toplevel window is active.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/focus", "ja": "ja/XUL/Method/focus", "pl": "pl/XUL/Metoda/focus" } ) </span></p>
+</div></body></content>

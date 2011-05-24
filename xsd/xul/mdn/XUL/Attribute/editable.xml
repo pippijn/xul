@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="editable"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("editable")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Indicates that the value of the <span class="script">template.XULElem("menulist")</span> can be modified by typing directly into the value field. This is rendered as a textbox with a drop-down arrow beside it. The user may enter text into the textbox or select one of the choices by clicking from the drop-down. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/editable", "pl": "pl/XUL/Atrybut/editable" } ) </span></p>
+</div></body></content>

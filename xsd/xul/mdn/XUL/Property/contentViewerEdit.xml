@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="contentViewerEdit"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("contentViewerEdit")</span></dt> <dd>Type: <em><span class="script">interface("nsIContentViewerEdit")</span><br /> </em></dd> <dd>This read-only property contains the <span class="script">interface("nsIContentViewerEdit")</span> which handles clipboard operations on the document.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/contentViewerEdit", "pl": "pl/XUL/W\u0142asno\u015b\u0107/contentViewerEdit" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,22 @@
+<content type="application/x.deki0805+xml" title="tabpanel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A individual panel in a <span class="script">template.XULElem("tabpanels")</span> element. This element is optional and you may just use any other container in place of it.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Tabboxes">XUL tutorial</a>.
+</p>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<dl><dt> Elements
+</dt><dd><span class="script">template.XULElem("tabbox")</span>, <span class="script">template.XULElem("tabs")</span>, <span class="script">template.XULElem("tab")</span>, <span class="script">template.XULElem("tabpanels")</span>.
+</dd></dl>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/tabpanel", "pl": "pl/XUL/tabpanel" } ) </span></body></content>

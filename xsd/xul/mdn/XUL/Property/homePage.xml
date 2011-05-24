@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="homePage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("homePage")</span> </dt><dd> Type: <em>string home page URL</em> </dd><dd> This property holds the value of the user's home page setting. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/homePage", "pl": "pl/XUL/W\u0142asno\u015b\u0107/homePage" } ) </span></p>
+</div></body></content>

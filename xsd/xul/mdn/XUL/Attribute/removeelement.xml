@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="removeelement"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("removeelement")</span> </dt><dd> Type: <em>element id</em> </dd><dd> When placed on an element in an <span class="script">template.XULElem("overlay")</span>, it indicates that the element in the base file should be removed from the window. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/removeelement", "ja": "ja/XUL/Attribute/removeelement" } ) </span></p>
+</div></body></content>

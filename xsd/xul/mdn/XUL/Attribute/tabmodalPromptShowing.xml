@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="tabmodalPromptShowing"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("tabmodalPromptShowing")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>integer</em></dd> <dd>The number of tab modal prompts currently attached to the current tab.</dd>
+</dl></body></content>

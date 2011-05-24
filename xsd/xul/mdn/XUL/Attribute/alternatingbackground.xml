@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="alternatingbackground"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("alternatingbackground")</span> <span class="script">obsolete_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, the background of the <span class="script">XULElem("tree")</span>'s rows will alternate between two colors. You can use the <span class="script">cssxref(":-moz-tree-row")</span> CSS style to do this instead.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/alternatingbackground", "pl": "pl/XUL/Atrybut/alternatingbackground" } ) </span></p>
+</div></body></content>

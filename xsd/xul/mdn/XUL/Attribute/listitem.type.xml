@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="listitem.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("listitem.type", "type")</span> </dt><dd> Type: <em>string</em> </dd><dd> You can make an item in a <span class="script">template.XULElem("listbox")</span> a checkbox by setting this attribute to the value <code>checkbox</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/listitem.type", "pl": "pl/XUL/Atrybut/listitem.type" } ) </span></p>
+</div></body></content>

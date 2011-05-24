@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="style"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("style")</span> </dt><dd> Type: <em>CSS inline style</em> </dd><dd> CSS style rules to be applied to the element. Syntax is as in the HTML style attribute. It is preferred to put style rules in style sheets. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/style", "ja": "ja/XUL/Attribute/style" } ) </span></p>
+</div></body></content>

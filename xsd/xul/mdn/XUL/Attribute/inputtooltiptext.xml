@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="inputtooltiptext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("inputtooltiptext")</span> </dt><dd> Type: <em>string</em> </dd><dd> The tooltip text for the textbox. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/inputtooltiptext", "pl": "pl/XUL/Atrybut/inputtooltiptext" } ) </span></p>
+</div></body></content>

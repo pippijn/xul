@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="isWaiting"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("isWaiting")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This property is set to <code>true</code> during the period while waiting for the timeout between the time when a user has pressed a key and a search is performed. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/isWaiting" } ) </span></p>
+</div></body></content>

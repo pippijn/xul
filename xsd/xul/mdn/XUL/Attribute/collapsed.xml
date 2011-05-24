@@ -1,0 +1,10 @@
+<content type="application/x.deki0805+xml" title="collapsed"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("collapsed")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, then the element is collapsed and does not appear. It is equivalent to setting the CSS <a title="en/CSS/visibility" href="/en/CSS/visibility">visibility</a> property to <code>collapse</code>.</dd>
+</dl>
+<div class="noinclude">
+<h2>See also</h2>
+<ul> <li><a title="en/XUL/Attribute/hidden" class="internal" href="/en/XUL/Attribute/hidden">hidden</a></li>
+</ul>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/collapsed", "ja": "ja/XUL/Attribute/collapsed" } ) </span></p>
+</div></body></content>

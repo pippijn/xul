@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="accessible"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("accessible")</span></dt> <dd>Type: <em><span class="script">interface("nsIAccessible")</span></em></dd> <dd>Returns the accessibility object for the element.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/accessible", "ja": "ja/XUL/Property/accessible" } ) </span></p>
+</div></body></content>

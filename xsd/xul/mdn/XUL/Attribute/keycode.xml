@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="keycode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("keycode")</span></dt> <dd>Type: <em>string key code</em></dd> <dd>For keys that do not have displayable characters, such as the Enter key or function keys, use this attribute instead of the <span class="script">template.XULAttr("key")</span> attribute. Valid keys are listed at <a title="en/XUL Tutorial/Keyboard Shortcuts" class="internal" href="/en/XUL_Tutorial/Keyboard_Shortcuts">Keyboard Shortcuts</a>.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/keycode", "pl": "pl/XUL/Atrybut/keycode" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,57 @@
+<content type="application/x.deki0805+xml" title="resizer"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>An element used for window resizing. If you place a custom resizing button inside the resizer, the user will be able to resize the window by dragging it. The resizer will send a command event after the resize is complete.</p>
+<div class="geckoVersionNote">
+<p><span class="script">gecko_callout_heading("2.0")</span></p>
+<p>Starting in <span class="script">gecko("2.0")</span>, you can also specify a target element using the <code>element</code> attribute, to use the <code>resizer</code> to resize the specified element instead of the window.</p>
+</div>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "resizer.dir", "dir")</span>, <span class="script">PrefAnch("a-", "resizer.element", "element")</span>, <span class="script">PrefAnch("a-", "resizer.type", "type")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<h4>Resizing a window</h4>
+<pre class="eval">
+&lt;window xmlns="<a rel="freelink" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class=" external">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"
+	hidechrome="true"
+	windowtype="main"
+	orient="vertical"
+	sizemode="normal"
+	width="400" height="300"
+	persist="screenX screenY width height"&gt;
+	&lt;hbox flex="1"&gt;
+		&lt;vbox width="2" style="background-color: grey;"&gt;
+			&lt;resizer dir="topleft" height="2" style="cursor: nw-resize;"/&gt;
+			&lt;resizer dir="left" flex="1" style="cursor: w-resize;"/&gt;
+			&lt;resizer dir="bottomleft" height="2" style="cursor: sw-resize;"/&gt;
+		&lt;/vbox&gt;
+		&lt;vbox flex="1"&gt;
+			&lt;resizer dir="top" height="2" style="background-color: grey; cursor: n-resize;"/&gt;
+			&lt;browser flex="1" id="browser" type="content-primary"/&gt;
+			&lt;resizer dir="bottom" height="2" style="background-color: grey; cursor: s-resize;"/&gt;
+		&lt;/vbox&gt;
+		&lt;vbox width="2" style="background-color: grey; overflow: hidden;"&gt;
+			&lt;resizer dir="topright" height="2" style="cursor: ne-resize;"/&gt;
+			&lt;resizer dir="right" flex="1" style="cursor: e-resize;"/&gt;
+			&lt;resizer dir="bottomright" height="2" style="cursor: se-resize;"/&gt;
+		&lt;/vbox&gt;
+	&lt;/hbox&gt;
+&lt;/window&gt;
+</pre>
+<h4>Resizing an element</h4>
+<pre>
+&lt;<span class="start-tag">stack</span><span class="attribute-name"> style</span>=<span class="attribute-value">"border: 1px solid black;"</span>&gt;
+  &lt;<span class="start-tag">button</span><span class="attribute-name"> id</span>=<span class="attribute-value">"button" </span><span class="attribute-name">label</span>=<span class="attribute-value">"Resizable" </span><span class="attribute-name">left</span>=<span class="attribute-value">"18" </span><span class="attribute-name">top</span>=<span class="attribute-value">"18" </span><span class="attribute-name">right</span>=<span class="attribute-value">"18" </span><span class="attribute-name">bottom</span>=<span class="attribute-value">"18"</span><span class="attribute-name">/</span>&gt;
+  &lt;<span class="start-tag">resizer</span><span class="attribute-name"> dir</span>=<span class="attribute-value">"topleft" </span><span class="attribute-name">style</span>=<span class="attribute-value">"background: black; -moz-appearance: none;"<br />           </span><span class="attribute-name">element</span>=<span class="attribute-value">"button" </span><span class="attribute-name">left</span>=<span class="attribute-value">"0" </span><span class="attribute-name">top</span>=<span class="attribute-value">"0" </span><span class="attribute-name">width</span>=<span class="attribute-value">"16" </span><span class="attribute-name">height</span>=<span class="attribute-value">"16"</span><span class="attribute-name">/</span>&gt;
+  &lt;<span class="start-tag">resizer</span><span class="attribute-name"> dir</span>=<span class="attribute-value">"topright" </span><span class="attribute-name">style</span>=<span class="attribute-value">"background: black; -moz-appearance: none;"<br />           </span><span class="attribute-name">element</span>=<span class="attribute-value">"button" </span><span class="attribute-name">right</span>=<span class="attribute-value">"0" </span><span class="attribute-name">top</span>=<span class="attribute-value">"0" </span><span class="attribute-name">width</span>=<span class="attribute-value">"16" </span><span class="attribute-name">height</span>=<span class="attribute-value">"16"</span><span class="attribute-name">/</span>&gt;
+  &lt;<span class="start-tag">resizer</span><span class="attribute-name"> dir</span>=<span class="attribute-value">"bottomleft" </span><span class="attribute-name">style</span>=<span class="attribute-value">"background: black; -moz-appearance: none;"<br />           </span><span class="attribute-name">element</span>=<span class="attribute-value">"button" </span><span class="attribute-name">left</span>=<span class="attribute-value">"0" </span><span class="attribute-name">bottom</span>=<span class="attribute-value">"0" </span><span class="attribute-name">width</span>=<span class="attribute-value">"16" </span><span class="attribute-name">height</span>=<span class="attribute-value">"16"</span><span class="attribute-name">/</span>&gt;
+  &lt;<span class="start-tag">resizer</span><span class="attribute-name"> dir</span>=<span class="attribute-value">"bottomright" </span><span class="attribute-name">style</span>=<span class="attribute-value">"background: black; -moz-appearance: none;"<br />           </span><span class="attribute-name">element</span>=<span class="attribute-value">"button" </span><span class="attribute-name">right</span>=<span class="attribute-value">"0" </span><span class="attribute-name">bottom</span>=<span class="attribute-value">"0" </span><span class="attribute-name">width</span>=<span class="attribute-value">"16" </span><span class="attribute-name">height</span>=<span class="attribute-value">"16"</span><span class="attribute-name">/</span>&gt;
+&lt;/<span class="end-tag">stack</span>&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInc("resizer.dir")</span> <span class="script">xulattrinc("resizer.element")</span> <span class="script">xulattrinc("resizer.type")</span> <span class="script">XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<p>TBD</p>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/resizer", "pl": "pl/XUL/resizer" } ) </span></p></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="clearSelection"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("clearSelection", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Deselects all of the items.  A select event is sent before the items are deselected. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/clearSelection", "pl": "pl/XUL/Metoda/clearSelection" } ) </span></p>
+</div></body></content>

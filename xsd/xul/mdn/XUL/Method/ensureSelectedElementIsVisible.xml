@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="ensureSelectedElementIsVisible"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("ensureSelectedElementIsVisible", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If the currently selected element in the list box is not currently visible to the user, the list box view is scrolled so that it is. If the item is already visible, no scrolling occurs. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/ensureSelectedElementIsVisible", "pl": "pl/XUL/Metoda/ensureSelectedElementIsVisible" } ) </span></p>
+</div></body></content>

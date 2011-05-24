@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="keytext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("keytext")</span> </dt><dd> Type: <em>string</em> </dd><dd> A label for the keyboard shortcut. This text would appear next to a <span class="script">template.XULElem("menuitem")</span> label if that <span class="script">template.XULElem("menuitem")</span> is associated with the <span class="script">template.XULElem("key")</span> element via its <span class="script">template.XULAttr("key")</span> attribute. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/keytext", "pl": "pl/XUL/Atrybut/keytext" } ) </span></p>
+</div></body></content>

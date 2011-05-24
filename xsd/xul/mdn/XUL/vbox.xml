@@ -1,0 +1,30 @@
+<content type="application/x.deki0805+xml" title="vbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A container element which can contain any number of child elements. This is equivalent to the <code><span class="script">template.XULElem("box")</span></code> element, except it defaults to vertical orientation.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/The_Box_Model">XUL tutorial</a>.
+</p>
+<h3 name="Example"> Example </h3>
+<pre>
+&lt;!-- Two labels at bottom --&gt;
+&lt;vbox&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;label value="One"/&gt;
+  &lt;label value="Two"/&gt;
+&lt;/vbox&gt;
+</pre>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<dl><dt> Elements
+</dt><dd> <span class="script">template.XULElem("box")</span>, <span class="script">template.XULElem("hbox")</span>
+</dd></dl>
+<p><br />
+</p>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "de": "de/XUL/vbox", "fr": "fr/XUL/vbox", "ja": "ja/XUL/vbox", "pl": "pl/XUL/vbox" } ) </span></body></content>

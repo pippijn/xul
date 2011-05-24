@@ -1,0 +1,9 @@
+<content type="application/x.deki0805+xml" title="builder"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("builder")</span></dt> <dd>Type: <em><span class="script">interface("nsIXULTemplateBuilder")</span></em></dd> <dd>For content generated from a template, this is the <a title="en/XPCOM" href="/en/XPCOM">XPCOM</a> object that is responsible for generating the content. For scripts it is only necessary in case you want to force the template content to be regenerated. You may need to do this if you have adjusted the rules manually. To rebuild the content call the builder's <code>rebuild</code> method.</dd>
+</dl>
+<dl> <dd>For example, given a reference to a tree <code>myTree</code>, this example will rebuild its content: <code>myTree.builder.rebuild();</code></dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/builder", "ja": "ja/XUL/Property/builder" } ) </span></p>
+</div></body></content>

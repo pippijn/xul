@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="reloadWithFlags"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("reloadWithFlags", "( flags )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Reloads the document in the browser with the given load flags. The flags listed below may be used, which are all constants of the <span class="script">XULProp("webNavigation")</span> property (or the <span class="script">interface("nsIWebNavigation")</span> interface). You may combine flags using a or symbol ( <code>|</code> ). <ul> <li><code>LOAD_FLAGS_NONE</code>: No special flags. The document is loaded normally.</li> <li><code>LOAD_FLAGS_BYPASS_CACHE</code>: Reload the page, ignoring if it is already in the cache. This is the flag used when the reload button is pressed while the Shift key is held down.</li> <li><code>LOAD_FLAGS_BYPASS_PROXY</code>: Reload the page, ignoring the proxy server.</li> <li><code>LOAD_FLAGS_CHARSET_CHANGE</code>: This flag is used if the document needs to be reloaded because the character set changed.</li> </ul> </dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/reloadWithFlags", "pl": "pl/XUL/Metoda/reloadWithFlags" } ) </span></p>
+</div></body></content>

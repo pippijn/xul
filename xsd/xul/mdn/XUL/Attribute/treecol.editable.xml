@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="treecol.editable"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("treecol.editable", "editable")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Allows the contents of cells in the column to be changed, especially useful when <code>type="checkbox"</code>. When the user double-clicks an editable cell, a text field appears in which the user can edit the contents of the cell. </dd></dl> <dl><dd> The <span class="script">template.XULElem("tree")</span> must also be <strong>marked as editable</strong> in order for this to work. Individual <span class="script">template.XULElem("treecell")</span> elements in the column may be marked <code>editable="false"</code> in order to disable editing. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/treecol.editable" } ) </span></p>
+</div></body></content>

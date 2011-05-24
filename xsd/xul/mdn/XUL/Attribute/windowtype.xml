@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="windowtype"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("windowtype")</span> </dt><dd> Type: <em>string</em> </dd><dd> Set to a string which can be used to identify the type of window. This might be used, for example, to distinguish between a browser window and an editor window. Some of Mozilla's window handling functions use this attribute to group windows of the same type together. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/windowtype", "ja": "ja/XUL/Attribute/windowtype", "pl": "pl/XUL/Atrybut/windowtype" } ) </span></p>
+</div></body></content>

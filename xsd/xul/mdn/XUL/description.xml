@@ -1,0 +1,34 @@
+<content type="application/x.deki0805+xml" title="description"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>This element is used to create a block of text. The text can be set either with the <span class="script">template.XULAttr("value")</span> attribute or by placing text inside the open and close <code>description</code> tags. The <span class="script">template.XULAttr("value")</span> attribute is used to set text that appears in a single line. If text appears as a child of the description, it will wrap to multiple lines. It may contain arbitrary markup, which can be styled as needed.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Adding_Labels_and_Images" href="/en/XUL_Tutorial/Adding_Labels_and_Images">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "crop")</span>, <span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "tabindex")</span> <span class="script">template.PrefAnch("a-", "value")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessibleType")</span>, <span class="script">template.PrefAnch("p-", "crop")</span>, <span class="script">template.PrefAnch("p-", "disabled")</span>, <span class="script">template.PrefAnch("p-", "tabIndex")</span>, <span class="script">template.PrefAnch("p-", "value")</span></dd>
+</dl>
+<dl> <dt>Style classes</dt> <dd><span class="script">template.PrefAnch("s-", "header")</span>, <span class="script">template.PrefAnch("s-", "indent")</span>, <span class="script">template.PrefAnch("s-", "monospace")</span>, <span class="script">template.PrefAnch("s-", "plain")</span>, <span class="script">template.PrefAnch("s-", "small-margin")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<h4>This is a long section of text that will word wrap when displayed</h4>
+<pre>
+&lt;description&gt; This is a long section of text that will word wrap when displayed. &lt;/description&gt;</pre>
+<h4>This is a long section of text that will not word wrap</h4>
+<pre>
+&lt;description value="This is a long section of text that will not word wrap"&gt; &lt;/description&gt;
+</pre>
+<h4>This is a long section of dynamically controlled text that will word wrap</h4>
+<pre>
+&lt;description id="desc" style="width: 300px"&gt;&lt;/description&gt;
+document.getElementById('desc').textContent = "This is a long section of dynamic message text that will word wrap";
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("crop")</span> <span class="script">template.XULAttrInc("disabled")</span> <span class="script">template.XULAttrInc("tabindex")</span> <span class="script">template.XULAttrInc("value")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("accessibleType")</span> <span class="script">template.XULPropInc("crop")</span> <span class="script">template.XULPropInc("disabled")</span> <span class="script">template.XULPropInc("tabIndex")</span> <span class="script">template.XULPropInc("value")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Style_classes">Style classes</h3>
+<p><span class="script">template.XULStyleInc("header")</span> <span class="script">template.XULStyleInc("indent")</span> <span class="script">template.XULStyleInc("monospace")</span> <span class="script">template.XULStyleInc("plain")</span> <span class="script">template.XULStyleInc("small-margin")</span></p>
+<h3 name="Related">Related</h3>
+<p><a title="en/XUL/label" class="internal" href="/en/XUL/label">label </a></p>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/description", "ja": "ja/XUL/description", "pl": "pl/XUL/description" } ) </span></p></body></content>

@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="contentPrincipal"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("contentPrincipal")</span></dt> <dd>Type: <em><span class="script">interface("nsIPrincipal")</span></em></dd> <dd>This read-only property contains the principal for the content loaded in the browser, which provides security context information.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/contentPrincipal" } ) </span></p>
+</div></body></content>

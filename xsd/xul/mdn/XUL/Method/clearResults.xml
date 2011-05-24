@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="clearResults"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("clearResults", "()")</span> </dt><dd> Return type: <em>???</em> </dd><dd> Clears the results list. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/clearResults", "pl": "pl/XUL/Metoda/clearResults" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="preference-editable"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("preference-editable")</span></dt> <dd><strong><span class="highlightgreen">Mozilla 1.8</span></strong></dd> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, the element may be used as one that modifies a preference in a <span class="script">template.XULElem("prefwindow")</span>. The <span class="script">template.XULAttr("preference")</span> attribute may be used to connect to a <span class="script">template.XULElem("preference")</span> element. This is useful for custom elements implemented in XBL. The element should fire <code>change</code>, <code>command</code>, or <code>input</code> event when the value is changed so that the preference will update accordingly. <br /> <br /> See the <a title="en/Preferences System/New attributes" href="/en/Preferences_System/New_attributes">pref system documentation</a> for more information.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/preference-editable", "ja": "ja/XUL/Attribute/preference-editable" } ) </span></p>
+</div>
+</body></content>

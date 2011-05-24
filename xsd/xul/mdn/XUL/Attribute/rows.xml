@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="rows"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("rows")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The number of rows to display in the element. If the element contains more than this number of rows, a scrollbar will appear which the user can use to scroll to the other rows. To get the actual number of rows in the element, use the <span class="script">template.XULMeth("getRowCount")</span> method. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/rows", "ja": "ja/XUL/Attribute/rows" } ) </span></p>
+</div></body></content>

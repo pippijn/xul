@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="tabindex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("tabindex")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The tab order of the element. The tab order is the order in which the focus is moved when the user presses the "<code>tab</code>" key. Elements with a higher <code>tabindex</code> are later in the tab sequence. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/tabindex", "ja": "ja/XUL/Attribute/tabindex", "pl": "pl/XUL/Atrybut/tabindex" } ) </span></p>
+</div></body></content>

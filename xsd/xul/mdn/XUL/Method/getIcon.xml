@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="getIcon"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("getIcon", "( aTab )")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Return type: <em>string</em></dd> <dd>Returns the URL of the specified tab's favicon. If <code>aTab</code> is null, the current tab's icon is returned. See <span class="script">XULMeth2("setIcon")</span> to set the icon.</dd>
+</dl></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="currentNotification"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("currentNotification")</span> </dt><dd> Type: <em>notification element</em> </dd><dd> The currently displayed <span class="script">template.XULElem("notification")</span> element or null. This property is read-only. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/currentNotification" } ) </span></p>
+</div></body></content>

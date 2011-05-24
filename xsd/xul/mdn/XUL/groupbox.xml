@@ -1,0 +1,28 @@
+<content type="application/x.deki0805+xml" title="groupbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>The <code>groupbox</code> is used to group related elements together. If a <span class="script">template.XULElem("caption")</span> element is placed inside the <code>groupbox</code>, it will be used as a caption which appears along the top of the <code>groupbox</code>. Typically, the <code>groupbox</code> will be drawn with a border around it and the caption either above or over the top border, however the actual appearance will be platform specific. On Linux, for instance, only the caption appears with no border around the group.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Groupboxes" href="/en/XUL_Tutorial/Groupboxes">XUL tutorial</a>.</p>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessibleType")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<div class="float-right"><img src="/@api/deki/files/459/=XUL_ref_groupbox.png" alt="Image:XUL_ref_groupbox.png" class=" internal" /></div>
+<pre>
+&lt;groupbox&gt;
+  &lt;caption label="Settings"/&gt;
+  &lt;radiogroup&gt;
+    &lt;radio label="Black and white"/&gt;
+    &lt;radio label="Colour"/&gt;
+  &lt;/radiogroup&gt;
+  &lt;checkbox label="Enabled"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInc("accessibleType")</span> <span class="script">template.XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/groupbox", "pl": "pl/XUL/groupbox" } ) </span></p></body></content>

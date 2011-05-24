@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="pickertooltiptext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("pickertooltiptext")</span> </dt><dd> Type: <em>string</em> </dd><dd> The text for the tooltip on the column picker. </dd></dl>
+<p> </p>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/pickertooltiptext", "pl": "pl/XUL/Atrybut/pickertooltiptext" } ) </span></p>
+</div></body></content>

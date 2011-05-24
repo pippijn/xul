@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="cols"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("cols")</span></dt> <dd>Type: <em>integer</em></dd> <dd>For multiline textboxes, the number of columns to display.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/cols", "ja": "ja/XUL/Attribute/cols" } ) </span></p>
+</div></body></content>

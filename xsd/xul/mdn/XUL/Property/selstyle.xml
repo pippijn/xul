@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selstyle"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("selstyle")</span> </dt><dd> Type: <em>string</em> </dd><dd> If set to the value <code>primary</code>, only the label of the primary column will be highlighted when an item in the tree is selected. Otherwise, the entire row will be highlighted. To see the difference, compare the selection style in the folder list and the message list in Mozilla mail. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selstyle", "pl": "pl/XUL/W\u0142asno\u015b\u0107/selstyle" } ) </span></p>
+</div></body></content>

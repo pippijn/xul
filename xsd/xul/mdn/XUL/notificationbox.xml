@@ -1,0 +1,44 @@
+<content type="application/x.deki0805+xml" title="notificationbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>The <span class="script">template.XULElem("notificationbox")</span> element is used to display notifications above an element. Typically the element will be a browser, but any element may be used. The <span class="script">template.XULElem("notification")</span> element is used for each notification, and will be created automatically for each item. Each notification will slide in and out as needed. This element is used, for example, to implement the yellow information bar in various Firefox windows.</p>
+<p><img class="internal default" alt="notificationbox2.png" src="/@api/deki/files/4114/=notificationbox2.png" /></p>
+<p>The notification box is a vertical box which may have children. The notifications appear at the top of the box. The notifications may be placed at the bottom by setting the <span class="script">template.XULAttr("dir")</span> attribute to <code>reverse</code>.</p>
+<h2>Finding the current notification box</h2>
+<p>Within a Firefox extension, you can retrieve the current notification box for a specific tab by calling the global function <code><a title="en/XUL/Method/getNotificationBox" href="/en/XUL/Method/getNotificationBox">getNotificationBox</a>()</code>:</p>
+<pre>
+notifyBox = chromeWin.getNotificationBox(notifyWindow)
+notifyBox = getNotificationBox(notifyWindow) // applies to current context's window object
+</pre>
+<p>Here, <code>chromeWin</code> is the XUL window (usually just <code>window</code>), and <code>notifyWindow</code> is the web content window for the tab you want to find the notification box for.</p>
+<p>Also it is possible to call function with the same name (they are different) of global object <code>gBrowser</code>:</p>
+<pre>
+notifyBox = gBrowser.getNotificationBox()</pre>
+<h2>Examples</h2>
+<pre>
+&lt;notificationbox flex="1"&gt;
+  &lt;browser src="http://www.mozilla.org"/&gt;
+&lt;/notificationbox&gt;
+</pre>
+<p>There is a <a title="https://developer.mozilla.org/en/Code_snippets/Alerts_and_Notifications#Using_notification_box" href="/en/Code_snippets/Alerts_and_Notifications#Using_notification_box">more complex code</a> available in the Code Snippets area. </p>
+<p> </p>
+<p>
+ </p><dt>Properties</dt>
+
+<dl> <dd><span class="script">template.PrefAnch("p-", "currentNotification")</span>, <span class="script">template.PrefAnch("p-", "allNotifications")</span>, <span class="script">template.PrefAnch("p-", "notificationsHidden")</span></dd>
+</dl>
+<p> </p>
+<dl> <dt>Methods</dt> <dd><span class="script">template.PrefAnch("m-", "appendNotification")</span>, <span class="script">template.PrefAnch("m-", "getNotificationWithValue")</span>, <span class="script">template.PrefAnch("m-", "removeAllNotifications")</span>, <span class="script">template.PrefAnch("m-", "removeCurrentNotification")</span>, <span class="script">template.PrefAnch("m-", "removeNotification")</span>, <span class="script">template.PrefAnch("m-", "removeTransientNotifications")</span>,</dd>
+</dl>
+<h3>Attributes</h3>
+<p><span class="script">template.XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInc("currentNotification")</span> <span class="script">template.XULPropInc("allNotifications")</span> <span class="script">template.XULPropInc("notificationsHidden")</span></p>
+<h3>Events</h3>
+<dl> <dt>AlertActive</dt> <dd>Type: <em>Event</em></dd> <dd>Fired when a <span class="script">template.XULElem("notification")</span> element is shown.</dd> <dt>AlertClose <span class="script">template.mb_minversion_inline(2)</span></dt> <dd>Type: <em>Event</em></dd> <dd>Fired when a <span class="script">template.XULElem("notification")</span> element is closed.</dd>
+</dl>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInherited()</span> <span class="script">template.XULMethInc("appendNotification")</span> <span class="script">template.XULMethInc("getNotificationWithValue")</span> <span class="script">template.XULMethInc("removeAllNotifications")</span> <span class="script">template.XULMethInc("removeCurrentNotification")</span> <span class="script">template.XULMethInc("removeNotification")</span> <span class="script">template.XULMethInc("removeTransientNotifications")</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">template.XULElem("notification")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/notificationbox", "pl": "pl/XUL/notificationbox" } ) </span></p></body></content>

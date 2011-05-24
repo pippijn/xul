@@ -1,0 +1,12 @@
+<content type="application/x.deki0805+xml" title="orient"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("orient")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Used to specify whether the children of the element are oriented horizontally or vertically. The default value depends on the element. You can also use the <span class="script">cssxref("-moz-box-orient")</span> style property. <ul> <li><code>horizontal</code>: Child elements of the element are placed next to each other in a row in the order that they appear in the XUL source.</li> <li><code>vertical</code>: Child elements of the element are placed under each other in a column in the order that they appear in the XUL source.</li> </ul> </dd>
+</dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><span class="script">XULAttr("separator.orient")</span></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/orient", "ja": "ja/XUL/Attribute/orient", "pl": "pl/XUL/Atrybut/orient" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectedPanel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("selectedPanel")</span> </dt><dd> Type: <em>element</em> </dd><dd> Holds a reference to the currently selected panel within a <code>&lt;tabbox&gt;</code> element. Assigning a value to this property will modify the selected panel. A select event will be sent when the selected panel is changed. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selectedPanel" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,35 @@
+<content type="application/x.deki0805+xml" title="dialogheader"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A heading row for a dialog box. This element should be placed inside a <span class="script">template.XULElem("dialog")</span> element. The header may have a title and a description.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "crop")</span>, <span class="script">template.PrefAnch("a-", "description")</span>, <span class="script">template.PrefAnch("a-", "title")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<div class="float-right"><img src="File:en/Media_Gallery/XUL_ref_dialogheader.png" alt="Image:XUL_ref_dialogheader.png" fileid="456" /></div>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+&lt;dialog id="donothing" title="Dialog example"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+    
+    &lt;dialogheader title="My dialog" description="Example dialog"/&gt;
+    &lt;!-- Other widgets --&gt;
+
+&lt;/dialog&gt;
+</pre>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInherited()</span>
+<span class="script">template.XULAttrInc("crop")</span>
+<span class="script">template.XULAttrInc("description")</span>
+<span class="script">template.XULAttrInc("title")</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<dl><dt> Elements
+</dt><dd> <span class="script">template.XULElem("dialog")</span>, <span class="script">template.XULElem("window")</span>
+</dd></dl>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/dialogheader", "pl": "pl/XUL/dialogheader" } ) </span></body></content>

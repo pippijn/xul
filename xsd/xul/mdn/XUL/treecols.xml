@@ -1,0 +1,20 @@
+<content type="application/x.deki0805+xml" title="treecols"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>A group of <span class="script">XULElem("treecol")</span> elements. There should one and only one <span class="script">XULElem("treecols")</span> element in a <span class="script">XULElem("tree")</span>.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Trees" href="/en/XUL_Tutorial/Trees">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "pickertooltiptext")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "accessibleType")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInc("pickertooltiptext")</span> <span class="script">XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInc("accessibleType")</span> <span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">XULElem("tree")</span>, <span class="script">XULElem("treecol")</span>, <span class="script">XULElem("treechildren")</span>, <span class="script">XULElem("treeitem")</span>, <span class="script">XULElem("treerow")</span>, <span class="script">XULElem("treecell")</span> and <span class="script">XULElem("treeseparator")</span>.</dd> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/treecols", "ja": "ja/XUL/treecols", "pl": "pl/XUL/treecols" } ) </span></p></body></content>

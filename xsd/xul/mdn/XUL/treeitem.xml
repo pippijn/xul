@@ -1,0 +1,19 @@
+<content type="application/x.deki0805+xml" title="treeitem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>A <code>treeitem</code> should be placed inside a <span class="script">XULElem("treechildren")</span> element and should contain <span class="script">XULElem("treerow")</span> elements. The <code>treeitem</code> can be clicked by the user to select the row of the tree. The <code>treeitem</code> contains a single row and all of what appear to the user as that row's descendants.</p>
+<p>In a template condition, you should use a <code>treeitem</code> instead of a <span class="script">XULElem("content")</span> element when the <code>dont-build-content</code> flag is specified. Set the <span class="script">XULAttr("uri")</span> attribute to the variable name to bind to a content node during matching.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Trees" href="/en/XUL_Tutorial/Trees">XUL tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "container")</span>, <span class="script">PrefAnch("a-", "empty")</span>, <span class="script">PrefAnch("a-", "treeitem.label", "label")</span>, <span class="script">PrefAnch("a-", "open")</span>, <span class="script">PrefAnch("a-", "uri")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInherited()</span> <span class="script">XULAttrInc("container")</span> <span class="script">XULAttrInc("empty")</span> <span class="script">XULAttrInc("treeitem.label")</span> <span class="script">XULAttrInc("open")</span> <span class="script">XULAttrInc("uri")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">XULElem("tree")</span>, <span class="script">XULElem("treecols")</span>, <span class="script">XULElem("treecol")</span>, <span class="script">XULElem("treechildren")</span>, <span class="script">XULElem("treerow")</span>, <span class="script">XULElem("treecell")</span> and <span class="script">XULElem("treeseparator")</span>.</dd>
+</dl>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/treeitem", "ja": "ja/XUL/treeitem", "pl": "pl/XUL/treeitem" } ) </span></p></body></content>

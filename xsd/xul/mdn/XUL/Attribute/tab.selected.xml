@@ -1,0 +1,11 @@
+<content type="application/x.deki0805+xml" title="tab.selected"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("tab.selected", "selected")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This attribute is set to <code>true</code> if the tab is selected by default. </dd></dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<ul> <li><a title="en/XUL/Attribute/selected" href="/en/XUL/Attribute/selected">selected</a></li>
+</ul>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/tab.selected" } ) </span></p>
+</div></body></content>

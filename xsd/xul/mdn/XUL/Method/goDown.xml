@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="goDown"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("goDown", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Move the selection down by one item. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/goDown" } ) </span></p>
+</div></body></content>

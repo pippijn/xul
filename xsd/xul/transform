@@ -1,0 +1,39 @@
+#!/usr/bin/env perl
+
+use common::sense;
+use autodie 'system';
+
+use constant VALIDATE => 1;
+
+my $XSL = $ARGV[0] or die;
+my $XML = $ARGV[1] or die;
+my $OUT = $ARGV[2] or die;
+my $XSLTPROC = "xsltproc -o $OUT $XSL $XML";
+
+my $XSD = "xsd/" . ($XSL =~ m|(\w+)-info\.xsl|)[0] . ".xsd";
+
+print "  ATTR  $OUT\n"
+   unless VALIDATE;
+
+$SIG{__DIE__} = sub {
+   unlink $OUT;
+   print "https://developer.mozilla.org/en/", ($XML =~ m|mdn/(.+)|), "\n";
+   exit 1
+};
+
+sub remake {
+   #$XSL 
+   #system 'echo "make -B $(patsubst mdn/%,%,$(lastword $+))" | xclip -i';
+}
+
+
+my $msg = `$XSLTPROC 2>&1`;
+if (length $msg) {
+   print "$msg\n";
+   remake;
+   die $XSLTPROC;
+}
+
+system qw/tidy -config .tidyrc -m/, $OUT;
+system qw/xmllint --noout --schema/, $XSD, $OUT
+   if VALIDATE;

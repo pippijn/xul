@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="getNumberOfVisibleRows"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("getNumberOfVisibleRows", "()")</span> </dt><dd> Return type: <em>integer</em> </dd><dd> Returns the number of rows that are currently visible to the user. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getNumberOfVisibleRows", "pl": "pl/XUL/Metoda/getNumberOfVisibleRows" } ) </span></p>
+</div></body></content>

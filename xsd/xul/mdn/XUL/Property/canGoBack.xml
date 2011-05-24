@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="canGoBack"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("canGoBack")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This read-only property is <code>true</code> if there is a page to go back to in the session history and the Back button should be enabled. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/canGoBack", "pl": "pl/XUL/W\u0142asno\u015b\u0107/canGoBack" } ) </span></p>
+</div></body></content>

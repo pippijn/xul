@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="database"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("database")</span></dt> <dd>Type: <em><span class="script">interface("nsIRDFCompositeDataSource")</span></em></dd> <dd>Returns the composite datasource created when all the datasources of an element are combined. Set to <code>null</code> for elements that do not have a <span class="script">XULAttr("datasources")</span> attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/database", "ja": "ja/XUL/Property/database" } ) </span></p>
+</div></body></content>

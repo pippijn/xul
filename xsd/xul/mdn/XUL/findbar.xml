@@ -1,0 +1,20 @@
+<content type="application/x.deki0805+xml" title="findbar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p><span class="script">template.gecko_minversion_header(1.9)</span></p>
+<p>In Gecko 1.9, the findbar widget moved into toolkit, so it's available to any XUL application, as well as extensions.</p>
+<p>For example, the standard findbar in Firefox 3.5 looks like this on the Mac:</p>
+<p><img src="/@api/deki/files/3244/=findbar.png" style="width: 589px; height: 30px;" alt="findbar.png" class="internal default" /></p>
+<p>You may attach a findbar to a particular browser element by either setting the findbar's <span class="script">template.PrefAnch("a-", "browserid")</span> attribute to the ID of the browser element before the findbar element is bound, or by setting the findbar's <span class="script">template.PrefAnch("p-", "browser")</span> property to the browser element itself.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "browserid")</span>, <span class="script">template.PrefAnch("a-", "findnextaccesskey")</span>, <span class="script">template.PrefAnch("a-", "findpreviousaccesskey")</span>, <span class="script">template.PrefAnch("a-", "highlightaccesskey")</span>, <span class="script">template.PrefAnch("a-", "matchcaseaccesskey")</span></dd> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "browser")</span>, <span class="script">template.PrefAnch("p-", "findMode")</span></dd> <dt>Methods</dt> <dd><span class="script">template.PrefAnch("m-", "close")</span>, <span class="script">template.PrefAnch("m-", "onFindAgainCommand")</span>, <span class="script">template.PrefAnch("m-", "open")</span>, <span class="script">template.PrefAnch("m-", "startFind")</span>, <span class="script">template.PrefAnch("m-", "toggleHighlight")</span></dd>
+</dl>
+<h3>Example</h3>
+<pre>
+&lt;browser type="content-primary" flex="1" id="content" src="about:blank"/&gt;
+&lt;findbar id="FindToolbar" browserid="content"/&gt;
+</pre>
+<h3>Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("browserid")</span> <span class="script">template.XULAttrInc("findnextaccesskey")</span> <span class="script">template.XULAttrInc("findpreviousaccesskey")</span> <span class="script">template.XULAttrInc("highlightaccesskey")</span> <span class="script">template.XULAttrInc("matchcaseaccesskey")</span></p>
+<h3>Properties</h3>
+<p><span class="script">template.XULPropInheritedWide()</span> <span class="script">template.XULPropInc("browser")</span> <span class="script">template.XULPropInc("findMode")</span></p>
+<h3>Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span> <span class="script">template.XULMethInc("close")</span> <span class="script">template.XULMethInc("open")</span> <span class="script">template.XULMethInc("onFindAgainCommand")</span> <span class="script">template.XULMethInc("startFind")</span> <span class="script">template.XULMethInc("toggleHighlight")</span></p></body></content>

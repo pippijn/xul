@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onwizardcancel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onwizardcancel")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This should be set to code which is called when the user presses the Cancel button. Return <code>true</code> to allow the wizard to be cancelled, and close the wizard, or return <code>false</code> to prevent the wizard from being cancelled.<span class="comment">Use the <span class="script">XULProp|canCancel</span> property to indicate to the user (by disabling the Cancel button) that they cannot cancel.</span> </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onwizardcancel", "pl": "pl/XUL/Atrybut/onwizardcancel" } ) </span></p>
+</div></body></content>

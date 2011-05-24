@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="commandupdater"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("commandupdater")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the commandset is used for updating commands. Typically, this is used to update menu commands such as Undo and Cut based on when an event occurs. For example, since the Cut command is only valid when something is selected, a command updater might be used when the select event occurs. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/commandupdater" } ) </span></p>
+</div></body></content>

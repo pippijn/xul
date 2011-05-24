@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="open"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("open")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> For the <code>menu</code> <span class="script">template.XULAttr("type")</span> buttons, the <code>open</code> attribute is set to <code>true</code> when the menu is open. The <code>open</code> attribute is not present if the menu is closed. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/open", "ja": "ja/XUL/Attribute/open", "pl": "pl/XUL/Atrybut/open" } ) </span></p>
+</div></body></content>

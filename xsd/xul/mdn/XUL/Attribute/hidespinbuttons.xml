@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="hidespinbuttons"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("hidespinbuttons")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, the number box does not have arrow buttons next to it to allow the user to adjust the value. The value may still be adjusted with the keyboard. The default value is <code>false</code>.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/hidespinbuttons", "ja": "ja/XUL/Attribute/hidespinbuttons", "pl": "pl/XUL/Atrybut/hidespinbuttons" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="tabbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("tabbox")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em><span class="script">XULElem("tabbox")</span> element</em></dd> <dd>Returns the <span class="script">XULElem("tabbox")</span> element that contains the tabs.</dd>
+</dl></body></content>

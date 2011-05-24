@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="query.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("query.type", "type")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The type of the parameter's value </dd></dl>
+<ul> <li><code>integer</code>: 32 bit integer</li> <li><code>int64</code>: 64 bit integer</li> <li><code>double</code>: double-precision floating-point number</li> <li><code>string</code>: string literal, the default value</li>
+</ul>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/query.type", "pl": "pl/XUL/Atrybut/query.type" } ) </span></p>
+</div></body></content>

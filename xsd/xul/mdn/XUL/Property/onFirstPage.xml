@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onFirstPage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("onFirstPage")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This property is set to <code>true</code> if the user is on the first page, which may or may not be the first index. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/onFirstPage" } ) </span></p>
+</div></body></content>

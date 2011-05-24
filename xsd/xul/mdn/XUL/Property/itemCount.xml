@@ -1,0 +1,17 @@
+<content type="application/x.deki0805+xml" title="itemCount"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("itemCount")</span> <span class="script">Fx_minversion_inline(3)</span></dt> <dd>Type: <em>integer</em></dd> <dd>Read only property holding the number of child items.</dd>
+</dl>
+<div class="noinclude">
+<h2 name="Example">Example</h2>
+<pre>
+var bucket = document.getElementById("attachmentBucket");
+if(bucket.itemCount == 0){
+  dump("\n\n No attachments \n\n");
+}
+else{
+  dump("\n\n Attachment Exists \n\n");
+}
+</pre>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/itemCount" } ) </span></p>
+</div></body></content>

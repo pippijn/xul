@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="goForwardGroup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("goForwardGroup", "()")</span> </dt><dd> <strong><span class="highlightred">Not in Firefox</span></strong> </dd><dd> Return type: <em>no return value</em> </dd><dd> Go forward to the next group of tabs. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/goForwardGroup" } ) </span></p>
+</div></body></content>

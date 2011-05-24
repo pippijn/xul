@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="minResultsForPopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("minResultsForPopup")</span></dt> <dd>Type: <em>integer</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("minresultsforpopup")</span> (or <span class="script">template.XULAttr("textbox.minResultsForPopup", "minResultsForPopup")</span>) attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/minResultsForPopup" } ) </span></p>
+</div></body></content>

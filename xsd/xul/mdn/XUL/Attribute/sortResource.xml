@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="sortResource"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("sortResource")</span> </dt><dd> Type: <em>URI of an RDF predicate</em> </dd><dd> For template-generated content, this specifies the sort key, if you would like the content to be sorted. The key should be the full URI of the resource to sort by, for example '<code><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></code>'. Place this attribute on the same element as the <span class="script">template.XULAttr("datasources")</span> attribute. Use <span class="script">template.XULAttr("sortResource2")</span> to specify a secondary sort key. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/sortResource", "ja": "ja/XUL/Attribute/sortResource" } ) </span></p>
+</div></body></content>

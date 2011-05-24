@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onerrorcommand"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onerrorcommand")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event handler is called when an error occurs when selecting a result from the popup. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onerrorcommand" } ) </span></p>
+</div></body></content>

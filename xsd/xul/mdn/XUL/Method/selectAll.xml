@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="selectAll"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("selectAll", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Selects all of the items. A select event is sent after the selection is made. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/selectAll", "ja": "ja/XUL/Method/selectAll" } ) </span></p>
+</div></body></content>

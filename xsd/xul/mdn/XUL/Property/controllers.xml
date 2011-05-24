@@ -1,0 +1,41 @@
+<content type="application/x.deki0805+xml" title="controllers"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("controllers")</span></dt> <dd>Type: <em><span class="script">interface("nsIControllers")</span></em></dd> <dd>A controllers list attached to the element. The controllers are used to respond to commands. The document's command dispatcher will locate controllers to handle a command by using the focused element's list.</dd>
+</dl>
+<div class="noinclude">
+<h2 name="Example">Example</h2>
+<pre>
+&lt;window id="controller-example" title="Controller Example" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  var list = document.getElementById("theList");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+&lt;/script&gt;
+
+&lt;listbox id="theList"&gt;
+  &lt;listitem label="Ocean"/&gt;
+  &lt;listitem label="Desert"/&gt;
+  &lt;listitem label="Jungle"/&gt;
+  &lt;listitem label="Swamp"/&gt;
+&lt;/listbox&gt;
+
+&lt;/window&gt;</pre>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/controllers", "ja": "ja/XUL/Property/controllers" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="timepicker.increment"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("timepicker.increment", "increment")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Indicates the number of minutes to skip each time the arrows are pressed. This should be used in combination with setting <span class="script">template.XULAttr("hideseconds")</span> to <code>true</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/timepicker.increment", "ja": "ja/XUL/Attribute/timepicker.increment", "pl": "pl/XUL/Atrybut/timepicker.increment" } ) </span></p>
+</div></body></content>

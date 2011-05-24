@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="visibleTabs"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefProp()</span></div>
+<dl> <dt><span class="script">XULProp("visibleTabs")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>array</em></dd> <dd>An array containing <span class="script">xulelem("tab")</span> objects for each visible tab in the <span class="script">xulelem("tabbrowser")</span>. This lets you determine which tabs are visible in the current tab set.</dd>
+</dl></body></content>

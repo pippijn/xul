@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="coalesceduplicatearcs"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("coalesceduplicatearcs")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Valid on any element that has a <span class="script">template.XULAttr("datasources")</span> attribute. When multiple datasources are used, one may override an assertion from another. This attribute, if <code>true</code>, which is the default, allows a datasource to negate an earlier assertion. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/coalesceduplicatearcs", "ja": "ja/XUL/Attribute/coalesceduplicatearcs", "pl": "pl/XUL/Atrybut/coalesceduplicatearcs" } ) </span></p>
+</div></body></content>

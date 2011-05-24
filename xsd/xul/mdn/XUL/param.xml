@@ -1,0 +1,18 @@
+<content type="application/x.deki0805+xml" title="param"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><span class="script">template.Fx_minversion_header(3)</span><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>For SQL templates, used to bind values to parameters specified within an SQL statement. The value to bind should be text as a child of the param element.
+</p><p>For more information, see <a href="en/XUL/Template_Guide/SQLite_Templates#Query_Parameters">Query_Parameters</a>.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "index")</span>, <span class="script">template.PrefAnch("a-", "query.name", "name")</span>, <span class="script">template.PrefAnch("a-", "query.type", "type")</span>
+</dd></dl>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInherited()</span>
+<span class="script">template.XULAttrInc("index")</span>
+<span class="script">template.XULAttrInc("query.name")</span>
+<span class="script">template.XULAttrInc("query.type")</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/param", "pl": "pl/XUL/param" } ) </span></body></content>

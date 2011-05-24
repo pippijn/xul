@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="unpinTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl> <dt><span class="script">template.XULMeth2("unpinTab", "( tabElement )")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Unpins the specified <span class="script">XULElem("tab")</span> element, making it no longer an app tab.</dd>
+</dl></body></content>

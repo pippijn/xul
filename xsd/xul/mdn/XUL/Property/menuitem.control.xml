@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="menuitem.control"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("menuitem.control", "control")</span> </dt><dd> Type: <em><span class="script">template.XULElem("menu")</span> element</em> </dd><dd> Returns the enclosing <span class="script">template.XULElem("menu")</span> that the item is inside, if any, or <code>null</code> if there is no enclosing menu. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/menuitem.control" } ) </span></p>
+</div></body></content>

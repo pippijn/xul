@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="onpopuphidden"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("onpopuphidden")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event is sent to a popup after it has been hidden. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/onpopuphidden", "ja": "ja/XUL/Attribute/onpopuphidden" } ) </span></p>
+</div></body></content>

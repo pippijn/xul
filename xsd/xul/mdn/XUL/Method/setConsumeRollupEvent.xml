@@ -1,0 +1,9 @@
+<content type="application/x.deki0805+xml" title="setConsumeRollupEvent"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl> <dt><span class="script">template.XULMeth2("setConsumeRollupEvent", "( consume )")</span> <span class="script">template.Fx_minversion_inline(3)</span></dt> <dd>Return type: <em>no return value</em></dd>
+</dl>
+<p>Controls whether or not the event that caused the popup to be automatically dismissed (or "rolled up") should be consumed or be dispatched as a normal event. If a non-default behavior is desired, this method should be called immediately prior to calling <span class="script">template.XULMeth("openPopup")</span> or <span class="script">template.XULMeth("openPopupAtScreen")</span>.</p>
+<p>Possible values for <code>consume</code> are:</p>
+<dl> <dt><code>ROLLUP_DEFAULT</code></dt> <dd>The default for the current platform.</dd> <dt><code>ROLLUP_CONSUME</code></dt> <dd>Consume the rollup event.</dd> <dt><code>ROLLUP_NO_CONSUME</code></dt> <dd>Don't consume the rollup event.</dd>
+</dl>
+<div class="note"><strong>Note:</strong> This method did not work on Mac OS X prior to Gecko 1.9.2 (Firefox 3.6).</div></body></content>

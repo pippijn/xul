@@ -1,0 +1,31 @@
+<content type="application/x.deki0805+xml" title="command"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p>A <code>command</code> element can be used to invoke an operation that can come from multiple sources. For example, a clipboard paste operation can be invoked from the Edit menu, a context menu and by pressing a keyboard shortcut. You attach the code to the command using the <span class="script">template.XULAttr("oncommand")</span> attribute. It will be called no matter how it is invoked by the user. In addition, disabling the command will automatically disable the menu items and keyboard shortcuts.</p>
+<p>Commands are identified by their <code><span class="script">template.XULAttr("id")</span></code>. If you include the script <code><a rel="freelink" href="chrome://global/content/globalOverlay.js" class=" external">chrome://global/content/globalOverlay.js</a></code> in your window, you can use the function <code>goDoCommand</code> function to invoke the command. Using this function has the advantage that the command will be sent to the part of the UI which will respond to it. Typically, this will be the currently focused element.</p>
+<p>Like a <span class="script">template.XULElem("broadcaster")</span>, commands forward attributes to other elements.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Commands" href="/en/XUL_Tutorial/Commands">XUL tutorial</a>. See also: <span class="script">template.XULAttr("command")</span> attribute, <span class="script">template.XULElem("commandset")</span> element</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "oncommand")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>The following code will send a paste command (<code>cmd_paste</code>) to the currently focused element:</p>
+<pre class="eval">
+ // First include <a rel="freelink" href="chrome://global/content/globalOverlay.js" class=" external">chrome://global/content/globalOverlay.js</a>
+ goDoCommand("cmd_paste");
+</pre>
+<p>Example with two buttons</p>
+<pre>
+&lt;commandset&gt;&lt;command id="cmd_openhelp" oncommand="alert('Help');"/&gt;&lt;/commandset&gt;
+&lt;button label="Help" command="cmd_openhelp"/&gt;
+&lt;button label="More Help" command="cmd_openhelp"/&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("disabled")</span> <span class="script">template.XULAttrInc("label")</span> <span class="script">template.XULAttrInc("oncommand")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<ul> <li><a title="en/XUL/List_of_commands" href="/en/XUL/List_of_commands">XUL:List of commands</a></li>
+</ul>
+
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/command", "ja": "ja/XUL/command", "pl": "pl/XUL/command" } ) </span></p></body></content>

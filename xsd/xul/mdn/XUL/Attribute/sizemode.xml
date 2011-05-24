@@ -1,0 +1,16 @@
+<content type="application/x.deki0805+xml" title="sizemode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("sizemode")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The state of the <span class="script">template.XULElem("window")</span>. It can have one of the following values:</dd></dl>
+<ul> <li><code>maximized</code>: The window is maximized, and occupies the full size of the screen.</li> <li><code>normal</code>: The window appears in a normal state at the desired size.</li>
+</ul>
+<p><strong>Note:</strong> When a window is minimized, the <code>sizemode</code> attribute is not updated. This is done so that if a window is closed while minimized, its persisted <code>sizemode</code> attribute wouldn't be <code>minimized</code>.</p>
+<p>This attribute is used to save and restore the state of a window (together with <a class="internal" title="En/XUL/Property/Persist" href="/en/XUL/Property/persist">persist</a> attribute) and for CSS styles (e.g. to hide the resizer grippy on maximized windows).</p>
+<p>Setting this attribute does not change the window state. Use <a class="internal" title="DOM/window.maximize" href="/DOM/window.maximize">window.maximize()</a>, <a class="internal" title="DOM/window.restore" href="/DOM/window.restore">window.restore()</a>, or <a class="internal" title="DOM/window.minimize" href="/DOM/window.minimize">window.minimize()</a> to change the window state.</p>
+<p>To get the window state from JavaScript code, use <a class="internal" title="DOM/window.windowState" href="/DOM/window.windowState">window.windowState</a>.</p>
+<p>Issues with this attribute (at least on Firefox 3):</p>
+<ul> <li><code>sizemode</code> doesn't work on Mac OS X (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=409095">bug 409095</a>)</li> <li>On platforms where <code>sizemode</code> works, it isn't always updated properly (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=419292">bug 419292</a>)</li> <li> <p><code>sizemode</code> is only updated when the value of the <code>persist</code> attribute on the root element (such as <code>&lt;window&gt;</code>) contains <code>sizemode</code>.</p> </li>
+</ul>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/sizemode", "ja": "ja/XUL/Attribute/sizemode" } ) </span></p>
+</div>
+<p> </p></body></content>

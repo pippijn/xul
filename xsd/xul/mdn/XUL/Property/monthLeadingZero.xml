@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="monthLeadingZero"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("monthLeadingZero")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> A read only value indicating whether a leading zero should be displayed before the month when it is less than 10. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/monthLeadingZero", "ja": "ja/XUL/Property/monthLeadingZero", "pl": "pl/XUL/W\u0142asno\u015b\u0107/monthLeadingZero" } ) </span></p>
+</div></body></content>

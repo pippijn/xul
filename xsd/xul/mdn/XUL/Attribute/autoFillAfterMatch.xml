@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="autoFillAfterMatch"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("autoFillAfterMatch")</span><span class="script">obsolete_inline("1.9.1")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If set to <code>true</code>, the entire text of the best match will be displayed at the end of the input. If <code>false</code>, only the text that hasn't been entered yet will be filled in. The <span class="script">template.XULAttr("textbox.autoFill")</span> attribute must be set to <code>true</code> to use this feature. As of Gecko 1.9.1, this attribute is superseded by the <span class="script">template.XULAttr("completedefaultindex")</span> attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/autoFillAfterMatch", "pl": "pl/XUL/Atrybut/autoFillAfterMatch" } ) </span></p>
+</div></body></content>

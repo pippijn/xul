@@ -1,0 +1,10 @@
+<content type="application/x.deki0805+xml" title="menulist.appendItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("menulist.appendItem", "( label, value, description )", "appendItem")</span> </dt><dd> Return type: <em>element</em> </dd><dd> Creates a new <span class="script">template.XULElem("menuitem")</span> element and adds it to the end of the menulist. You may optionally set a value and description. The function returns the new item. </dd></dl>
+<div class="noinclude">
+<h3 name="See_also">See also</h3>
+<p><span class="script">template.XULMeth("appendItem", "")</span></p>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/menulist.appendItem" } ) </span></p>
+</div></body></content>

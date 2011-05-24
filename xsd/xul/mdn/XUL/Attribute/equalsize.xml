@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="equalsize"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefAttr()</span></div>
+<dl> <dt><span class="script">XULAttr("equalsize")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>This attribute can be used to make the children of the element equal in size. <ul> <li><code>always</code>: For a horizontally oriented element, this will make all of its children have the width of the widest child. For a vertically oriented element, this will make its children all have the height of the tallest child.</li> <li><code>never</code>: All of the children are displayed at the size required by the content or as specified by the <span class="script">XULAttr("width")</span> and <span class="script">XULAttr("height")</span> attributes or the CSS <span class="script">Cssxref("width")</span> and <span class="script">Cssxref("height")</span> properties.</li> </ul> </dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/equalsize", "ja": "ja/XUL/Attribute/equalsize", "pl": "pl/XUL/Atrybut/equalsize" } ) </span></p>
+</div></body></content>

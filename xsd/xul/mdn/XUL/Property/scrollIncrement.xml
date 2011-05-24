@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="scrollIncrement"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("scrollIncrement")</span> </dt><dd> Type: <em>integer</em> </dd><dd> A read only property that lets you retrieve the number of pixels by which scrolling will occur when the <span class="script">template.XULElem("arrowscrollbox")</span> is clicked. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/scrollIncrement" } ) </span></p>
+</div></body></content>

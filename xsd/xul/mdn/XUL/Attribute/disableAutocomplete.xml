@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="disableautocomplete"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("disableautocomplete")</span><span class="script">fx_minversion_inline("1.0")</span><span class="script">tb_minversion_inline("3.0")</span><span style="border: 1px solid rgb(129, 129, 81); background-color: rgb(255, 255, 225); font-size: x-small; white-space: nowrap; padding:0px 2px;">Requires SeaMonkey 2.0</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, the autocomplete behavior will be disabled. You might use a script to change this attribute. If <code>false</code>, the default, autocomplete is enabled.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/disableAutocomplete", "pl": "pl/XUL/Atrybut/disableAutocomplete" } ) </span></p>
+</div></body></content>

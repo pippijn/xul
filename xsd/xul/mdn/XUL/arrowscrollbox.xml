@@ -1,0 +1,38 @@
+<content type="application/x.deki0805+xml" title="arrowscrollbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>A box which provides scroll arrows along its edges for scrolling through the contents of the box. The user only needs to hover the mouse over the arrows to scroll the box. This element is typically used for large popup menus.</p>
+<p>Hovering the mouse over one of the (active) arrows triggers a scroll event.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Scrolling_Menus" href="/en/XUL_Tutorial/Scrolling_Menus">XUL Tutorial</a>.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "disabled")</span>, <span class="script">PrefAnch("a-", "smoothscroll")</span>, <span class="script">PrefAnch("a-", "tabindex")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "disabled")</span>, <span class="script">PrefAnch("p-", "scrollBoxObject")</span>, <span class="script">PrefAnch("p-", "scrollIncrement")</span>, <span class="script">PrefAnch("p-", "smoothScroll")</span>, <span class="script">PrefAnch("p-", "tabIndex")</span></dd>
+</dl>
+<dl> <dt>Methods</dt> <dd><span class="script">PrefAnch("m-", "ensureElementIsVisible")</span>, <span class="script">PrefAnch("m-", "scrollByIndex")</span>, <span class="script">PrefAnch("m-", "scrollByPixels")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<div style="float: right;"><img src="/@api/deki/files/760/=Menuscroll1.jpg" alt="Image:menuscroll1.jpg" class="internal" /></div>
+<pre>
+&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Red"/&gt;
+  &lt;button label="Blue"/&gt;
+  &lt;button label="Green"/&gt;
+  &lt;button label="Yellow"/&gt;
+  &lt;button label="Orange"/&gt;
+  &lt;button label="Silver"/&gt;
+  &lt;button label="Lavender"/&gt;
+  &lt;button label="Gold"/&gt;
+  &lt;button label="Turquoise"/&gt;
+  &lt;button label="Peach"/&gt;
+  &lt;button label="Maroon"/&gt;
+  &lt;button label="Black"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInheritedWide()</span> <span class="script">XULAttrInc("disabled")</span> <span class="script">XULAttrInc("smoothscroll")</span> <span class="script">XULAttrInc("tabindex")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInheritedWide()</span> <span class="script">XULPropInc("disabled")</span> <span class="script">XULPropInc("scrollBoxObject")</span> <span class="script">XULPropInc("scrollIncrement")</span> <span class="script">XULPropInc("smoothScroll")</span> <span class="script">XULPropInc("tabIndex")</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInc("ensureElementIsVisible")</span> <span class="script">XULMethInc("scrollByIndex")</span> <span class="script">XULMethInc("scrollByPixels")</span> <span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<p>TBD</p>
+<p><span class="script"> wiki.languages( { "de": "de/XUL/arrowscrollbox", "ja": "ja/XUL/arrowscrollbox", "pl": "pl/XUL/arrowscrollbox" } ) </span></p></body></content>

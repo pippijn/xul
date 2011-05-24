@@ -1,0 +1,9 @@
+<content type="application/x.deki0805+xml" title="currentSet"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("currentSet")</span></dt> <dd><strong><span class="highlightred">Not in SeaMonkey 1.x</span></strong></dd> <dd>Type: <em>comma-separated list of strings</em></dd> <dd>Holds a comma-separated list of the IDs of the items currently on the toolbar. For spacers, separators, and flexible spacers the following strings are used instead of IDs: "<code>spacer</code>", "<code>separator</code>", "<code>spring</code>". An empty toolbar has a <code>currentSet</code> value of <code>"__empty"</code>.</dd>
+</dl>
+<dl> <dd>You may change the current set of items by setting this property. Be careful, as setting this property doesn't automatically update the <span class="script">template.XULAttr("currentset")</span> attribute.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/currentSet" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,10 @@
+<content type="application/x.deki0805+xml" title="currentset"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("currentset")</span></dt> <dd><strong><span class="highlightred">Not in SeaMonkey 1.x</span></strong></dd> <dd>Type: <em>comma-separated string</em></dd> <dd>The current set of displayed items on the <span class="script">template.XULElem("toolbar")</span>. This will be modified when the user customizes the toolbar. The value of this attribute should be a comma-separated list of item IDs from the <span class="script">template.XULElem("toolbarpalette")</span> or, additionally, any of the following strings: "<code>separator</code>", "<code>spring</code>", "<code>spacer</code>".</dd>
+</dl>
+<div class="noinclude">
+<p><span class="comment">this isn't necessary the *current* set, i.e. it might not be equal the value of the currentSet property which is computed from the actual DOM</span></p>
+</div>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/currentset" } ) </span></p>
+</div></body></content>

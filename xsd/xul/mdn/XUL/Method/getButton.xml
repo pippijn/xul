@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="getButton"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("getButton", "( type )")</span> </dt><dd> Return type: <em>button element</em> </dd><dd> Returns the <span class="script">template.XULElem("button")</span> element in the dialog corresponding to the given type. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getButton", "pl": "pl/XUL/Metoda/getButton" } ) </span></p>
+</div></body></content>

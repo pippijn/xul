@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="element"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("element")</span> </dt><dd> Type: <em>broadcaster element id</em> </dd><dd> The <span class="script">template.XULAttr("id")</span> of the <span class="script">template.XULElem("broadcaster")</span> element that the observer is observing. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/element", "pl": "pl/XUL/Atrybut/element" } ) </span></p>
+</div></body></content>

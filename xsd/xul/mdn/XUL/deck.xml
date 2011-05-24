@@ -1,0 +1,35 @@
+<content type="application/x.deki0805+xml" title="deck"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>An element that displays only one of its children at a time. The <span class="script">template.XULAttr("selectedIndex")</span> attribute determines which child is displayed.
+</p><p>More information is available in the <a href="en/XUL_Tutorial/Stacks_and_Decks">XUL tutorial</a>.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "selectedIndex")</span>
+</dd></dl>
+<dl><dt> Properties
+</dt><dd> <span class="script">template.PrefAnch("p-", "selectedIndex")</span>, <span class="script">template.PrefAnch("p-", "deck.selectedPanel", "selectedPanel")</span>
+</dd></dl>
+<h3 name="Examples"> Examples </h3>
+<pre>
+&lt;deck selectedIndex="2"&gt;
+  &lt;description value="This is the first page"/&gt;
+  &lt;button label="This is the second page"/&gt;
+  &lt;box&gt;
+    &lt;description value="This is the third page"/&gt;
+    &lt;button label="This is also the third page"/&gt;
+  &lt;/box&gt;
+&lt;/deck&gt;
+</pre>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInc("selectedIndex")</span>
+<span class="script">template.XULAttrInheritedWide()</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInc("selectedIndex")</span>
+<span class="script">template.XULPropInc("deck.selectedPanel")</span>
+<span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Related"> Related </h3>
+<p><a href="en/XUL/stack">stack</a>
+</p><span class="script"> wiki.languages( { "ja": "ja/XUL/deck", "pl": "pl/XUL/deck" } ) </span></body></content>

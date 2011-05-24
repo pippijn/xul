@@ -1,0 +1,45 @@
+<content type="application/x.deki0805+xml" title="listcell"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A single cell of a <span class="script">template.XULElem("listbox")</span>. By default it only contains text but iconic and checkbox listcells are also available.
+</p>
+<dl><dt> Attributes
+</dt><dd> <span class="script">template.PrefAnch("a-", "crop")</span>, <span class="script">template.PrefAnch("a-", "disabled")</span>, <span class="script">template.PrefAnch("a-", "image")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "listcell.type", "type")</span>
+</dd></dl>
+<dl><dt> Properties
+</dt><dd> <span class="script">template.PrefAnch("p-", "disabled")</span>
+</dd></dl>
+<dl><dt> Style classes
+</dt><dd> <span class="script">template.PrefAnch("s-", "listcell-iconic")</span>, </dd></dl>
+<h3 name="Examples"> Examples </h3>
+<p>(example needed)
+</p>
+<h3 name="Attributes"> Attributes </h3>
+<p><span class="script">template.XULAttrInherited()</span>
+<span class="script">template.XULAttrInc("crop")</span>
+<span class="script">template.XULAttrInc("disabled")</span>
+<span class="script">template.XULAttrInc("image")</span>
+<span class="script">template.XULAttrInc("label")</span>
+<span class="script">template.XULAttrInc("listcell.type")</span>
+</p>
+<h3 name="Properties"> Properties </h3>
+<p><span class="script">template.XULPropInc("disabled")</span>
+<span class="script">template.XULPropInheritedWide()</span>
+</p>
+<h3 name="Methods"> Methods </h3>
+<p><span class="script">template.XULMethInheritedWide()</span>
+</p>
+<h3 name="Style_classes"> Style classes </h3>
+<p><span class="script">template.XULStyleInc("listcell-iconic")</span>
+</p>
+<h3 name="Tips"> Tips </h3>
+<p>If you need to right-align a cell's contents, you can do so like this:
+</p>
+<pre class="eval">cell = document.createElement("listcell");
+cell.setAttribute("label", "This is the cell's label");
+cell.setAttribute("style", "text-align:right");
+</pre>
+<h3 name="Related"> Related </h3>
+<dl><dt> Elements
+</dt><dd> <span class="script">template.XULElem("listbox")</span>, <span class="script">template.XULElem("listcol")</span>, <span class="script">template.XULElem("listcols")</span>, <span class="script">template.XULElem("listhead")</span>, <span class="script">template.XULElem("listheader")</span>, <span class="script">template.XULElem("listitem")</span>
+</dd></dl>
+<div class="noinclude">
+</div>
+<span class="script"> wiki.languages( { "ja": "ja/XUL/listcell", "pl": "pl/XUL/listcell" } ) </span></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="sortActive"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("sortActive")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This should be set to <code>true</code> for the column which should be sorted by default. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/sortActive" } ) </span></p>
+</div></body></content>

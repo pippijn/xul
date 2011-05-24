@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="buttonlabelextra2"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("buttonlabelextra2")</span> </dt><dd> Type: <em>string</em> </dd><dd> The label to appear on the second extra button. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonlabelextra2" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="iframe.transparent"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("iframe.transparent", "transparent")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Set the background of an <code><span class="script">template.XULElem("iframe")</span></code> as transparent.</dd>
+</dl>
+<ul> <li><code><strong><span style="font-family: Verdana,Tahoma,sans-serif;">transparent</span></strong></code>:  This results in the iframe's background being transparent. This can be used to workaround things like <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=540911" title="https://bugzilla.mozilla.org/show_bug.cgi?id=540911" class="    link-https">bug 540911</a></li>
+</ul></body></content>

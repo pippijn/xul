@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="toolbarName"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("toolbarName")</span></dt> <dd><strong><span class="highlightred">Not in SeaMonkey 1.x</span></strong></dd> <dd>Type: <em>string</em></dd> <dd>The name of the toolbar.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/toolbarName", "pl": "pl/XUL/W\u0142asno\u015b\u0107/toolbarName" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="getTabModalPromptBox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefMeth()</span></div>
+<dl> <dt><span class="script">XULMeth2("getTabModalPromptBox", "( browser )")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Return type: <em>object</em></dd> <dd>Returns an object that manages tab-modal prompts for the specified browser. Returns a <a title="en/XUL/promptBox" href="/en/XUL/promptBox"><code>promptBox</code></a> object representing the new prompt.</dd>
+</dl></body></content>

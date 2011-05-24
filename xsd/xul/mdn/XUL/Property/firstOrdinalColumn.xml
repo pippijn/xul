@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="firstOrdinalColumn"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("firstOrdinalColumn")</span> </dt><dd> Type: <em><span class="script">template.XULElem("treecol")</span> element</em> </dd><dd> A reference to the first <span class="script">template.XULElem("treecol")</span> element, which or may not be the first column displayed in the tree. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/firstOrdinalColumn" } ) </span></p>
+</div></body></content>

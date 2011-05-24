@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="currentPage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("currentPage")</span> </dt><dd> Type: <em><span class="script">template.XULElem("wizardpage")</span> element</em> </dd><dd> This property returns the <span class="script">template.XULElem("wizardpage")</span> element that is currently displayed. You can modify this value to change the current page. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/currentPage" } ) </span></p>
+</div></body></content>

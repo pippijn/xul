@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="disablefastfind"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("disablefastfind")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Put <code>disablefastfind="true"</code> on the root element of a XUL document, which is intended to be loaded in a tab, to disable the find bar for the tab with this document. This is used to prevent the find bar from being displayed when it's not supported by the content (such as in the Add-ons manager tab).</dd>
+</dl></body></content>

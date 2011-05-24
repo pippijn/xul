@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="persistence"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("persistence")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The persistence may be set to a non-zero value so that the <span class="script">template.XULElem("notificationbox")</span>'s <span class="script">template.XULMeth("removeTransientNotifications")</span> method does not remove them. This may be used to close a set of notifications as a group without affecting other notifications. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/persistence" } ) </span></p>
+</div></body></content>

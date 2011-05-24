@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="multiple"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("multiple")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set to <code>true</code> to indicate that the <span class="script">template.XULAttr("where.value", "value")</span> contains multiple values separated by commas. Any of the values may match. Otherwise, the entire value string is compared. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/multiple" } ) </span></p>
+</div></body></content>

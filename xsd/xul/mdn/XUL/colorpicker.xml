@@ -1,0 +1,24 @@
+<content type="application/x.deki0805+xml" title="colorpicker"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>A palette of colors from which a user may select by clicking on one of the grid cells.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "disabled")</span>, <span class="script">PrefAnch("a-", "color")</span>, <span class="script">PrefAnch("a-", "onchange")</span>, <span class="script">PrefAnch("a-", "preference")</span>, <span class="script">PrefAnch("a-", "tabindex")</span>, <span class="script">PrefAnch("a-", "colorpicker.type", "type")</span></dd>
+</dl>
+<dl> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "accessibleType")</span>, <span class="script">PrefAnch("p-", "color")</span>, <span class="script">PrefAnch("p-", "disabled")</span>, <span class="script">PrefAnch("p-", "colorpicker.open", "open")</span>, <span class="script">PrefAnch("p-", "tabIndex")</span>, <span class="script">PrefAnch("p-", "value")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p><img src="/@api/deki/files/430/=XUL_REF_rgb.gif" class="internal" alt="Image:XUL_REF_rgb.gif" /></p>
+<pre>
+&lt;colorpicker/&gt;
+</pre>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInherited()</span> <span class="script">XULAttrInc("disabled")</span> <span class="script">XULAttrInc("color")</span> <span class="script">XULAttrInc("onchange")</span> <span class="script">XULAttrInc("preference")</span> <span class="script">XULAttrInc("tabindex")</span> <span class="script">XULAttrInc("colorpicker.type")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInherited()</span> <span class="script">XULPropInc("accessibleType")</span> <span class="script">XULPropInc("color")</span> <span class="script">XULPropInc("disabled")</span> <span class="script">XULPropInc("colorpicker.open")</span> <span class="script">XULPropInc("tabIndex")</span> <!--{{XULPropInc("value")}}--> value property gets and sets <span class="script">PrefAnch("a-", "color")</span> attribute</p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIDOMXULControlElement")</span></dd>
+</dl>
+<h3 name="Bugs">Bugs</h3>
+<p>The <code>onchange</code> Event only fires if Attribute <code>type</code> is set to "<code>button</code>". You may use <code>onclick</code> when you are working with a plain colorpicker and need the currently selected color for example to display in a &lt;textbox&gt;.</p>
+<p><span class="script"> wiki.languages( { "de": "de/XUL/colorpicker", "ja": "ja/XUL/colorpicker", "pl": "pl/XUL/colorpicker" } ) </span></p></body></content>

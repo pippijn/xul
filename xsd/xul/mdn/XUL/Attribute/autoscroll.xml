@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="autoscroll"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("autoscroll")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set to <code>false</code> to disable autoscroll for this browser. If this attribute is set to <code>true</code> or omitted, autoscroll will be enabled or depending on the user preference <code>general.autoScroll</code>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/autoscroll", "pl": "pl/XUL/Atrybut/autoscroll" } ) </span></p>
+</div></body></content>

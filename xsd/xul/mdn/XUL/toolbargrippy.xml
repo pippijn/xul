@@ -1,0 +1,21 @@
+<content type="application/x.deki0805+xml" title="toolbargrippy"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
+<p><strong><span class="highlightred">Not in Firefox</span></strong></p>
+<p>The notch on the side of a <span class="script">template.XULElem("toolbar")</span> which can be used to collapse and expand it. This element is used internally by the toolbar and should only be used directly when modifying its theme.</p>
+<p>More information is available in the <a title="en/XUL_Tutorial/Toolbars" href="/en/XUL_Tutorial/Toolbars">XUL tutorial</a>.</p>
+<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "accessible")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<p>(example needed)</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">template.XULAttrInheritedWide()</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">template.XULPropInc("accessible")</span> <span class="script">template.XULPropInheritedWide()</span></p>
+<h3 name="Methods">Methods</h3>
+<p><span class="script">template.XULMethInheritedWide()</span></p>
+<h3 name="Related">Related</h3>
+<dl> <dt>Elements</dt> <dd><span class="script">template.XULElem("toolbar")</span>, <span class="script">template.XULElem("toolbarbutton")</span>, <span class="script">template.XULElem("toolbaritem")</span>, <span class="script">template.XULElem("toolbarpalette")</span>, <span class="script">template.XULElem("toolbarseparator")</span>, <span class="script">template.XULElem("toolbarset")</span>, <span class="script">template.XULElem("toolbarspacer")</span>, <span class="script">template.XULElem("toolbarspring")</span>, <span class="script">template.XULElem("toolbox")</span></dd>
+</dl>
+<dl> <dt>Interfaces</dt> <dd><span class="script">interface("nsIAccessibleProvider")</span></dd>
+</dl>
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/toolbargrippy", "pl": "pl/XUL/toolbargrippy" } ) </span></p></body></content>

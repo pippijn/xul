@@ -1,0 +1,14 @@
+<content type="application/x.deki0805+xml" title="disabled"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl> <dt><span class="script">template.XULProp("disabled")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("disabled")</span> attribute.</dd>
+</dl>
+<div class="noinclude">
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" class="internal" src="/@api/deki/files/445/=XUL_ref_attr_disabled.png" /></div>
+<pre>
+&lt;!-- Checkbox enables/disables the button --&gt;
+&lt;checkbox label="Enable button" 
+    onclick="document.getElementById('buttRemove').disabled = ! this.checked"/&gt;
+&lt;button id="buttRemove" label="Remove All" disabled="true"/&gt;
+</pre>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/disabled", "ja": "ja/XUL/Property/disabled" } ) </span></p>
+</div></body></content>

@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="firstdayofweek"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("firstdayofweek")</span> </dt><dd> Type: <em>integer</em> </dd><dd> which day of the week to display as the first day in the grid. The values range from 0 to 6, where 0 is Sunday and 6 is Saturday. The default value is determined by the locale, so only use this attribute if you want to override it. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/firstdayofweek", "ja": "ja/XUL/Attribute/firstdayofweek" } ) </span></p>
+</div></body></content>

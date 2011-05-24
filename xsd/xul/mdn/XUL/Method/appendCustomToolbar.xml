@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="appendCustomToolbar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("appendCustomToolbar", "( name, currentset )")</span> </dt><dd> <strong><span class="highlightred">Firefox only</span></strong> </dd><dd> Return type: <em>element</em> </dd><dd> Adds a custom <span class="script">template.XULElem("toolbar")</span> to the <span class="script">template.XULElem("toolbox")</span> with the given <var>name</var>. You can supply a comma-separated list of toolbar item ids as the second argument to add some items by default. The method returns the DOM element for the created toolbar. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/appendCustomToolbar", "pl": "pl/XUL/Metoda/appendCustomToolbar" } ) </span></p>
+</div></body></content>

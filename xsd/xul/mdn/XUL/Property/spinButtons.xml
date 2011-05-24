@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="spinButtons"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("spinButtons")</span> </dt><dd> Type: <em>element</em> </dd><dd> The read-only property returns a reference to the <span class="script">template.XULElem("spinbuttons")</span> element used by the number box. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/spinButtons", "pl": "pl/XUL/W\u0142asno\u015b\u0107/spinButtons" } ) </span></p>
+</div></body></content>

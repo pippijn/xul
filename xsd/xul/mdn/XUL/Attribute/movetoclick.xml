@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="movetoclick"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl><dt> <span class="script">template.XULAttr("movetoclick")</span> <span class="script">template.Fx_minversion_inline(3.5)</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If true, clicking the slide area of the scale moves the thumb directly to that position. If false, clicking the slide area moves the thumb only one increment in that direction. If not specified, the default value is used, which varies for each platform.</dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/movetoclick" } ) </span></p>
+</div></body></content>

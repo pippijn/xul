@@ -1,0 +1,4 @@
+<content type="application/x.deki0805+xml" title="selectTabAtIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl> <dt><span class="script">template.XULMeth2("selectTabAtIndex", "( index, event )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Selects the tab at the given index. Index values may be positive or negative. If the event argument is supplied, the default event handling will be prevented and propagation stopped.</dd>
+</dl></body></content>

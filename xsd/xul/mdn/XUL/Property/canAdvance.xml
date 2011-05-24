@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="canAdvance"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("canAdvance")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This property is set to <code>true</code> if the user can press the Next button to go to the next page. If this property is <code>false</code>, the user cannot navigate to the next page. Set this property to <code>true</code> to indicate that the user can go to the next page. Set to <code>false</code> to disallow moving to the next page. This has the effect of enabling or disabling the Next button, or, on the last page of the wizard, the Finish button. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/canAdvance" } ) </span></p>
+</div></body></content>

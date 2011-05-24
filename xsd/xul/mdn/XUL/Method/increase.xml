@@ -1,0 +1,8 @@
+<content type="application/x.deki0805+xml" title="increase"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
+<dl><dt> <span class="script">template.XULMeth2("increase", "()")</span></dt>
+<div class="noinclude"><dd> Method of: <span class="script">template.XULElem("scale")</span> <span class="script">template.XULElem("textbox")</span></dd></div>
+<dd> Return type: <em>no return value</em> </dd><dd> Increases the value of the scale or number box by the <span class="script">template.XULAttr("increment")</span>. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/increase", "ja": "ja/XUL/Method/increase", "pl": "pl/XUL/Metoda/increase" } ) </span></p>
+</div></body></content>

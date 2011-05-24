@@ -1,0 +1,6 @@
+<content type="application/x.deki0805+xml" title="tabbox.tabs"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
+<dl><dt> <span class="script">template.XULProp("tabbox.tabs", "tabs")</span> </dt><dd> Type: <em><span class="script">template.XULElem("tabs")</span> element</em> </dd><dd> The <span class="script">template.XULElem("tabs")</span> element contained within the tabbox. </dd></dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/tabbox.tabs" } ) </span></p>
+</div></body></content>
