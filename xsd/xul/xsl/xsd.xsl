@@ -7,7 +7,7 @@
 	extension-element-prefixes="x"> 
 
 	<xsl:output omit-xml-declaration="yes" indent="yes"/>
-	<xsl:key name="parent" match="e:element" use="@name"/>
+	<xsl:key name="parent" match="x:element" use="@name"/>
 
 	<xsl:template match="x:xulref">
 		<xs:schema targetNamespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -29,7 +29,7 @@
 		</xs:schema>
 	</xsl:template>
 
-	<xsl:template match="a:attribute">
+	<xsl:template match="x:attribute">
 		<xsl:variable name="name" select="substring-after(@name, '-')"/>
 		<xs:attributeGroup name="{$name}">
 			<xsl:choose>
@@ -43,13 +43,13 @@
 		</xs:attributeGroup>
 	</xsl:template>
 
-	<xsl:template match="e:element">
+	<xsl:template match="x:element">
 		<xsl:if test="@abstract = 'false'">
 			<!--<xsl:message>processing <xsl:value-of select="@name"/></xsl:message>-->
 			<xs:attributeGroup name="{@name}AttributeGroup">
 				<xsl:if test="@inherits">
 					<xsl:comment>Inherited from <xsl:value-of select="@inherits"/>:</xsl:comment>
-					<xsl:apply-templates select="key('parent', @inherits)/e:attr">
+					<xsl:apply-templates select="key('parent', @inherits)/x:attr">
 						<xsl:with-param name="derived" select="@name"/>
 					</xsl:apply-templates>
 				</xsl:if>
@@ -77,14 +77,14 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template match="e:attr">
+	<xsl:template match="x:attr">
 		<xsl:param name="derived"/>
 		<xsl:variable name="ref" select="@ref"/>
 
 		<xsl:choose>
 			<xsl:when test="$derived">
 				<!--<xsl:message><xsl:value-of select="concat($derived, ' inherits ', substring-after($ref, '-'), ' from ', ../@name)"/></xsl:message>-->
-				<xsl:if test="not(key('parent', $derived)/e:attr[@ref = $ref or substring-after(@ref, '.') = substring-after($ref, '-')])">
+				<xsl:if test="not(key('parent', $derived)/x:attr[@ref = $ref or substring-after(@ref, '.') = substring-after($ref, '-')])">
 					<xs:attributeGroup ref="xul:{substring-after($ref, '-')}"/>
 				</xsl:if>
 			</xsl:when>
@@ -94,10 +94,7 @@
 		</xsl:choose>
 	</xsl:template>
 
-	<xsl:template match="a:documentation"/>
-	<xsl:template match="p:documentation"/>
-	<xsl:template match="m:documentation"/>
-	<xsl:template match="e:documentation"/>
+	<xsl:template match="documentation"/>
 	<xsl:template match="text()"/>
 
 </xsl:stylesheet>
