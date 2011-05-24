@@ -1,11 +1,15 @@
 <content type="application/x.deki0805+xml" title="treecol.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("treecol.type", "type")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The type of <a title="en/XUL/treecol" href="/en/XUL/treecol">tree column</a>. The default is a text column that displays the content as text. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("treecol.type", "type")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The type of <a title="en/XUL/treecol" href="/en/XUL/treecol">tree column</a>. The default is a text column that displays the content as text.</dd>
+<dd>
 <ul> <li><code>checkbox</code>: The content of the columns are checkboxes.</li> <li><code>progressmeter</code>: The content of the columns are a progress meters. This is used in Mozilla's download manager window.</li> <li><code>text</code>: The content of the columns is text.</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <p>If you are using <code>type="checkbox"</code>, then the <span class="script">template.XULElem("tree")</span> and each treecol must be editable. You need to apply CSS to make the checkbox toggle. Here is an example CSS style using the current theme's checkboxes:</p>
-<pre class="eval">treechildren::-moz-tree-checkbox
+<pre class="eval">
+treechildren::-moz-tree-checkbox
 {
   /* unchecked checkbox treecells. This style MUST come before treechildren::-moz-tree-checkbox(checked) otherwise it won't take effect. */
   list-style-image: none;

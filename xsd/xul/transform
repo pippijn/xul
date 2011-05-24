@@ -5,9 +5,9 @@ use autodie 'system';
 
 use constant VALIDATE => 1;
 
-my $XSL = $ARGV[0] or die;
-my $XML = $ARGV[1] or die;
-my $OUT = $ARGV[2] or die;
+my $OUT = $ARGV[0] or die;
+my $XSL = $ARGV[1] or die;
+my $XML = $ARGV[2] or die;
 my $XSLTPROC = "xsltproc -o $OUT $XSL $XML";
 
 my $XSD = "xsd/" . ($XSL =~ m|(\w+)-info\.xsl|)[0] . ".xsd";
@@ -16,8 +16,9 @@ print "  ATTR  $OUT\n"
    unless VALIDATE;
 
 $SIG{__DIE__} = sub {
+   sleep 1;
+   print "http://developer.mozilla.org/en/", ($XML =~ m|mdn/(.+)\.xml|), "\n";
    unlink $OUT;
-   print "https://developer.mozilla.org/en/", ($XML =~ m|mdn/(.+)|), "\n";
    exit 1
 };
 

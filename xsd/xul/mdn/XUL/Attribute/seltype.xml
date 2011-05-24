@@ -1,13 +1,7 @@
 <content type="application/x.deki0805+xml" title="seltype"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("seltype")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Used to indicate whether multiple selection is allowed.</dd>
+<dl> <dt><span class="script">template.XULAttr("seltype")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Used to indicate whether multiple selection is allowed.</dd> <dd> <ul> <li><code>single</code>: Only one row may be selected at a time. (Default in <code>listbox</code> and <code>richlistbox</code>.)</li> <li><code>multiple</code>: Multiple rows may be selected at once. (Default in <code>tree</code>.)</li> </ul> </dd> <dd> <p>For trees, you can also use the following values:</p> <ul> <li><code>cell</code>: Individual cells can be selected <span class="script">template.fx_minversion_inline(3)</span></li> <li><code>text</code>: Rows are selected; however, the selection highlight appears only over the text of the primary column.</li> </ul> <p>For <code>richlistbox</code>, this is new in Firefox 3.5.</p> </dd>
 </dl>
-<ul> <li><code>single</code>: Only one row may be selected at a time. (Default in <code>listbox</code> and <code>richlistbox</code>.)</li> <li><code>multiple</code>: Multiple rows may be selected at once. (Default in <code>tree</code>.)</li>
-</ul>
-<p>For trees, you can also use the following values:</p>
-<ul> <li><code>cell</code>: Individual cells can be selected <span class="script">template.fx_minversion_inline(3)</span></li> <li><code>text</code>: Rows are selected; however, the selection highlight appears only over the text of the primary column.</li>
-</ul>
-<p>For <code>richlistbox</code>, this is new in Firefox 3.5.</p>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/seltype", "ja": "ja/XUL/Attribute/seltype", "pl": "pl/XUL/Atrybut/seltype" } ) </span></p>
 </div></body></content>

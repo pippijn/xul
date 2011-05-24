@@ -8,9 +8,9 @@
 
   <xs:annotation>
     <xs:documentation>
-    XHTML 1.0 (Second Edition) Transitional in XML Schema
+    XHTML 1.0 (Second Edition) Frameset in XML Schema
 
-    This is the same as HTML 4 Transitional except for
+    This is the same as HTML 4 Frameset except for
     changes due to the differences between XML and SGML.
 
     Namespace = http://www.w3.org/1999/xhtml
@@ -22,15 +22,15 @@
 
     The DTD version is identified by the PUBLIC and SYSTEM identifiers:
 
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+    PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+    SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"
 
-    $Id: xhtml1-transitional.xsd,v 1.5 2002/08/28 09:53:29 mimasa Exp $
+    $Id: xhtml1-frameset.xsd,v 1.5 2002/08/28 09:53:29 mimasa Exp $
     </xs:documentation>
   </xs:annotation>
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-      schemaLocation="xml.xsd"/>
+	  schemaLocation="../xml/namespace.xsd"/>
 
   <xs:annotation>
     <xs:documentation>
@@ -240,6 +240,18 @@
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:pattern value="[-+]?(\d+|\d+(\.\d+)?%)|[1-9]?(\d+)?\*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="MultiLengths">
+    <xs:annotation>
+      <xs:documentation>
+      comma-separated list of MultiLength
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern
+          value="[-+]?(\d+|\d+(\.\d+)?%)|[1-9]?(\d+)?\*(,\s*[-+]?(\d+|\d+(\.\d+)?%)|[1-9]?(\d+)?\*)*"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -606,7 +618,6 @@
       <xs:element ref="blockquote"/>
       <xs:element ref="address"/>
       <xs:element ref="center"/>
-      <xs:element ref="noframes"/>
     </xs:choice>
   </xs:group>
 
@@ -662,7 +673,7 @@
     <xs:annotation>
       <xs:documentation>
       pre uses "Inline" excluding img, object, applet, big, small,
-      font, or basefont
+      sub, sup, font, or basefont
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -724,7 +735,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="head"/>
-        <xs:element ref="body"/>
+        <xs:element ref="frameset"/>
       </xs:sequence>
       <xs:attributeGroup ref="i18n"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -915,6 +926,72 @@
     </xs:documentation>
   </xs:annotation>
 
+  <xs:element name="frameset">
+    <xs:annotation>
+      <xs:documentation>
+      only one noframes element permitted per document
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="frameset"/>
+        <xs:element ref="frame"/>
+        <xs:element ref="noframes"/>
+      </xs:choice>
+      <xs:attributeGroup ref="coreattrs"/>
+      <xs:attribute name="rows" type="MultiLengths"/>
+      <xs:attribute name="cols" type="MultiLengths"/>
+      <xs:attribute name="onload" type="Script"/>
+      <xs:attribute name="onunload" type="Script"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:annotation>
+    <xs:documentation>
+    reserved frame names start with "_" otherwise starts with letter
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="frame">
+    <xs:annotation>
+      <xs:documentation>
+      tiled window within frameset
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="coreattrs"/>
+      <xs:attribute name="longdesc" type="URI"/>
+      <xs:attribute name="name" type="xs:NMTOKEN"/>
+      <xs:attribute name="src" type="URI"/>
+      <xs:attribute name="frameborder" default="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="marginwidth" type="Pixels"/>
+      <xs:attribute name="marginheight" type="Pixels"/>
+      <xs:attribute name="noresize">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="noresize"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="scrolling" default="auto">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+            <xs:enumeration value="auto"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
   <xs:element name="iframe">
     <xs:annotation>
       <xs:documentation>
@@ -955,6 +1032,7 @@
     </xs:complexType>
   </xs:element>
 
+<!--
   <xs:element name="noframes">
     <xs:annotation>
       <xs:documentation>
@@ -963,10 +1041,24 @@
     </xs:annotation>
     <xs:complexType mixed="true">
       <xs:complexContent>
-        <xs:extension base="Flow">
+        <xs:extension base="body">
           <xs:attributeGroup ref="attrs"/>
         </xs:extension>
       </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+-->
+  <xs:element name="noframes">
+    <xs:annotation>
+      <xs:documentation>
+      alternate content container for non frame-based rendering
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="body"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attrs"/>
     </xs:complexType>
   </xs:element>
 
@@ -2487,7 +2579,7 @@
       <xs:documentation>
       horizontal alignment attributes for cell contents
 
-      char        alignment char, e.g. char=':'
+      char        alignment char, e.g. char=":"
       charoff     offset for alignment char
       </xs:documentation>
     </xs:annotation>

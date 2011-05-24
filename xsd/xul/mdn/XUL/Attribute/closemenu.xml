@@ -1,8 +1,7 @@
 <content type="application/x.deki0805+xml" title="Closemenu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("closemenu")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> Indicates if the menu closes when the menuitem is activated. </dd></dl>
-<ul> <li><code>auto</code>: This, the default value if the closemenu attribute is not specified, closes up the menu and all parent menus.</li> <li><code>single</code>: The menu the item is contained within is closed, but the parent menus remain open.</li> <li><code>none</code>: No menus are closed.</li>
-</ul>
+<dl> <dt><span class="script">template.XULAttr("closemenu")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Indicates if the menu closes when the menuitem is activated.</dd> <dd> <ul> <li><code>auto</code>: This, the default value if the closemenu attribute is not specified, closes up the menu and all parent menus.</li> <li><code>single</code>: The menu the item is contained within is closed, but the parent menus remain open.</li> <li><code>none</code>: No menus are closed.</li> </ul> </dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/closemenu" } ) </span></p>
 </div></body></content>

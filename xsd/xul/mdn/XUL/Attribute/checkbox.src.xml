@@ -1,10 +1,10 @@
 <content type="application/x.deki0805+xml" title="checkbox.src"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("checkbox.src", "src")</span> </dt><dd> Type: <em>image URL</em> </dd><dd> Set this to the URL of an image to appear in the checkbox. If this attribute is left out, no image appears. You can have both an image and a label. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("checkbox.src", "src")</span></dt> <dd>Type: <em>URI</em></dd> <dd>Set this to an URI pointing to an image to appear in the checkbox. If this attribute is left out, no image appears. You can have both an image and a label.</dd>
+</dl>
 <div class="noinclude">
 <h3 name="See_also">See also</h3>
 <ul> <li><a title="en/XUL/Attribute/src" href="/en/XUL/Attribute/src">src</a></li>
 </ul>
-
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/checkbox.src" } ) </span></p>
 </div></body></content>

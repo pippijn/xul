@@ -1,26 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:a="http://xul.xinutec.org/2011/attribute"
-	xmlns:p="http://xul.xinutec.org/2011/property"
-	xmlns:m="http://xul.xinutec.org/2011/method"
-	xmlns:e="http://xul.xinutec.org/2011/element"
-	xmlns:x="http://xul.xinutec.org/2011/xulref"
-	targetNamespace="http://xul.xinutec.org/2011/xulref"
-	finalDefault="extension">
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
 
-	<xs:import namespace="http://xul.xinutec.org/2011/attribute" schemaLocation="attribute.xsd"/>
-	<xs:import namespace="http://xul.xinutec.org/2011/property" schemaLocation="property.xsd"/>
-	<xs:import namespace="http://xul.xinutec.org/2011/method" schemaLocation="method.xsd"/>
-	<xs:import namespace="http://xul.xinutec.org/2011/element" schemaLocation="element.xsd"/>
+	<xs:include schemaLocation="attribute.xsd"/>
+	<xs:include schemaLocation="property.xsd"/>
+	<xs:include schemaLocation="method.xsd"/>
+	<xs:include schemaLocation="element.xsd"/>
 
 	<xs:element name="xulref">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="a:attribute" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element ref="p:property" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element ref="m:method" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element ref="e:element" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="attribute" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="property" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="method" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="element" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

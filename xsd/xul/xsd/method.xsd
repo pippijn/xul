@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://xul.xinutec.org/2011/method"
-	xmlns:h="http://www.w3.org/1999/xhtml"
-	xmlns:t="http://xul.xinutec.org/2011/type"
-	targetNamespace="http://xul.xinutec.org/2011/method"
-	finalDefault="extension">
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
 
-	<xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml/xhtml1-transitional.xsd"/>
-	<xs:import namespace="http://xul.xinutec.org/2011/type" schemaLocation="fragments/types.xsd"/>
+	<xs:include schemaLocation="fragments/documentation.xsd"/>
+	<xs:include schemaLocation="fragments/types.xsd"/>
 
 	<xs:element name="method">
 		<xs:complexType>
@@ -17,22 +14,13 @@
 				<xs:element ref="documentation"/>
 			</xs:sequence>
 			<xs:attribute name="name" type="xs:ID" use="required"/>
-			<xs:attribute name="type" type="t:returnType" use="required"/>
+			<xs:attribute name="type" type="returnType" use="required"/>
 		</xs:complexType>
 	</xs:element>
 
 	<xs:element name="arg">
 		<xs:complexType>
 			<xs:attribute name="name" type="xs:string" use="required"/>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="documentation">
-		<xs:complexType>
-			<xs:all>
-				<xs:element ref="h:div"/>
-			</xs:all>
-			<xs:attribute name="source" type="xs:anyURI" use="required"/>
 		</xs:complexType>
 	</xs:element>
 

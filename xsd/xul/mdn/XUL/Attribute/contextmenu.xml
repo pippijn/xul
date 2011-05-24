@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="contextmenu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("contextmenu")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Alternate name for the <span class="script">template.XULAttr("context")</span> attribute, but also has a corresponding script property <span class="script">template.XULProp("contextMenu")</span>. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("contextmenu")</span></dt> <dd>Type: <em>id</em></dd> <dd>Alternate name for the <span class="script">template.XULAttr("context")</span> attribute, but also has a corresponding script property <span class="script">template.XULProp("contextMenu")</span>.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/contextmenu", "ja": "ja/XUL/Attribute/contextmenu", "pl": "pl/XUL/Atrybut/contextmenu" } ) </span></p>
 </div></body></content>

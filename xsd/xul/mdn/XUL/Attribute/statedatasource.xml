@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="statedatasource"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("statedatasource")</span> </dt><dd> Type: <em>datasource URI</em> </dd><dd> Chrome XUL may specify an RDF datasource to use to store <span class="script">template.XULElem("tree")</span> state information. This is used to hold which tree items are open and which items are collapsed. This information will be remembered for the next time the XUL file is opened. If you do not specify this attribute, state information will be stored in the local store (<code>rdf:local-store</code>). </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("statedatasource")</span></dt> <dd>Type: <em>URI</em></dd> <dd>Chrome XUL may specify an RDF datasource to use to store <span class="script">template.XULElem("tree")</span> state information. This is used to hold which tree items are open and which items are collapsed. This information will be remembered for the next time the XUL file is opened. If you do not specify this attribute, state information will be stored in the local store (<code>rdf:local-store</code>).</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/statedatasource" } ) </span></p>
 </div></body></content>

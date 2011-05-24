@@ -8,9 +8,9 @@
 
   <xs:annotation>
     <xs:documentation>
-    XHTML 1.0 (Second Edition) Strict in XML Schema
+    XHTML 1.0 (Second Edition) Transitional in XML Schema
 
-    This is the same as HTML 4 Strict except for
+    This is the same as HTML 4 Transitional except for
     changes due to the differences between XML and SGML.
 
     Namespace = http://www.w3.org/1999/xhtml
@@ -22,15 +22,15 @@
 
     The DTD version is identified by the PUBLIC and SYSTEM identifiers:
 
-    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 
-    $Id: xhtml1-strict.xsd,v 1.2 2002/08/28 08:05:44 mimasa Exp $
+    $Id: xhtml1-transitional.xsd,v 1.5 2002/08/28 09:53:29 mimasa Exp $
     </xs:documentation>
   </xs:annotation>
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-      schemaLocation="xml.xsd"/>
+	  schemaLocation="../xml/namespace.xsd"/>
 
   <xs:annotation>
     <xs:documentation>
@@ -152,7 +152,7 @@
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <!--<xs:pattern value="[^,]+(,\s*[^,]+)*"/>-->
+      <xs:pattern value="[^,]+(,\s*[^,]+)*"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -210,6 +210,17 @@
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
 
+  <xs:simpleType name="FrameTarget">
+    <xs:annotation>
+      <xs:documentation>
+      render in this frame
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:pattern value="_(blank|self|parent|top)|[A-Za-z]\c*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="Length">
     <xs:annotation>
       <xs:documentation>
@@ -265,6 +276,43 @@
     <xs:restriction base="xs:string">
       <xs:pattern
           value="[-+]?(\d+|\d+(\.\d+)?%)(,\s*[-+]?(\d+|\d+(\.\d+)?%))*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ImgAlign">
+    <xs:annotation>
+      <xs:documentation>
+      used for object, applet, img, input and iframe
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="middle"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Color">
+    <xs:annotation>
+      <xs:documentation>
+      a color using sRGB: #RRGGBB as Hex values
+
+      There are also 16 widely known color names with their sRGB values:
+
+      Black  = #000000    Green  = #008000
+      Silver = #C0C0C0    Lime   = #00FF00
+      Gray   = #808080    Olive  = #808000
+      White  = #FFFFFF    Yellow = #FFFF00
+      Maroon = #800000    Navy   = #000080
+      Red    = #FF0000    Blue   = #0000FF
+      Purple = #800080    Teal   = #008080
+      Fuchsia= #FF00FF    Aqua   = #00FFFF
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]+|#[0-9A-Fa-f]{3}|#[0-9A-Fa-f]{6}"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -360,40 +408,91 @@
     <xs:attributeGroup ref="events"/>
   </xs:attributeGroup>
 
+  <xs:attributeGroup name="TextAlign">
+    <xs:annotation>
+      <xs:documentation>
+      text alignment for p, div, h1-h6. The default is
+      align="left" for ltr headings, "right" for rtl
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="align">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="left"/>
+          <xs:enumeration value="center"/>
+          <xs:enumeration value="right"/>
+          <xs:enumeration value="justify"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+
   <xs:annotation>
     <xs:documentation>
     =================== Text Elements ====================================
     </xs:documentation>
   </xs:annotation>
 
-  <xs:group name="special.pre">
+  <xs:group name="special.extra">
+    <xs:choice>
+      <xs:element ref="object"/>
+      <xs:element ref="applet"/>
+      <xs:element ref="img"/>
+      <xs:element ref="map"/>
+      <xs:element ref="iframe"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="special.basic">
     <xs:choice>
       <xs:element ref="br"/>
       <xs:element ref="span"/>
       <xs:element ref="bdo"/>
-      <xs:element ref="map"/>
     </xs:choice>
   </xs:group>
 
   <xs:group name="special">
     <xs:choice>
-      <xs:group ref="special.pre"/>
-      <xs:element ref="object"/>
-      <xs:element ref="img"/>
+      <xs:group ref="special.basic"/>
+      <xs:group ref="special.extra"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="fontstyle.extra">
+    <xs:choice>
+      <xs:element ref="big"/>
+      <xs:element ref="small"/>
+      <xs:element ref="font"/>
+      <xs:element ref="basefont"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="fontstyle.basic">
+    <xs:choice>
+      <xs:element ref="tt"/>
+      <xs:element ref="i"/>
+      <xs:element ref="b"/>
+      <xs:element ref="u"/>
+      <xs:element ref="s"/>
+      <xs:element ref="strike"/>
     </xs:choice>
   </xs:group>
 
   <xs:group name="fontstyle">
     <xs:choice>
-      <xs:element ref="tt"/>
-      <xs:element ref="i"/>
-      <xs:element ref="b"/>
-      <xs:element ref="big"/>
-      <xs:element ref="small"/>
+      <xs:group ref="fontstyle.basic"/>
+      <xs:group ref="fontstyle.extra"/>
     </xs:choice>
   </xs:group>
 
-  <xs:group name="phrase">
+  <xs:group name="phrase.extra">
+    <xs:choice>
+      <xs:element ref="sub"/>
+      <xs:element ref="sup"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="phrase.basic">
     <xs:choice>
       <xs:element ref="em"/>
       <xs:element ref="strong"/>
@@ -406,8 +505,13 @@
       <xs:element ref="cite"/>
       <xs:element ref="abbr"/>
       <xs:element ref="acronym"/>
-      <xs:element ref="sub"/>
-      <xs:element ref="sup"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="phrase">
+    <xs:choice>
+      <xs:group ref="phrase.basic"/>
+      <xs:group ref="phrase.extra"/>
     </xs:choice>
   </xs:group>
 
@@ -422,6 +526,11 @@
   </xs:group>
 
   <xs:group name="misc.inline">
+    <xs:annotation>
+      <xs:documentation>
+      these can only occur at block level
+      </xs:documentation>
+    </xs:annotation>
     <xs:choice>
       <xs:element ref="ins"/>
       <xs:element ref="del"/>
@@ -454,7 +563,7 @@
   <xs:complexType name="Inline" mixed="true">
     <xs:annotation>
       <xs:documentation>
-      "Inline" covers inline or "text-level" elements
+      "Inline" covers inline or "text-level" element
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -485,6 +594,8 @@
       <xs:element ref="ul"/>
       <xs:element ref="ol"/>
       <xs:element ref="dl"/>
+      <xs:element ref="menu"/>
+      <xs:element ref="dir"/>
     </xs:choice>
   </xs:group>
 
@@ -494,6 +605,8 @@
       <xs:element ref="hr"/>
       <xs:element ref="blockquote"/>
       <xs:element ref="address"/>
+      <xs:element ref="center"/>
+      <xs:element ref="noframes"/>
     </xs:choice>
   </xs:group>
 
@@ -504,18 +617,11 @@
       <xs:element ref="div"/>
       <xs:group ref="lists"/>
       <xs:group ref="blocktext"/>
+      <xs:element ref="isindex"/>
       <xs:element ref="fieldset"/>
       <xs:element ref="table"/>
     </xs:choice>
   </xs:group>
-
-  <xs:complexType name="Block">
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:group ref="block"/>
-      <xs:element ref="form"/>
-      <xs:group ref="misc"/>
-    </xs:choice>
-  </xs:complexType>
 
   <xs:complexType name="Flow" mixed="true">
     <xs:annotation>
@@ -555,27 +661,29 @@
   <xs:complexType name="pre.content" mixed="true">
     <xs:annotation>
       <xs:documentation>
-      pre uses "Inline" excluding big, small, sup or sup
+      pre uses "Inline" excluding img, object, applet, big, small,
+      font, or basefont
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="a"/>
-      <xs:group ref="fontstyle"/>
-      <xs:group ref="phrase"/>
-      <xs:group ref="special.pre"/>
-      <xs:group ref="misc.inline"/>
+      <xs:group ref="special.basic"/>
+      <xs:group ref="fontstyle.basic"/>
+      <xs:group ref="phrase.basic"/>
       <xs:group ref="inline.forms"/>
+      <xs:group ref="misc.inline"/>
     </xs:choice>
   </xs:complexType>
 
-  <xs:complexType name="form.content">
+  <xs:complexType name="form.content" mixed="true">
     <xs:annotation>
       <xs:documentation>
-      form uses "Block" excluding form
+      form uses "Flow" excluding form
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="block"/>
+      <xs:group ref="inline"/>
       <xs:group ref="misc"/>
     </xs:choice>
   </xs:complexType>
@@ -583,7 +691,7 @@
   <xs:complexType name="button.content" mixed="true">
     <xs:annotation>
       <xs:documentation>
-      button uses "Flow" but excludes a, form and form controls
+      button uses "Flow" but excludes a, form, form controls, iframe
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -593,7 +701,13 @@
       <xs:group ref="lists"/>
       <xs:group ref="blocktext"/>
       <xs:element ref="table"/>
-      <xs:group ref="special"/>
+      <xs:element ref="br"/>
+      <xs:element ref="span"/>
+      <xs:element ref="bdo"/>
+      <xs:element ref="object"/>
+      <xs:element ref="applet"/>
+      <xs:element ref="img"/>
+      <xs:element ref="map"/>
       <xs:group ref="fontstyle"/>
       <xs:group ref="phrase"/>
       <xs:group ref="misc"/>
@@ -631,6 +745,7 @@
         <xs:element ref="meta"/>
         <xs:element ref="link"/>
         <xs:element ref="object"/>
+        <xs:element ref="isindex"/>
       </xs:choice>
     </xs:sequence>
   </xs:group>
@@ -689,8 +804,9 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:attribute name="href" use="required" type="URI"/>
       <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="href" type="URI"/>
+      <xs:attribute name="target" type="FrameTarget"/>
     </xs:complexType>
   </xs:element>
 
@@ -735,6 +851,7 @@
       <xs:attribute name="rel" type="LinkTypes"/>
       <xs:attribute name="rev" type="LinkTypes"/>
       <xs:attribute name="media" type="MediaDesc"/>
+      <xs:attribute name="target" type="FrameTarget"/>
     </xs:complexType>
   </xs:element>
 
@@ -764,6 +881,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="charset" type="Charset"/>
       <xs:attribute name="type" use="required" type="ContentType"/>
+      <xs:attribute name="language"/>
       <xs:attribute name="src" type="URI"/>
       <xs:attribute name="defer">
         <xs:simpleType>
@@ -782,9 +900,70 @@
       alternate content container for non script-based rendering
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="true">
       <xs:complexContent>
-        <xs:extension base="Block">
+        <xs:extension base="Flow">
+          <xs:attributeGroup ref="attrs"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:annotation>
+    <xs:documentation>
+    ======================= Frames =======================================
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="iframe">
+    <xs:annotation>
+      <xs:documentation>
+      inline subwindow
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Flow">
+          <xs:attributeGroup ref="coreattrs"/>
+          <xs:attribute name="longdesc" type="URI"/>
+          <xs:attribute name="name" type="xs:NMTOKEN"/>
+          <xs:attribute name="src" type="URI"/>
+          <xs:attribute name="frameborder" default="1">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="1"/>
+                <xs:enumeration value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="marginwidth" type="Pixels"/>
+          <xs:attribute name="marginheight" type="Pixels"/>
+          <xs:attribute name="scrolling" default="auto">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="yes"/>
+                <xs:enumeration value="no"/>
+                <xs:enumeration value="auto"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="align" type="ImgAlign"/>
+          <xs:attribute name="height" type="Length"/>
+          <xs:attribute name="width" type="Length"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="noframes">
+    <xs:annotation>
+      <xs:documentation>
+      alternate content container for non frame-based rendering
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Flow">
           <xs:attributeGroup ref="attrs"/>
         </xs:extension>
       </xs:complexContent>
@@ -798,12 +977,18 @@
   </xs:annotation>
 
   <xs:element name="body">
-    <xs:complexType>
+    <xs:complexType mixed="true">
       <xs:complexContent>
-        <xs:extension base="Block">
+        <xs:extension base="Flow">
           <xs:attributeGroup ref="attrs"/>
           <xs:attribute name="onload" type="Script"/>
           <xs:attribute name="onunload" type="Script"/>
+          <xs:attribute name="background" type="URI"/>
+          <xs:attribute name="bgcolor" type="Color"/>
+          <xs:attribute name="text" type="Color"/>
+          <xs:attribute name="link" type="Color"/>
+          <xs:attribute name="vlink" type="Color"/>
+          <xs:attribute name="alink" type="Color"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -819,6 +1004,7 @@
       <xs:complexContent>
         <xs:extension base="Flow">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -835,6 +1021,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -854,6 +1041,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -864,6 +1052,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -874,6 +1063,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -884,6 +1074,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -894,6 +1085,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -904,6 +1096,7 @@
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attributeGroup ref="TextAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -914,6 +1107,19 @@
     =================== Lists ============================================
     </xs:documentation>
   </xs:annotation>
+
+  <xs:simpleType name="ULStyle">
+    <xs:annotation>
+      <xs:documentation>
+      Unordered list bullet styles
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="disc"/>
+      <xs:enumeration value="square"/>
+      <xs:enumeration value="circle"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="ul">
     <xs:annotation>
@@ -926,8 +1132,34 @@
         <xs:element maxOccurs="unbounded" ref="li"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="type" type="ULStyle"/>
+      <xs:attribute name="compact">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="compact"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
+
+  <xs:simpleType name="OLStyle">
+    <xs:annotation>
+      <xs:documentation>
+      Ordered list numbering style
+
+      1   arabic numbers      1, 2, 3, ...
+      a   lower alpha         a, b, c, ...
+      A   upper alpha         A, B, C, ...
+      i   lower roman         i, ii, iii, ...
+      I   upper roman         I, II, III, ...
+
+      The style is applied to the sequence number which by default
+      is reset to 1 for the first list item in an ordered list.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
 
   <xs:element name="ol">
     <xs:annotation>
@@ -940,8 +1172,68 @@
         <xs:element maxOccurs="unbounded" ref="li"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="type" type="OLStyle"/>
+      <xs:attribute name="compact">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="compact"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="start" type="Number"/>
     </xs:complexType>
   </xs:element>
+
+  <xs:element name="menu">
+    <xs:annotation>
+      <xs:documentation>
+      single column list (DEPRECATED)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="li"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="compact">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="compact"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dir">
+    <xs:annotation>
+      <xs:documentation>
+      multiple column list (DEPRECATED)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="li"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="compact">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="compact"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="LIStyle">
+    <xs:annotation>
+      <xs:documentation>
+      LIStyle is constrained to: "(ULStyle|OLStyle)"
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
 
   <xs:element name="li">
     <xs:annotation>
@@ -953,6 +1245,8 @@
       <xs:complexContent>
         <xs:extension base="Flow">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attribute name="type" type="LIStyle"/>
+          <xs:attribute name="value" type="Number"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -971,6 +1265,13 @@
         <xs:element ref="dd"/>
       </xs:choice>
       <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="compact">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="compact"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 
@@ -1007,11 +1308,12 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:complexContent>
-        <xs:extension base="Inline">
-          <xs:attributeGroup ref="attrs"/>
-        </xs:extension>
-      </xs:complexContent>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="inline"/>
+        <xs:group ref="misc.inline"/>
+        <xs:element ref="p"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attrs"/>
     </xs:complexType>
   </xs:element>
 
@@ -1024,6 +1326,24 @@
   <xs:element name="hr">
     <xs:complexType>
       <xs:attributeGroup ref="attrs"/>
+      <xs:attribute name="align">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="left"/>
+            <xs:enumeration value="center"/>
+            <xs:enumeration value="right"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="noshade">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="noshade"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="size" type="Pixels"/>
+      <xs:attribute name="width" type="Length"/>
     </xs:complexType>
   </xs:element>
 
@@ -1036,14 +1356,16 @@
   <xs:element name="pre">
     <xs:annotation>
       <xs:documentation>
-      content is "Inline" excluding "img|object|big|small|sub|sup"
+      content is "Inline" excluding 
+         "img|object|applet|big|small|sub|sup|font|basefont"
       </xs:documentation>
     </xs:annotation>
     <xs:complexType mixed="true">
       <xs:complexContent>
         <xs:extension base="pre.content">
-           <xs:attributeGroup ref="attrs"/>
-           <xs:attribute ref="xml:space" fixed="preserve"/>
+          <xs:attributeGroup ref="attrs"/>
+          <xs:attribute name="width" type="Number"/>
+          <xs:attribute ref="xml:space" fixed="preserve"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1056,11 +1378,32 @@
   </xs:annotation>
 
   <xs:element name="blockquote">
-    <xs:complexType>
+    <xs:complexType mixed="true">
       <xs:complexContent>
-        <xs:extension base="Block">
+        <xs:extension base="Flow">
           <xs:attributeGroup ref="attrs"/>
           <xs:attribute name="cite" type="URI"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:annotation>
+    <xs:documentation>
+    =================== Text alignment ===================================
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="center">
+    <xs:annotation>
+      <xs:documentation>
+      center content
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Flow">
+          <xs:attributeGroup ref="attrs"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1126,6 +1469,7 @@
           <xs:attribute name="rev" type="LinkTypes"/>
           <xs:attribute name="shape" default="rect" type="Shape"/>
           <xs:attribute name="coords" type="Coords"/>
+          <xs:attribute name="target" type="FrameTarget"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1186,6 +1530,16 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="coreattrs"/>
+      <xs:attribute name="clear" default="none">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="left"/>
+            <xs:enumeration value="all"/>
+            <xs:enumeration value="right"/>
+            <xs:enumeration value="none"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 
@@ -1460,6 +1814,84 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="u">
+    <xs:annotation>
+      <xs:documentation>
+      underline
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Inline">
+          <xs:attributeGroup ref="attrs"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="s">
+    <xs:annotation>
+      <xs:documentation>
+      strike-through
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Inline">
+          <xs:attributeGroup ref="attrs"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="strike">
+    <xs:annotation>
+      <xs:documentation>
+      strike-through
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Inline">
+          <xs:attributeGroup ref="attrs"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="basefont">
+    <xs:annotation>
+      <xs:documentation>
+      base font size
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="size" use="required"/>
+      <xs:attribute name="color" type="Color"/>
+      <xs:attribute name="face"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="font">
+    <xs:annotation>
+      <xs:documentation>
+      local change to font
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:complexContent>
+        <xs:extension base="Inline">
+          <xs:attributeGroup ref="coreattrs"/>
+          <xs:attributeGroup ref="i18n"/>
+          <xs:attribute name="size"/>
+          <xs:attribute name="color" type="Color"/>
+          <xs:attribute name="face"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
   <xs:annotation>
     <xs:documentation>
     ==================== Object ======================================
@@ -1499,7 +1931,11 @@
       <xs:attribute name="width" type="Length"/>
       <xs:attribute name="usemap" type="URI"/>
       <xs:attribute name="name" type="xs:NMTOKEN"/>
-      <xs:attribute name="tabindex" type="tabindexNumber"/>
+      <xs:attribute name="tabindex" type="Number"/>
+      <xs:attribute name="align" type="ImgAlign"/>
+      <xs:attribute name="border" type="Pixels"/>
+      <xs:attribute name="hspace" type="Pixels"/>
+      <xs:attribute name="vspace" type="Pixels"/>
     </xs:complexType>
   </xs:element>
 
@@ -1514,7 +1950,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="name"/>
+      <xs:attribute name="name" use="required"/>
       <xs:attribute name="value"/>
       <xs:attribute name="valuetype" default="data">
         <xs:simpleType>
@@ -1531,14 +1967,45 @@
 
   <xs:annotation>
     <xs:documentation>
+    =================== Java applet ==================================
+
+    One of code or object attributes must be present.
+    Place param elements before other content.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="applet">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="param"/>
+        <xs:group ref="block"/>
+        <xs:element ref="form"/>
+        <xs:group ref="inline"/>
+        <xs:group ref="misc"/>
+      </xs:choice>
+      <xs:attributeGroup ref="coreattrs"/>
+      <xs:attribute name="codebase" type="URI"/>
+      <xs:attribute name="archive"/>
+      <xs:attribute name="code"/>
+      <xs:attribute name="object"/>
+      <xs:attribute name="alt" type="Text"/>
+      <xs:attribute name="name" type="xs:NMTOKEN"/>
+      <xs:attribute name="width" use="required" type="Length"/>
+      <xs:attribute name="height" use="required" type="Length"/>
+      <xs:attribute name="align" type="ImgAlign"/>
+      <xs:attribute name="hspace" type="Pixels"/>
+      <xs:attribute name="vspace" type="Pixels"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:annotation>
+    <xs:documentation>
     =================== Images ===========================================
 
     To avoid accessibility problems for people who aren't
     able to see the image, you should provide a text
     description using the alt and longdesc attributes.
     In addition, avoid the use of server-side image maps.
-    Note that in this DTD there is no name attribute. That
-    is only available in the transitional and frameset DTD.
     </xs:documentation>
   </xs:annotation>
 
@@ -1547,6 +2014,7 @@
       <xs:attributeGroup ref="attrs"/>
       <xs:attribute name="src" use="required" type="URI"/>
       <xs:attribute name="alt" use="required" type="Text"/>
+      <xs:attribute name="name" type="xs:NMTOKEN"/>
       <xs:attribute name="longdesc" type="URI"/>
       <xs:attribute name="height" type="Length"/>
       <xs:attribute name="width" type="Length"/>
@@ -1565,6 +2033,10 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
+      <xs:attribute name="align" type="ImgAlign"/>
+      <xs:attribute name="border" type="Length"/>
+      <xs:attribute name="hspace" type="Pixels"/>
+      <xs:attribute name="vspace" type="Pixels"/>
     </xs:complexType>
   </xs:element>
 
@@ -1593,13 +2065,13 @@
       <xs:attribute name="class"/>
       <xs:attribute name="style" type="StyleSheet"/>
       <xs:attribute name="title" type="Text"/>
-      <xs:attribute name="name" type="xs:NMTOKEN"/>
+      <xs:attribute name="name"/>
     </xs:complexType>
   </xs:element>
 
   <xs:element name="area">
     <xs:complexType>
-        <xs:attributeGroup ref="attrs"/>
+      <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="focus"/>
       <xs:attribute name="shape" default="rect" type="Shape"/>
       <xs:attribute name="coords" type="Coords"/>
@@ -1612,6 +2084,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="alt" use="required" type="Text"/>
+      <xs:attribute name="target" type="FrameTarget"/>
     </xs:complexType>
   </xs:element>
 
@@ -1622,7 +2095,7 @@
   </xs:annotation>
 
   <xs:element name="form">
-    <xs:complexType>
+    <xs:complexType mixed="true">
       <xs:complexContent>
         <xs:extension base="form.content">
           <xs:attributeGroup ref="attrs"/>
@@ -1641,6 +2114,7 @@
           <xs:attribute name="onreset" type="Script"/>
           <xs:attribute name="accept" type="ContentTypes"/>
           <xs:attribute name="accept-charset" type="Charsets"/>
+          <xs:attribute name="target" type="FrameTarget"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1728,6 +2202,7 @@
       <xs:attribute name="onselect" type="Script"/>
       <xs:attribute name="onchange" type="Script"/>
       <xs:attribute name="accept" type="ContentTypes"/>
+      <xs:attribute name="align" type="ImgAlign"/>
     </xs:complexType>
   </xs:element>
 
@@ -1871,6 +2346,15 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:simpleType name="LAlign">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:element name="legend">
     <xs:annotation>
       <xs:documentation>
@@ -1882,6 +2366,7 @@
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
           <xs:attribute name="accesskey" type="Character"/>
+          <xs:attribute name="align" type="LAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1918,6 +2403,19 @@
           </xs:attribute>
         </xs:extension>
       </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="isindex">
+    <xs:annotation>
+      <xs:documentation>
+      single-line text input control (DEPRECATED)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="coreattrs"/>
+      <xs:attributeGroup ref="i18n"/>
+      <xs:attribute name="prompt" type="Text"/>
     </xs:complexType>
   </xs:element>
 
@@ -1968,6 +2466,19 @@
       <xs:enumeration value="rows"/>
       <xs:enumeration value="cols"/>
       <xs:enumeration value="all"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TAlign">
+    <xs:annotation>
+      <xs:documentation>
+      horizontal placement of table relative to document
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="right"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -2036,14 +2547,26 @@
       <xs:attribute name="rules" type="TRules"/>
       <xs:attribute name="cellspacing" type="Length"/>
       <xs:attribute name="cellpadding" type="Length"/>
+      <xs:attribute name="align" type="TAlign"/>
+      <xs:attribute name="bgcolor" type="Color"/>
     </xs:complexType>
   </xs:element>
+
+  <xs:simpleType name="CAlign">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="caption">
     <xs:complexType mixed="true">
       <xs:complexContent>
         <xs:extension base="Inline">
           <xs:attributeGroup ref="attrs"/>
+          <xs:attribute name="align" type="CAlign"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -2149,6 +2672,7 @@
       <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="cellhalign"/>
       <xs:attributeGroup ref="cellvalign"/>
+      <xs:attribute name="bgcolor" type="Color"/>
     </xs:complexType>
   </xs:element>
 
@@ -2185,6 +2709,16 @@
           <xs:attribute name="colspan" default="1" type="Number"/>
           <xs:attributeGroup ref="cellhalign"/>
           <xs:attributeGroup ref="cellvalign"/>
+          <xs:attribute name="nowrap">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="nowrap"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="bgcolor" type="Color"/>
+          <xs:attribute name="width" type="Length"/>
+          <xs:attribute name="height" type="Length"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -2203,6 +2737,16 @@
           <xs:attribute name="colspan" default="1" type="Number"/>
           <xs:attributeGroup ref="cellhalign"/>
           <xs:attributeGroup ref="cellvalign"/>
+          <xs:attribute name="nowrap">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="nowrap"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="bgcolor" type="Color"/>
+          <xs:attribute name="width" type="Length"/>
+          <xs:attribute name="height" type="Length"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>

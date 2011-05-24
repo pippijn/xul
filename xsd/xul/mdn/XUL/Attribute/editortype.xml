@@ -1,8 +1,11 @@
 <content type="application/x.deki0805+xml" title="editortype"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("editortype")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The type of editor to use. This value will be overridden depending on the content type of the document in the editor. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("editortype")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The type of editor to use. This value will be overridden depending on the content type of the document in the editor.</dd>
+<dd>
 <ul> <li><code>html</code>: An HTML editor.</li> <li><code>text</code>: A plaintext editor.</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/editortype", "pl": "pl/XUL/Atrybut/editortype" } ) </span></p>
 </div></body></content>

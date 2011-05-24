@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="prefpane.src"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("prefpane.src", "src")</span> </dt><dd> Type: <em>overlay URL</em> </dd><dd> The URL of the contents of preference pane. If this is not specified, the contents of the <span class="script">template.XULElem("prefpane")</span> element is used. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("prefpane.src", "src")</span></dt> <dd>Type: <em>URI</em></dd> <dd>The URI of the overlay contents of preference pane. If this is not specified, the contents of the <span class="script">template.XULElem("prefpane")</span> element is used.</dd>
+</dl>
 <div class="noinclude">
 <h3 name="See_also">See also</h3>
 <ul> <li><a title="en/XUL/Attribute/src" href="/en/XUL/Attribute/src">src</a></li>

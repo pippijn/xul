@@ -3,16 +3,21 @@
 	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/xulref"
 >
 
-<!ELEMENT attribute (documentation)>
+<!ELEMENT attribute (value*, documentation)>
 <!ATTLIST attribute
-	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/attribute"
+	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/xulref"
 	name	ID	#REQUIRED
 	type	CDATA	#REQUIRED
 >
 
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+	name	CDATA	#REQUIRED
+>
+
 <!ELEMENT method (arg*, documentation)>
 <!ATTLIST method
-	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/method"
+	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/xulref"
 	name	ID	#REQUIRED
 	type	CDATA	#REQUIRED
 >
@@ -22,9 +27,9 @@
 	name	CDATA	#REQUIRED
 >
 
-<!ELEMENT property (documentation)>
+<!ELEMENT property (value*, documentation)>
 <!ATTLIST property
-	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/property"
+	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/xulref"
 	name	ID	#REQUIRED
 	type	CDATA	#REQUIRED
 >
@@ -34,14 +39,9 @@
 	source	CDATA	#REQUIRED
 >
 
-<!ELEMENT div EMPTY>
-<!ATTLIST div
-	xmlns	CDATA	#FIXED "http://www.w3.org/1999/xhtml"
->
-
 <!ELEMENT element (attr*, prop*, meth*, documentation)>
 <!ATTLIST element
-	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/element"
+	xmlns	CDATA	#FIXED "http://xul.xinutec.org/2011/xulref"
 	name	ID	#REQUIRED
 	inherits
 		IDREF	#IMPLIED
@@ -63,4 +63,10 @@
 <!ELEMENT meth EMPTY>
 <!ATTLIST meth
 	ref	IDREF	#REQUIRED
+>
+
+<!ENTITY % xhtml SYSTEM "../../xhtml/xhtml1-transitional.dtd"> %xhtml;
+
+<!ATTLIST div
+	xmlns	CDATA	#FIXED "http://www.w3.org/1999/xhtml"
 >

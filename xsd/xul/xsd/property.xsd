@@ -1,32 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://xul.xinutec.org/2011/property"
-	xmlns:h="http://www.w3.org/1999/xhtml"
-	xmlns:t="http://xul.xinutec.org/2011/type"
-	targetNamespace="http://xul.xinutec.org/2011/property"
-	finalDefault="extension">
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
 
-	<xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml/xhtml1-transitional.xsd"/>
-	<xs:import namespace="http://xul.xinutec.org/2011/type" schemaLocation="fragments/types.xsd"/>
+	<xs:include schemaLocation="fragments/attrprop.xsd"/>
 
-	<xs:element name="property">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="documentation"/>
-			</xs:sequence>
-			<xs:attribute name="name" type="xs:ID" use="required"/>
-			<xs:attribute name="type" type="t:propertyType" use="required"/>
-		</xs:complexType>
-	</xs:element>
+	<xs:element name="property" type="propertyElementType"/>
 
-	<xs:element name="documentation">
-		<xs:complexType>
-			<xs:all>
-				<xs:element ref="h:div"/>
-			</xs:all>
-			<xs:attribute name="source" type="xs:anyURI" use="required"/>
-		</xs:complexType>
-	</xs:element>
+	<xs:complexType name="propertyElementType">
+		<xs:complexContent>
+			<xs:extension base="attrpropElementType">
+				<xs:attribute name="type" type="propertyType" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 
 </xs:schema>

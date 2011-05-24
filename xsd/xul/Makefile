@@ -5,6 +5,8 @@ PROPERTIES	:= $(patsubst mdn/XUL/%,xml/%,$(wildcard mdn/XUL/Property/*))
 
 XULELEMENT	:= xml/XULElement.xml
 
+DEPENDENCIES	:= $(wildcard xsl/fragments/* xsd/* xsd/fragments/*)
+
 ../xul.xsd: xsl/xsd.xsl xulref.xml
 	xsltproc --output $@ $< xulref.xml
 
@@ -25,17 +27,17 @@ elements: $(ELEMENTS)
 methods: $(METHODS)
 properties: $(PROPERTIES)
 
-$(XULELEMENT): xsl/xul-element-info.xsl mdn/XUL_element_attributes.xml
-	@./transform $+ $@
+$(XULELEMENT): xsl/xul-element-info.xsl mdn/XUL_element_attributes.xml $(DEPENDENCIES)
+	@./transform $@ $+
 
-xml/Attribute/%.xml: xsl/attribute-info.xsl mdn/XUL/Attribute/%.xml
-	@./transform $+ $@
+xml/Attribute/%.xml: xsl/attribute-info.xsl mdn/XUL/Attribute/%.xml $(DEPENDENCIES)
+	@./transform $@ $+
 
-xml/Element/%.xml: xsl/element-info.xsl mdn/XUL/%.xml
-	@./transform $+ $@
+xml/Element/%.xml: xsl/element-info.xsl mdn/XUL/%.xml $(DEPENDENCIES)
+	@./transform $@ $+
 
-xml/Method/%.xml: xsl/method-info.xsl mdn/XUL/Method/%.xml
-	@./transform $+ $@
+xml/Method/%.xml: xsl/method-info.xsl mdn/XUL/Method/%.xml $(DEPENDENCIES)
+	@./transform $@ $+
 
-xml/Property/%.xml: xsl/property-info.xsl mdn/XUL/Property/%.xml
-	@./transform $+ $@
+xml/Property/%.xml: xsl/property-info.xsl mdn/XUL/Property/%.xml $(DEPENDENCIES)
+	@./transform $@ $+

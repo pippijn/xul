@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://xul.xinutec.org/2011/element"
-	xmlns:h="http://www.w3.org/1999/xhtml"
-	targetNamespace="http://xul.xinutec.org/2011/element"
-	finalDefault="extension">
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
 
-	<xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml/xhtml1-transitional.xsd"/>
+	<xs:include schemaLocation="fragments/documentation.xsd"/>
 
 	<xs:element name="element">
 		<xs:complexType>
@@ -29,14 +27,5 @@
 	<xs:complexType name="refType">
 		<xs:attribute name="ref" type="xs:IDREF" use="required"/>
 	</xs:complexType>
-
-	<xs:element name="documentation">
-		<xs:complexType>
-			<xs:all>
-				<xs:element ref="h:div"/>
-			</xs:all>
-			<xs:attribute name="source" type="xs:anyURI" use="required"/>
-		</xs:complexType>
-	</xs:element>
 
 </xs:schema>

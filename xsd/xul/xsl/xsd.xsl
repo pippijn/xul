@@ -1,14 +1,10 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-	xmlns:a="http://xul.xinutec.org/2011/attribute"
-	xmlns:p="http://xul.xinutec.org/2011/property"
-	xmlns:m="http://xul.xinutec.org/2011/method"
-	xmlns:e="http://xul.xinutec.org/2011/element"
 	xmlns:x="http://xul.xinutec.org/2011/xulref"
 	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	extension-element-prefixes="a p m e x"> 
+	extension-element-prefixes="x"> 
 
 	<xsl:output omit-xml-declaration="yes" indent="yes"/>
 	<xsl:key name="parent" match="e:element" use="@name"/>

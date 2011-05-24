@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="script.src"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("script.src", "src")</span> </dt><dd> Type: <em>URL</em> </dd><dd> The URL of the script. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("script.src", "src")</span></dt> <dd>Type: <em>URI</em></dd> <dd>The URI of the script.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/script.src", "pl": "pl/XUL/Atrybut/script.src" } ) </span></p>
 </div></body></content>

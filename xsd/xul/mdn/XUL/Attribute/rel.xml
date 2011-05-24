@@ -1,8 +1,11 @@
 <content type="application/x.deki0805+xml" title="rel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("rel")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The type of comparison to perform. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("rel")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The type of comparison to perform.</dd>
+<dd>
 <ul> <li><code>equals</code>: The subject and value must match exactly.</li> <li><code>less</code>: The numeric value of the subject must be less than the value</li> <li><code>greater</code>: The numeric value of the subject must be greater than the value</li> <li><code>before</code>: The string value of subject must come before value alphabetically</li> <li><code>after</code>: The string value of subject must come after value alphabetically</li> <li><code>startswith</code>: The value of subject must start with the value</li> <li><code>endswith</code>: The value of subject must end with the value</li> <li><code>contains</code>: The value of subject must contain the value as a substring</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/rel" } ) </span></p>
 </div></body></content>

@@ -1,6 +1,6 @@
 <content type="application/x.deki0805+xml" title="id"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("id")</span></dt> <dd>Type: <em>element id, must be unique in the window</em></dd> <dd>A unique identifier so that you can identify the element with. You can use this as a parameter to <code><a title="en/DOM/document.getElementById" href="/en/DOM/document.getElementById">getElementById()</a></code> and other DOM functions and to reference the element in style sheets.</dd>
+<dl> <dt><span class="script">template.XULAttr("id")</span></dt> <dd>Type: <em>unique id</em></dd> <dd>A unique identifier so that you can identify the element with. You can use this as a parameter to <code><a title="en/DOM/document.getElementById" href="/en/DOM/document.getElementById">getElementById()</a></code> and other DOM functions and to reference the element in style sheets.</dd>
 </dl>
 <div class="noinclude">
 <h4 name="Example">Example</h4>

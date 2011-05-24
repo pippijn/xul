@@ -1,8 +1,11 @@
 <content type="application/x.deki0805+xml" title="resizer.dir"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("resizer.dir", "dir")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> The direction that the window is resized. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("resizer.dir", "dir")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The direction that the window is resized.</dd>
+<dd>
 <ul> <li><code>left</code>: Resized to the left.</li> <li><code>right</code>: Resized to the right.</li> <li><code>top</code>: Resized up.</li> <li><code>bottom</code>: Resized down.</li> <li><code>bottomend</code>: Resized down and toward the end of the line (toward the right for left-to-right locales, toward the left for right-to-left locales).  <span class="script">template.gecko_minversion_inline("1.9.2")</span></li> <li><code>bottomleft</code>: Resized down and to the left.</li> <li><code>bottomright</code>: Resized down and to the right.</li> <li><code>topleft</code>: Resized up and to the left.</li> <li><code>topright</code>: Resized up and to the right.</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <h3 name="See_also">See also</h3>
 <ul> <li><span class="script">template.XULAttr("dir")</span></li>

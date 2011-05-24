@@ -1,9 +1,11 @@
 <content type="application/x.deki0805+xml" title="browser.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
 <dl> <dt><span class="script">template.XULAttr("browser.type", "type")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The type of browser, which can be used to set the access of the document loaded inside the browser. If this is not set, the loaded document has the same access as the window containing the <code><span class="script">template.XULElem("browser")</span></code>.</dd>
-</dl>
+<dd>
 <ul> <li><code><strong>content</strong></code>: A browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it.</li> <li><code><strong>content-primary</strong></code>: The primary browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it. For instance, in a web browser, this would be the element that displays the web page. The window for the primary content can be retrieved more conveniently using <a title="en/DOM/window.content" href="/en/DOM/window.content">window.content</a>.</li> <li><code><strong>content-targetable</strong></code>: One browser among many for content. The content that is loaded inside the browser is not allowed to access the chrome above it. This is the preferred value for any <code><span class="script">template.XULElem("browser")</span></code> element in an application that will use multiple browsers of equal privileges and is unselected at the moment.</li> <li><code><strong>chrome</strong></code> (default behaviour): A browser, intended to be used for loading privileged content using a chrome:// URI. Don't use for content from web, as this may cause serious security problems!</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <h4 name="See_also">See also</h4>
 <p>More information in the <a title="en/XUL_Tutorial/Content_Panels" href="/en/XUL_Tutorial/Content_Panels">XUL tutorial</a> and <span class="script">template.XULElem("iframe")</span></p>

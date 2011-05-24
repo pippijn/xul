@@ -1,6 +1,6 @@
 <content type="application/x.deki0805+xml" title="autocompletepopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("autocompletepopup")</span></dt> <dd>Type: <em>id of popup element</em></dd> <dd>The <span class="script">template.XULAttr("id")</span> of a <span class="script">template.XULElem("popup")</span> element used to hold autocomplete results for the element.</dd>
+<dl> <dt><span class="script">template.XULAttr("autocompletepopup")</span></dt> <dd>Type: <em>id</em></dd> <dd>The <span class="script">template.XULAttr("id")</span> of a <span class="script">template.XULElem("popup")</span> element used to hold autocomplete results for the element.</dd>
 </dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/autocompletepopup", "pl": "pl/XUL/Atrybut/autocompletepopup" } ) </span></p>

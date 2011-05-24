@@ -16,10 +16,13 @@ static void
 xsltproc (std::string const &input, std::string const &xslt, std::string const &output)
 {
   timer const T (__func__);
-  xsltStylesheetPtr cur = xsltParseStylesheetFile (reinterpret_cast<xmlChar const *> (xslt.c_str ()));
-  xmlDocPtr doc = xmlParseFile (input.c_str ());
-  xmlDocPtr res = xsltApplyStylesheet (cur, doc, NULL);
+
+  xsltStylesheetPtr const cur = xsltParseStylesheetFile (reinterpret_cast<xmlChar const *> (xslt.c_str ()));
+  xmlDocPtr const doc = xmlParseFile (input.c_str ());
+  xmlDocPtr const res = xsltApplyStylesheet (cur, doc, NULL);
+
   xsltSaveResultToFile (tempFILE (output.c_str ()), res, cur);
+
   xsltFreeStylesheet (cur);
   xmlFreeDoc (res);
   xmlFreeDoc (doc);

@@ -1,9 +1,11 @@
 <content type="application/x.deki0805+xml" title="datepicker.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
 <dl> <dt><span class="script">template.XULAttr("datepicker.type", "type")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>You can set the <code>type</code> attribute to one of the values below to specify the type of datepicker to use</dd>
-</dl>
+<dd>
 <ul> <li><code>normal</code>: A datepicker with three fields for entering the year, month and date. This is the default value so do not specify the type attribute if this kind is desired.</li> <li><code>grid</code>: A datepicker that displays a calendar grid where one month is shown at a time.</li> <li><code>popup</code>: A datepicker with three entry fields but an additional dropdown button, which, when pressed, will display a popup calendar grid.</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <dl> <dt>Normal type</dt> <dd><img class="internal" alt="Image:Controlsguide-datepicker.png" src="/@api/deki/files/158/=Controlsguide-datepicker.png" /></dd> <dt>Grid type</dt> <dd><img class="internal" alt="Image:Controlsguide-datepicker-grid.png" src="/@api/deki/files/156/=Controlsguide-datepicker-grid.png" /></dd> <dt>Popup type</dt> <dd><img class="internal" alt="Image:Controlsguide-datepicker-popup.png" src="/@api/deki/files/5093/=Controlsguide-datepicker-popup.png?" /></dd>
 </dl>

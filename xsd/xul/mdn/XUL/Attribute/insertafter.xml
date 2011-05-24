@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="insertafter"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("insertafter")</span> </dt><dd> Type: <em>element id</em> </dd><dd> When an element is in an <span class="script">template.XULElem("overlay")</span>, the insertafter attribute specifies the <span class="script">template.XULAttr("id")</span> of the element in the base window that the element should appear after. This attribute overrides the <span class="script">template.XULAttr("insertbefore")</span> attribute. This value may be a comma-separated list of ids, which are scanned and the first one found in the window is used. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("insertafter")</span></dt> <dd>Type: <em>id</em></dd> <dd>When an element is in an <span class="script">template.XULElem("overlay")</span>, the insertafter attribute specifies the <span class="script">template.XULAttr("id")</span> of the element in the base window that the element should appear after. This attribute overrides the <span class="script">template.XULAttr("insertbefore")</span> attribute. This value may be a comma-separated list of ids, which are scanned and the first one found in the window is used.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/insertafter", "ja": "ja/XUL/Attribute/insertafter", "pl": "pl/XUL/Atrybut/insertafter" } ) </span></p>
 </div></body></content>

@@ -1,8 +1,11 @@
 <content type="application/x.deki0805+xml" title="progressmeter.mode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("progressmeter.mode", "mode")</span> </dt><dd> Type: <em>one of the values below</em> </dd><dd> A <code>determined</code> <span class="script">template.XULElem("progressmeter")</span> is used in cases where you know how long an operation will take. An <code>undetermined</code> <span class="script">template.XULElem("progressmeter")</span> can be used when you don't and will typically be drawn as a spinning barber pole. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("progressmeter.mode", "mode")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>A <code>determined</code> <span class="script">template.XULElem("progressmeter")</span> is used in cases where you know how long an operation will take. An <code>undetermined</code> <span class="script">template.XULElem("progressmeter")</span> can be used when you don't and will typically be drawn as a spinning barber pole.</dd>
+<dd>
 <ul> <li><code>determined</code>: The progress meter uses its value attribute to determine the amount of the bar that is filled in.</li> <li><code>undetermined</code>: The progressmeter is indeterminate.</li>
 </ul>
+</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/progressmeter.mode", "pl": "pl/XUL/Atrybut/progressmeter.mode" } ) </span></p>
 </div></body></content>

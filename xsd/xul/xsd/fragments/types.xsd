@@ -1,46 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:a="http://xul.xinutec.org/2011/type"
-	xmlns:h="http://www.w3.org/1999/xhtml"
-	targetNamespace="http://xul.xinutec.org/2011/type"
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref"
 	finalDefault="extension">
 
 	<xs:simpleType name="attributeType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="attribute name"/>
-			<xs:enumeration value="margin string"/>
-			<xs:enumeration value="id"/>
+			<xs:enumeration value="unique id"/> <!-- ID -->
+			<xs:enumeration value="id"/> <!-- IDREF -->
 			<xs:enumeration value="boolean"/>
-			<xs:enumeration value="broadcaster element id"/>
 			<xs:enumeration value="character"/>
 			<xs:enumeration value="color string"/>
+			<xs:enumeration value="integer"/>
+			<xs:enumeration value="URI"/>
+			<xs:enumeration value="URL"/>
+			<xs:enumeration value="string"/>
+
+			<xs:enumeration value="attribute name"/>
 			<xs:enumeration value="comma-separated list"/>
 			<xs:enumeration value="comma-separated list of element ids"/>
 			<xs:enumeration value="comma-separated list of item ids"/>
 			<xs:enumeration value="comma-separated list of the values below"/>
 			<xs:enumeration value="comma-separated string"/>
 			<xs:enumeration value="CSS inline style"/>
-			<xs:enumeration value="datasource URI"/>
-			<xs:enumeration value="element id"/>
-			<xs:enumeration value="element id, must be unique in the window"/>
 			<xs:enumeration value="element tag name"/>
 			<xs:enumeration value="element to resize"/>
-			<xs:enumeration value="homepage URL"/>
-			<xs:enumeration value="id of a menupopup element"/>
-			<xs:enumeration value="id of a tabpanel element"/>
-			<xs:enumeration value="id of a tooltip element"/>
-			<xs:enumeration value="id of menupopup element"/>
-			<xs:enumeration value="id of popup element"/>
-			<xs:enumeration value="id of statusbar element"/>
-			<xs:enumeration value="image URL"/>
-			<xs:enumeration value="integer"/>
 			<xs:enumeration value="language content type"/>
+			<xs:enumeration value="margin string"/>
 			<xs:enumeration value="nsIAccessible"/>
-			<xs:enumeration value="one of the following values"/>
 			<xs:enumeration value="one of the values below"/>
-			<xs:enumeration value="overlay URL"/>
-			<xs:enumeration value="popup element id"/>
 			<xs:enumeration value="script code"/>
 			<xs:enumeration value="space-separated list of attribute names"/>
 			<xs:enumeration value="space separated list of datasource URIs"/>
@@ -48,20 +37,10 @@
 			<xs:enumeration value="space-separated list of session names"/>
 			<xs:enumeration value="space-separated list of the values below"/>
 			<xs:enumeration value="space-separated list of values"/>
-			<xs:enumeration value="string"/>
 			<xs:enumeration value="string group name"/>
 			<xs:enumeration value="string key code"/>
 			<xs:enumeration value="string name"/>
-			<xs:enumeration value="string properties file URL"/>
-			<xs:enumeration value="string wizardpage id"/>
-			<xs:enumeration value="tooltip element id"/>
-			<xs:enumeration value="uri"/>
-			<xs:enumeration value="URI"/>
-			<xs:enumeration value="URI of an RDF predicate"/>
-			<xs:enumeration value="URI of an RDF predicate or XML attribute"/>
-			<xs:enumeration value="URI of an RDF resource"/>
-			<xs:enumeration value="URL"/>
-			<xs:enumeration value="URL of an RDF predicate"/>
+			<xs:enumeration value="URI or XML attribute"/>
 		</xs:restriction>
 	</xs:simpleType>
 

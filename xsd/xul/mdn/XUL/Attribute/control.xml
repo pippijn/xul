@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="control"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("control")</span> </dt><dd> Type: <em>element id</em> </dd><dd> This attribute specifies the <span class="script">template.XULAttr("id")</span> of the element with which the label is associated. When the user clicks on the label, the associated element is given focus. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("control")</span></dt> <dd>Type: <em>id</em></dd> <dd>This attribute specifies the <span class="script">template.XULAttr("id")</span> of the element with which the label is associated. When the user clicks on the label, the associated element is given focus.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/control", "pl": "pl/XUL/Atrybut/control" } ) </span></p>
 </div></body></content>

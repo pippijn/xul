@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="menu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("menu")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Alternate name for the <code><span class="script">template.XULAttr("popup")</span></code> attribute, but also has a corresponding script property 'menu'. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("menu")</span></dt> <dd>Type: <em>id</em></dd> <dd>Alternate name for the <code><span class="script">template.XULAttr("popup")</span></code> attribute, but also has a corresponding script property 'menu'.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/menu", "ja": "ja/XUL/Attribute/menu" } ) </span></p>
 </div></body></content>

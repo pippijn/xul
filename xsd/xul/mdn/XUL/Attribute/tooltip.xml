@@ -1,6 +1,7 @@
 <content type="application/x.deki0805+xml" title="tooltip"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
 <div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("tooltip")</span> </dt><dd> Type: <em>tooltip element id</em> </dd><dd> Should be set to the value of the <span class="script">template.XULAttr("id")</span> of the <span class="script">template.XULElem("popup")</span> element that should be used as a tooltip window when the mouse hovers over the element for a moment. The tooltip will automatically disappear when the mouse is moved. If this attribute is set to '_child', the first tooltip child element inside the element is used. </dd></dl>
+<dl> <dt><span class="script">template.XULAttr("tooltip")</span></dt> <dd>Type: <em>id</em></dd> <dd>Should be set to the value of the <span class="script">template.XULAttr("id")</span> of the <span class="script">template.XULElem("popup")</span> element that should be used as a tooltip window when the mouse hovers over the element for a moment. The tooltip will automatically disappear when the mouse is moved. If this attribute is set to '_child', the first tooltip child element inside the element is used.</dd>
+</dl>
 <div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/tooltip", "ja": "ja/XUL/Attribute/tooltip" } ) </span></p>
 </div></body></content>
