@@ -1,12 +1,12 @@
 <!DOCTYPE xs:schema [
-<!ENTITY PN_CHARS_BASE "[A-Z]|[a-z]|[&amp;#x00C0;-&amp;#x00D6;]|[&amp;#x00D8;-&amp;#x00F6;]|[&amp;#x00F8;-&amp;#x02FF;]|[&amp;#x0370;-&amp;#x037D;]|[&amp;#x037F;-&amp;#x1FFF;]|[&amp;#x200C;-&amp;#x200D;]|[&amp;#x2070;-&amp;#x218F;]|[&amp;#x2C00;-&amp;#x2FEF;]|[&amp;#x3001;-&amp;#xD7FF;]|[&amp;#xF900;-&amp;#xFDCF;]|[&amp;#xFDF0;-&amp;#xFFFD;]|[&amp;#x10000;-&amp;#xEFFFF;]">
-	<!ENTITY PN_CHARS_U    "&amp;PN_CHARS_BASE;|_">
-	<!ENTITY PN_CHARS      "&amp;PN_CHARS_U;|\-|[0-9]|&amp;#x00B7;|[&amp;#x0300;-&amp;#x036F;]|[&amp;#x203F;-&amp;#x2040;]">
-	<!ENTITY PN_PREFIX     "(&amp;PN_CHARS_BASE;)((&amp;PN_CHARS;|\.)*(&amp;PN_CHARS;  ))?">
-	<!ENTITY PN_LOCAL	     "(&amp;PN_CHARS_U;|[0-9])((&amp;PN_CHARS;|\.)*(&amp;PN_CHARS;))?">
-	<!ENTITY PNAME_NS      "(&amp;PN_PREFIX;)?:">
-	<!ENTITY PNAME_LN	     "(&amp;PNAME_NS;)(&amp;PN_LOCAL;)">
-	<!ENTITY PrefixedName  "(&amp;PNAME_LN;)|(&amp;PNAME_NS;)">
+<!ENTITY PN_CHARS_BASE "[A-Z]|[a-z]|[&#x00C0;-&#x00D6;]|[&#x00D8;-&#x00F6;]|[&#x00F8;-&#x02FF;]|[&#x0370;-&#x037D;]|[&#x037F;-&#x1FFF;]|[&#x200C;-&#x200D;]|[&#x2070;-&#x218F;]|[&#x2C00;-&#x2FEF;]|[&#x3001;-&#xD7FF;]|[&#xF900;-&#xFDCF;]|[&#xFDF0;-&#xFFFD;]|[&#x10000;-&#xEFFFF;]">
+	<!ENTITY PN_CHARS_U    "&PN_CHARS_BASE;|_">
+	<!ENTITY PN_CHARS      "&PN_CHARS_U;|\-|[0-9]|&#x00B7;|[&#x0300;-&#x036F;]|[&#x203F;-&#x2040;]">
+	<!ENTITY PN_PREFIX     "(&PN_CHARS_BASE;)((&PN_CHARS;|\.)*(&PN_CHARS;  ))?">
+	<!ENTITY PN_LOCAL	     "(&PN_CHARS_U;|[0-9])((&PN_CHARS;|\.)*(&PN_CHARS;))?">
+	<!ENTITY PNAME_NS      "(&PN_PREFIX;)?:">
+	<!ENTITY PNAME_LN	     "(&PNAME_NS;)(&PN_LOCAL;)">
+	<!ENTITY PrefixedName  "(&PNAME_LN;)|(&PNAME_NS;)">
 	]>
 <!--  From: http://www.w3.org/TR/rdf-sparql-query/#grammar 
   The entities implement productions [95] (PN_CHARS_BASE), [96] (PN_CHARS_U), [98] (PN_CHARS), [99] (PN_PREFIX),
@@ -27,7 +27,7 @@
 		<xs:attribute name="name" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:pattern value="&amp;PN_PREFIX;|"/>
+					<xs:pattern value="&PN_PREFIX;|"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -84,7 +84,7 @@
   <!-- This is the type for the attribute. The complex type for the element is capitalized. -->
   <xs:simpleType name="abbreviatedIRI">
 	  <xs:restriction base="xs:string">
-		  <xs:pattern value="&amp;PrefixedName;"/>
+		  <xs:pattern value="&PrefixedName;"/>
 	  </xs:restriction>
   </xs:simpleType>
 
