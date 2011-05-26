@@ -1,0 +1,117 @@
+xsl:stylesheet {
+	version: "1.0"
+	xmlns:x: "http://xul.xinutec.org/2011/xulref"
+	xmlns:xs: "http://www.w3.org/2001/XMLSchema"
+	xmlns:xsl: "http://www.w3.org/1999/XSL/Transform"
+	xmlns:xul: "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	extension-element-prefixes: "x"
+
+	xsl:output { omit-xml-declaration: "yes" }
+	xsl:key { name: "parent", match: "x:element", use: "@name" }
+
+	xsl:template {
+		match: "x:xulref"
+		xs:schema {
+			targetNamespace: "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+			xs:group {
+				name: "anyElementStructure"
+				xs:choice {
+					xs:any {
+						namespace: "http://www.w3.org/1999/xhtml"
+						processContents: "strict"
+					}
+					xs:any {
+						namespace: "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+						processContents: "strict"
+					}
+				}
+			}
+
+			xsl:apply-templates {
+				xsl:sort { select: "name()" }
+				xsl:sort { select: "@name" }
+			}
+		}
+	}
+
+	xsl:template {
+		match: "x:attribute"
+		xsl:variable { name: "name", select: "substring-after(@name, '-')" }
+		xs:attributeGroup {
+			name: "{$name}"
+			xsl:choose {
+				xsl:when { test: "contains($name, '.')"
+					xs:attribute { name: "{substring-after($name, '.')}", type: "xs:string" }
+				}
+				xsl:otherwise {
+					xs:attribute { name: "{$name}", type: "xs:string" }
+				}
+			}
+		}
+	}
+
+	xsl:template {
+		match: "x:element"
+		xsl:if { test: "@abstract = 'false'"
+			xs:attributeGroup {
+				name: "{@name}AttributeGroup"
+				xs:if { test: "@inherits"
+					xsl:comment {
+						"Inherited from "
+						xsl:value-of { select: "@inherits" }
+						":"
+					}
+					xsl:apply-templates {
+						select: "key('parent', @inherits)/x:attr"
+						xsl:with-param { name: "derived", select: "@name" }
+					}
+				}
+				xsl:comment { "Own attributes:" }
+				xsl:apply-templates {
+					xsl:sort { select: "@ref" }
+				}
+			}
+
+			xs:complexType {
+				name: "{@name}ElementStructure"
+				xs:sequence {
+					xs:group { ref: "xul:anyElementStructure", minOccurs: "0", maxOccurs: "unbounded" }
+				}
+			}
+
+			xs:complexType {
+				name: "{@name}ElementType"
+				mixed: "true"
+				xs:complexContent {
+					xs:extension {
+						base: "xul:{@name}ElementStructure"
+						xs:attributeGroup { ref: "xul:{@name}AttributeGroup" }
+					}
+				}
+			}
+
+			xs:element { name: "{@name}", type: "xul:{@name}ElementType" }
+		}
+	}
+
+	xsl:template {
+		match: "x:attr"
+		xsl:param { name: "derived" }
+		xsl:variable { name: "ref", select: "@ref" }
+
+		xsl:choose {
+			xsl:when { test: "$derived"
+				xsl:if { test: "not(key('parent', $derived)/x:attr[@ref = $ref or substring-after(@ref, '.') = substring-after($ref, '-')])"
+					xs:attributeGroup { ref: "xul:{substring-after($ref, '-')}" }
+				}
+			}
+			xsl:otherwise {
+				xs:attributeGroup { ref: "xul:{substring-after($ref, '-')}" }
+			}
+		}
+	}
+
+	xsl:template { match: "documentation" }
+	xsl:template { match: "text()" }
+
+}

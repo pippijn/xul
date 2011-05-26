@@ -1,0 +1,36 @@
+#DOCTYPE window SYSTEM "xul.dtd"
+
+window {
+	id: "rootWnd"
+	title: "Register Online!"
+
+	description { "Register Online!" }
+	vbox {
+		description { "Register Online!" }
+		hbox {
+			image { src: "wall-create-account-button.png" }
+			description { "Register Online!" }
+		}
+		groupbox {
+			align: "start"
+			caption { label: "Your Information" }
+			vbox {
+				hbox {
+					label { control: "your-fname", value: "Enter first name:" }
+					textbox { id: "your-fname", value: "Johan" }
+				}
+				hbox {
+					label { control: "your-lname", value: "Enter last name:" }
+					textbox { id: "your-lname", value: "Hernandez" }
+				}
+				hbox {
+					button {
+						oncommand: "alert('save!')"
+						description { "Save" }
+					}
+				}
+			}
+		}
+	}
+
+}

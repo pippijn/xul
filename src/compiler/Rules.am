@@ -1,0 +1,2 @@
+include jmlc/Rules.am
+include gozerc/Rules.am

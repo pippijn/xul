@@ -1,0 +1,7 @@
+include jml/Tests.am
+include xul/Tests.am
+
+TEST_EXTENSIONS = .xul .jml
+
+JML_LOG_COMPILER = $(builddir)/jmlc$(EXEEXT) --noout
+XUL_LOG_COMPILER = $(abs_srcdir)/$(CURDIR)/runtest $(builddir)/gozerc$(EXEEXT)

@@ -1,0 +1,6 @@
+window {
+	id: 'rootWnd'
+	title: "Register Online!"
+
+	'hello'
+}

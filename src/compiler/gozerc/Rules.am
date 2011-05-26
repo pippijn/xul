@@ -1,0 +1,10 @@
+bin_PROGRAMS += gozerc
+
+LOCAL_SOURCES =		\
+	gozerc.cpp
+
+LOCAL_LDADD =		\
+	$(LIBXML_LIBS)	\
+	$(LIBXSLT_LIBS)	\
+	$(XERCESC_LIBS)	\
+	-ltidy

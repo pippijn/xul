@@ -1,0 +1,22 @@
+include automake/init.am
+
+AUTOMAKE_OPTIONS	+= -Wno-portability -Wno-override
+
+AM_CXXFLAGS		+= -pipe -ggdb3
+AM_CXXFLAGS		+= $(LIBXML_CFLAGS)
+AM_CXXFLAGS		+= $(LIBXSLT_CFLAGS)
+AM_CXXFLAGS		+= $(XERCESC_CFLAGS)
+AM_LDFLAGS		+= -Wl,-z,defs,-z,nodlopen,-z,noexecstack,-z,now,-z,nodump
+
+AM_CPPFLAGS		+= -DSRCDIR='"$(realpath $(abs_srcdir)/src)"'
+AM_CPPFLAGS		+= -D_GLIBCXX_DEBUG
+AM_CPPFLAGS		+= -D_GLIBCXX_DEBUG_PEDANTIC
+AM_CPPFLAGS		+= -D_GLIBCXX_CONCEPT_CHECKS
+AM_CPPFLAGS		+= -include config.h
+AM_CPPFLAGS		+= -I$(srcdir)/include
+
+AM_YFLAGS		+= -d
+
+include include/Rules.am
+include src/Rules.am
+include testsuite/Rules.am

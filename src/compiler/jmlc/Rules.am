@@ -1,0 +1,22 @@
+bin_PROGRAMS += jmlc
+
+LOCAL_SOURCES =		\
+	jmlc.cpp	\
+	lexer.cpp	\
+	node.cpp	\
+	parser.cpp	\
+	xmlvisitor.cpp	\
+	yylex.ll	\
+	yyparse.yy
+
+LOCAL_LDADD =		\
+	$(LIBXML_LIBS)	\
+	$(LIBXSLT_LIBS)	\
+	$(XERCESC_LIBS)	\
+	-ltidy
+
+%yylex.o: yyparse.cc
+%yyparse.o: yylex.cc
+
+yylex.cc: $(CURDIR)/yylex.ll
+	$(AM_V_LEX)flex -o$@ $<
