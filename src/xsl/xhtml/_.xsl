@@ -7,14 +7,14 @@
 		omit-xml-declaration="yes"
 		encoding="ISO-8859-1" 
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="../../src/xsd/xhtml/xhtml1-strict.dtd"/>
+		doctype-system="../../../src/xsd/xhtml/xhtml1-strict.dtd"/>
 
 	<xsl:template match="/">
 		<html>
 			<head>
 				<title><xsl:value-of select="x:*/@title"/></title>
-				<link rel="stylesheet" type="text/css" href="../../global/skin.css"/>
-				<script type="text/javascript" src="../../global/xul.js"/>
+				<link rel="stylesheet" type="text/css" href="../../../src/global/skin.css"/>
+				<script type="text/javascript" src="../../../src/global/xul.js"/>
 			</head>
 			<body>
 				<xsl:apply-templates/>

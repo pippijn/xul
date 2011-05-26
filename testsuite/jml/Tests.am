@@ -1,1 +1,4 @@
-TESTS += test0001.jml
+TESTS +=		\
+	test0000.jml	\
+	test0001.jml	\
+	test0002.jml

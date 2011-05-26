@@ -10,5 +10,5 @@ sub notdir   { ($_[0] =~ /([^\/]+)$/)[0] }
 sub basename { ($_[0] =~ /(.+)\.[^.]+$/)[0] }
 
 for (qw/xhtml xul/) {
-   system $compiler, $input, "testsuite/" . (basename notdir $input) . ".$_";
+   system $compiler, $input, "testsuite/xul/" . (basename notdir $input) . ".$_";
 }
