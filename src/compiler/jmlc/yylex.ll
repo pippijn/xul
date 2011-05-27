@@ -54,5 +54,7 @@ WS	[ \t\v\n\r]
 ^"#".*					{ }
 {WS}+					{ }
 ","					{ }
+"("					{ return '{'; }
+")"					{ return '}'; }
 .					{ return yytext[0]; }
 %%
