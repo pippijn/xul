@@ -9,12 +9,6 @@ LOCAL_SOURCES =		\
 	yylex.ll	\
 	yyparse.yy
 
-LOCAL_LDADD =		\
-	$(LIBXML_LIBS)	\
-	$(LIBXSLT_LIBS)	\
-	$(XERCESC_LIBS)	\
-	-ltidy
-
 %yylex.o: yyparse.cc
 %yyparse.o: yylex.cc
 
