@@ -1,0 +1,6 @@
+bin_PROGRAMS += xsdproc
+
+LOCAL_SOURCES =		\
+	xsdproc.cpp
+
+LOCAL_LDADD = $(XERCESC_LIBS)

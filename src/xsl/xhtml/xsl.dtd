@@ -1,0 +1,10 @@
+<!ELEMENT xsl:stylesheet EMPTY>
+<!ATTLIST xsl:stylesheet
+	xmlns:html	CDATA	#FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:x		CDATA	#FIXED "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:xi	CDATA	#FIXED "http://www.w3.org/2001/XInclude"
+	xmlns:xs	CDATA	#FIXED "http://www.w3.org/2001/XMLSchema"
+	xmlns:xsl	CDATA	#FIXED "http://www.w3.org/1999/XSL/Transform"
+	extension-element-prefixes
+			CDATA	#FIXED "html xi x xs"
+>

@@ -24,5 +24,5 @@ AP_PKG_CHECK([libxml-2.0], 2.7.8)
 AP_PKG_CHECK([libxslt], 1.1.26)
 AP_PKG_CHECK([xerces-c], 3.1.1)
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile src/compiler/gozerc])
 AC_OUTPUT

@@ -5,7 +5,7 @@ PROPERTIES	:= $(patsubst mdn/XUL/%,xml/%,$(wildcard mdn/XUL/Property/*))
 
 XULELEMENT	:= xml/XULElement.xml
 
-DEPENDENCIES	:= $(wildcard xsl/fragments/* xsd/* xsd/fragments/*)
+DEPENDENCIES	:= $(patsubst slax/%.slax,xsl/%.xsl,$(wildcard slax/fragments/*.slax)) $(wildcard xsd/* xsd/fragments/*)
 
 ../xul.xsd: xsl/xsd.xsl xulref.xml
 	@echo "  XSLT  " $@
@@ -42,3 +42,7 @@ xml/Method/%.xml: xsl/method-info.xsl mdn/XUL/Method/%.xml $(DEPENDENCIES)
 
 xml/Property/%.xml: xsl/property-info.xsl mdn/XUL/Property/%.xml $(DEPENDENCIES)
 	@./transform $@ $+
+
+xsl/%.xsl: slax/%.slax
+	@echo "  SLAX  " $@
+	@slaxproc -o $@ -x $<

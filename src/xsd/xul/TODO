@@ -1,0 +1,3 @@
+- Attribute/buttonpack and Attribute/pack share an enumeration type, but this
+  is not known to the parser
+- implement enumeration types in the info-to-schema transformation

@@ -1,0 +1,14 @@
+/* Machine Crafted with Care (tm) by slaxWriter */
+version 1.1;
+
+ns html extension = "http://www.w3.org/1999/xhtml";
+ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+ns xi extension = "http://www.w3.org/2001/XInclude";
+ns xs extension = "http://www.w3.org/2001/XMLSchema";
+
+match x:scrollbar {
+	<div class="xul-scrollbar"> {
+		copy-of @id;
+		apply-templates;
+	}
+}

@@ -1,0 +1,83 @@
+version 1.1;
+
+ns "http://www.w3.org/1999/xhtml";
+
+include "ENOENT.xsl";
+include "copy-self.xsl";
+include "parse-util.xsl";
+include "string-replace.xsl";
+
+match content {
+	apply-templates body/dl[1];
+}
+
+match body/dl[1]/dt[1] { }
+
+match body/dl[1]/dd[substring(normalize-space(text()), 1, 5) == "Type:"] { }
+
+match body/dl[1] {
+	var $name = {
+		call parse-name();
+	}
+	var $type = {
+		call parse-type();
+	}
+
+	if (string-length($name) == 0) {
+		call ENOENT($what = "name");
+	}
+	if (string-length($type) == 0) {
+		call ENOENT($what = "type");
+	}
+	element $longname {
+		ns-template "http://xul.xinutec.org/2011/xulref";
+		attribute "name" {
+			expr $shortname _ "-" _ $name;
+		}
+		attribute "type" {
+			expr $type;
+		}
+		if ($type == "one of the values below") {
+			var $values = dd/ul[1]/li/code[1];
+			/* <xsl:message><xsl:value-of select="count($values)"/></xsl:message> */
+			if (not($values)) {
+				call ENOENT($what = "enumeration values");
+			}
+
+			for-each ($values) {
+				<value name=.> {
+					ns "http://xul.xinutec.org/2011/xulref";
+
+					expr ..;
+				}
+			}
+		}
+		<documentation> {
+			ns "http://xul.xinutec.org/2011/xulref";
+
+			attribute "source" {
+				expr "https://developer.mozilla.org/en/XUL/";
+				if ($Longname) {
+					expr $Longname;
+					expr "/";
+				}
+				expr $name;
+			}
+			<div> {
+				ns "http://www.w3.org/1999/xhtml";
+
+
+				/*
+				 <dl>
+				 <xsl:apply-templates select="@*|node()"/>
+				 </dl>
+				 <xsl:apply-templates select="following-sibling::*"/>
+				 */
+			}
+		}
+	}
+}
+
+template parse-name () {
+	expr substring-before(substring-after(dt[1]/span/text(), concat("XUL", $Shortname, '("')), '"');
+}

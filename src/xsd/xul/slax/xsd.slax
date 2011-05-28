@@ -1,0 +1,93 @@
+version 1.1;
+
+ns x extension = "http://xul.xinutec.org/2011/xulref";
+ns xs = "http://www.w3.org/2001/XMLSchema";
+ns xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+output-method {
+	omit-xml-declaration "yes";
+	indent "yes";
+}
+
+key parent {
+	match x:element;
+	value @name;
+}
+
+match x:xulref {
+	<xs:schema targetNamespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"> {
+		<xs:group name="anyElementStructure"> {
+			<xs:choice> {
+				<xs:any namespace="http://www.w3.org/1999/xhtml"
+					processContents="strict">;
+				<xs:any namespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+					processContents="strict">;
+			}
+		}
+		apply-templates {
+			sort name();
+			sort @name;
+		}
+	}
+}
+
+match x:attribute {
+	var $name = substring-after(@name, "-");
+
+	<xs:attributeGroup name=$name> {
+		if (contains($name, ".")) {
+			<xs:attribute name=substring-after($name, ".") type="xs:string">;
+
+		} else {
+			<xs:attribute name=$name type="xs:string">;
+		}
+	}
+}
+
+match x:element {
+	if (@abstract == "false") {
+		/* <xsl:message>processing <xsl:value-of select="@name"/></xsl:message> */
+		<xs:attributeGroup name=@name _ "AttributeGroup"> {
+			if (@inherits) {
+				comment "Inherited from " _ @inherits _ ":";
+				apply-templates key("parent", @inherits)/x:attr {
+					with $derived = @name;
+				}
+			}
+			comment "Own attributes:";
+			apply-templates {
+				sort @ref;
+			}
+		}
+		<xs:complexType name=@name _ "ElementStructure"> {
+			<xs:sequence> {
+				<xs:group ref="xul:anyElementStructure" minOccurs="0" maxOccurs="unbounded">;
+			}
+		}
+		<xs:complexType name=@name _ "ElementType" mixed="true"> {
+			<xs:complexContent> {
+				<xs:extension base="xul:" _ @name _ "ElementStructure"> {
+					<xs:attributeGroup ref="xul:" _ @name _ "AttributeGroup">;
+				}
+			}
+		}
+		<xs:element name=@name type="xul:" _ @name _ "ElementType">;
+	}
+}
+
+match x:attr {
+	param $derived;
+	var $ref = @ref;
+
+	if ($derived) {
+		/* <xsl:message><xsl:value-of select="concat($derived, ' inherits ', substring-after($ref, '-'), ' from ', ../@name)"/></xsl:message> */
+		if (not(key("parent", $derived)/x:attr[@ref == $ref || substring-after(@ref, ".") == substring-after($ref, "-")])) {
+			<xs:attributeGroup ref="xul:" _ substring-after($ref, "-")>;
+		}
+	} else {
+		<xs:attributeGroup ref="xul:" _ substring-after($ref, "-")>;
+	}
+}
+
+match documentation { }
+match text() { }

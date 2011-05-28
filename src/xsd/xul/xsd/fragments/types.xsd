@@ -16,6 +16,7 @@
 			<xs:enumeration value="URI"/>
 			<xs:enumeration value="URL"/>
 			<xs:enumeration value="string"/>
+			<xs:enumeration value="one of the values below"/> <!-- enumeration -->
 
 			<xs:enumeration value="attribute name"/>
 			<xs:enumeration value="comma-separated list"/>
@@ -29,7 +30,6 @@
 			<xs:enumeration value="language content type"/>
 			<xs:enumeration value="margin string"/>
 			<xs:enumeration value="nsIAccessible"/>
-			<xs:enumeration value="one of the values below"/>
 			<xs:enumeration value="script code"/>
 			<xs:enumeration value="space-separated list of attribute names"/>
 			<xs:enumeration value="space separated list of datasource URIs"/>

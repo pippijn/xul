@@ -1,0 +1,34 @@
+/* Machine Crafted with Care (tm) by slaxWriter */
+version 1.1;
+
+ns html extension = "http://www.w3.org/1999/xhtml";
+ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+ns xi extension = "http://www.w3.org/2001/XInclude";
+ns xs extension = "http://www.w3.org/2001/XMLSchema";
+
+output-method xml {
+	encoding "ISO-8859-1";
+	doctype-public "-//W3C//DTD XHTML 1.0 Strict//EN";
+	doctype-system "../../../src/xsd/xhtml/xhtml1-strict.dtd";
+}
+
+match / {
+	<html> {
+		<head> {
+			<title> x:*/@title;
+			<link rel="stylesheet" type="text/css" href=$srcdir _ "/global/skin.css">;
+			<script type="text/javascript" src=$srcdir _ "/global/xul.js">;
+		}
+		<body> {
+			apply-templates;
+		}
+	}
+}
+
+match html:* {
+	element name() {
+		ns-template "";
+		copy-of @*;
+		apply-templates;
+	}
+}

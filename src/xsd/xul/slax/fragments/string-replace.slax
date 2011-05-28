@@ -1,0 +1,34 @@
+version 1.1;
+
+template string-replace ($text, $replace, $by) {
+	if (contains($text, $replace)) {
+		expr substring-before($text, $replace);
+		expr $by;
+		call string-replace($text = substring-after($text, $replace), $replace, $by);
+
+	} else {
+		expr $text;
+	}
+}
+
+template string-erase ($text, $erase) {
+	call string-replace($text, $replace = $erase, $by = "");
+}
+
+template string-erase-all ($text, $list) {
+	var $all = normalize-space($list);
+	var $return = {
+		if (contains($all, " ")) {
+			call string-erase-all($list = substring-after($all, " ")) {
+				with $text = {
+					call string-erase($text, $erase = substring-before($all, " "));
+				}
+			}
+
+		} else {
+			call string-erase($text, $erase = $all);
+		}
+	}
+
+	expr $return;
+}

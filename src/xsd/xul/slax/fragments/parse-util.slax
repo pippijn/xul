@@ -1,0 +1,24 @@
+version 1.1;
+
+import "string-replace.xsl";
+
+template parse-type ($prefix) {
+	var $search = {
+		if ($prefix) {
+			expr $prefix;
+
+		} else {
+			expr "Type:";
+		}
+	}
+	var $type = normalize-space(dd[substring(normalize-space(text()), 1, string-length($search)) == $search]/em);
+
+	call string-erase-all($text = $type) {
+		with $list = {
+			expr " template.XULElem(\""
+				_ " XULElem(\""
+				_ " interface(\""
+				_ " \")";
+		}
+	}
+}

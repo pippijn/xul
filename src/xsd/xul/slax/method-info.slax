@@ -1,0 +1,64 @@
+version 1.1;
+
+ns "http://xul.xinutec.org/2011/xulref";
+
+output-method {
+	omit-xml-declaration "yes";
+}
+include "fragments/ENOENT.xsl";
+include "fragments/copy-self.xsl";
+include "fragments/parse-util.xsl";
+
+match content {
+	apply-templates body/dl[1];
+}
+
+match body/dl[1]/dt[1] { }
+
+match body/dl[1]/dd[substring(normalize-space(text()), 1, 12) == "Return type:"] { }
+
+match body/dl[1] {
+	var $name = substring-before(substring-after(dt[1]/span/text(), 'XULMeth2("'), '"');
+	var $args = substring-before(substring-after(dt[1]/span/text(), '"('), ')"');
+	var $type = {
+		call parse-type() {
+			with $prefix = {
+				expr "Return type:";
+			}
+		}
+	}
+
+	if (not($name)) {
+		call ENOENT($what = "method name");
+	}
+	if (not($type)) {
+		call ENOENT($what = "method return type");
+	}
+	<method name="meth-" _ $name type=$type> {
+		if ($args) {
+			call parse-argument-list($args);
+		}
+		<documentation source="https://developer.mozilla.org/en/XUL/Method/" _ $name> {
+			<div> {
+				ns "http://www.w3.org/1999/xhtml";
+
+				/*
+				 <dl>
+				 <xsl:apply-templates select="@*|node()"/>
+				 </dl>
+				 <xsl:apply-templates select="following-sibling::*"/>
+				 */
+			}
+		}
+	}
+}
+
+template parse-argument-list ($args) {
+	if (contains($args, ",")) {
+		<arg name=normalize-space(substring-before($args, ","))>;
+		call parse-argument-list($args = substring-after($args, ","));
+
+	} else {
+		<arg name=normalize-space($args)>;
+	}
+}

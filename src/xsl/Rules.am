@@ -1,17 +1,23 @@
-BUILT_SOURCES +=			\
-	$(srcdir)/$(CURDIR)/xhtml.xsl	\
-	$(srcdir)/$(CURDIR)/xul.xsl
+include xhtml/Rules.am
+include xul/Rules.am
 
-$(srcdir)/$(CURDIR)/xhtml.xsl: $(wildcard $(srcdir)/$(CURDIR)/xhtml/*)
+BUILT_SOURCES +=	\
+	xhtml.xsl	\
+	xul.xsl
+
+$(CURDIR)/xhtml.xsl: $(patsubst $(srcdir)/%.slax,$(builddir)/%.xsl,$(wildcard $(srcdir)/$(CURDIR)/xhtml/*.slax))
 	@echo '<?xml version="1.0"?>' > $@
 	@echo '<!DOCTYPE stylesheet SYSTEM "xsl.dtd">' >> $@
 	@echo '<xsl:stylesheet version="1.0">' >> $@
 	$(AM_V_GEN)for i in $(basename $@)/*; do echo "	<xsl:include href='xhtml/`basename $$i`'/>" >> $@; done
 	@echo '</xsl:stylesheet>' >> $@
 
-$(srcdir)/$(CURDIR)/xul.xsl: $(wildcard $(srcdir)/$(CURDIR)/xul/*)
+$(CURDIR)/xul.xsl: $(patsubst $(srcdir)/%.slax,$(builddir)/%.xsl,$(wildcard $(srcdir)/$(CURDIR)/xul/*.slax))
 	@echo '<?xml version="1.0"?>' > $@
 	@echo '<!DOCTYPE stylesheet SYSTEM "xsl.dtd">' >> $@
 	@echo '<xsl:stylesheet version="1.0">' >> $@
 	$(AM_V_GEN)for i in $(basename $@)/*; do echo "	<xsl:include href='xul/`basename $$i`'/>" >> $@; done
 	@echo '</xsl:stylesheet>' >> $@
+
+.slax.xsl:
+	$(AM_V_GEN)$(MKDIR_P) $(@D) && slaxproc -o $@ -x $<

@@ -1,0 +1,42 @@
+version 1.1;
+
+ns "http://xul.xinutec.org/2011/xulref";
+
+output-method {
+	omit-xml-declaration "yes";
+}
+
+match content {
+	var $attrlinks = body/h3[normalize-space(text()) == "Attributes"]/following-sibling::p/span[contains(text(), "XULAttrInc")];
+	var $proplinks = body/h3[normalize-space(text()) == "Properties"]/following-sibling::p/span[contains(text(), "XULPropInc")];
+	var $methlinks = body/h3[normalize-space(text()) == "Methods"]/following-sibling::p/span[contains(text(), "XULMethInc")];
+
+	<element name=@title inherits="XULElement"> {
+		apply-templates $attrlinks;
+		apply-templates $proplinks;
+		apply-templates $methlinks;
+		<documentation source="https://developer.mozilla.org/en/XUL/" _ @title> {
+			<div> {
+				ns "http://www.w3.org/1999/xhtml";
+			}
+		}
+	}
+}
+
+match span[contains(text(), "XULAttrInc")] {
+	<attr ref="attr-" _ substring-before(substring-after(text(), 'XULAttrInc("'), '")')>;
+}
+
+match span[contains(text(), "XULPropInc")] {
+	<prop ref="prop-" _ substring-before(substring-after(text(), 'XULPropInc("'), '")')>;
+}
+
+match span[contains(text(), "XULMethInc")] {
+	<meth ref="meth-" _ substring-before(substring-after(text(), 'XULMethInc("'), '")')>;
+}
+
+match @* | node() {
+	copy-node {
+		apply-templates @* | node();
+	}
+}

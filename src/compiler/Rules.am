@@ -1,2 +1,9 @@
 include jmlc/Rules.am
-include gozerc/Rules.am
+include xsdproc/Rules.am
+
+BUILT_SOURCES += gozerc
+
+gozerc: config.status src/compiler/gozerc.in
+	$(AM_V_GEN)./config.status src/compiler/gozerc
+	@cp src/compiler/gozerc $@
+	@chmod +x $@

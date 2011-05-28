@@ -1,0 +1,14 @@
+version 1.1;
+
+ns "http://xul.xinutec.org/2011/xulref";
+
+output-method {
+	omit-xml-declaration "yes";
+}
+
+var $Longname = "Attribute";
+var $longname = "attribute";
+var $Shortname = "Attr";
+var $shortname = "attr";
+
+include "fragments/attrprop.xsl";

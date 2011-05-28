@@ -1,0 +1,4 @@
+XUL_SLAX_FILES =	\
+	_.slax
+
+EXTRA_DIST += $(XUL_SLAX_FILES)

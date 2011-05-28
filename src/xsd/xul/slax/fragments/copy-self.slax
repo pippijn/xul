@@ -1,0 +1,45 @@
+version 1.1;
+
+ns "http://www.w3.org/1999/xhtml";
+
+match @* {
+	copy-node {
+		apply-templates @*;
+	}
+}
+
+match * {
+	element name() {
+		ns-template "http://www.w3.org/1999/xhtml";
+		apply-templates @*;
+		apply-templates;
+	}
+}
+
+match h1/@name { }
+
+match h2/@name { }
+
+match h3/@name { }
+
+match h4/@name { }
+
+match pre/@function { }
+
+match dl/div {
+	<dd> {
+		<div> {
+			apply-templates @* | *;
+		}
+	}
+}
+
+match ul/p {
+	<li> {
+		apply-templates @* | *;
+	}
+}
+
+match div[@class == "noinclude"] {
+	apply-templates;
+}
