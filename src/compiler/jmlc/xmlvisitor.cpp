@@ -3,6 +3,15 @@
 #include "node.h"
 #include "xmlvisitor.h"
 
+static bool
+selfclosing (std::string const &tag)
+{
+  return tag == "img"
+      || tag == "br"
+      ;
+}
+
+
 struct predicate
 {
   virtual bool exec (node *n) const = 0;
@@ -102,22 +111,28 @@ xmlvisitor::visit (nodes::element const *n)
   os << "<"  << n->identifier;
   pred = ISA<nodes::attribute> ();
   accept (this) (n->node_list);
-  os << ">";
-  pred = NOT (ISA<nodes::attribute> ());
-  accept (this) (n->node_list);
-  os << "</" << n->identifier << ">";
+  if (selfclosing (n->identifier))
+    {
+      os << " />";
+    }
+  else
+    {
+      os << ">";
+      pred = NOT (ISA<nodes::attribute> ());
+      accept (this) (n->node_list);
+      os << "</" << n->identifier << ">";
+    }
   pred.reset ();
 }
 
 void
 xmlvisitor::visit (nodes::attribute const *n)
 {
-  os << ' ' << n->identifier << '=' << n->string;
+  os << ' ' << n->identifier << "=\"" << n->string << '"';
 }
 
 void
 xmlvisitor::visit (nodes::text const *n)
 {
-  os.write (n->string.data () + 1,
-            n->string.length () - 2);
+  os << n->string;
 }

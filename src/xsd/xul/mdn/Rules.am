@@ -1,0 +1,45 @@
+include MDN.am
+
+noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD)
+
+$(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages
+	echo -n 'MDNBASE =' > $@
+	for i in `$<`; do		\
+	    echo -n " $$i" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNXML =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/xml/$$i.xml" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNJML =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/jml/$$i.jml" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNUPLOAD =' >> $@
+	for i in `$<`; do						\
+	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.xml" >> $@;	\
+	done
+	echo >> $@
+
+
+AM_V_GET = $(am__v_GET_$(V))
+am__v_GET_ = $(am__v_GET_$(AM_DEFAULT_VERBOSITY))
+am__v_GET_0 = @echo "  GET   " $@;
+$(srcdir)/$(CURDIR)/xml/%.xml: $(CURDIR)/download $(CURDIR)/pageids.pm
+	$(AM_V_GET)$< $* $@
+
+AM_V_X2J = $(am__v_X2J_$(V))
+am__v_X2J_ = $(am__v_X2J_$(AM_DEFAULT_VERBOSITY))
+am__v_X2J_0 = @echo "  X2J   " $@;
+$(srcdir)/$(CURDIR)/jml/%.jml: src/compiler/xml2jml $(srcdir)/$(CURDIR)/xml/%.xml
+	$(AM_V_X2J)$+ $@
+
+AM_V_JMLC = $(am__v_JMLC_$(V))
+am__v_JMLC_ = $(am__v_JMLC_$(AM_DEFAULT_VERBOSITY))
+am__v_JMLC_0 = @echo "  JMLC  " $@;
+$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml jmlc$(EXEEXT) $(CURDIR)/upload
+	$(AM_V_JMLC)$(builddir)/jmlc$(EXEEXT) $< > $@
+	@$(lastword $+) $* $@

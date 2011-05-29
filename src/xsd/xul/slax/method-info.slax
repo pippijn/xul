@@ -14,7 +14,6 @@ match content {
 }
 
 match body/dl[1]/dt[1] { }
-
 match body/dl[1]/dd[substring(normalize-space(text()), 1, 12) == "Return type:"] { }
 
 match body/dl[1] {
@@ -28,12 +27,8 @@ match body/dl[1] {
 		}
 	}
 
-	if (not($name)) {
-		call ENOENT($what = "method name");
-	}
-	if (not($type)) {
-		call ENOENT($what = "method return type");
-	}
+	if (not($name)) { call ENOENT($what = "method name"); }
+	if (not($type)) { call ENOENT($what = "method return type"); }
 	<method name="meth-" _ $name type=$type> {
 		if ($args) {
 			call parse-argument-list($args);
@@ -41,13 +36,12 @@ match body/dl[1] {
 		<documentation source="https://developer.mozilla.org/en/XUL/Method/" _ $name> {
 			<div> {
 				ns "http://www.w3.org/1999/xhtml";
-
 				/*
-				 <dl>
-				 <xsl:apply-templates select="@*|node()"/>
-				 </dl>
-				 <xsl:apply-templates select="following-sibling::*"/>
-				 */
+				<dl> {
+					apply-templates @* | node();
+				}
+				apply-templates following-sibling::*;
+				*/
 			}
 		}
 	}

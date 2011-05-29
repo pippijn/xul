@@ -17,13 +17,9 @@ match * {
 }
 
 match h1/@name { }
-
 match h2/@name { }
-
 match h3/@name { }
-
 match h4/@name { }
-
 match pre/@function { }
 
 match dl/div {

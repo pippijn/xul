@@ -5,10 +5,7 @@
 
 %union {
   struct node *node;
-  struct token {
-    char const *text;
-    size_t leng;
-  } string;
+  std::string *string;
 }
 
 %define api.pure
@@ -23,6 +20,7 @@
 
 %token<string> TOK_IDENTIFIER	"identifier"
 %token<string> TOK_STRING	"string literal"
+%token<string> TOK_STRINGNODE	"text node"
 
 %type<node> document
 %type<node> node_list
@@ -30,6 +28,8 @@
 %type<node> element
 %type<node> attribute
 %type<node> text
+
+%destructor { delete $$; } <string>
 
 %%
 document
@@ -49,16 +49,17 @@ node
 
 element
 	: TOK_IDENTIFIER '{' node_list '}'
-				{ $$ = self->element ($1, $3); }
+				{ $$ = self->element (*$1, $3); }
 	;
 
 attribute
 	: TOK_IDENTIFIER ':' TOK_STRING
-				{ $$ = self->attribute ($1, $3); }
+				{ $$ = self->attribute (*$1, *$3); }
 	;
 
 text
-	: TOK_STRING		{ $$ = self->text ($1); }
+	: TOK_STRING		{ $$ = self->text (*$1); }
+	| TOK_STRINGNODE	{ $$ = self->text (*$1); }
 	;
 
 %%

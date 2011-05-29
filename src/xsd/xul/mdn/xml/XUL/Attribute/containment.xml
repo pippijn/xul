@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="containment"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("containment")</span></dt> <dd>Type: <em>URI</em></dd> <dd>This attribute specifies RDF properties (an RDF predicate) that indicate that a resource is a container. When generating content from a template this is used to determine which resources from the datasource are containers and thus can have child nodes and which ones are not containers.</dd> <dd>This attribute should be placed on the same element that the <span class="script">template.XULAttr("datasources")</span> and the <span class="script">template.XULAttr("ref")</span> attribute is on. It may be set to a space-separated list of RDF properties or resources.</dd>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/containment", "ja": "ja/XUL/Attribute/containment" } ) </span></p>
+</div></body></content>

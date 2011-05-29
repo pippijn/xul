@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window id="oi" activetitlebarcolor="#ffffff">
+	<html:h1>The Button Test Page</html:h1>
+</window>

@@ -1,0 +1,5 @@
+<!ENTITY % XMLSchema SYSTEM "xml/XMLSchema.dtd"> %XMLSchema;
+
+<!ATTLIST xs:schema
+	xmlns:xul	CDATA	#FIXED "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>

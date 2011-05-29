@@ -1,3 +1,4 @@
+#include <clocale>
 #include <cstdlib>
 
 #include "lexer.h"
@@ -9,6 +10,8 @@ main (int argc, char *argv[])
 {
   if (argc < 2)
     return EXIT_FAILURE;
+
+  setlocale (LC_ALL, "");
 
   lexer lex (argv[1]);
   parser parse (lex);

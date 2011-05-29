@@ -1,0 +1,37 @@
+<content type="application/x.deki0805+xml" title="preference"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">XULRefElem()</span></div>
+<p>Declares a preference that may be adjusted in a <span class="script">XULElem("prefpane")</span>. This element must be placed inside a <span class="script">XULElem("preferences")</span> element. Each <code>preference</code> element corresponds to a preference which is stored in the user's preferences file. You can connect a user interface element such as a checkbox to a preference element using the user interface element's <span class="script">XULAttr("preference")</span> attribute.</p>
+<p>More information is available in the <a title="en/Preferences_System" href="/en/Preferences/Preferences_system">Preferences System</a> article.</p>
+<dl> <dt>Attributes</dt> <dd><span class="script">PrefAnch("a-", "disabled")</span>, <span class="script">PrefAnch("a-", "instantApply")</span>, <span class="script">PrefAnch("a-", "inverted")</span>, <span class="script">PrefAnch("a-", "preference.name", "name")</span>, <span class="script">PrefAnch("a-", "onchange")</span>, <span class="script">PrefAnch("a-", "readonly")</span>, <span class="script">PrefAnch("a-", "tabindex")</span>, <span class="script">PrefAnch("a-", "preference.type", "type")</span></dd> <dt>Properties</dt> <dd><span class="script">PrefAnch("p-", "defaultValue")</span>, <span class="script">PrefAnch("p-", "disabled")</span>, <span class="script">PrefAnch("p-", "hasUserValue")</span>, <span class="script">PrefAnch("p-", "inverted")</span>, <span class="script">PrefAnch("p-", "locked")</span>, <span class="script">PrefAnch("p-", "name")</span>, <span class="script">PrefAnch("p-", "preference.preferences", "preferences")</span>, <span class="script">PrefAnch("p-", "readOnly")</span>, <span class="script">PrefAnch("p-", "tabIndex")</span>, <span class="script">PrefAnch("p-", "type")</span>, <span class="script">PrefAnch("p-", "value")</span>, <span class="script">PrefAnch("p-", "valueFromPreferences")</span></dd> <dt>Methods</dt> <dd><span class="script">PrefAnch("m-", "reset")</span></dd>
+</dl>
+<h3 name="Examples">Examples</h3>
+<pre class="eval">
+&lt;preferences&gt;
+  &lt;preference id="<em>pref_id</em>" name="<em>preference.name</em>" type="<em>int</em>"/&gt;
+&lt;/preferences&gt;
+</pre>
+<p>See <a title="en/Preferences System" href="/en/Preferences/Preferences_system">Preferences System</a> for a complete example.</p>
+<h3 name="Attributes">Attributes</h3>
+<p><span class="script">XULAttrInherited()</span> <span class="script">XULAttrInc("disabled")</span> <span class="script">XULAttrInc("instantApply")</span> <span class="script">XULAttrInc("inverted")</span> <span class="script">XULAttrInc("preference.name")</span> <span class="script">XULAttrInc("onchange")</span> <span class="script">XULAttrInc("readonly")</span> <span class="script">XULAttrInc("tabindex")</span> <span class="script">XULAttrInc("preference.type")</span></p>
+<h3 name="Properties">Properties</h3>
+<p><span class="script">XULPropInherited()</span></p>
+<dl> <dt><code id="p-defaultValue">defaultValue</code> (readonly)</dt> <dd>Returns the <a title="en/Code snippets/Preferences#Default preferences" href="/en/Code_snippets/Preferences#Default_preferences">default value</a> of the preference. The type of the property depends on the value of the <code>type</code> property.<br /> If the preference has no default value, this property returns <code>null</code>.</dd>
+</dl>
+<p><span class="script">XULPropInc("disabled")</span> <span class="script">XULPropInc("hasUserValue")</span></p>
+<dl> <dt><code id="p-instantApply">instantApply</code> (readonly boolean)</dt> <dd>Whether to use <em>instant apply</em> for this preference. This is <code>true</code> if either the element has an <code>instantApply</code> attribute set to <code>true</code>, or the <code>&lt;prefwindow&gt;</code>'s <code>instantApply</code> property is <code>true</code>. (But note <span class="script">bug("293439")</span>.)</dd>
+</dl>
+<p><span class="script">XULPropInc("inverted")</span> <span class="script">XULPropInc("locked")</span> <span class="script">XULPropInc("name")</span> <span class="script">XULPropInc("preference.preferences")</span> <span class="script">XULPropInc("readOnly")</span> <span class="script">XULPropInc("tabIndex")</span> <span class="script">XULPropInc("type")</span></p>
+<dl> <dt><code id="p-value">value</code></dt> <dd>Gets and sets the value of the user preference specified in <code>name</code>. In pref dialogs with instantApply == true (default on Mac OS X) this value is kept in sync with the actual value stored in the preferences (see <span class="script">PrefAnch("p-", "valueFromPreferences")</span>). When instantApply is off (default on Windows), this gets and sets the current value of the preference in the currently open dialog.<br /> <br /> There's a special case of <code>value === undefined</code>, indicating that the preference does not have a user-set value (<span class="script">PrefAnch("p-", "hasUserValue")</span> == false). In this case the actual value to be displayed in the UI is obtained from the <span class="script">PrefAnch("p-", "defaultValue")</span> property.</dd>
+</dl>
+<dl> <dt><code id="p-valueFromPreferences">valueFromPreferences</code></dt> <dd>Gets and sets the value stored in the user preference, specified in <code>name</code>. (This always accesses the nsIPrefBranch APIs regardless of the instantApply mode in effect).</dd>
+</dl>
+<h3 name="Methods">Methods</h3>
+<dl> <dt><code id="m-getElementValue">type getElementValue(in DOMElement element);</code></dt> <dd>Retrieves the value that should be written to preferences based on the current state of the supplied element. This function calls <code>onsynctopreference</code>.</dd> <dt><code id="m-isElementEditable">boolean isElementEditable(in DOMElement element)</code></dt> <dd>Returns <code>true</code>, if the given element is "editable" (see below).</dd> <p><span class="script">XULMethInc("reset")</span></p> <dt><code id="m-setElementValue">void setElementValue(in DOMElement element);</code></dt> <dd>Initializes the supplied element from the value stored in the preference. This function calls <code>onsyncfrompreference</code>.</dd> <dt><code id="m-updateElements">void updateElements();</code></dt> <dd>Update all elements that observe this preference.</dd>
+</dl>
+<p><span class="script">XULMethInheritedWide()</span></p>
+<h3 name="Events">Events</h3>
+<dl> <dt><code>change</code></dt> <dd>When a preference value changes, an <code>onchange</code>/<code>change</code> event is fired on the &lt;preference&gt; element. You can handle this if you wish to.</dd>
+</dl>
+<h3 name="Related">Related</h3>
+<p><span class="script">Preferences_System_TOC()</span></p>
+<p><span class="script"> wiki.languages( { "fr": "fr/XUL/preference", "ja": "ja/XUL/preference", "pl": "pl/XUL/preference" } ) </span></p></body></content>

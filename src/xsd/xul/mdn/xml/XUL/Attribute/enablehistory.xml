@@ -1,0 +1,7 @@
+<content type="application/x.deki0805+xml" title="enablehistory"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
+<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
+<dl> <dt><span class="script">template.XULAttr("enablehistory")</span><span class="script">fx_minversion_inline("1.0")</span><span class="script">tb_minversion_inline("1.0")</span><span style="border: 1px solid rgb(129, 129, 81); background-color: rgb(255, 255, 225); font-size: x-small; white-space: nowrap; padding:0px 2px;">Requires SeaMonkey 2.0</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, an arrow button will appear on the end of the textbox which, when pressed, will open a dropdown menu of all available results.</dd> <p><span class="script">note("For SeaMonkey 2.0 and all versions of Thunderbird prior to 3.0 you also need to provide the disablehistory attribute.")</span></p>
+</dl>
+<div class="noinclude">
+<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/enablehistory", "pl": "pl/XUL/Atrybut/enablehistory" } ) </span></p>
+</div></body></content>

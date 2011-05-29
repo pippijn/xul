@@ -1,9 +1,9 @@
 include xhtml/Rules.am
 include xul/Rules.am
 
-BUILT_SOURCES +=	\
-	xhtml.xsl	\
-	xul.xsl
+noinst_DATA +=			\
+	$(CURDIR)/xhtml.xsl	\
+	$(CURDIR)/xul.xsl
 
 $(CURDIR)/xhtml.xsl: $(patsubst $(srcdir)/%.slax,$(builddir)/%.xsl,$(wildcard $(srcdir)/$(CURDIR)/xhtml/*.slax))
 	@echo '<?xml version="1.0"?>' > $@

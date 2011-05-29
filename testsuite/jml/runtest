@@ -1,0 +1,32 @@
+#!/usr/bin/env perl
+
+use common::sense;
+use autodie 'open', 'system';
+
+my $compiler = $ARGV[0] or die;
+my $input    = $ARGV[1] or die;
+
+my @temps;
+END { unlink for @temps }
+$SIG{__DIE__} = sub { undef @temps };
+sub temp {
+   push @temps, $_[0];
+   $_[0]
+}
+
+sub tidy {
+   system "tidy --char-encoding $_[0] --output-encoding latin1 --sort-attributes alpha -xml -indent -q $_[1] > "
+        . temp $_[2];
+}
+
+if (my ($basename) = $input =~ /\.\.\/(.+)\.xml$/) {
+   my $jml = temp "$basename.jml";
+   system "../src/compiler/xml2jml", $input, temp $jml;
+   system "$compiler $jml | xmllint - > " . temp "$basename.xml";
+
+   tidy 'utf8', $input, "$basename.xi";
+   tidy 'latin1', "$basename.xml", "$basename.xo";
+   system "diff", "-u", "$basename.xi", "$basename.xo";
+} else {
+   system "$compiler $input | xmllint -";
+}

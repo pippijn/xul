@@ -2,14 +2,6 @@
 
 #include <iostream>
 
-static std::ostream &
-operator << (std::ostream &os, YYSTYPE::token const &tok)
-{
-  os.write (tok.text, tok.leng);
-  return os;
-}
-
-
 parser::parser (lexer &lex)
   : lex (lex)
   , doc (0)
@@ -73,7 +65,7 @@ parser::text_node (node *text)
 }
 
 node *
-parser::element (YYSTYPE::token identifier, node *node_list)
+parser::element (std::string const &identifier, node *node_list)
 {
   //std::cout << "element (" << identifier << ", " << node_list << ")\n";
   dynamic_cast<nodes::node_list *> (node_list)->reverse ();
@@ -81,14 +73,14 @@ parser::element (YYSTYPE::token identifier, node *node_list)
 }
 
 node *
-parser::attribute (YYSTYPE::token identifier, YYSTYPE::token string)
+parser::attribute (std::string const &identifier, std::string const &string)
 {
   //std::cout << "attribute (" << identifier << ", " << string << ")\n";
   return new nodes::attribute (identifier, string);
 }
 
 node *
-parser::text (YYSTYPE::token string)
+parser::text (std::string const &string)
 {
   //std::cout << "text (" << string << ")\n";
   return new nodes::text (string);

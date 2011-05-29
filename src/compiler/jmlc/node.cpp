@@ -60,8 +60,8 @@ namespace nodes
   }
 
 
-  element::element (YYSTYPE::token const &identifier, node *node_list)
-    : identifier (identifier.text, identifier.leng)
+  element::element (std::string const &identifier, node *node_list)
+    : identifier (identifier)
     , node_list (node_list)
   {
   }
@@ -78,9 +78,9 @@ namespace nodes
   }
 
 
-  attribute::attribute (YYSTYPE::token const &identifier, YYSTYPE::token const &string)
-    : identifier (identifier.text, identifier.leng)
-    , string (string.text, string.leng)
+  attribute::attribute (std::string const &identifier, std::string const &string)
+    : identifier (identifier)
+    , string (string)
   {
   }
 
@@ -95,8 +95,8 @@ namespace nodes
   }
 
 
-  text::text (YYSTYPE::token const &string)
-    : string (string.text, string.leng)
+  text::text (std::string const &string)
+    : string (string)
   {
   }
 

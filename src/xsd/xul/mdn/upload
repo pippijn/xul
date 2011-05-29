@@ -1,0 +1,88 @@
+#!/usr/bin/env perl
+
+use common::sense;
+use autodie 'open', 'system';
+use constant {
+   URL => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified',
+   CMD => 'xmllint --xpath "/content/body/*" %s | curl -s -n -d "@-" "%s"',
+};
+
+use Dir::Self;
+my %pageids = do (__DIR__ . "/pageids.pm");
+
+sub mtime {
+   (stat $_[0])[9]
+}
+
+sub strmtime {
+   use Date::Format;
+   my @lt = localtime mtime $_[0];
+   strftime '%Y%m%d%H%M%S', @lt
+}
+
+sub popen {
+   use IPC::Open3;
+
+   my $out;
+   my $pid = open3 undef, $out, $out, @_
+      or die "Cannot open pipe: $!";
+   my @out;
+   while (my $line = <$out>) {
+      push @out, $line;
+      if (@out > 100000) {
+         push @out, "<truncated>\n";
+         close $out;
+         last
+      }
+   }
+   $out = join "", @out;
+   waitpid $pid, 0;
+   die "@_" if $?;
+
+   $out
+}
+
+my $PAGE = $ARGV[0] or die;
+my $XML  = $ARGV[1] or die;
+my $REF  = $XML;
+
+$REF =~ s/\.upload/xml/;
+
+$SIG{__DIE__} = sub { unlink $XML };
+
+sub tidy {
+   popen (
+      'tidy', '-q',
+      '--punctuation-wrap', 'yes',
+      '--wrap', 0,
+      '--sort-attributes', 'alpha',
+      '-xml',
+      '--output-encoding', 'utf8',
+      '--char-encoding', $_[0],
+      $_[1]
+   );
+}
+
+my $xmlout = tidy 'utf8' => $XML;
+my $refout = tidy 'utf8' => $REF;
+
+sub writeout {
+   open my $fh, '>', $_[0];
+   print $fh $_[1];
+}
+
+if ($xmlout ne $refout) {
+   writeout 'xmlout', $xmlout;
+   writeout 'refout', $refout;
+   system 'diff', '-u', 'refout', 'xmlout';
+
+   my $URL = sprintf URL, $pageids{$PAGE}, strmtime $XML;
+   my $CMD = sprintf CMD, $XML, $URL;
+   #print "  POST   $JML\n";
+   exec "echo", $CMD;
+   for (`$CMD`) {
+      m|<error><status>(\d+)</status><title>(.*?)</title>| and die "Error $1: $2";
+      m|<edit status="success">| or die "Edit was not successful";
+      #print "$_\n";
+   }
+}

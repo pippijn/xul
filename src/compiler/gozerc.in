@@ -26,6 +26,7 @@ system 'xmllint'
    , '--path', '@abs_top_srcdir@/src/xsd'
    , '--output', (my $xinclude = mktemp 'xinclude')
    , '--xinclude'
+   , '--noent'
    , '--dropdtd'
    , '--dtdattr'
    , '--nofixup-base-uris'

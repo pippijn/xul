@@ -1,4 +1,6 @@
-%pageids = (
+(
+   'Sandbox/XUL_element_attributes' => 73508,
+
    'XUL_element_attributes' => 15383,
 
    'XUL/action' => 3823,
@@ -927,4 +929,4 @@
    'XUL/Property/wrapAround' => 16214,
    'XUL/Property/year' => 10023,
    'XUL/Property/yearLeadingZero' => 21097,
-);
+)

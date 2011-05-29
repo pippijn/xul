@@ -1,0 +1,70 @@
+#!/usr/bin/env perl
+
+use common::sense;
+use autodie 'open';
+use base 'XML::SAX::Base';
+
+use Data::Dumper;
+use Encode 'encode';
+use XML::SAX;
+
+my $XML = $ARGV[0] or die;
+my $JML = $ARGV[1] or die;
+
+open my $fh, '>', $JML;
+
+my $p = XML::SAX::ParserFactory->parser (Handler => __PACKAGE__->new);
+$p->parse_uri ($XML);
+
+my $indent = 0;
+sub out {
+   print $fh "   " x $indent, @_;
+}
+sub escape {
+   my ($text) = @_;
+   for ($text) {
+      s/\\/\\\\/g;
+      s/"/\\"/g;
+      s/&/&amp;/g;
+      s/\xa0/&#xa0;/g;
+   }
+   encode 'utf-8', $text
+}
+
+my $chardata;
+sub chardump {
+   if (defined $chardata) {
+      out '"', (escape $chardata), "\"\n";
+      undef $chardata;
+   }
+}
+
+
+sub start_element {
+   my ($self, $data) = @_;
+
+   chardump;
+
+   out "$data->{Name} {\n";
+   ++$indent;
+   for my $attr (values %{ $data->{Attributes} }) {
+      out "$attr->{Name}: \"", (escape $attr->{Value}), "\"\n";
+   }
+   #print Dumper $data;
+   #die;
+}
+
+sub end_element {
+   my ($self, $data) = @_;
+
+   chardump;
+
+   --$indent;
+   out "}\n";
+}
+
+sub characters {
+   my ($self, $data) = @_;
+
+   $chardata .= $data->{Data}
+}

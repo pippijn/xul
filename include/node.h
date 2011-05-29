@@ -41,7 +41,7 @@ namespace nodes
   struct element
     : node
   {
-    element (YYSTYPE::token const &identifier, node *node_list);
+    element (std::string const &identifier, node *node_list);
     ~element ();
     virtual void accept (visitor *v);
 
@@ -52,7 +52,7 @@ namespace nodes
   struct attribute
     : node
   {
-    attribute (YYSTYPE::token const &identifier, YYSTYPE::token const &string);
+    attribute (std::string const &identifier, std::string const &string);
     ~attribute ();
     virtual void accept (visitor *v);
 
@@ -63,7 +63,7 @@ namespace nodes
   struct text
     : node
   {
-    text (YYSTYPE::token const &string);
+    text (std::string const &string);
     ~text ();
     virtual void accept (visitor *v);
 

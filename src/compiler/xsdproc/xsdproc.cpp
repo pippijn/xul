@@ -83,16 +83,16 @@ try
 }
 catch (SAXNotRecognizedException const &e)
 {
-  std::cerr << "Xerces-C exception caught:\n   " << strx (e.getMessage ()) << "\n";
+  std::cerr << "Xerces-C exception caught:\n " << strx (e.getMessage ()) << "\n";
   return EXIT_FAILURE;
 }
 catch (XMLException const &e)
 {
-  std::cerr << "Xerces-C exception caught:\n   " << strx (e.getMessage ()) << "\n";
+  std::cerr << "Xerces-C exception caught:\n " << strx (e.getMessage ()) << "\n";
   return EXIT_FAILURE;
 }
 catch (std::exception const &e)
 {
-  std::cerr << "Runtime exception caught:\n   " << e.what () << "\n";
+  std::cerr << "Runtime exception caught:\n " << e.what () << "\n";
   return EXIT_FAILURE;
 }

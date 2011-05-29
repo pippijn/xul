@@ -24,6 +24,16 @@ match x:xulref {
 					processContents="strict">;
 			}
 		}
+		<xs:simpleType name="character"> {
+			<xs:restriction base="xs:string"> {
+				<xs:length value="1">;
+			}
+		}
+		<xs:simpleType name="color"> {
+			<xs:restriction base="xs:string"> {
+				<xs:pattern value="#([0-9a-fA-F]{3}){1,2}">;
+			}
+		}
 		apply-templates {
 			sort name();
 			sort @name;
@@ -34,19 +44,54 @@ match x:xulref {
 match x:attribute {
 	var $name = substring-after(@name, "-");
 
+	if (x:value) {
+		<xs:simpleType name=$name _ "Values"> {
+			<xs:restriction base="xs:token"> {
+				for-each (x:value) {
+					<xs:enumeration value=@name>;
+				}
+			}
+		}
+	}
+
+	var $type = {
+		if (@type == "integer") {
+			expr "xs:integer";
+		} else if (@type == "boolean") {
+			expr "xs:boolean";
+		} else if (@type == "unique id") {
+			expr "xs:ID";
+		} else if (@type == "id") {
+			expr "xs:IDREF";
+		} else if (@type == "character") {
+			expr "xul:character";
+		} else if (@type == "color string") {
+			expr "xul:color";
+		} else if (@type == "URI" || @type == "URL") {
+			expr "xs:anyURI";
+		} else if (@type == "one of the values below") {
+			if (!x:value) {
+				terminate "no values found for enumeration";
+			}
+			expr "xul:" _ $name _ "Values";
+		} else {
+			expr "xs:string";
+		}
+	}
+
 	<xs:attributeGroup name=$name> {
 		if (contains($name, ".")) {
-			<xs:attribute name=substring-after($name, ".") type="xs:string">;
+			<xs:attribute name=substring-after($name, ".") type=$type>;
 
 		} else {
-			<xs:attribute name=$name type="xs:string">;
+			<xs:attribute name=$name type=$type>;
 		}
 	}
 }
 
 match x:element {
 	if (@abstract == "false") {
-		/* <xsl:message>processing <xsl:value-of select="@name"/></xsl:message> */
+		/*message "processing " _ @name;*/
 		<xs:attributeGroup name=@name _ "AttributeGroup"> {
 			if (@inherits) {
 				comment "Inherited from " _ @inherits _ ":";
@@ -80,7 +125,7 @@ match x:attr {
 	var $ref = @ref;
 
 	if ($derived) {
-		/* <xsl:message><xsl:value-of select="concat($derived, ' inherits ', substring-after($ref, '-'), ' from ', ../@name)"/></xsl:message> */
+		/*message $derived _ ' inherits ' _ substring-after($ref, '-') _ ' from ' _ ../@name;*/
 		if (not(key("parent", $derived)/x:attr[@ref == $ref || substring-after(@ref, ".") == substring-after($ref, "-")])) {
 			<xs:attributeGroup ref="xul:" _ substring-after($ref, "-")>;
 		}
