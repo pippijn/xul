@@ -1,49 +1,15 @@
-<content type="application/x.deki0805+xml" title="prefpane"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
-<p>A single preference panel in a <span class="script">template.XULElem("prefwindow")</span>. A <code>prefpane</code> is made up of two parts, the preferences descriptions, which specify the set of preferences that will be modified, and the user interface for adjusting those preferences. The former is specified using a <span class="script">template.XULElem("preferences")</span> element while the latter may be specified using other XUL elements.</p>
-<p>Both may be specified directly as children of the <code>prefpane</code> element, or the <span class="script">template.XULAttr("src")</span> attribute may be used to put a pane in a separate file. In this latter case, the separate file should use an <span class="script">template.XULElem("overlay")</span> tag as its root tag since it will be loaded as an overlay to the main preferences window.</p>
-<p>More information is available in the <a title="en/Preferences_System" href="/en/Preferences_System">Preferences System</a> article.</p>
-<dl> <dt>Attributes</dt> <dd><span class="script">template.PrefAnch("a-", "helpURI")</span>, <span class="script">template.PrefAnch("a-", "image")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "onpaneload")</span>, <span class="script">template.PrefAnch("a-", "prefpane.selected", "selected")</span>, <span class="script">template.PrefAnch("a-", "prefpane.src", "src")</span></dd>
-</dl>
-<dl> <dt>Properties</dt> <dd><span class="script">template.PrefAnch("p-", "image")</span>, <span class="script">template.PrefAnch("p-", "label")</span>, <span class="script">template.PrefAnch("p-", "preferenceElements")</span>, <span class="script">template.PrefAnch("p-", "prefpane.preferences", "preferences")</span>, <span class="script">template.PrefAnch("p-", "selected")</span>, <span class="script">template.PrefAnch("p-", "src")</span></dd>
-</dl>
-<dl> <dt>Methods</dt> <dd><span class="script">template.PrefAnch("m-", "preferenceForElement")</span></dd> <h3>Examples</h3>
-</dl>
-<pre class="eval">
-&lt;prefpane id="paneGeneral" label="General" src="<a rel="freelink" href="chrome://path/to/paneOverlay.xul" class=" external">chrome://path/to/paneOverlay.xul</a>"/&gt;
-</pre>
-<p>or</p>
-<pre class="eval">
+<content type="application/x.deki0805+xml" title="prefpane"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div><p>A single preference panel in a <span class="script">template.XULElem("prefwindow")</span>. A <code>prefpane</code> is made up of two parts, the preferences descriptions, which specify the set of preferences that will be modified, and the user interface for adjusting those preferences. The former is specified using a <span class="script">template.XULElem("preferences")</span> element while the latter may be specified using other XUL elements.</p><p>Both may be specified directly as children of the <code>prefpane</code> element, or the <span class="script">template.XULAttr("src")</span> attribute may be used to put a pane in a separate file. In this latter case, the separate file should use an <span class="script">template.XULElem("overlay")</span> tag as its root tag since it will be loaded as an overlay to the main preferences window.</p><p>More information is available in the <a href="/en/Preferences_System" title="en/Preferences_System">Preferences System</a> article.</p><dl><dt>Attributes</dt><dd><span class="script">template.PrefAnch("a-", "helpURI")</span>, <span class="script">template.PrefAnch("a-", "image")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "onpaneload")</span>, <span class="script">template.PrefAnch("a-", "prefpane.selected", "selected")</span>, <span class="script">template.PrefAnch("a-", "prefpane.src", "src")</span></dd></dl><dl><dt>Properties</dt><dd><span class="script">template.PrefAnch("p-", "image")</span>, <span class="script">template.PrefAnch("p-", "label")</span>, <span class="script">template.PrefAnch("p-", "preferenceElements")</span>, <span class="script">template.PrefAnch("p-", "prefpane.preferences", "preferences")</span>, <span class="script">template.PrefAnch("p-", "selected")</span>, <span class="script">template.PrefAnch("p-", "src")</span></dd></dl><dl><dt>Methods</dt><dd><span class="script">template.PrefAnch("m-", "preferenceForElement")</span></dd><h3>Examples</h3></dl><pre class="eval">
+&lt;prefpane id="paneGeneral" label="General" src="<a rel="freelink" class=" external" href="chrome://path/to/paneOverlay.xul">chrome://path/to/paneOverlay.xul</a>"/&gt;
+</pre><p>or</p><pre class="eval">
 &lt;prefpane id="paneGeneral" label="General" onpaneload="onGeneralPaneLoad(event);"&gt;
   &lt;preferences&gt;
     &lt;preference id="pref_one" name="extensions.myextension.one" type="bool"/&gt;
-     ... more preferences ...
+    ... more preferences ...
   &lt;/preferences&gt;
 
   &lt;checkbox label="Number one?" preference="pref_one"/&gt;
   ... more UI elements ...
-&lt;/prefpane&gt;</pre>
-<h3 name="Attributes">Attributes</h3>
-<p><span class="script">template.XULAttrInherited()</span> <span class="script">template.XULAttrInc("helpURI")</span> <span class="script">template.XULAttrInc("image")</span> <span class="script">template.XULAttrInc("label")</span> <span class="script">template.XULAttrInc("onpaneload")</span> <span class="script">template.XULAttrInc("prefpane.selected")</span> <span class="script">template.XULAttrInc("prefpane.src")</span></p>
-<h3 name="Properties">Properties</h3>
-<dl> <dt><code>contentHeight</code> (readonly) </dt> <dd>The height (in pixels) of current pane's content.</dd>
-</dl>
-<p><span class="script">template.XULPropInherited()</span> <span class="script">template.XULPropInc("image")</span> <span class="script">template.XULPropInc("label")</span> </p>
-<dl> <dt><code>loaded</code> </dt> <dd>Indicates whether the pane is fully loaded.</dd>
-</dl>
-<p><span class="script">template.XULPropInc("preferenceElements")</span> <span class="script">template.XULPropInc("prefpane.preferences")</span> <span class="script">template.XULPropInc("selected")</span> <span class="script">template.XULPropInc("src")</span></p><h3 name="Methods">Methods</h3>
-<dl> <dt><code>DOMElement getPreferenceElement(in DOMElement startElement)</code></dt>
-</dl>
-<p><span class="script">template.XULMethInc("preferenceForElement")</span></p>
-<dl> <dt><code>void userChangedValue(in DOMElement element);</code> </dt> <dd>The user changed the value in a widget that the preferences system does not automatically track state changes for (1) and the preference element associated with the widget should be updated based on the state held by the widget. For example, if you are using a listbox and the user changes the contents of the listbox (such as adding or removing an item) and you want to sync the changes back to a preference, you must write an <code>onsynctopreference</code> handler for your listbox that returns the value to be written to the preference element, and then call the <code>userChangedValue</code> function every time you edit the list in a way that should cause the preference's value to change.</dd> <dd>(1) an example of a widget that has state changes tracked for it includes the checkbox element, whose state is tracked automatically when the "command" event fires.</dd> <dt><code>void writePreferences(in boolean flushToDisk);</code> </dt> <dd>Writes all changes in this pane to preferences, optionally flushes to disk.</dd>
-</dl>
-<p><span class="script">XULMethInheritedWide()</span></p><h3 name="Events">Events</h3>
-<dl> <dt><code>paneload</code> </dt> <dd>This event is fired on the pane element when the pane is fully loaded (e.g. after the overlay is merged.) You can put the handler for this event in the <code>onpaneload</code> attribute on the element.</dd>
-</dl>
-<h3 name="Using_multiple_prefpanes">Using multiple <code>prefpane</code>s</h3>
-<p>Note that when using multiple <code>prefpane</code>s in the same <code>prefwindow</code>, you must not put the <code>&lt;script&gt;</code> elements above the <code>prefpane</code> elements, but instead below them. Otherwise the dialog will show erratic behavior and not display correctly.</p>
-<p>Place the <code>&lt;script&gt;</code> tags as in the following example for preference dialogs to work correctly:</p>
-<pre class="eval">
+&lt;/prefpane&gt;</pre><h3 name="Attributes">Attributes</h3><p><span class="script">template.XULAttrInherited()</span><span class="script">template.XULAttrInc("helpURI")</span><span class="script">template.XULAttrInc("image")</span><span class="script">template.XULAttrInc("label")</span><span class="script">template.XULAttrInc("onpaneload")</span><span class="script">template.XULAttrInc("prefpane.selected")</span><span class="script">template.XULAttrInc("prefpane.src")</span></p><h3 name="Properties">Properties</h3><dl><dt><code>contentHeight</code> (readonly) </dt><dd>The height (in pixels) of current pane's content.</dd></dl><p><span class="script">template.XULPropInherited()</span><span class="script">template.XULPropInc("image")</span><span class="script">template.XULPropInc("label")</span></p><dl><dt><code>loaded</code> </dt><dd>Indicates whether the pane is fully loaded.</dd></dl><p><span class="script">template.XULPropInc("preferenceElements")</span><span class="script">template.XULPropInc("prefpane.preferences")</span><span class="script">template.XULPropInc("selected")</span><span class="script">template.XULPropInc("src")</span></p><h3 name="Methods">Methods</h3><dl><dt><code>DOMElement getPreferenceElement(in DOMElement startElement)</code></dt></dl><p><span class="script">template.XULMethInc("preferenceForElement")</span></p><dl><dt><code>void userChangedValue(in DOMElement element);</code> </dt><dd>The user changed the value in a widget that the preferences system does not automatically track state changes for (1) and the preference element associated with the widget should be updated based on the state held by the widget. For example, if you are using a listbox and the user changes the contents of the listbox (such as adding or removing an item) and you want to sync the changes back to a preference, you must write an <code>onsynctopreference</code> handler for your listbox that returns the value to be written to the preference element, and then call the <code>userChangedValue</code> function every time you edit the list in a way that should cause the preference's value to change.</dd><dd>(1) an example of a widget that has state changes tracked for it includes the checkbox element, whose state is tracked automatically when the "command" event fires.</dd><dt><code>void writePreferences(in boolean flushToDisk);</code> </dt><dd>Writes all changes in this pane to preferences, optionally flushes to disk.</dd></dl><p><span class="script">XULMethInheritedWide()</span></p><h3 name="Events">Events</h3><dl><dt><code>paneload</code> </dt><dd>This event is fired on the pane element when the pane is fully loaded (e.g. after the overlay is merged.) You can put the handler for this event in the <code>onpaneload</code> attribute on the element.</dd></dl><h3 name="Using_multiple_prefpanes">Using multiple <code>prefpane</code>s</h3><p>Note that when using multiple <code>prefpane</code>s in the same <code>prefwindow</code>, you must not put the <code>&lt;script&gt;</code> elements above the <code>prefpane</code> elements, but instead below them. Otherwise the dialog will show erratic behavior and not display correctly.</p><p>Place the <code>&lt;script&gt;</code> tags as in the following example for preference dialogs to work correctly:</p><pre class="eval">
 &lt;prefwindow&gt;
   &lt;prefpane id="paneGeneral" label="General"&gt;
     ...
@@ -53,14 +19,8 @@
     ...
   &lt;/prefpane&gt;
 
-  &lt;script type="application/javascript" src="<a rel="freelink" href="chrome://myext/content/script0.js" class=" external">chrome://myext/content/script0.js</a>"&gt;
-  &lt;script type="application/javascript" src="<a rel="freelink" href="chrome://myext/content/script1.js" class=" external">chrome://myext/content/script1.js</a>"&gt;
+  &lt;script type="application/javascript" src="<a rel="freelink" class=" external" href="chrome://myext/content/script0.js">chrome://myext/content/script0.js</a>"&gt;
+  &lt;script type="application/javascript" src="<a rel="freelink" class=" external" href="chrome://myext/content/script1.js">chrome://myext/content/script1.js</a>"&gt;
 &lt;/prefwindow&gt;
-</pre>
-<p>When opening a dialog with multiple panes you must include the <code>toolbar</code> feature in the call to <code>openDialog</code>, for example:</p>
-<pre class="eval">
-window.openDialog("<a rel="freelink" href="chrome://example/content/prefwin.xul" class=" external">chrome://example/content/prefwin.xul</a>", "", "chrome,toolbar");</pre>
-<h3 name="Related">Related</h3>
-<p><span class="script">template.XULElem("prefwindow")</span></p>
-<p><span class="script">template.Preferences_System_TOC()</span></p>
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/prefpane", "ja": "ja/XUL/prefpane", "pl": "pl/XUL/prefpane" } ) </span></p></body></content>
+</pre><p>When opening a dialog with multiple panes you must include the <code>toolbar</code> feature in the call to <code>openDialog</code>, for example:</p><pre class="eval">
+window.openDialog("<a rel="freelink" class=" external" href="chrome://example/content/prefwin.xul">chrome://example/content/prefwin.xul</a>", "", "chrome,toolbar");</pre><h3 name="Related">Related</h3><p><span class="script">template.XULElem("prefwindow")</span></p><p><span class="script">template.Preferences_System_TOC()</span></p><p><span class="script"> wiki.languages( { "fr": "fr/XUL/prefpane", "ja": "ja/XUL/prefpane", "pl": "pl/XUL/prefpane" } ) </span></p></body></content>

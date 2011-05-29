@@ -1,14 +1,10 @@
-<content type="application/x.deki0805+xml" title="listcol"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>A column in a <span class="script">template.XULElem("listbox")</span>. You can make some columns flexible and other columns non-flexible.
-</p>
-<h3 name="Examples"> Examples </h3>
-<h3 name="Example"> Example </h3>
-<pre>
+<content type="application/x.deki0805+xml" title="listcol"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div><p>A column in a <span class="script">template.XULElem("listbox")</span>. You can make some columns flexible and other columns non-flexible.</p><h3 name="Examples">Examples</h3><h3 name="Example">Example</h3><pre>
 &lt;!-- A two column listbox with one column flexible --&gt;
 &lt;listbox&gt;
-   &lt;listhead&gt;
-      &lt;listheader label="First"/&gt;
-      &lt;listheader label="Last"/&gt;
-    &lt;/listhead&gt;
+  &lt;listhead&gt;
+    &lt;listheader label="First"/&gt;
+    &lt;listheader label="Last"/&gt;
+  &lt;/listhead&gt;
   &lt;listcols&gt;
     &lt;listcol flex="1"/&gt;
     &lt;listcol/&gt;
@@ -22,20 +18,4 @@
     &lt;listcell label="Painter"/&gt;
   &lt;/listitem&gt;
 &lt;/listbox&gt;
-</pre>
-<h3 name="Attributes"> Attributes </h3>
-<p><span class="script">template.XULAttrInheritedWide()</span>
-</p>
-<h3 name="Properties"> Properties </h3>
-<p><span class="script">template.XULPropInheritedWide()</span>
-</p>
-<h3 name="Methods"> Methods </h3>
-<p><span class="script">template.XULMethInheritedWide()</span>
-</p>
-<h3 name="Related"> Related </h3>
-<dl><dt> Elements
-</dt><dd> <span class="script">template.XULElem("listbox")</span>, <span class="script">template.XULElem("listcell")</span>, <span class="script">template.XULElem("listcols")</span>, <span class="script">template.XULElem("listhead")</span>, <span class="script">template.XULElem("listheader")</span>, <span class="script">template.XULElem("listitem")</span>
-</dd></dl>
-<div class="noinclude">
-</div>
-<span class="script"> wiki.languages( { "ja": "ja/XUL/listcol", "pl": "pl/XUL/listcol" } ) </span></body></content>
+</pre><h3 name="Attributes">Attributes</h3><p><span class="script">template.XULAttrInheritedWide()</span></p><h3 name="Properties">Properties</h3><p><span class="script">template.XULPropInheritedWide()</span></p><h3 name="Methods">Methods</h3><p><span class="script">template.XULMethInheritedWide()</span></p><h3 name="Related">Related</h3><dl><dt>Elements</dt><dd><span class="script">template.XULElem("listbox")</span>, <span class="script">template.XULElem("listcell")</span>, <span class="script">template.XULElem("listcols")</span>, <span class="script">template.XULElem("listhead")</span>, <span class="script">template.XULElem("listheader")</span>, <span class="script">template.XULElem("listitem")</span></dd></dl><span class="script">wiki.languages( { "ja": "ja/XUL/listcol", "pl": "pl/XUL/listcol" } )</span></body></content>

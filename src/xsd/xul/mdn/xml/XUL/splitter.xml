@@ -3,19 +3,19 @@
      used to hold the .png image that a user clicks on to resize the search bar.--&gt;
 
 &lt;splitter tooltiptext="Resize the Search Box" oncommand="alert('The splitter was dragged')"&gt;
-    &lt;vbox id="example_vbox" /&gt;
+  &lt;vbox id="example_vbox" /&gt;
 &lt;/splitter&gt;
 </pre><h3 name="Attributes">Attributes</h3><p><span class="script">XULAttrInherited()</span><span class="script">XULAttrInc("collapse")</span><span class="script">XULAttrInc("resizeafter")</span><span class="script">XULAttrInc("resizebefore")</span><span class="script">XULAttrInc("state")</span><span class="script">XULAttrInc("substate")</span></p><h3 name="Properties">Properties</h3><p><span class="script">XULPropInheritedWide()</span></p><h3 name="Methods">Methods</h3><p><span class="script">XULMethInheritedWide()</span></p><h3 name="Style_classes">Style classes</h3><p>The following classes may be used to style the element. These classes should be used instead of changing the style of the element directly since they will fit more naturally with the user's selected theme.</p><p><span class="script">XULStyleInc("tree-splitter")</span></p><pre>
 &lt;tree id="tree1" flex="1" height="300" enableColumnDrag="true"&gt;
-   &lt;treecols&gt;
-      &lt;treecol id="name" label="Name" flex="1"/&gt;
-      &lt;splitter class="tree-splitter"/&gt;
-      &lt;treecol id="id" label="ID" flex="1"/&gt;
-      &lt;splitter class="tree-splitter"/&gt;
-      &lt;treecol id="date" label="Date" flex="1"/&gt;
-      &lt;splitter class="tree-splitter"/&gt;
-   &lt;/treecols&gt;
-   &lt;treechildren/&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Name" flex="1"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="id" label="ID" flex="1"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="date" label="Date" flex="1"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
 &lt;/tree&gt;
 </pre><h3 name="Related">Splitter resizing and overflow</h3><p>The degree to which a splitter will resize a box, and what happens during the resize and after the limit is reached, depends on the height (or width) specified for the box as an attribute or in CSS, the min-height (or min-width), the intrinsic height of the box contents, and the presence or absence of a collapse attribute on the splitter.</p><p>For:</p><pre>
 &lt;vbox&gt;&lt;/vbox&gt;
@@ -25,18 +25,18 @@
 &lt;vbox/&gt;
 &lt;splitter/&gt;
 &lt;vbox height="500"&gt;
-   &lt;vbox height="100"/&gt;
+  &lt;vbox height="100"/&gt;
 &lt;/vbox&gt;
 </pre><p>...the splitter can be dragged down to the 100px intrinsic height of the lower box, where it will stop (or collapse if the splitter has a collapse attribute).</p><p>For:</p><pre>
 &lt;vbox/&gt;
 &lt;splitter/&gt;
 &lt;vbox height="500" minheight="200"&gt;
-   &lt;vbox height="100"/&gt;
+  &lt;vbox height="100"/&gt;
 &lt;/vbox&gt;
 </pre><p>...the splitter can be dragged down to the 200px minheight, where it will stop or collapse.</p><p>For:</p><pre>
 &lt;vbox/&gt;
 &lt;splitter/&gt;
 &lt;vbox height="500" style="min-height: 50"&gt;
-   &lt;vbox height="100"/&gt;
+  &lt;vbox height="100"/&gt;
 &lt;/vbox&gt;
 </pre><p>...the splitter can be dragged down below the 100px intrinsic height of the lower box, causing the child box to overflow, until reaching the min-height, at which point it will stop or collapse. That should also work with a minheight attribute specifying a value less than the intrinsic height. (However, because of <a class=" external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=513597" title="http://bugzilla.mozilla.org/show_bug.cgi?id=513597">bug 513597</a>, only specifying both minheight and minwidth attributes, or specifying min-height or min-width in CSS, actually works to allow overflow.)</p><h3 name="Related">Related</h3><p>TBD</p><p><span class="script"> wiki.languages( { "de": "de/XUL/splitter", "ja": "ja/XUL/splitter", "pl": "pl/XUL/splitter" } ) </span></p></body></content>

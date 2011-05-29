@@ -1,59 +1,24 @@
-<content type="application/x.deki0805+xml" title="wizardpage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div> <p>This element defines a page in a <span class="script">template.XULElem("wizard")</span>. The content in the pages should be placed inside the <code>wizardpage</code> element.
-</p><p>More information is available in the <a href="en/XUL_Tutorial/Creating_a_Wizard">XUL tutorial</a>.
-</p>
-<dl><dt> Attributes
-</dt><dd> <span class="script">template.PrefAnch("a-", "description")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "next")</span>, <span class="script">template.PrefAnch("a-", "onpageadvanced")</span>, <span class="script">template.PrefAnch("a-", "onpagehide")</span>, <span class="script">template.PrefAnch("a-", "onpagerewound")</span>, <span class="script">template.PrefAnch("a-", "onpageshow")</span>, <span class="script">template.PrefAnch("a-", "pageid")</span>
-</dd></dl>
-<dl><dt> Properties
-</dt><dd> <span class="script">template.PrefAnch("p-", "next")</span>, <span class="script">template.PrefAnch("p-", "pageid")</span>
-</dd></dl>
-<h3 name="Examples"> Examples </h3>
-<pre>
+<content type="application/x.deki0805+xml" title="wizardpage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div><p>This element defines a page in a <span class="script">template.XULElem("wizard")</span>. The content in the pages should be placed inside the <code>wizardpage</code> element.</p><p>More information is available in the <a href="en/XUL_Tutorial/Creating_a_Wizard">XUL tutorial</a>.</p><dl><dt>Attributes</dt><dd><span class="script">template.PrefAnch("a-", "description")</span>, <span class="script">template.PrefAnch("a-", "label")</span>, <span class="script">template.PrefAnch("a-", "next")</span>, <span class="script">template.PrefAnch("a-", "onpageadvanced")</span>, <span class="script">template.PrefAnch("a-", "onpagehide")</span>, <span class="script">template.PrefAnch("a-", "onpagerewound")</span>, <span class="script">template.PrefAnch("a-", "onpageshow")</span>, <span class="script">template.PrefAnch("a-", "pageid")</span></dd></dl><dl><dt>Properties</dt><dd><span class="script">template.PrefAnch("p-", "next")</span>, <span class="script">template.PrefAnch("p-", "pageid")</span></dd></dl><h3 name="Examples">Examples</h3><pre>
 &lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
 
 &lt;wizard id="theWizard" title="Secret Code Wizard"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
 
-&lt;script&gt;
-function checkCode(){
-  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
-} 
-&lt;/script&gt;
+  &lt;script&gt;
+  function checkCode(){
+    document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+  } 
+  &lt;/script&gt;
 
   &lt;wizardpage onpageshow="checkCode();"&gt;
-       &lt;label value="Enter the secret code:"/&gt;
-       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+    &lt;label value="Enter the secret code:"/&gt;
+    &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
   &lt;/wizardpage&gt;
 
   &lt;wizardpage&gt;
-       &lt;label value="That is the correct secret code."/&gt;
+    &lt;label value="That is the correct secret code."/&gt;
   &lt;/wizardpage&gt;
 
 &lt;/wizard&gt;
-</pre>
-<h3 name="Attributes"> Attributes </h3>
-<p><span class="script">template.XULAttrInherited()</span>
-<span class="script">template.XULAttrInc("description")</span>
-<span class="script">template.XULAttrInc("label")</span>
-<span class="script">template.XULAttrInc("next")</span>
-<span class="script">template.XULAttrInc("onpageadvanced")</span>
-<span class="script">template.XULAttrInc("onpagehide")</span>
-<span class="script">template.XULAttrInc("onpagerewound")</span>
-<span class="script">template.XULAttrInc("onpageshow")</span>
-<span class="script">template.XULAttrInc("pageid")</span>
-</p>
-<h3 name="Properties"> Properties </h3>
-<p><span class="script">template.XULPropInc("next")</span>
-<span class="script">template.XULPropInc("pageid")</span>
-<span class="script">template.XULPropInheritedWide()</span>
-</p>
-<h3 name="Methods"> Methods </h3>
-<p><span class="script">template.XULMethInheritedWide()</span>
-</p>
-<h3 name="Related"> Related </h3>
-<p><a href="en/XUL/wizard"> wizard</a>
-</p>
-<div class="noinclude">
-</div>
-<span class="script"> wiki.languages( { "ja": "ja/XUL/wizardpage", "pl": "pl/XUL/wizardpage" } ) </span></body></content>
+</pre><h3 name="Attributes">Attributes</h3><p><span class="script">template.XULAttrInherited()</span><span class="script">template.XULAttrInc("description")</span><span class="script">template.XULAttrInc("label")</span><span class="script">template.XULAttrInc("next")</span><span class="script">template.XULAttrInc("onpageadvanced")</span><span class="script">template.XULAttrInc("onpagehide")</span><span class="script">template.XULAttrInc("onpagerewound")</span><span class="script">template.XULAttrInc("onpageshow")</span><span class="script">template.XULAttrInc("pageid")</span></p><h3 name="Properties">Properties</h3><p><span class="script">template.XULPropInc("next")</span><span class="script">template.XULPropInc("pageid")</span><span class="script">template.XULPropInheritedWide()</span></p><h3 name="Methods">Methods</h3><p><span class="script">template.XULMethInheritedWide()</span></p><h3 name="Related">Related</h3><p><a href="en/XUL/wizard">wizard</a></p><span class="script">wiki.languages( { "ja": "ja/XUL/wizardpage", "pl": "pl/XUL/wizardpage" } )</span></body></content>
