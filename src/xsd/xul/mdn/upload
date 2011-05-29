@@ -52,17 +52,17 @@ sub tidy {
    popen (
       'tidy', '-q',
       '--punctuation-wrap', 'yes',
-      '--wrap', 0,
+      '--wrap', '0',
       '--sort-attributes', 'alpha',
       '-xml',
       '--output-encoding', 'utf8',
-      '--char-encoding', $_[0],
-      $_[1]
+      '--char-encoding', 'utf8',
+      $_[0]
    );
 }
 
-my $xmlout = tidy 'utf8' => $XML;
-my $refout = tidy 'utf8' => $REF;
+my $xmlout = tidy $XML;
+my $refout = tidy $REF;
 
 sub writeout {
    open my $fh, '>', $_[0]
