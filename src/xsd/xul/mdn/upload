@@ -36,7 +36,7 @@ my $REF  = $XML;
 
 $REF =~ s/\.upload/xml/;
 
-#$SIG{__DIE__} = sub { unlink $XML };
+$SIG{__DIE__} = sub { unlink $XML };
 
 sub sysdie {
    if ($? == -1) {
