@@ -2,7 +2,7 @@
 
 use common::sense;
 use constant URL
-   => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?include=true&mode=raw&format=xhtml';
+   => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?include=true&mode=raw&format=xhtml&ts=%d';
 
 use Dir::Self;
 my %pageids = do (__DIR__ . "/pageids.pm");
@@ -10,6 +10,6 @@ my %pageids = do (__DIR__ . "/pageids.pm");
 my $PAGE = $ARGV[0] or die;
 my $XML  = $ARGV[1] or die;
 
-my $URL = sprintf URL, $pageids{$PAGE};
-#print "  GET    $URL\n";
+my $URL = sprintf URL, $pageids{$PAGE}, time;
+print "Downloading from $URL\n";
 exec "curl", "-o", $XML, "-s", $URL;

@@ -2,7 +2,9 @@ include MDN.am
 
 noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
 
-$(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages
+mdn: $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
+
+$(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages $(CURDIR)/pageids.pm
 	echo -n 'MDNBASE =' > $@
 	for i in `$<`; do		\
 	    echo -n " $$i" >> $@;	\
@@ -33,8 +35,10 @@ $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages
 AM_V_GET = $(am__v_GET_$(V))
 am__v_GET_ = $(am__v_GET_$(AM_DEFAULT_VERBOSITY))
 am__v_GET_0 = @echo "  GET   " $@;
-$(srcdir)/$(CURDIR)/xml/%.xml: $(CURDIR)/download $(CURDIR)/pageids.pm
-	$(AM_V_GET)$< $* $@
+$(srcdir)/$(CURDIR)/xml/%.xml: #$(CURDIR)/pageids.pm $(CURDIR)/download
+	$(AM_V_GET)$(srcdir)/$(CURDIR)/download $* $@
+#	$(AM_V_GET)$(lastword $+) $* $@
+#	@touch $@
 
 AM_V_X2J = $(am__v_X2J_$(V))
 am__v_X2J_ = $(am__v_X2J_$(AM_DEFAULT_VERBOSITY))
@@ -51,6 +55,7 @@ $(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml jmlc$(EXEEXT)
 AM_V_POST = $(am__v_POST_$(V))
 am__v_POST_ = $(am__v_POST_$(AM_DEFAULT_VERBOSITY))
 am__v_POST_0 = @echo "  POST  " $@;
-$(srcdir)/$(CURDIR)/.upload/%.post: $(srcdir)/$(CURDIR)/.upload/%.xml $(CURDIR)/upload
-	$(AM_V_POST)$(lastword $+) $* $<
+$(srcdir)/$(CURDIR)/.upload/%.post: $(srcdir)/$(CURDIR)/.upload/%.xml #$(CURDIR)/upload
+	$(AM_V_POST)$(srcdir)/$(CURDIR)/upload $* $<
+#	$(AM_V_POST)$(lastword $+) $* $<
 	@touch $@

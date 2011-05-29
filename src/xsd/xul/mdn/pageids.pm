@@ -1,5 +1,7 @@
 (
-   'Sandbox/XUL_element_attributes' => 73508,
+   'Sandbox/pippijn/1' => 73763,
+   'Sandbox/pippijn/2' => 73765,
+   'Sandbox/pippijn/3' => 73769,
 
    'XUL_element_attributes' => 15383,
 

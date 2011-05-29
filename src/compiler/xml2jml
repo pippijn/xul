@@ -18,7 +18,7 @@ $p->parse_uri ($XML);
 
 my $indent = 0;
 sub out {
-   print $fh "   " x $indent, @_;
+   print $fh "\t" x $indent, @_;
 }
 sub escape {
    my ($text) = @_;
@@ -31,10 +31,22 @@ sub escape {
    encode 'utf-8', $text
 }
 
+sub wrapout {
+   use Text::Wrap;
+
+   # the text already seems to be manually wrapped
+   return out "\"$_[0]\"\n"
+      if $_[0] =~ /\n/;
+
+   my @lines = split /\n/, fill '', '', $_[0];
+   out "\"$lines[$_]", $_ != $#lines ? " " : "", "\"\n"
+      for 0 .. $#lines;
+}
+
 my $chardata;
 sub chardump {
    if (defined $chardata) {
-      out '"', (escape $chardata), "\"\n";
+      wrapout escape $chardata;
       undef $chardata;
    }
 }

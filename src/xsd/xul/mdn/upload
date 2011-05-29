@@ -4,7 +4,7 @@ use common::sense;
 use autodie 'open', 'system';
 use constant {
    URL => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified',
-   CMD => 'xmllint --xpath "/content/body/*" %s | curl -s -n -d "@-" "%s"',
+   CMD => 'xmllint --xpath "/content/body/*" %s | curl -s -n --data-binary "@-" "%s"',
 };
 
 use Dir::Self;
@@ -72,18 +72,23 @@ sub writeout {
 }
 
 if ($xmlout ne $refout) {
-   END { unlink "xmlout-$$", "refout-$$" }
-   writeout "xmlout-$$", $xmlout;
-   writeout "refout-$$", $refout;
-   system 'diff', '-u', "refout-$$", "xmlout-$$";
+   if (0) {
+      END { unlink "xmlout-$$", "refout-$$" }
+      writeout "xmlout-$$", $xmlout;
+      writeout "refout-$$", $refout;
+      system 'diff', '-u', "refout-$$", "xmlout-$$";
+   }
 
    my $URL = sprintf URL, $pageids{$PAGE}, strmtime $XML;
    my $CMD = sprintf CMD, $XML, $URL;
-   print "Uploading to $URL...\n";
-   exec "echo", $CMD;
+   #print "Uploading to $URL\n";
+   #exec "echo", $CMD;
    for (`$CMD`) {
       m|<error><status>(\d+)</status><title>(.*?)</title>| and die "Error $1: $2";
       m|<edit status="success">| or die "Edit was not successful";
       #print "$_\n";
+
+      # remove original so it's downloaded from the updated MDN again
+      unlink $REF;
    }
 }
