@@ -72,13 +72,14 @@ sub writeout {
 }
 
 if ($xmlout ne $refout) {
-   writeout 'xmlout', $xmlout;
-   writeout 'refout', $refout;
-   system 'diff', '-u', 'refout', 'xmlout';
+   END { unlink "xmlout-$$", "refout-$$" }
+   writeout "xmlout-$$", $xmlout;
+   writeout "refout-$$", $refout;
+   system 'diff', '-u', "refout-$$", "xmlout-$$";
 
    my $URL = sprintf URL, $pageids{$PAGE}, strmtime $XML;
    my $CMD = sprintf CMD, $XML, $URL;
-   #print "  POST   $JML\n";
+   print "Uploading to $URL...\n";
    exec "echo", $CMD;
    for (`$CMD`) {
       m|<error><status>(\d+)</status><title>(.*?)</title>| and die "Error $1: $2";

@@ -1,6 +1,6 @@
 include MDN.am
 
-noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD)
+noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
 
 $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages
 	echo -n 'MDNBASE =' > $@
@@ -23,6 +23,11 @@ $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages
 	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.xml" >> $@;	\
 	done
 	echo >> $@
+	echo -n 'MDNPOST =' >> $@
+	for i in `$<`; do						\
+	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.post" >> $@;	\
+	done
+	echo >> $@
 
 
 AM_V_GET = $(am__v_GET_$(V))
@@ -40,6 +45,12 @@ $(srcdir)/$(CURDIR)/jml/%.jml: src/compiler/xml2jml $(srcdir)/$(CURDIR)/xml/%.xm
 AM_V_JMLC = $(am__v_JMLC_$(V))
 am__v_JMLC_ = $(am__v_JMLC_$(AM_DEFAULT_VERBOSITY))
 am__v_JMLC_0 = @echo "  JMLC  " $@;
-$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml jmlc$(EXEEXT) $(CURDIR)/upload
+$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml jmlc$(EXEEXT)
 	$(AM_V_JMLC)$(builddir)/jmlc$(EXEEXT) $< > $@
-	@$(lastword $+) $* $@
+
+AM_V_POST = $(am__v_POST_$(V))
+am__v_POST_ = $(am__v_POST_$(AM_DEFAULT_VERBOSITY))
+am__v_POST_0 = @echo "  POST  " $@;
+$(srcdir)/$(CURDIR)/.upload/%.post: $(srcdir)/$(CURDIR)/.upload/%.xml $(CURDIR)/upload
+	$(AM_V_POST)$(lastword $+) $* $<
+	@touch $@
