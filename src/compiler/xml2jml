@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 
 use common::sense;
-use autodie 'open';
 use base 'XML::SAX::Base';
 
 use Data::Dumper;
@@ -11,7 +10,8 @@ use XML::SAX;
 my $XML = $ARGV[0] or die;
 my $JML = $ARGV[1] or die;
 
-open my $fh, '>', $JML;
+open my $fh, '>', $JML
+   or die "$JML: $!";
 
 my $p = XML::SAX::ParserFactory->parser (Handler => __PACKAGE__->new);
 $p->parse_uri ($XML);
@@ -36,6 +36,8 @@ sub wrapout {
    use Text::Wrap;
 
    # the text already seems to be manually wrapped
+   # or we are in a <pre> tag
+   # so we won't mess with the indentation
    return out "\"$_[0]\"\n"
       if $_[0] =~ /\n/ or $pre;
 
@@ -61,9 +63,8 @@ sub start_element {
    out "$data->{Name} {\n";
    ++$indent;
    ++$pre if $data->{Name} eq 'pre';
-   for my $attr (values %{ $data->{Attributes} }) {
-      out "$attr->{Name}: \"", (escape $attr->{Value}), "\"\n";
-   }
+   out "$_->{Name}: \"", (escape $_->{Value}), "\"\n"
+      for values %{ $data->{Attributes} };
    #print Dumper $data;
    #die;
 }
