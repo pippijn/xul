@@ -64,6 +64,51 @@ struct out
   wchar_t const c;
 };
 
+
+static bool
+is_entity (std::vector<wchar_t>::const_iterator it, std::vector<wchar_t>::const_iterator et)
+{
+#define NEXT() do { if (++it == et) return false; } while (0)
+
+  if (*it != '&')
+    return false;
+
+  NEXT ();
+
+  // numeric entities
+  if (*it == L'#')
+    {
+      NEXT (); // skip over '#'
+      // hex entities
+      if (*it == L'x')
+        {
+          do
+            NEXT ();
+          while (isxdigit (*it));
+        }
+      else
+        {
+          do
+            NEXT ();
+          while (isdigit (*it));
+        }
+      return *it == L';';
+    }
+
+  // named entities
+  if (isalpha (*it))
+    {
+      do
+        NEXT ();
+      while (isalpha (*it));
+      return *it == L';';
+    }
+
+#undef NEXT
+
+  return false;
+}
+
 void
 parse_string (std::string *&string, char const *text, int leng)
 {
@@ -94,6 +139,12 @@ parse_string (std::string *&string, char const *text, int leng)
         break;
       case L'>':
         s << "&gt;";
+        break;
+      case L'&':
+        if (is_entity (it, et))
+          s << '&';
+        else
+          s << "&amp;";
         break;
       case L'"':
         printf ("found unescaped double quote in string:\n%s\n%*c\n", text, it - wcs.begin () + 1, '^');
