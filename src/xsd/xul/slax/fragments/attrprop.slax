@@ -37,7 +37,7 @@ match body/dl[1] {
 			expr $type;
 		}
 		if ($type == "one of the values below") {
-			var $values = dd/ul[1]/li/code[1];
+			var $values = dd/dl[1]/dt/code[1];
 			/*message count($values);*/
 			if (not($values)) {
 				call ENOENT($what = "enumeration values");

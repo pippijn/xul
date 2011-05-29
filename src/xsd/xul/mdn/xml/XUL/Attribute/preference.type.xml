@@ -1,11 +1,8 @@
-<content type="application/x.deki0805+xml" title="preference.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("preference.type", "type")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The preference type which should be one of the following values.</dd>
+<content type="application/x.deki0805+xml" title="preference.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("preference.type", "type")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>The preference type which should be one of the following values.</dd>
 <dd>
-<ul> <li><code>bool</code>: A boolean set to either <code>true</code> or <code>false</code>. Usually a <span class="script">template.XULElem("checkbox")</span> would be connected to these preferences.</li> <li><code>int</code>: An integer</li> <li><code>string</code>: A string</li> <li><code>unichar</code>: A Unicode string</li> <li><code>wstring</code>: A localized string. In this situation the preference will save the path to a property file which contains the actual value of the preference.</li> <li><code>file</code>: A file. The file path will be stored in the preferences.</li>
-</ul>
-</dd>
+<dl><dt><code>bool</code></dt><dd>A boolean set to either <code>true</code> or <code>false</code>. Usually a <span class="script">template.XULElem("checkbox")</span> would be connected to these preferences.</dd><dt><code>int</code></dt><dd>An integer</dd><dt><code>string</code></dt><dd>A string</dd><dt><code>unichar</code></dt><dd>A Unicode string</dd><dt><code>wstring</code></dt><dd>A localized string. In this situation the preference will save the path to a property file which contains the actual value of the preference.</dd><dt><code>file</code></dt><dd>A file. The file path will be stored in the preferences.</dd>
 </dl>
-<div class="noinclude">
+</dd>
+</dl><div class="noinclude">
 <p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/preference.type", "ja": "ja/XUL/Attribute/preference.type", "pl": "pl/XUL/Atrybut/preference.type" } ) </span></p>
 </div></body></content>

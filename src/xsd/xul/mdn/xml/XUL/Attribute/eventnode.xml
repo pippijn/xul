@@ -1,11 +1,7 @@
-<content type="application/x.deki0805+xml" title="eventnode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("eventnode")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>Indicates where keyboard navigation events are listened to. If this attribute is not specified, events are listened to from the <span class="script">template.XULElem("tabbox")</span>. Thus, if this attribute is not used, the <span class="script">template.XULElem("tabbox")</span> or an element inside it must have the focus for the keyboard navigation to apply.</dd>
+<content type="application/x.deki0805+xml" title="eventnode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("eventnode")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>Indicates where keyboard navigation events are listened to. If this attribute is not specified, events are listened to from the <span class="script">template.XULElem("tabbox")</span>. Thus, if this attribute is not used, the <span class="script">template.XULElem("tabbox")</span> or an element inside it must have the focus for the keyboard navigation to apply.</dd>
 <dd>
-<ul> <li><code>parent</code>: Keyboard navigation is captured at the parent of the <span class="script">template.XULElem("tabbox")</span>.</li> <li><code>window</code>: Keyboard navigation is captured at the window level. Tab navigation will occur as long as any element in the window is focused.</li> <li><code>document</code>: Keyboard navigation is captured at the document level. Tab navigation will occur as long as any element in the document is focused.</li>
-</ul>
+<dl><dt><code>parent</code></dt><dd>Keyboard navigation is captured at the parent of the <span class="script">template.XULElem("tabbox")</span>.</dd><dt><code>window</code></dt><dd>Keyboard navigation is captured at the window level. Tab navigation will occur as long as any element in the window is focused.</dd><dt><code>document</code></dt><dd>Keyboard navigation is captured at the document level. Tab navigation will occur as long as any element in the document is focused.</dd></dl>
 </dd>
-</dl>
-<div class="noinclude">
+</dl><div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/eventnode", "pl": "pl/XUL/Atrybut/eventnode" } ) </span></p>
 </div></body></content>

@@ -11,5 +11,5 @@ my $PAGE = $ARGV[0] or die;
 my $XML  = $ARGV[1] or die;
 
 my $URL = sprintf URL, $pageids{$PAGE}, time;
-print "Downloading from $URL\n";
+#print "Downloading from $URL\n";
 exec "curl", "-o", $XML, "-s", $URL;

@@ -1,8 +1,5 @@
-<content type="application/x.deki0805+xml" title="panel.fade"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("panel.fade", "fade")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The <code>fade</code> attribute, which may only be used with arrow panels, lets you set up a panel that will automatically fade away after a short time. The default is <code>none</code>.</dd>
+<content type="application/x.deki0805+xml" title="panel.fade"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("panel.fade", "fade")</span><span class="script">gecko_minversion_inline("2.0")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>The <code>fade</code> attribute, which may only be used with arrow panels, lets you set up a panel that will automatically fade away after a short time. The default is <code>none</code>.</dd>
 <dd>
-<ul> <li><code>none</code>: The panels doesn't automatically fade away.</li> <li><code>slow</code>: The panels slowly fades away after a short time.</li> <li><code>fast</code>: The panels quickly fades away after a short time.</li>
-</ul>
+<dl><dt><code>none</code></dt><dd>The panels doesn't automatically fade away.</dd><dt><code>slow</code></dt><dd>The panels slowly fades away after a short time.</dd><dt><code>fast</code></dt><dd>The panels quickly fades away after a short time.</dd></dl>
 </dd>
 </dl></body></content>

@@ -1,11 +1,7 @@
-<content type="application/x.deki0805+xml" title="query.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("query.type", "type")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>The type of the parameter's value</dd>
+<content type="application/x.deki0805+xml" title="query.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("query.type", "type")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>The type of the parameter's value</dd>
 <dd>
-<ul> <li><code>integer</code>: 32 bit integer</li> <li><code>int64</code>: 64 bit integer</li> <li><code>double</code>: double-precision floating-point number</li> <li><code>string</code>: string literal, the default value</li>
-</ul>
+<dl><dt><code>integer</code></dt><dd>32 bit integer</dd><dt><code>int64</code></dt><dd>64 bit integer</dd><dt><code>double</code></dt><dd>double-precision floating-point number</dd><dt><code>string</code></dt><dd>string literal, the default value</dd></dl>
 </dd>
-</dl>
-<div class="noinclude">
+</dl><div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/query.type", "pl": "pl/XUL/Atrybut/query.type" } ) </span></p>
 </div></body></content>

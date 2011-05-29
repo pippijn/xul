@@ -1,11 +1,7 @@
-<content type="application/x.deki0805+xml" title="treecell.mode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("treecell.mode", "mode")</span></dt> <dd>Type: <em>one of the values below</em></dd> <dd>For columns that are progress meters, this determines the type of progress meter to use.</dd>
+<content type="application/x.deki0805+xml" title="treecell.mode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("treecell.mode", "mode")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>For columns that are progress meters, this determines the type of progress meter to use.</dd>
 <dd>
-<ul> <li><code>none</code>: No progress meter is displayed. The cell text is displayed instead.</li> <li><code>normal</code>: The cell uses its value attribute to determine the amount of the bar that is filled in.</li> <li><code>undetermined</code>: The progressmeter is indeterminate.</li>
-</ul>
+<dl><dt><code>none</code></dt><dd>No progress meter is displayed. The cell text is displayed instead.</dd><dt><code>normal</code></dt><dd>The cell uses its value attribute to determine the amount of the bar that is filled in.</dd><dt><code>undetermined</code></dt><dd>The progressmeter is indeterminate.</dd></dl>
 </dd>
-</dl>
-<div class="noinclude">
+</dl><div class="noinclude">
 <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/treecell.mode" } ) </span></p>
 </div></body></content>
