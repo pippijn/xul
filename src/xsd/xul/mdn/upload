@@ -1,14 +1,14 @@
 #!/usr/bin/env perl
 
 use common::sense;
-use autodie 'open', 'system';
 use constant {
-   URL => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified',
-   CMD => 'xmllint --xpath "/content/body/*" %s | curl -s -n --data-binary "@-" "%s"',
+   URL => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified&comment=%s&title=%s',
+   CMD => {
+      body   => 'xmllint --xpath "/content/body/*" %s',
+      title  => 'xmllint --xpath "/content/@title" %s',
+      upload => 'curl -s -n --data-binary "@-" "%s"',
+   },
 };
-
-use Dir::Self;
-my %pageids = do (__DIR__ . "/pageids.pm");
 
 sub mtime {
    (stat $_[0])[9]
@@ -21,34 +21,32 @@ sub strmtime {
 }
 
 sub popen {
-   use IPC::Open3;
-
-   my $out;
-   my $pid = open3 undef, $out, $out, @_
+   local $/;
+   open my $out, '-|', @_
       or die "Cannot open pipe: $!";
-   my @out;
-   while (my $line = <$out>) {
-      push @out, $line;
-      if (@out > 100000) {
-         push @out, "<truncated>\n";
-         close $out;
-         last
-      }
-   }
-   $out = join "", @out;
-   waitpid $pid, 0;
-   die "@_" if $?;
+   $out = <$out>;
+   die "@_: $?" if $?;
 
    $out
 }
 
-my $PAGE = $ARGV[0] or die;
-my $XML  = $ARGV[1] or die;
+my $PAGE = $ARGV[0] or die 'missing page name';
+my $XML  = $ARGV[1] or die 'missing XML output file name';
 my $REF  = $XML;
 
 $REF =~ s/\.upload/xml/;
 
-$SIG{__DIE__} = sub { unlink $XML };
+#$SIG{__DIE__} = sub { unlink $XML };
+
+sub sysdie {
+   if ($? == -1) {
+      die "failed to execute: $!\n";
+   } elsif ($? & 127) {
+      die sprintf "child died with signal %d, %s coredump\n", $? & 127, $? & 128 ? 'with' : 'without';
+   } elsif ($? >> 8) {
+      die sprintf "child exited with value %d\n", $? >> 8;
+   }
+}
 
 sub tidy {
    popen (
@@ -67,7 +65,8 @@ my $xmlout = tidy 'utf8' => $XML;
 my $refout = tidy 'utf8' => $REF;
 
 sub writeout {
-   open my $fh, '>', $_[0];
+   open my $fh, '>', $_[0]
+      or die "$_[0]: $!";
    print $fh $_[1];
 }
 
@@ -77,13 +76,26 @@ if ($xmlout ne $refout) {
       writeout "xmlout-$$", $xmlout;
       writeout "refout-$$", $refout;
       system 'diff', '-u', "refout-$$", "xmlout-$$";
+      sysdie;
    }
 
-   my $URL = sprintf URL, $pageids{$PAGE}, strmtime $XML;
-   my $CMD = sprintf CMD, $XML, $URL;
+   my $CMD = do {
+      require Dir::Self;
+      my %pageids = do (Dir::Self->__DIR__ . "/pageids.pm");
+      require URI::Escape; import URI::Escape;
+      my ($title) = (popen sprintf CMD->{title}, $XML) =~ /title="([^"]+)"/;
+      my $body = sprintf CMD->{body}, $XML;
+
+      my $MSG = $ENV{COMMENT} or die 'missing commit message (envvar $COMMENT)';
+      my $URL = sprintf URL, $pageids{$PAGE}, strmtime ($XML), uri_escape ($MSG), uri_escape ($title);
+      my $upload = sprintf CMD->{upload}, $URL;
+
+      "$body | $upload"
+   };
    #print "Uploading to $URL\n";
+   #print "exec: $CMD\n"; exit 1;
    #exec "echo", $CMD;
-   for (`$CMD`) {
+   for (popen $CMD) {
       m|<error><status>(\d+)</status><title>(.*?)</title>| and die "Error $1: $2";
       m|<edit status="success">| or die "Edit was not successful";
       #print "$_\n";
