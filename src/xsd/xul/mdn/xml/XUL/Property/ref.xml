@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="ref"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("ref")</span> </dt><dd> Type: <em>URI of an RDF resource</em> </dd><dd> Gets and sets the value of the <span class="script">template.XULAttr("ref")</span> attribute. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/ref", "ja": "ja/XUL/Property/ref" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onsearchcomplete"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("onsearchcomplete")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event handler is called when the autocomplete search is finished and results are available. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onsearchcomplete", "pl": "pl/XUL/Atrybut/onsearchcomplete" } ) </span></p>
-</div></body></content>

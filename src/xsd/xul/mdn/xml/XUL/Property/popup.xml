@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="popup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("popup")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Should be set to the value of the <span class="script">template.XULAttr("id")</span> of the <span class="script">template.XULElem("popup")</span> element that should appear when the user clicks on the textbox. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/popup" } ) </span></p>
-</div></body></content>

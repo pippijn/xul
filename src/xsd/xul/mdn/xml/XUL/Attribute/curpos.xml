@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="curpos"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("curpos")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The current position of the <span class="script">template.XULElem("scrollbar")</span>, which ranges from 0 to the value of the <span class="script">template.XULAttr("maxpos")</span> attribute. The default value is 0. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/curpos", "pl": "pl/XUL/Atrybut/curpos" } ) </span></p>
-</div></body></content>

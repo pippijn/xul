@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="stringBundle"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("stringBundle")</span></dt> <dd>Type: <em><span class="script">interface("nsIStringBundle")</span></em></dd> <dd>Returns the XPCOM string bundle object which implements <span class="script">interface("nsIStringBundle")</span>.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/stringBundle" } ) </span></p>
-</div></body></content>

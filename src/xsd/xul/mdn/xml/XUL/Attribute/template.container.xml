@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="template.container"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("template.container", "container")</span> </dt><dd> Type: <em>string</em> </dd><dd> May optionally be set to the variable to use as the container or reference variable. If not specified, the variable specified in the <span class="script">template.XULAttr("uri")</span> attribute of the content tag in the template's first rule is used. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/template.container" } ) </span></p>
-</div></body></content>

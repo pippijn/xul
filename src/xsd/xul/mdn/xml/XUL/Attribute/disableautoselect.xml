@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="disableautoselect"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("disableautoselect")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If this attribute is <code>true</code> or omitted, the selected item on the menu will update to match what the user entered in the textbox. If the text does not match any of the items in the list, the menu selection is cleared. If this attribute is <code>false</code>, the selection is never updated to match the text box. This attribute applies only to editable <span class="script">template.XULElem("menulist")</span>s. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/disableautoselect", "pl": "pl/XUL/Atrybut/disableautoselect" } ) </span></p>
-</div></body></content>

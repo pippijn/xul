@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="placeholder"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("placeholder")</span> <span class="script">gecko_minversion_inline("2")</span></dt> <dd>Type: <em>string</em></dd> <dd>Gets and sets a string that appears in the textbox when it has no value.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/placeholder" } ) </span></p>
-</div></body></content>

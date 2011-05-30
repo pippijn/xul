@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="getBrowserForTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("getBrowserForTab", "( tab )")</span></dt> <dd>Return type: <em><span class="script">template.XULElem("browser")</span> element</em></dd> <dd>Returns a <span class="script">template.XULElem("browser")</span> for the specified <span class="script">template.XULElem("tab")</span> element.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getBrowserForTab", "pl": "pl/XUL/Metoda/getBrowserForTab" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="dateLeadingZero"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("dateLeadingZero")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>A read only value indicating whether a leading zero should be displayed before the date when it is less than 10.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/dateLeadingZero", "ja": "ja/XUL/Property/dateLeadingZero", "pl": "pl/XUL/W\u0142asno\u015b\u0107/dateLeadingZero" } ) </span></p>
-</div></body></content>

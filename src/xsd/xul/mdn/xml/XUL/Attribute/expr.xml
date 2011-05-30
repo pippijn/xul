@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="expr"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("expr")</span> </dt><dd> Type: <em>string</em> </dd><dd> For XML queries, an XPath expression which returns results. Any namespace prefixes declared on the element may be used within the expression. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/expr", "ja": "ja/XUL/Attribute/expr", "pl": "pl/XUL/Atrybut/expr" } ) </span></p>
-</div></body></content>

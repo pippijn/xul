@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="close"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("close","()")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Closes the notification or findbar and removes it from its enclosing <span class="script">XULElem("notificationbox")</span> or <span class="script">XULElem("findbar")</span>.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/close", "pl": "pl/XUL/Metoda/close" } ) </span></p>
-</div></body></content>

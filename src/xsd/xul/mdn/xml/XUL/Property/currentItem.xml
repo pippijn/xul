@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="currentItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("currentItem")</span> </dt><dd> Type: <em>listitem element</em> </dd><dd> Returns the last selected item in the list box, which is only useful in a multiple selection list box. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/currentItem", "ja": "ja/XUL/Property/currentItem" } ) </span></p>
-</div></body></content>

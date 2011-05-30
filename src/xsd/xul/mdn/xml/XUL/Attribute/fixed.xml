@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="fixed"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("fixed")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the size of the column in the tree cannot be adjusted by the user. Any <span class="script">template.XULElem("splitter")</span> to either side will resize those columns while keeping the fixed column at a constant size. If <code>false</code> or not specified, the user can adjust the size of the column, typically by dragging the column header with the mouse. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/fixed", "pl": "pl/XUL/Atrybut/fixed" } ) </span></p>
-</div></body></content>

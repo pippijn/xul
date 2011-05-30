@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="getBrowserAtIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("getBrowserAtIndex", "( index )")</span></dt> <dd>Return type: <em><span class="script">template.XULElem("browser")</span> element</em></dd> <dd>Returns a <span class="script">template.XULElem("browser")</span> at the specified tab index.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getBrowserAtIndex" } ) </span></p>
-</div></body></content>

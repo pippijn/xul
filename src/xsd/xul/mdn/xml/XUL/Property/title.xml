@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="title"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("title")</span> </dt><dd> Type: <em>string</em> </dd><dd> The title that appears at the top of the <span class="script">template.XULElem("wizard")</span>. This is overridden by the <span class="script">template.XULAttr("label")</span> attribute on the individual pages. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/title" } ) </span></p>
-</div></body></content>

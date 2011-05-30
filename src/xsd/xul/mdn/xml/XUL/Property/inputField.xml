@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="inputField"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("inputField")</span> </dt><dd> Type: <em>textbox element</em> </dd><dd> In Mozilla, the XUL textbox is implemented as a wrapper around an HTML input element. This read only property holds a reference to this inner input element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/inputField" } ) </span></p>
-</div></body></content>

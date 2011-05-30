@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="first-tab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("first-tab")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This attribute will be set to <code>true</code> for the first tab. This attribute should not be set manually, but is useful in a <a title="en/Themes" href="/en/Themes">theme</a> if the first tab should be styled differently. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/first-tab", "pl": "pl/XUL/Atrybut/first-tab" } ) </span></p>
-</div></body></content>

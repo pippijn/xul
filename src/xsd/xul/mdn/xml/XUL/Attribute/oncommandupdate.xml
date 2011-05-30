@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="oncommandupdate"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("oncommandupdate")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event occurs when a command update occurs. You would use this to update the disabled status of items. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/oncommandupdate", "pl": "pl/XUL/Atrybut/oncommandupdate" } ) </span></p>
-</div></body></content>

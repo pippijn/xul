@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="editor"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("editor")</span></dt> <dd>Type: <em><span class="script">interface("nsIEditor")</span></em></dd> <dd>A reference to the <span class="script">interface("nsIEditor")</span> for editable text. This property is read only.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/editor" } ) </span></p>
-</div></body></content>

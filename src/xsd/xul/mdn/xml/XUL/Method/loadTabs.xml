@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="loadTabs"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("loadTabs", "( uris, loadInBackground, replace )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Loads a set of URIs, specified by the array <code>uris</code>, into tabs. If <code>loadInBackground</code> is <code>true</code>, the tabs are loaded in the background, and if <code>replace</code> is <code>true</code>, the currently displayed tabs are replaced with the specified URIs instead of adding new tabs. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/loadTabs" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="docShell"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("docShell")</span></dt> <dd>Type: <em><span class="script">interface("nsIDocShell")</span></em></dd> <dd>This read-only property contains the <span class="script">interface("nsIDocShell")</span> object for the document.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/docShell", "pl": "pl/XUL/W\u0142asno\u015b\u0107/docShell" } ) </span></p>
-</div></body></content>

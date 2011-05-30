@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onload"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("onload")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event handler will be called on the <span class="script">template.XULElem("image")</span> element when the image has finished loading. This applies whether the image is applied via the <span class="script">template.XULAttr("src")</span> attribute or the <code>list-style-image</code> style property. If you change the image, the event will fire again when the new image loads. This event will not bubble up the element tree. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onload" } ) </span></p>
-</div></body></content>

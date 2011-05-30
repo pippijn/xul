@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="showpopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("showpopup")</span></dt> <dd>Type: <em>boolean</em></dd> <dd><span class="script">note("Applies to: Thunderbird, SeaMonkey")</span>If <code>true</code>, the popup will be shown. If <code>false</code>, the popup will not be shown, but the autocomplete results will still be available. You can set this to <code>false</code> and set the <span class="script">template.XULAttr("autoFill")</span> attribute to <code>true</code> to emulate a Communicator 4.x style autocomplete textbox. The default value is <code>true</code>.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/showpopup" } ) </span></p>
-</div></body></content>

@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="disablechrome"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("disablechrome")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Set this attribute to <code>true</code> to disable chrome in the window. This is used to hide chrome when showing in-browser UI such as the <code>about:addons</code> page, and causes the toolbars to be hidden, with only the tab strip (and, if currently displayed, the add-on bar) left showing.</dd> <div class="note"><strong>Note:</strong> This has no effect if the tabs on top preference is turned off.</div>
-</dl></body></content>

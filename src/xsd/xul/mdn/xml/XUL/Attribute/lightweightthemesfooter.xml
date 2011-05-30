@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="lightweightthemesfooter"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("lightweightthemesfooter")</span> <span class="script">template.gecko_minversion_inline("1.9.2")</span></dt> <dd>Type: <em>id</em></dd> <dd>Specifies the ID of an element to which a <a title="en/Themes/Lightweight themes" href="/en/Themes/Lightweight_themes">lightweight theme</a>'s footer image will be applied.</dd>
-</dl></body></content>

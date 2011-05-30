@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="preference"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("preference")</span></dt> <dd>Type: <em>id</em></dd> <dd>Connects the element to a corresponding <span class="script">template.XULElem("preference")</span>. This attribute only has any effect when used inside a <span class="script">template.XULElem("prefwindow")</span>. More information is available in the <a rel="internal" href="../../../../en/Preferences_System">Preferences System</a> article.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/preference", "ja": "ja/XUL/Attribute/preference", "pl": "pl/XUL/Atrybut/preference" } ) </span></p>
-</div></body></content>

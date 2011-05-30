@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="querytype"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("querytype")</span> </dt><dd> Type: <em>string</em> </dd><dd> Indicates the type of datasource used in a template. Firefox 3 provides 3 built-in datasources: 'rdf', default, 'xml' and 'storage'. Extensions may provide support for additional datasources. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/querytype", "ja": "ja/XUL/Attribute/querytype" } ) </span></p>
-</div></body></content>

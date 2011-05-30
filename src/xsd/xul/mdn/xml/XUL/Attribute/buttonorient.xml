@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttonorient"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("buttonorient")</span> </dt><dd> Type: <em>string</em> </dd><dd> The value of the <span class="script">template.XULAttr("orient")</span> attribute for the box containing the buttons. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonorient", "pl": "pl/XUL/Atrybut/buttonorient" } ) </span></p>
-</div></body></content>

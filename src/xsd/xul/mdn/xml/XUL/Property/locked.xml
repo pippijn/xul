@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="locked"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("locked")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the preference has been locked and disabled in the system configuration, preventing the value from being changed. This property is read-only. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/locked", "ja": "ja/XUL/Property/locked" } ) </span></p>
-</div></body></content>

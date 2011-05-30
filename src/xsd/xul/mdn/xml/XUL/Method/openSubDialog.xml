@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="openSubDialog"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("openSubDialog", "( url, features, params )")</span> </dt><dd> Return type: <em>window</em> </dd><dd> Opens a child modal dialog. Usually this method would be used to allow the user to configure advanced options. The arguments are similar to the window's <code><a title="en/DOM/window.openDialog" href="/en/DOM/window.openDialog">openDialog</a></code> method except that the window name does not need to be supplied. The <var>url</var> should be a XUL file. If the child dialog is also a <span class="script">template.XULElem("prefwindow")</span>, set its <span class="script">template.XULAttr("type")</span> attribute to <code>child</code> so that preferences will be saved properly when the main dialog is closed. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/openSubDialog" } ) </span></p>
-</div></body></content>

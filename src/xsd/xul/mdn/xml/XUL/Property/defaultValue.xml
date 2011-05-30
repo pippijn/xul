@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="defaultValue"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("defaultValue")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em>string</em> </dd><dd> Gets and sets the the default value in a textbox. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/defaultValue", "ja": "ja/XUL/Property/defaultValue", "pl": "pl/XUL/W\u0142asno\u015b\u0107/defaultValue" } ) </span></p>
-</div></body></content>

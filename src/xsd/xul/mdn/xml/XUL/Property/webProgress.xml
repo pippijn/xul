@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="webProgress"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("webProgress")</span></dt> <dd>Type: <em><span class="script">interface("nsIWebProgress")</span></em></dd> <dd>This read-only property contains an <span class="script">interface("nsIWebProgress")</span> object which is used to monitor the progress of a document loading.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/webProgress", "pl": "pl/XUL/W\u0142asno\u015b\u0107/webProgress" } ) </span></p>
-</div></body></content>

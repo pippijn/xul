@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="handleCtrlTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("handleCtrlTab")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If set to <code>true</code> or omitted, the <span class="script">template.XULElem("tabbox")</span> will switch to the next tab when the Control and Tab keys are pressed. If the Shift key is also held down, the previous tab will be displayed. If this attribute is set to <code>false</code>, these keys do not navigate between tabs. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/handleCtrlTab", "pl": "pl/XUL/Atrybut/handleCtrlTab" } ) </span></p>
-</div></body></content>

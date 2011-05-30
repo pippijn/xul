@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="cancelDialog"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("cancelDialog", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Cancels the dialog and closes it, similar to pressing the Cancel button. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/cancelDialog", "pl": "pl/XUL/Metoda/cancelDialog" } ) </span></p>
-</div></body></content>

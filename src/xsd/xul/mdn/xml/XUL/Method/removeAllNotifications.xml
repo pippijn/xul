@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeAllNotifications"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("removeAllNotifications", "( immediate )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Remove all notifications. If <code>immediate</code> is <code>true</code>, the messages are removed immediately. If <code>immediate</code> is <code>false</code>, the notifications are removed using a slide transition.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeAllNotifications" } ) </span></p>
-</div></body></content>

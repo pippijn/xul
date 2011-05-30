@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="title"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("title")</span> </dt><dd> Type: <em>string</em> </dd><dd> The text to appear in the title bar of the window. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/title", "ja": "ja/XUL/Attribute/title", "pl": "pl/XUL/Atrybut/title" } ) </span></p>
-</div></body></content>

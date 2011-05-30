@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="securityUI"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("securityUI")</span></dt> <dd>Type: <em><span class="script">interface("nsISecureBrowserUI")</span></em></dd> <dd>The read-only property holds an object which may be used to determine the security level of the loaded document.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/securityUI", "pl": "pl/XUL/W\u0142asno\u015b\u0107/securityUI" } ) </span></p>
-</div></body></content>

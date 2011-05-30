@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="alwaysopenpopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("alwaysopenpopup")</span><span class="script">obsolete_inline("1.9.1")</span></dt> <dd>Type: <em>boolean</em></dd> <dd><span class="script">note("Applies to: Thunderbird and SeaMonkey")</span>If <code>true</code>, the autocomplete popup will be displayed even when there are no matches. If <code>false</code>, the default value, the popup will be hidden. This attribute is obsolete as of Gecko 1.9.1; to control the display of the popup, use the <span class="script">template.XULAttr("minresultsforpopup")</span> attribute instead.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/alwaysopenpopup", "pl": "pl/XUL/Atrybut/alwaysopenpopup" } ) </span></p>
-</div></body></content>

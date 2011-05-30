@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="preference.preferences"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("preference.preferences", "preferences")</span> </dt><dd> Type: <em>element</em> </dd><dd> Reference to the containing <span class="script">template.XULElem("preferences")</span> element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/preference.preferences", "ja": "ja/XUL/Property/preference.preferences" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="pagestep"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("pagestep")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The index of the current page. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/pagestep" } ) </span></p>
-</div></body></content>

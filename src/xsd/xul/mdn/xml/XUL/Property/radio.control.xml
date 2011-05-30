@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="radio.control"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("radio.control", "control")</span> </dt><dd> Type: <em><span class="script">template.XULElem("radiogroup")</span> element</em> </dd><dd> Returns the enclosing <span class="script">template.XULElem("radiogroup")</span> that the <span class="script">template.XULElem("radio")</span> element is contained within, which may or may not be its direct parent. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/radio.control" } ) </span></p>
-</div></body></content>

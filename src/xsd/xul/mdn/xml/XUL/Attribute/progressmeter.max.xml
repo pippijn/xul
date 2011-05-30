@@ -1,9 +1,0 @@
-<content type="application/x.deki0805+xml" title="progressmeter.max"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("progressmeter.max", "max")</span> <span class="script">template.Fx_minversion_inline(3.5)</span></dt> <dd>Type: <em>integer</em></dd>
-</dl>
-<dl> <dd>The maximum value that progressmeter may have. The default value if not specified is 100 such that the value may be used as a percentage.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/progressmeter.max" } ) </span></p>
-</div></body></content>

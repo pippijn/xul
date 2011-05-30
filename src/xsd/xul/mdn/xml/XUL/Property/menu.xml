@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="menu"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("menu")</span> </dt><dd> Type: <em>popup element id</em> </dd><dd> Gets and sets the value of the <span class="script">template.XULAttr("menu")</span> attribute. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/menu", "ja": "ja/XUL/Property/menu" } ) </span></p>
-</div></body></content>

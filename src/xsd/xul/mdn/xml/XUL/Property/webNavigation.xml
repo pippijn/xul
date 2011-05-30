@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="webNavigation"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("webNavigation")</span></dt> <dd>Type: <em><span class="script">interface("nsIWebNavigation")</span></em></dd> <dd>This read-only property contains the <span class="script">interface("nsIWebNavigation")</span> object for the document. Most of its methods are callable directly on the element itself, such as <span class="script">XULMeth2("goBack")</span> and <span class="script">XULMeth2("goForward")</span>. It also contains the load constants used by <span class="script">XULMeth2("reloadWithFlags")</span> and <span class="script">XULMeth2("loadURIWithFlags")</span>.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/webNavigation", "pl": "pl/XUL/W\u0142asno\u015b\u0107/webNavigation" } ) </span></p>
-</div></body></content>

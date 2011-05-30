@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="noautohide"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("noautohide")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If this attribute is set to <code>false</code> or omitted, the <span class="script">template.XULElem("tooltip")</span> will automatically disappear after a few seconds. If this attribute is set to <code>true</code>, this will not happen and the tooltip will only hide when the user moves the mouse to another element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/noautohide", "pl": "pl/XUL/Atrybut/noautohide" } ) </span></p>
-</div></body></content>

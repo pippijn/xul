@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="ontextcommand"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("ontextcommand")</span><span class="script">obsolete_inline("1.9.1")</span></dt> <dd>Type: <em>script code</em></dd> <dd><span class="script">note("Applies to: Thunderbird, SeaMonkey")</span>This event handler is called when a result is selected for the textbox. As of Gecko 1.9.1, this attribute is superseded by the <span class="script">template.XULAttr("ontextentered")</span> attribute.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/ontextcommand" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="tooltiptext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("tooltiptext")</span> </dt><dd> Type: <em>string</em> </dd><dd> Used to set the text which appears in the tooltip when the user moves the mouse over the element. This can be used instead of setting the tooltip to a popup for the common case where it contains only text. The tooltip is displayed in a default tooltip which displays only a label, however the default tooltip may be changed by setting the default attribute on a <span class="script">template.XULElem("tooltip")</span> element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/tooltiptext", "ja": "ja/XUL/Attribute/tooltiptext", "pl": "pl/XUL/Atrybut/tooltiptext" } ) </span></p>
-</div></body></content>

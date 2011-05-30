@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="lastSelected"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("lastSelected")</span> </dt><dd> Type: <em>string</em> </dd><dd> Set this to the <span class="script">template.XULAttr("id")</span> of the last selected pane. It will be opened by default the next time the preferences dialog is opened. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/lastSelected", "pl": "pl/XUL/Atrybut/lastSelected" } ) </span></p>
-</div></body></content>

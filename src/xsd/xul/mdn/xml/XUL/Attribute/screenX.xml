@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="screenX"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("screenX")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The horizontal position at which the window appears on the screen. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/screenX", "ja": "ja/XUL/Attribute/screenX" } ) </span></p>
-</div></body></content>

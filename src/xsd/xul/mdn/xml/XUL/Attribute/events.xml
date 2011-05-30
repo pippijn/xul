@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="events"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("events")</span></dt> <dd>Type: <em>comma-separated list</em></dd> <dd>A comma-separated list of event names that the command updater will update upon. If this attribute is not specified, or you set it to the value '*', all events are valid. Valid events are listed below, or you can use your own events. You can send a custom event by calling the <span class="script">XULMeth2("UpdateCommands")</span> method of the command dispatcher. <ul> <li><code>focus</code>: Occurs when the focused element changes.</li> <li><code>select</code>: Occurs when the selected text changed.</li> <li><code>clipboard</code>: Occurs when the clipboard is changed.</li> <li><code>undo</code>: Occurs when the undo buffer is changed.</li> </ul> </dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/events", "pl": "pl/XUL/Atrybut/events" } ) </span></p>
-</div></body></content>

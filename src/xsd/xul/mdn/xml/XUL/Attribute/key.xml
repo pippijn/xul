@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="key"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("key")</span> </dt><dd> Type: <em>character</em> </dd><dd> The character that must be pressed. This should be set to a displayable character. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/key", "pl": "pl/XUL/Atrybut/key" } ) </span></p>
-</div></body></content>

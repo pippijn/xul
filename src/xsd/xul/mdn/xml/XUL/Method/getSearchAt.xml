@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getSearchAt"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getSearchAt", "( index )")</span> </dt><dd> Return type: <em>string</em> </dd><dd> Returns the search component with the given index. The components are set with the <span class="script">template.XULAttr("autocompletesearch")</span> attribute. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getSearchAt" } ) </span></p>
-</div></body></content>

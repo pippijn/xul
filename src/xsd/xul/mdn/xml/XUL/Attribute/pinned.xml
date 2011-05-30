@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="pinned"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("pinned")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>This attribute is set to <code>true</code> if the tab has been pinned (that is, if it's an app tab). The <span class="script">XULElem("tabbrowser")</span> element's <span class="script">XULMeth2("pinTab")</span> and <span class="script">XULMeth2("unpinTab")</span> methods handle pinning and unpinning tabs.</dd>
-</dl></body></content>

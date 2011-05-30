@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="var"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("var")</span></dt> <dd>Type: <em>string</em></dd> <dd>For the XUL <code><a title="En/XUL/Assign" class="internal" href="/en/XUL/assign">assign</a></code> attribute, this is the variable to assign the value to; otherwise it's a reference to a template variable such as "?name".</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/var", "ja": "ja/XUL/Attribute/var", "pl": "pl/XUL/Atrybut/var" } ) </span></p>
-</div></body></content>

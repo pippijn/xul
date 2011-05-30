@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="goForward"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("goForward", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Go forward one page in the history. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/goForward", "pl": "pl/XUL/Metoda/goForward" } ) </span></p>
-</div></body></content>

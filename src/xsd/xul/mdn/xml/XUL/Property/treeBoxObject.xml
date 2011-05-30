@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="treeBoxObject"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("treeBoxObject")</span></dt> <dd>Type: <em><span class="script">interface("nsITreeBoxObject")</span></em></dd> <dd>The box object is responsible for rendering the <span class="script">XULElem("tree")</span> on the window. This object implements the <span class="script">interface("nsITreeBoxObject")</span> interface and contains functions for retrieving the cells at certain coordinates, redrawing cells and scrolling the tree. This property is equivalent to the <span class="script">XULProp("boxObject")</span> property.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/treeBoxObject" } ) </span></p>
-</div></body></content>

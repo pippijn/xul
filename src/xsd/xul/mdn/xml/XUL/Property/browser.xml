@@ -1,3 +1,0 @@
-<content type="application/x.deki0805+xml" title="browser"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("browser")</span> </dt><dd> Type: <em><span class="script">template.XULElem("browser")</span> element</em> </dd><dd> Lets you set and get the <span class="script">template.XULElem("browser")</span> in which the <span class="script">template.XULElem("findbar")</span> is located. </dd></dl></body></content>

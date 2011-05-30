@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="hasUserValue"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("hasUserValue", "()")</span> </dt><dd> Return type: <em>boolean</em> </dd><dd> Returns <code>true</code> if the preference has been changed from its default value. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/hasUserValue", "ja": "ja/XUL/Method/hasUserValue" } ) </span></p>
-</div></body></content>

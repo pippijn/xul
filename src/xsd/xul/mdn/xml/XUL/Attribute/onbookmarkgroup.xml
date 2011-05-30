@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onbookmarkgroup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("onbookmarkgroup")</span> </dt><dd> <strong><span class="highlightred">Not in Firefox</span></strong> </dd><dd> Type: <em>script code</em> </dd><dd> This code executes when the user chooses the "Bookmark this Group of Tabs" command. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onbookmarkgroup" } ) </span></p>
-</div></body></content>

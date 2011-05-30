@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="color"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("color")</span></dt> <dd>Type: <em>color string</em></dd> <dd>The currently selected color. This is modified when the user selects a color. You can assign a string of the form #RRGGBB to this property to change the selected color.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/color", "ja": "ja/XUL/Attribute/color" } ) </span></p>
-</div></body></content>

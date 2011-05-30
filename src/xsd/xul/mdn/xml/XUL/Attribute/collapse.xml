@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="collapse"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("collapse")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>Determines which side of the <span class="script">template.XULElem("splitter")</span> is collapsed when its grippy is clicked. If this attribute is not specified, the splitter will not cause a collapse. You should put a <span class="script">template.XULElem("grippy")</span> element inside the splitter when it is used for collapsing.</dd>
-<dd>
-<dl><dt><code>none</code></dt><dd>No collapsing occurs.</dd><dt><code>before</code></dt><dd>When the grippy is clicked, the element immediately before the splitter in the same parent is collapsed so that its width or height is 0.</dd><dt><code>after</code></dt><dd>When the grippy is clicked, the element immediately after the splitter in the same parent is collapsed so that its width or height is 0.</dd><dt><code>both</code></dt><dd>Either the element immediately before the splitter, or the element immediately after the splitter can be collapsed, if the size of that element would fall below the minimum size due to the position of the splitter. <span class="script">template.Fx_minversion_inline(3)</span></dd></dl>
-</dd>
-</dl><div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/collapse" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getSessionStatusAt"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getSessionStatusAt", "( index )")</span> </dt><dd> Return type: <em>???</em> </dd><dd> Returns the status for the session object with the given index. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getSessionStatusAt" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttonlabelaccept"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("buttonlabelaccept")</span> </dt><dd> Type: <em>string</em> </dd><dd> The label to appear on the "accept" button. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonlabelaccept", "pl": "pl/XUL/Atrybut/buttonlabelaccept" } ) </span></p>
-</div></body></content>

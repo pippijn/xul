@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="acceltext"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("acceltext")</span> </dt><dd> Type: <em>string</em> </dd><dd> Text that appears beside the <span class="script">template.XULElem("menu")</span> label to indicate the shortcut key (accelerator key) to use to invoke the command. If this value is set, it overrides an assigned key set in the key attribute. This attribute does not apply to menus directly on the menubar. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/acceltext", "ja": "ja/XUL/Attribute/acceltext", "pl": "pl/XUL/Atrybut/acceltext" } ) </span></p>
-</div></body></content>

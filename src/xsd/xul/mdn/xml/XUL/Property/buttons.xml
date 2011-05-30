@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttons"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("buttons")</span></dt> <dd>Type: <em>comma-separated list of the values below</em></dd> <dd>A comma-separated list of buttons to appear on the dialog box. The buttons will be placed in suitable locations for the user's platform and basic event handling will be performed automatically. The following values can be used in the list: <ul> <li><code>accept</code>: The OK button, which will accept the changes when pressed. This button will also be the default button.</li> <li><code>cancel</code>: The cancel button which will cancel the operation.</li> <li><code>help</code>: A help button for displaying help about the dialog.</li> <li><code>disclosure</code>: A button to show more information. This might be a button or a disclosure triangle.</li> <li><code>extra1</code>: An optional additional button. You can set its label with the <code><span class="script">XULAttr("buttonlabelextra1")</span></code> attribute.</li> <li><code>extra2</code>: A second optional additional button. You can set its label with the <code><span class="script">XULAttr("buttonlabelextra2")</span></code> attribute.</li> </ul> </dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "es": "es/XUL/Property/buttons", "ja": "ja/XUL/Property/buttons", "pl": "pl/XUL/W\u0142asno\u015b\u0107/buttons" } ) </span></p>
-</div></body></content>

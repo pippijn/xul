@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onTextReverted"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("onTextReverted", "()")</span> </dt><dd> Return type: <em>event result</em> </dd><dd> Calls the <span class="script">template.XULAttr("ontextreverted")</span> event handler. You should not call this method yourself. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/onTextReverted" } ) </span></p>
-</div></body></content>

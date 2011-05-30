@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="multiline"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("multiline")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the textbox displays multiple lines. If the user presses Enter, a new line is started. If <code>false</code>, the textbox only allows entry of one line. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/multiline" } ) </span></p>
-</div></body></content>

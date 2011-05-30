@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="click"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("click", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Calls the <code>onclick</code> handler for the element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/click", "ja": "ja/XUL/Method/click", "pl": "pl/XUL/Metoda/click" } ) </span></p>
-</div></body></content>

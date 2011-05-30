@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeCurrentTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("removeCurrentTab", "()")</span> </dt><dd> Return type: <em><span class="script">template.XULElem("tab")</span> element</em> </dd><dd> Removes the currently displayed tab page. If it is the only displayed tab, this method does nothing. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeCurrentTab" } ) </span></p>
-</div></body></content>

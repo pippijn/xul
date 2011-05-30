@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="listBoxObject"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("listBoxObject")</span></dt> <dd>Type: <em><span class="script">interface("nsIListBoxObject")</span></em></dd> <dd>The <span class="script">interface("nsIListBoxObject")</span> behind the list box. This property is read-only. Most of the features of the list box are already available directly in the <span class="script">XULElem("listbox")</span>, so you will rarely have need to use this box object directly.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/listBoxObject", "ja": "ja/XUL/Property/listBoxObject" } ) </span></p>
-</div></body></content>

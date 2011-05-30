@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="inverted"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("inverted")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> For boolean preferences, if this attribute is set to <code>true</code>, it indicates that the value of the preference is the reverse of the user interface element attached to it. For instance, checking the checkbox disables the preference instead of enabling it. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/inverted", "ja": "ja/XUL/Attribute/inverted", "pl": "pl/XUL/Atrybut/inverted" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="contentViewerFile"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl> <dt><span class="script">template.XULProp("contentViewerFile")</span></dt> <dd>Type: <em><span class="script">interface("nsIContentViewerFile")</span></em></dd> <dd>Reference to the <span class="script">interface("nsIContentViewerFile")</span> interface for the document.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/contentViewerFile", "pl": "pl/XUL/W\u0142asno\u015b\u0107/contentViewerFile" } ) </span></p>
-</div></body></content>

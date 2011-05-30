@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttonaccesskeyextra2"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("buttonaccesskeyextra2")</span> </dt><dd> Type: <em>string</em> </dd><dd> The access key to use for the second extra button. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonaccesskeyextra2", "pl": "pl/XUL/Atrybut/buttonaccesskeyextra2" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="reset"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("reset", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Resets the preference to its default value. </dd><dd> For a <span class="script">template.XULElem("textbox")</span> it also clears the undo transaction list (Gecko 1.9). </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/reset", "ja": "ja/XUL/Method/reset" } ) </span></p>
-</div></body></content>

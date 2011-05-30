@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="min"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("min")</span><span class="script">page.unprefixedpath == 'XUL:textbox' ? web.html(' ' .. template.Fx_minversion_inline(3)) : ''</span></dt> <dd>Type: <em>integer</em></dd> <dd>The minimum value that the scale or number box may be set to. The default value is 0.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/min", "ja": "ja/XUL/Attribute/min", "pl": "pl/XUL/Atrybut/min" } ) </span></p>
-</div></body></content>

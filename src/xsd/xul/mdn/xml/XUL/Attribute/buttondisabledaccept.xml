@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttondisabledaccept"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("buttondisabledaccept")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>true</code>, the accept button is disabled. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/buttondisabledaccept", "pl": "pl/XUL/Atrybut/buttondisabledaccept", "ja": "ja/XUL/Attribute/buttondisabledaccept" } ) </span></p>
-</div></body></content>

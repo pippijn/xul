@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="setIcon"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("setIcon", "( aTab, aURI )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Sets the specified tab's favicon to the image specified by aURI. See <span class="script">XULMeth2("getIcon")</span> to get the current icon.</dd>
-</dl></body></content>

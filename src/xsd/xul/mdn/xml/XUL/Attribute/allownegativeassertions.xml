@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="allownegativeassertions"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("allownegativeassertions")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Valid on any element that has a <span class="script">XULAttr("datasources")</span> attribute. When multiple datasources are used, one may override an assertion from another. This attribute, if <code>true</code>, which is the default, allows a datasource to negate an earlier assertion.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/allownegativeassertions", "fr": "fr/XUL/Attributs/allownegativeassertions", "ja": "ja/XUL/Attribute/allownegativeassertions", "pl": "pl/XUL/Atrybut/allownegativeassertions" } ) </span></p>
-</div></body></content>

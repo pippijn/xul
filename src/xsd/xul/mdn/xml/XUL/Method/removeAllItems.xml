@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeAllItems"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("removeAllItems", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Removes all of the items in the <a title="en/XUL/menu" href="/en/XUL/menu">menu</a>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeAllItems", "pl": "pl/XUL/Metoda/removeAllItems" } ) </span></p>
-</div></body></content>

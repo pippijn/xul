@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="hideheader"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("hideheader")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set this to <code>true</code> to indicate that the <a title="en/XUL/treecol" href="/en/XUL/treecol">tree column</a> header should be displayed without any column header styling. If you don't set a <code>label</code> for that column either, the header is not displayed at all. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/hideheader", "pl": "pl/XUL/Atrybut/hideheader" } ) </span></p>
-</div></body></content>

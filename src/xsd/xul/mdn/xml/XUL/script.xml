@@ -1,9 +1,0 @@
-<content type="application/x.deki0805+xml" title="script"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div><p>Much like the HTML <code>script</code> element, this is used to declare a script to be used by the XUL window. You should usually put scripts in a separate file pointed to by the <span class="script">template.XULAttr("src")</span> attribute, but you may also place the script inline inside the opening and closing <code>script</code> tags.</p><p>More information is available in the <a href="en/XUL_Tutorial/Adding_Event_Handlers">XUL tutorial</a>.</p><dl><dt>Attributes</dt><dd><span class="script">template.PrefAnch("a-", "script.src", "src")</span>, <span class="script">template.PrefAnch("a-", "script.type", "type")</span></dd></dl><h3 name="Examples">Examples</h3><pre>
-&lt;script src="test.js"/&gt;
-&lt;script src="http://example.com/js/test.js"/&gt;
-&lt;script&gt;
-  function foo(){
-    // code
-  }
-&lt;/script&gt;
-</pre><h3 name="Attributes">Attributes</h3><p><span class="script">template.XULAttrInc("script.src")</span><span class="script">template.XULAttrInc("script.type")</span><span class="script">template.XULAttrInheritedWide()</span></p><h3 name="Properties">Properties</h3><p><span class="script">template.XULPropInheritedWide()</span></p><h3 name="Methods">Methods</h3><p><span class="script">template.XULMethInheritedWide()</span></p><h3 name="Related">Related</h3><span class="script">wiki.languages( { "ja": "ja/XUL/script", "pl": "pl/XUL/script" } )</span></body></content>

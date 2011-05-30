@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="rewind"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("rewind", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Call this method to go back a page. It is equivalent to pressing the Back button. The <span class="script">template.XULProp("canRewind")</span> property must be set to <code>true</code> for the page to be changed. The code in the <span class="script">template.XULAttr("onwizardback")</span> attribute is called before the page is changed. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/rewind" } ) </span></p>
-</div></body></content>

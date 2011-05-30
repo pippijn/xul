@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="currentPane"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("currentPane")</span></dt> <dd>Type: <em><span class="script">XULElem("prefpane")</span> element</em></dd> <dd>Reference to the currently displayed pane. To change the current pane, use the <span class="script">XULMeth2("showPane")</span> method.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/currentPane", "pl": "pl/XUL/W\u0142asno\u015b\u0107/currentPane" } ) </span></p>
-</div></body></content>

@@ -1,3 +1,0 @@
-<content type="application/x.deki0805+xml" title="moveTabTo"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<dl> <dt><span class="script">XULMeth2("moveTabTo", "(<code>tab</code>, <code>index</code>)")</span></dt> <dd>Return type: <em><span class="script">XULElem("tab")</span> element</em></dd> <dd>Tries to moves an exsisting tab to a given index.</dd>
-</dl></body></content>

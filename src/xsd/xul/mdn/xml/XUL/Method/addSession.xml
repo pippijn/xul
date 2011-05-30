@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="addSession"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("addSession", "( session )")</span></dt> <dd>Return type: <em><span class="script">interface("nsIAutoCompleteSession")</span></em></dd> <dd>Adds a new session object to the autocomplete widget. This can be used to create a customized autocomplete results list. The argument should be an object which implements the <span class="script">interface("nsIAutoCompleteSession")</span> interface. This method returns the object passed in.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/addSession", "pl": "pl/XUL/Metoda/addSession" } ) </span></p>
-</div></body></content>

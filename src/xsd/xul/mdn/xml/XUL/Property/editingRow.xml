@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="editingRow"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("editingRow")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em>integer</em> </dd><dd> The row index of the <a title="en/XUL/tree" href="/en/XUL/tree">tree</a> cell currently being edited, or <code>-1</code> if there is no cell currently being edited. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/editingRow" } ) </span></p>
-</div></body></content>

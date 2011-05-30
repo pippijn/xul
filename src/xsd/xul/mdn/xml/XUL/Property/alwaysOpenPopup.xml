@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="alwaysOpenPopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl> <dt><span class="script">template.XULProp("alwaysOpenPopup")</span><span class="script">obsolete_inline("1.9.1")</span></dt> <dd>Type: <em>boolean</em></dd> <dd>Gets and sets the value of the <span class="script">template.XULAttr("alwaysopenpopup")</span> attribute.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/alwaysOpenPopup" } ) </span></p>
-</div></body></content>

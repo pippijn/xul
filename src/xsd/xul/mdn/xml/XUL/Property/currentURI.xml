@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="currentURI"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("currentURI")</span></dt> <dd>Type: <em><span class="script">interface("nsIURI")</span></em></dd> <dd>This read-only property contains the currently loaded URL. To change the URL, use the <span class="script">XULMeth2("loadURI")</span> method.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/currentURI", "pl": "pl/XUL/W\u0142asno\u015b\u0107/currentURI" } ) </span></p>
-</div></body></content>

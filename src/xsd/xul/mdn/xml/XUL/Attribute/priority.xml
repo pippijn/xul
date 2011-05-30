@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="priority"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("priority")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Numeric value that specifies the order in which the notifications appear. Should be one of the constants described in the <span class="script">template.XULElem("notificationbox")</span>'s <span class="script">template.XULMeth("appendNotification", "appendNotification")</span> method. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/priority" } ) </span></p>
-</div></body></content>

@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="showOnlyTheseTabs"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("showOnlyTheseTabs", "( aTabs )")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Makes all tabs in the <code>aTabs</code> array visible, and all other tabs hidden.</dd>
-</dl></body></content>

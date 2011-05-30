@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="toolbarset"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("toolbarset")</span> </dt><dd> <strong><span class="highlightred">Firefox only</span></strong> </dd><dd> Type: <em>element</em> </dd><dd> The <span class="script">template.XULElem("toolbarset")</span> within the <span class="script">template.XULElem("toolbox")</span>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/toolbarset" } ) </span></p>
-</div></body></content>

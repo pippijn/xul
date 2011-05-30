@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="getHTMLEditor"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("getHTMLEditor", "( window )")</span></dt> <dd>Return type: <em><span class="script">interface("nsIHTMLEditor")</span></em></dd> <dd>Returns the HTML editing interface for the editor which contains <a class="external" href="http://www.xulplanet.com/references/xpcomref/comps/c_editorhtmleditor1.html">methods</a> for manipulating an HTML document. Pass the editor's <code>contentWindow</code> as the argument.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getHTMLEditor", "pl": "pl/XUL/Metoda/getHTMLEditor" } ) </span></p>
-</div></body></content>

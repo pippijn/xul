@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="state"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("state")</span> <span class="script">Fx_minversion_inline(3)</span></dt> <dd>Type: <em>string</em></dd> <dd>This read only property indicates whether the popup is open or not. Four values are possible: <ul> <li><code>closed</code>: The popup is closed and not visible.</li> <li><code>open</code>: The popup is open and visible on screen.</li> <li><code>showing</code>: A request has been made to open the popup, but it has not yet been shown. This state will occur during the popupshowing event.</li> <li><code>hiding</code>: The popup is about to be hidden. This state will occur during the popuphiding event.</li> </ul> </dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/state", "ja": "ja/XUL/Property/state" } ) </span></p>
-</div></body></content>

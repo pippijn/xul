@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeTransientNotifications"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("removeTransientNotifications", "( )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Remove only those notifications that have a persistence value of zero, and decrements by one the persistence value of those that have a non-zero value.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeTransientNotifications" } ) </span></p>
-</div></body></content>

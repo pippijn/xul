@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="timedSelect"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("timedSelect", "( item, timeout )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Selects the item specified by the argument item after the number of milliseconds given by the timeout argument. All other items are deselected. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/timedSelect", "ja": "ja/XUL/Method/timedSelect" } ) </span></p>
-</div></body></content>

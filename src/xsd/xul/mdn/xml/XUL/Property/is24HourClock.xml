@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="is24HourClock"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("is24HourClock")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> A read only value indicating whether a 12-hour or 24-hour clock is used to display times. With a 12-hour clock, an extra field allows the user to pick between AM and PM. This value is determined from the user's locale. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/is24HourClock", "ja": "ja/XUL/Property/is24HourClock", "pl": "pl/XUL/W\u0142asno\u015b\u0107/is24HourClock" } ) </span></p>
-</div></body></content>

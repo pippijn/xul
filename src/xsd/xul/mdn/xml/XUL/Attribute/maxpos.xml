@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="maxpos"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("maxpos")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The maximum position of the <span class="script">template.XULElem("scrollbar")</span>. The default value is 100. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/maxpos", "pl": "pl/XUL/Atrybut/maxpos" } ) </span></p>
-</div></body></content>

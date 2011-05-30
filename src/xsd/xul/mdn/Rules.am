@@ -4,6 +4,12 @@ noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
 
 mdn: $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
 
+mdn-clean:
+	$(RM) $(MDNXML)
+	$(RM) $(MDNJML)
+	$(RM) $(MDNUPLOAD)
+	$(RM) $(MDNPOST)
+
 $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages $(CURDIR)/pageids.pm
 	echo -n 'MDNBASE =' > $@
 	for i in `$<`; do		\

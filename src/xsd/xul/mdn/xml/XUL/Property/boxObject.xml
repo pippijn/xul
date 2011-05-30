@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="boxObject"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("boxObject")</span></dt> <dd>Type: <em><span class="script">interface("nsIBoxObject")</span></em></dd> <dd>This property is available for elements that are derived from boxes, which is most displayable XUL elements. Prior to Gecko 1.9.1, you can retrieve the boxObject for non-XUL elements using the <span class="script">domxref("document.getBoxObjectFor")</span> method; the method was removed in Gecko 1.9.1 because it was non-standard. It is covered further in <a title="en/XUL_Tutorial/Box_Objects" href="/en/XUL_Tutorial/Box_Objects">the tutorial</a>.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/boxObject", "ja": "ja/XUL/Property/boxObject" } ) </span></p>
-</div></body></content>

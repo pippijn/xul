@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="focused"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("focused")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This attribute is <code>true</code> if the element is focused. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/focused", "pl": "pl/XUL/Atrybut/focused" } ) </span></p>
-</div></body></content>

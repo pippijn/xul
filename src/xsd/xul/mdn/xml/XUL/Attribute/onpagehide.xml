@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onpagehide"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("onpagehide")</span> </dt><dd> Type: <em>script code</em> </dd><dd> The code in this attribute is called when the page is hidden, such as when moving to another page. Return <code>true</code> to accept the page change and <code>false</code> to prevent the page from changing. This code is called before the <span class="script">template.XULElem("wizard")</span>'s <span class="script">template.XULAttr("onwizardnext")</span> and related functions. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onpagehide", "pl": "pl/XUL/Atrybut/onpagehide" } ) </span></p>
-</div></body></content>

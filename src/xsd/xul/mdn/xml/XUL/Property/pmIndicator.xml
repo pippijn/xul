@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="pmIndicator"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("pmIndicator")</span> </dt><dd> Type: <em>string</em> </dd><dd> The string value displayed for hours between noon and midnight, defaulting to PM. This value is determined from the user's locale. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/pmIndicator", "ja": "ja/XUL/Property/pmIndicator", "pl": "pl/XUL/W\u0142asno\u015b\u0107/pmIndicator" } ) </span></p>
-</div></body></content>

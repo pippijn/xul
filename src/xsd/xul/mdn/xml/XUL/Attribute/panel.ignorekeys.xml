@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="panel.ignorekeys"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("panel.ignorekeys", "ignorekeys")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If <code>false</code>, the default value, the Escape key may be used to close the panel. If <code>true</code>, the Escape key cannot be used to close the panel. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/panel.ignorekeys" } ) </span></p>
-</div></body></content>

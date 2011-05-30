@@ -1,8 +1,0 @@
-<content type="application/x.deki0805+xml" title="editable"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("editable")</span> <span class="script"> if (string.endsWith(page.path, "XUL/menulist")) { template.Fx_minversion_inline(3) } </span><br />
-</dt><dd> Type: <em>boolean</em> </dd><dd>Returns <code>true</code> if the element is editable. Autocomplete fields are editable so this property always returns <code>true</code> for those.<br />
-</dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/editable" } ) </span></p>
-</div></body></content>

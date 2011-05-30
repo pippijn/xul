@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="controller"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("controller")</span></dt> <dd>Type: <em><span class="script">interface("nsIAutoCompleteController")</span></em></dd> <dd>Returns the controller for the auto complete element.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/controller" } ) </span></p>
-</div></body></content>

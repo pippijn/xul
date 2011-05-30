@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="wizardPages"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("wizardPages")</span> </dt><dd> Type: <em>DOM NodeList of <span class="script">template.XULElem("wizardpage")</span> elements</em> </dd><dd> This property holds the list of <span class="script">template.XULElem("wizardpage")</span> elements in the <span class="script">template.XULElem("wizard")</span>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/wizardPages" } ) </span></p>
-</div></body></content>

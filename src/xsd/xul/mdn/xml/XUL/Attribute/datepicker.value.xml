@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="datepicker.value"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("datepicker.value", "value")</span> </dt><dd> Type: <em>string</em> </dd><dd> The initial value of the datepicker in the form <var>YYYY-MM-DD</var>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/datepicker.value", "ja": "ja/XUL/Attribute/datepicker.value" } ) </span></p>
-</div></body></content>

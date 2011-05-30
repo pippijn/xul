@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="checkAdjacentElement"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("checkAdjacentElement", "( dir )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Deselects the currently selected <span class="script">template.XULElem("radio")</span> button in the group and selects the one adjacent to it. If the argument <var>dir</var> is <code>true</code>, the next radio button is selected. If it is <code>false</code>, the previous radio button is selected. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/checkAdjacentElement", "pl": "pl/XUL/Metoda/checkAdjacentElement" } ) </span></p>
-</div></body></content>

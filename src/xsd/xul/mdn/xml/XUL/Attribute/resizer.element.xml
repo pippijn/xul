@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="resizer.element"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("resizer.element", "element")</span></dt> <dd>Type: <em>element to resize</em></dd> <dd>The <span class="script">XULAttr("id")</span> of the element that should be resized by the <span class="script">xulelem("resizer")</span>.</dd>
-</dl></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="selectItemRange"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("selectItemRange", "( startItem, endItem )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Selects the items between the two items given as arguments, including the start and end items. All other items are deselected. This method does nothing for single-selection list boxes. A select event is sent after the selection is made. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/selectItemRange", "ja": "ja/XUL/Method/selectItemRange" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="pageid"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("pageid")</span> </dt><dd> Type: <em>string <span class="script">template.XULElem("wizardpage")</span> id</em> </dd><dd> This attribute should be set to a string that identifies the page's identifer in the <span class="script">template.XULElem("wizard")</span>. This is used with the <span class="script">template.XULAttr("next")</span> attribute. The wizard always starts with the <span class="script">template.XULElem("wizardpage")</span> that appears first in the wizard child list. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/pageid" } ) </span></p>
-</div></body></content>

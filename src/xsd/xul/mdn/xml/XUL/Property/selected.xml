@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="selected"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt><span class="script">template.XULProp("selected")</span></dt> <dd> Type: <em>boolean</em> </dd><dd> This property's value is <code>true</code> if this element is selected, or <code>false</code> if it is not. This property is read only. This property is available for <a title="En/XUL/Menuitem" class="internal" href="/en/XUL/menuitem"><code>menuitem</code></a> and <a title="En/XUL/Menuseparator" class="internal" href="/en/XUL/menuseparator"><code>menuseparator</code></a> elements in <a title="En/Firefox 3 for developers" class="internal" href="/en/Firefox_3_for_developers">Firefox 3</a>.<br />
-</dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/selected", "ja": "ja/XUL/Property/selected" } ) </span></p>
-</div></body></content>

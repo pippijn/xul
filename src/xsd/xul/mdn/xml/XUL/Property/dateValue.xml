@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="dateValue"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("dateValue")</span> </dt><dd> Type: <em>Date</em> </dd><dd> The date that is currently entered or selected in the datepicker as a <a title="en/Core_JavaScript_1.5_Reference/Global_Objects/Date" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Date">Date</a> object. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/dateValue", "ja": "ja/XUL/Property/dateValue", "pl": "pl/XUL/W\u0142asno\u015b\u0107/dateValue" } ) </span></p>
-</div></body></content>

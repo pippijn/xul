@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="autocompleteenabled"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("autocompleteenabled")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set to <code>true</code> to enable autocomplete of fields. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/autocompleteenabled", "pl": "pl/XUL/Atrybut/autocompleteenabled" } ) </span></p>
-</div></body></content>

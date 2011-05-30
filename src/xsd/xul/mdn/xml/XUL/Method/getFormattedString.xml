@@ -1,9 +1,0 @@
-<content type="application/x.deki0805+xml" title="getFormattedString"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("getFormattedString", "( key, strArray )")</span></dt> <dd>Return type: <em>string</em></dd> <dd>Looks up the format string for the given key name in the string bundle and returns a formatted copy where each occurrence of <strong><code>%S</code></strong> (uppercase) is replaced by each successive element in the supplied array. Alternatively, numbered indices of the format <strong><code>%</code></strong><code><em>n</em></code><strong><code>$S</code></strong> (e.g. <strong><code>%1$S</code></strong>, <strong><code>%2$S</code></strong>, etc.) can be used to specify the position of the corresponding parameter explicitly.</dd>
-</dl>
-<p>If you need to handle substitutions involving plurals, take a look at <a title="en/Localization and Plurals" href="/en/Localization_and_Plurals">Localization and Plurals</a>.</p>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getFormattedString", "pl": "pl/XUL/Metoda/getFormattedString" } ) </span></p>
-</div>
-</body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="observes"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("observes")</span></dt> <dd>Type: <em>id</em></dd> <dd>Set to an id of a <span class="script">template.XULElem("broadcaster")</span> element that is being observed by the element. If an attribute changes in the broadcaster it is also changed in the observer.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/observes", "ja": "ja/XUL/Attribute/observes" } ) </span></p>
-</div></body></content>

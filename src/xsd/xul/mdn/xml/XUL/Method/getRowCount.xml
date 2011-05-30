@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getRowCount"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getRowCount", "()")</span> </dt><dd> Return type: <em>integer</em> </dd><dd> Returns the total number of rows in the element, regardless of how many rows are displayed. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/getRowCount", "ja": "ja/XUL/Method/getRowCount", "pl": "pl/XUL/Metoda/getRowCount" } ) </span></p>
-</div></body></content>

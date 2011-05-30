@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="moveTo"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("moveTo", "( x, y )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Moves the popup to a new location.</dd> <dd><span class="script">template.Fx_minversion_inline(3.6)</span> If both x and y have the value -1 the call will realign the popup with its anchor node.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/moveTo", "ja": "ja/XUL/Method/moveTo" } ) </span></p>
-</div></body></content>

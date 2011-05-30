@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="titlebar"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("titlebar", "titlebar")</span> <span class="script">template.Fx_minversion_inline(4)</span></dt> <dd>Type: <em>string</em></dd> <dd>Set the panel's titlebar attribute to the value <code>normal</code> to display a panel with a titlebar. The <span class="script">template.XULAttr("noautohide")</span> attribute must be set to <code>true</code>.</dd>
-</dl></body></content>

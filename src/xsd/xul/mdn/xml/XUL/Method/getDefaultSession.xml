@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getDefaultSession"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getDefaultSession", "")</span> </dt><dd> Return type: <em>session name</em> </dd><dd> Returns the name of the first session with available results. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getDefaultSession", "pl": "pl/XUL/Metoda/getDefaultSession" } ) </span></p>
-</div></body></content>

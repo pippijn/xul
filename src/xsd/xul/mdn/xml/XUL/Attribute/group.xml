@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="group"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("group")</span> </dt><dd> Type: <em>string group name</em> <span class="script">template.fx_minversion_inline(3)</span></dd><dd> Buttons with type="radio" and the same value for their group attribute are put into the same group. Only one button from each group can be checked at a time. If the user selects one the buttons, the others in the group are unchecked. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/group", "pl": "pl/XUL/Atrybut/group" } ) </span></p>
-</div></body></content>

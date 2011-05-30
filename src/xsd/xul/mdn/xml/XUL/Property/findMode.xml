@@ -1,5 +1,0 @@
-<content type="application/x.deki0805+xml" title="findMode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("findMode")</span> </dt><dd> Type: <em>integer</em> </dd><dd> <strong>Read only</strong>.  The find mode in use.  Possible values are: </dd></dl>
-<ul> <li><code>FIND_NORMAL</code> (0): Normal find</li> <li><code>FIND_TYPEAHEAD</code> (1): Typeahead find</li> <li><code>FIND_LINKS</code> (2): Link find</li>
-</ul></body></content>

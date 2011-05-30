@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="stopEditing"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("stopEditing", "( shouldaccept )")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Stops editing the cell currently being edited. If the <code>shouldAccept</code> parameter is <code>true</code>, the cell's label is changed to the edited value (the tree view's <span class="script">template.Ifmethod("nsITreeView", "setCellText")</span> method is called to change the cell contents). Otherwise the cell label is reverted to the value it had prior to editing. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/stopEditing" } ) </span></p>
-</div></body></content>

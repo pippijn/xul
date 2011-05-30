@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="selectedIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("selectedIndex")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Gets and sets the index of the currently selected panel. The first item is at index 0. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/selectedIndex" } ) </span></p>
-</div></body></content>

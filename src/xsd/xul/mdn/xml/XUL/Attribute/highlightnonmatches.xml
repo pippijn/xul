@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="highlightnonmatches"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("highlightnonmatches")</span> <span class="script">template.Fx_minversion_inline(3.5)</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, then the autocomplete field will be highlighted when no match has been found.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/highlightnonmatches" } ) </span></p>
-</div></body></content>

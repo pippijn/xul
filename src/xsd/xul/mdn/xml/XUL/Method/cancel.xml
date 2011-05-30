@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="cancel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("cancel", "()")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Call this method to cancel and close the wizard. The code in the <code><span class="script">template.XULAttr("onwizardcancel")</span></code> attribute is called before the wizard is cancelled. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/cancel", "pl": "pl/XUL/Metoda/cancel" } ) </span></p>
-</div></body></content>

@@ -1,8 +1,0 @@
-<content type="application/x.deki0805+xml" title="loadURI"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<p><span class="comment">NOTE: This is the XUL method on &lt;browser&gt; / &lt;tabbrowser&gt;, not the global function in <a rel="freelink" href="chrome://browser/content/browser.js" class=" external">chrome://browser/content/browser.js</a>. Please check which one you're documenting! (This one has no post data parameter, see loadURIWithFlags for a version that does)</span></p>
-<dl> <dt><span class="script">XULMeth2("loadURI", "( uri, referrer, charset )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Load a URL into the document, with the given referrer and character set.</dd> <dd>The first argument should be a string, not a <span class="script">interface("nsIURI")</span> object. To get a string from an <span class="script">interface("nsIURI")</span>, use <code>nsIURI.spec</code> or <code>nsIURI.asciiSpec</code></dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/loadURI", "pl": "pl/XUL/Metoda/loadURI" } ) </span></p>
-</div></body></content>

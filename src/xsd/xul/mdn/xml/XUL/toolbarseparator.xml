@@ -1,9 +1,0 @@
-<content type="application/x.deki0805+xml" title="toolbarseparator"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefElem()</span></div><p>Creates a separator between groups of toolbar items. It is functionally equivalent to a normal <span class="script">template.XULElem("separator")</span> but some <a href="en/Themes">themes</a> may apply a different appearance.</p><dl><dt>Properties</dt><dd><span class="script">template.PrefAnch("p-", "accessibleType")</span></dd></dl><h3 name="Examples">Examples</h3><pre>
-&lt;toolbox&gt;
-  &lt;toolbar&gt;
-    &lt;toolbarbutton label="Button 1"/&gt;
-    &lt;toolbarseparator /&gt;
-    &lt;toolbarbutton label="Button 2"/&gt;
-  &lt;/toolbar&gt;
-&lt;/toolbox&gt;
-</pre><h3 name="Attributes">Attributes</h3><p><span class="script">template.XULAttrInheritedWide()</span></p><h3 name="Properties">Properties</h3><p><span class="script">template.XULPropInc("accessibleType")</span><span class="script">template.XULPropInheritedWide()</span></p><h3 name="Methods">Methods</h3><p><span class="script">template.XULMethInheritedWide()</span></p><h3 name="Related">Related</h3><dl><dt>Elements</dt><dd><span class="script">template.XULElem("toolbar")</span>, <span class="script">template.XULElem("toolbarbutton")</span>, <span class="script">template.XULElem("toolbargrippy")</span>, <span class="script">template.XULElem("toolbaritem")</span>, <span class="script">template.XULElem("toolbarpalette")</span>, <span class="script">template.XULElem("toolbarset")</span>, <span class="script">template.XULElem("toolbarspacer")</span>, <span class="script">template.XULElem("toolbarspring")</span>, <span class="script">template.XULElem("toolbox")</span></dd></dl><span class="script">wiki.languages( { "ja": "ja/XUL/toolbarseparator", "pl": "pl/XUL/toolbarseparator" } )</span></body></content>

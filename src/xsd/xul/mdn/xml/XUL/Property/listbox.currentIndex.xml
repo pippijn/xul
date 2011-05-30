@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="listbox.currentIndex"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl> <dt><span class="script">template.XULProp("listbox.currentIndex", "currentIndex")</span></dt> <dd>Type: <em>integer</em></dd> <dd>Set to the index of the currently focused item in the list. If no item is focused, the value will be <code>-1</code>. (or, on some platforms, <code>typeof(listboxcurrentIndex)</code> will be <code>undefined</code>) In a single selection list, the current index will always be the same as the selected index. In a multiple selection list, the currently focused row may be modified by the user without changing the selection by pressing the Control key and pressing the cursor keys to navigate.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/listbox.currentIndex" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("removeTab", "( tabElement )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Removes a specific tabbed page corresponding to the given <span class="script">template.XULElem("tab")</span> element. If only one tab is displayed, this method does nothing. If needed, the row of tabs will collapse if only one tab remains. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeTab" } ) </span></p>
-</div></body></content>

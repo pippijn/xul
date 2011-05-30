@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="buttonlabelcancel"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("buttonlabelcancel")</span> </dt><dd> Type: <em>string</em> </dd><dd> The label to appear on the "cancel" button. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/buttonlabelcancel" } ) </span></p>
-</div></body></content>

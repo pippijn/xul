@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="sortDirection"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">XULRefAttr()</span></div><dl><dt><span class="script">XULAttr("sortDirection")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>Set this attribute to set the direction that template-generated content is sorted. Use the <span class="script">XULAttr("sortResource")</span> attribute to specify the sort key. <dl><dt><code>ascending</code></dt><dd>The data is sorted in ascending order.</dd><dt><code>descending</code></dt><dd>The data is sorted in descending order.</dd><dt><code>natural</code></dt><dd>The data is sorted in natural order, which means the order that it is stored in.</dd></dl></dd>
-</dl><div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/sortDirection", "ja": "ja/XUL/Attribute/sortDirection" } ) </span></p>
-</div></body></content>

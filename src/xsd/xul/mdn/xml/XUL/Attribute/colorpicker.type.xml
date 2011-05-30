@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="colorpicker.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("colorpicker.type", "type")</span></dt> <dd>Type: <em>string</em></dd> <dd>If this attribute is not present, the colorpicker is displayed inside the window. If this is set to the text <code>button</code>, the colorpicker is displayed as a button. When the user clicks the button, a popup appears for the user to select a color.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/colorpicker.type", "pl": "pl/XUL/Atrybut/colorpicker.type" } ) </span></p>
-</div></body></content>

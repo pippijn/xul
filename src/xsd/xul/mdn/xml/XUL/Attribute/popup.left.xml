@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="popup.left"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("popup.left", "left")</span> </dt><dd> Type: <em>integer</em> </dd><dd> Overrides the horizontal position of the popup specified by the <span class="script">template.XULMeth("showPopup")</span> method. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/popup.left", "ja": "ja/XUL/Attribute/popup.left" } ) </span></p>
-</div></body></content>

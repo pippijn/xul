@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="open"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl> <dt><span class="script">template.XULMeth2("open", "( mode )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Opens the <span class="script">template.XULElem("findbar")</span> using the specified mode, which should be one of <code>FIND_NORMAL</code>, <code>FIND_TYPEAHEAD</code>, or <code>FIND_LINKS</code>.  If you don't pass a mode, the last-used mode for the same findbar is used.  If the findbar hasn't been used before, <code>FIND_NORMAL</code> is the default.</dd>
-</dl></body></content>

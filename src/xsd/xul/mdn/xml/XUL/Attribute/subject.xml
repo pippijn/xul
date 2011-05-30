@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="subject"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("subject")</span></dt> <dd>Type: <em>string</em></dd> <dd>The subject of the element. It can be a variable reference or an RDF resource URI.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/subject", "pl": "pl/XUL/Atrybut/subject" } ) </span></p>
-</div></body></content>

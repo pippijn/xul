@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="isSearching"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("isSearching")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This property is set to <code>true</code> while a search is occuring. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/isSearching" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="getBrowserIndexForDocument"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("getBrowserIndexForDocument", "( document )")</span></dt> <dd>Return type: <em>integer</em></dd> <dd>Returns the index of the <span class="script">XULElem("browser")</span> for the specified document in the <span class="script">XULElem("tabbrowser")</span> the method was invoked on. The returned index is dependent on the <span class="script">XULElem("tab")</span>s in the <span class="script">XULElem("tabbrowser")</span> and is invalidated when the tab ordering changes. It should not be used to track per-tab data during a session; the use of <span class="script">XULAttr("linkedpanel")</span> on the corresponding tab is preferred instead.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getBrowserIndexForDocument" } ) </span></p>
-</div></body></content>

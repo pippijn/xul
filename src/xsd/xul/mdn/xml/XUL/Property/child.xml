@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="child"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("child")</span> </dt><dd> Type: <em>?</em> </dd><dd> A variable reference to a node that is expected to be a child of the element that is referred to by the container element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/child", "pl": "pl/XUL/W\u0142asno\u015b\u0107/child" } ) </span></p>
-</div></body></content>

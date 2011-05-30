@@ -1,8 +1,0 @@
-<content type="application/x.deki0805+xml" title="modifiers"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("modifiers")</span> </dt><dd> Type: <em>space-separated list of the values below</em> </dd><dd> A list of modifier keys that should be pressed to invoke the keyboard shortcut. Multiple keys may be separated by spaces or commas. Keys will map to other keys on platforms that do not have them. </dd></dl>
-<ul> <li><code>shift</code>: The Shift key.</li> <li><code>alt</code>: The Alt key. On the Macintosh, this is the Option key. On Macintosh this can only be used in conjunction with another modifier, since Alt+Letter combinations are reserved for entering special characters in text.</li> <li><code>meta</code>: The Meta key. On the Macintosh, this is the Command key.</li> <li><code>control</code>: The Control key.</li> <li><code>accel</code>: The key used for keyboard shortcuts on the user's platform, which is Control on Windows and Linux, and Command on Mac. Usually, this would be the value you would use.</li> <li><code>access</code>: The access key for activating menus and other elements. On Windows, this is the Alt key, used in conjuction with an element's accesskey.</li> <li><code>any</code>: Indicates that all modifiers preceding it are optional.</li>
-</ul>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/modifiers", "pl": "pl/XUL/Atrybut/modifiers" } ) </span></p>
-</div></body></content>

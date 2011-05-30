@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="resultsPopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("resultsPopup")</span> </dt><dd> Type: <em>popup element</em> </dd><dd> This property is set to the popup element that displays the results. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/resultsPopup" } ) </span></p>
-</div></body></content>

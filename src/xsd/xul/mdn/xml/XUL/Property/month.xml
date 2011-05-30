@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="month"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("month")</span> </dt><dd> Type: <em>integer</em> </dd><dd> The currently selected month from 0 to 11. Set this property to change the selected month. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/month", "ja": "ja/XUL/Property/month", "pl": "pl/XUL/W\u0142asno\u015b\u0107/month" } ) </span></p>
-</div></body></content>

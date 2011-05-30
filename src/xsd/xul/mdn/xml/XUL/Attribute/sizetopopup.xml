@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="sizetopopup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("sizetopopup")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>Indicates how the menu width and the <span class="script">template.XULElem("menupopup")</span> width are determined. If the <code>sizetopopup</code> attribute is left out or set to <code>none</code>, the menu will be its preferred width and the popup may extend outside of this width, unaffected by the maximum width of the menu itself.</dd>
-<dd>
-<dl><dt><code>none</code></dt><dd>The width of the popup will not be constrained to the size of the menu.</dd><dt><code>always</code></dt><dd>If set to <code>always</code>, the menu's width will be the same as that necessary for the <span class="script">template.XULElem("menupopup")</span>. If the menu has a maximum width, the popup will also be this width.</dd></dl>
-</dd>
-</dl><div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/sizetopopup" } ) </span></p>
-</div></body></content>

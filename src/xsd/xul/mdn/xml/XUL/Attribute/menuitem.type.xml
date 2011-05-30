@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="menuitem.type"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">template.XULRefAttr()</span></div><dl><dt><span class="script">template.XULAttr("menuitem.type", "type")</span></dt><dd>Type: <em>one of the values below</em></dd><dd>Can be used to create checkable menuitems or for radio button menuitems.</dd>
-<dd>
-<dl><dt><code>checkbox</code></dt><dd>The <span class="script">template.XULElem("menuitem")</span> is checked. The <span class="script">template.XULAttr("checked")</span> attribute determines whether the menuitem is checked or not.</dd><dt><code>radio</code></dt><dd>The <span class="script">template.XULElem("menuitem")</span> becomes part of a radio group. Other menuitems that have the same value for their <span class="script">template.XULAttr("name")</span> attributes are part of the same <span class="script">template.XULElem("radio")</span> group. Only one menuitem in the same radio group can be checked at once.</dd></dl>
-</dd>
-</dl><p>More information on adding checkmarks to menus in the <a href="/en/XUL_Tutorial/More_Menu_Features#Adding_Checkmarks_to_Menus" title="en/XUL_Tutorial/More_Menu_Features#Adding_Checkmarks_to_Menus">XUL tutorial</a></p><div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/menuitem.type" } ) </span></p>
-</div></body></content>

@@ -1,9 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeProgressListener"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("removeProgressListener", "( listener )")</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Remove a <span class="script">interface("nsIWebProgressListener")</span> from the browser.</dd>
-</dl>
-<div class="noinclude">
-<h2>See also</h2>
-<ul> <li><a title="en/Code snippets/Progress Listeners" href="/en/Code_snippets/Progress_Listeners">Progress listeners code snippets</a></li> <li><span class="script">interface("nsIWebProgress")</span></li> <p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/removeProgressListener", "pl": "pl/XUL/Metoda/removeProgressListener" } ) </span></p>
-</ul>
-</div></body></content>

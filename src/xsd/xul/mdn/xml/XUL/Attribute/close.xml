@@ -1,5 +1,0 @@
-<content type="application/x.deki0805+xml" title="close"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("close", "close")</span> <span class="script">template.Fx_minversion_inline(4)</span></dt> <dd>Type: <em>boolean</em></dd> <dd>If the panel has a titlebar, set the panel's close attribute to <code>true</code> to have a close button appear on the titlebar. Pressing the close button will close the panel.
-</dd>
-</dl></body></content>

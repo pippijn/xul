@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getNextItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getNextItem", "( startItem, delta )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> This method returns the item a given distance (delta) after the specified <code>startItem</code>, or <code>null</code> if no such item exists. This example will return the item two rows after <var>someItem</var>: <code>getNextItem ( someItem, 2 );</code> </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getNextItem", "pl": "pl/XUL/Metoda/getNextItem" } ) </span></p>
-</div></body></content>

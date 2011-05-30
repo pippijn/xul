@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="popup"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefElem()</span></div>
-<div class="noinclude"><span class="script">deprecated_inline("2")</span></div>
-<p>The popup element is equivalent to the <span class="script">template.XULElem("menupopup")</span> element which should be used instead. See the documentation on the <span class="script">template.XULElem("menupopup")</span> element for more information.</p>
-<p> </p>
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/popup", "ja": "ja/XUL/popup", "zh-cn": "cn/XUL/popup", "pl": "pl/XUL/popup" } ) </span></p></body></content>

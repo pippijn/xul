@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="nomatch"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("nomatch")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This attribute will be set to <code>true</code> if the last search resulted in no matches. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/nomatch" } ) </span></p>
-</div></body></content>

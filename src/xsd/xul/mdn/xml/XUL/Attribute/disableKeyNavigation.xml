@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="disableKeyNavigation"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("disableKeyNavigation")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> If this attribute is not used, the user can navigate to specific items within the element by pressing keys corresponding to letters in the item's label. This is done incrementally, so typing more letters with select more specific items. This feature may be disabled by setting this attribute to <code>true</code>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/disableKeyNavigation", "pl": "pl/XUL/Atrybut/disableKeyNavigation" } ) </span></p>
-</div></body></content>

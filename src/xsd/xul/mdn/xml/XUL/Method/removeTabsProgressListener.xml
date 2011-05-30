@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="removeTabsProgressListener"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("removeTabsProgressListener", "( listener )")</span> <span class="script">fx_minversion_inline(3.5)</span></dt> <dd>Return type: <em>no return value</em></dd> <dd>Removes a progress listener to the browser which has been monitoring all tabs. The progress listener should implement the <span class="script">interface("nsIWebProgressListener")</span> interface.</dd>
-</dl></body></content>

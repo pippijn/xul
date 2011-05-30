@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="loadOneTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefMeth()</span></div>
-<dl> <dt><span class="script">XULMeth2("loadOneTab", "( URL, referrerURI, charset, postData, loadInBackground, allowThirdPartyFixup )")</span><br /> <span class="script">XULMeth2("loadOneTab", "( URL, { referrerURI: ..., charset: ..., postData: ..., inBackground: ..., allowThirdPartyFixup: ..., relatedToCurrent: ... })")</span></dt> <dd>Return type: <em><span class="script">XULElem("tab")</span> element</em></dd> <dd>Opens a new tab that loads a page with the specified <code>URL</code>. The rest of the parameters are optional. This method works the same as <span class="script">xulmeth2("addTab")</span> except for the <code>loadInBackground</code> parameter which allows you to choose whether to open the new tab in foreground or background. There's also no <code>owner</code> parameter as the owner tab is specified automatically.</dd> <dd><span class="script">fx_minversion_note("3.6", "The second form of this method was added in Firefox 3.6; it adds the relatedToCurrent parameter, and allows the parameters to be specified by name, in any order.")</span></dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/loadOneTab" } ) </span></p>
-</div></body></content>

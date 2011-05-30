@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="negate"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("negate")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set to <code>true</code> to indicate that the comparison should be reversed. The <span class="script">template.XULElem("where")</span> clause matches if the condition is false, and does not match if the condition is true. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/negate" } ) </span></p>
-</div></body></content>

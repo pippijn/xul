@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="webBrowserFind"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("webBrowserFind")</span></dt> <dd>Type: <em><span class="script">interface("nsIWebBrowserFind")</span></em></dd> <dd>This read-only property contains an <span class="script">interface("nsIWebBrowserFind")</span> object which can be used to search for text in the document.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/webBrowserFind", "pl": "pl/XUL/W\u0142asno\u015b\u0107/webBrowserFind" } ) </span></p>
-</div></body></content>

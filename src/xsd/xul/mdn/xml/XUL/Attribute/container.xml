@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="container"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("container")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set to true if the element is to act as a container which can have child elements. This would be used for folders. This will be set by the template builder as needed. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/container", "ja": "ja/XUL/Attribute/container" } ) </span></p>
-</div></body></content>

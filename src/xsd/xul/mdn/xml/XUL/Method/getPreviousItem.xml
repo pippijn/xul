@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getPreviousItem"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getPreviousItem", "( startItem, delta )")</span> </dt><dd> Return type: <em>element</em> </dd><dd> This method returns the item a given distance (delta) before the specified <code>startItem</code>, or <code>null</code> if no such item exists. This example will return the item five rows before <var>someItem</var>: <code>getPreviousItem ( someItem, 5 );</code> </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getPreviousItem", "pl": "pl/XUL/Metoda/getPreviousItem" } ) </span></p>
-</div></body></content>

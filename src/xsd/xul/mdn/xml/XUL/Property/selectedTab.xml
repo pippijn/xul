@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="selectedTab"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("selectedTab")</span> </dt><dd> Type: <em>tab element</em> </dd><dd> A reference to the currently selected tab, which will always be one of the <span class="script">template.XULElem("tab")</span> elements in the <span class="script">template.XULElem("tabs")</span> element. Assign a value to this property to modify the currently selected tab. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/selectedTab" } ) </span></p>
-</div></body></content>

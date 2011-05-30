@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="sessionHistory"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("sessionHistory")</span></dt> <dd>Type: <em><span class="script">interface("nsISHistory")</span></em></dd> <dd>This read-only property contains the <span class="script">interface("nsISHistory")</span> object which holds the session history.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/sessionHistory", "pl": "pl/XUL/W\u0142asno\u015b\u0107/sessionHistory" } ) </span></p>
-</div></body></content>

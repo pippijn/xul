@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="getResultValueAt"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("getResultValueAt", "( index )")</span> </dt><dd> Return type: <em>result value</em> </dd><dd> Returns the result value at the specified index. The item will correspond to the text of that item that appears in the popup. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/getResultValueAt" } ) </span></p>
-</div></body></content>

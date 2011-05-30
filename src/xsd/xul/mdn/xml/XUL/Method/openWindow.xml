@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="openWindow"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("openWindow", "( windowtype, url, features, params )")</span> </dt><dd> Return type: <em>window</em> </dd><dd> Open a child window. The <var>windowtype</var> is a string specifying a window type. If a window with that type is already open, this method will just switch that window to the front and focus it instead of opening another window. If a window of the type is not open, a new one is opened displaying the supplied <var>url</var>. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/openWindow" } ) </span></p>
-</div></body></content>

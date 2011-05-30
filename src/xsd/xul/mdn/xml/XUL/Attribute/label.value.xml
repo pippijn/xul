@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="label.value"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("label.value", "value")</span></dt> <dd>Type: <em>string</em></dd> <dd>The text to be used for the label.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/label.value", "pl": "pl/XUL/Atrybut/label.value" } ) </span></p>
-</div></body></content>

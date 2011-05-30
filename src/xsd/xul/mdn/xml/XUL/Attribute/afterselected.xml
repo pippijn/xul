@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="afterselected"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("afterselected")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This is set to <code>true</code> if the tab is immediately after the currently selected tab. This is automatically set when needed and you shouldn't adjust it manually. This is primarily useful for themes so that they can adjust the appearance of the area around the selected tab. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/afterselected", "pl": "pl/XUL/Atrybut/afterselected" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="flags"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("flags")</span></dt> <dd>Type: <em>space-separated list of the values below</em></dd> <dd>A set of flags used for miscellaneous purposes. Two flags are defined, which may be the value of this attribute. <ul> <li><code>dont-test-empty</code>: For template generated content, the builder will not check that a container is empty.</li> <li><code>dont-build-content</code>: This flag may be used on a tree to indicate that content elements should not be generated. This results in a performance enhancement, but you will not be able to use the DOM functions to retrieve the tree rows.</li> </ul> </dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/flags", "ja": "ja/XUL/Attribute/flags", "pl": "pl/XUL/Atrybut/flags" } ) </span></p>
-</div></body></content>

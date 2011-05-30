@@ -1,4 +1,0 @@
-<content type="application/x.deki0805+xml" title="anchorNode"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl> <dt><span class="script">template.XULProp("anchorNode")</span> <span class="script">gecko_minversion_inline("2.0")</span></dt> <dd>Type: <em><span class="script">interface("nsIDOMElement")</span></em></dd> <dd>This read-only property holds the DOM node that was specified as the anchor when opening the popup.</dd>
-</dl></body></content>

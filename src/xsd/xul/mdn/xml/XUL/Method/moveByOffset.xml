@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="moveByOffset"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("moveByOffset", "( offset , isSelecting, isSelectingRange)")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> If <code>offset</code> is positive, adjusts the focused item forward by that many items. If <code>offset</code> is negative, adjusts the focused item backward by that many items. If <code>isSelecting</code> is <code>true</code>, then the selection is also adjusted. If <code>isSelectingRange</code> is also <code>true</code>, then the new item is selected in addition to any currently selected items. If <code>isSelectingRange</code> is <code>false</code>, any existing selection is cleared. Items that are hidden are skipped. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/moveByOffset" } ) </span></p>
-</div></body></content>

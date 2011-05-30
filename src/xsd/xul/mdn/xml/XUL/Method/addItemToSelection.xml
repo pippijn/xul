@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="addItemToSelection"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("addItemToSelection", "( item )")</span> </dt><dd> Return type: <em>no return value</em> </dd><dd> Selects the given item, without deselecting any other items that are already selected. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Method/addItemToSelection", "pl": "pl/XUL/Metoda/addItemToSelection" } ) </span></p>
-</div></body></content>

@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="activetitlebarcolor"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefAttr()</span></div>
-<dl> <dt><span class="script">XULAttr("activetitlebarcolor")</span> <span class="script">Fx_minversion_inline(3)</span></dt> <dd>Type: <em>color string</em></dd> <dd>Specify background color of the window's titlebar when it is active (foreground). Moreover this hides separator between titlebar and window contents. <em>This only affects Mac OS X.</em></dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "de": "de/XUL/Attribute/Activetitlebarcolor", "ja": "ja/XUL/Attribute/activetitlebarcolor" } ) </span></p>
-</div></body></content>

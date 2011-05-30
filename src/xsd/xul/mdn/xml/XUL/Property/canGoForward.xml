@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="canGoForward"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("canGoForward")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> This read-only property is <code>true</code> if there is a page to go forward to in the session history and the Forward button should be enabled. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/canGoForward" } ) </span></p>
-</div></body></content>

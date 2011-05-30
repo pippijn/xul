@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="query.name"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("query.name", "name")</span> </dt><dd> Type: <em>string</em> </dd><dd> The name of a parameter within the SQL statement. This name should appear within the query preceded by a colon. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/query.name", "pl": "pl/XUL/Atrybut/query.name" } ) </span></p>
-</div></body></content>

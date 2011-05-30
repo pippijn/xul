@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="minwidth"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("minwidth")</span> </dt><dd> Type: <em>string</em> (representing an integer) </dd><dd> The minimum width of the element. This corresponds to the min-width CSS property. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/minwidth", "ja": "ja/XUL/Attribute/minwidth" } ) </span></p>
-</div></body></content>

@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="popupOpen"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("popupOpen")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Indicates whether the popup is open or not. Set this property to open or close the popup. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/popupOpen", "pl": "pl/XUL/W\u0142asno\u015b\u0107/popupOpen" } ) </span></p>
-</div></body></content>

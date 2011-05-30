@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="hideseconds"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("hideseconds")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Indicates whether to show the seconds field. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Attributs/hideseconds", "ja": "ja/XUL/Attribute/hideseconds", "pl": "pl/XUL/Atrybut/hideseconds" } ) </span></p>
-</div></body></content>

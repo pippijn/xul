@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="resource"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">XULRefProp()</span></div>
-<dl> <dt><span class="script">XULProp("resource")</span></dt> <dd>Type: <em><span class="script">interface("nsIRDFResource")</span></em></dd> <dd>Returns an RDF resource with the value of the element's <span class="script">XULAttr("ref")</span> attribute. If the <span class="script">XULAttr("ref")</span> attribute is not specified, the <span class="script">XULAttr("id")</span> attribute is used instead.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/Propri\u00e9t\u00e9s/resource", "ja": "ja/XUL/Property/resource", "pl": "pl/XUL/W\u0142asno\u015b\u0107/resource" } ) </span></p>
-</div></body></content>

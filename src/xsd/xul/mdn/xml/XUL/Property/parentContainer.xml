@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="parentContainer"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl><dt> <span class="script">template.XULProp("parentContainer")</span> <span class="script">template.Fx_minversion_inline(3)</span> </dt><dd> Type: <em><span class="script">template.XULElem("menu")</span> element</em> </dd><dd> Read only property that returns the containing <span class="script">template.XULElem("menu")</span> element, or <code>null</code> if there isn't a containing menu. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/parentContainer" } ) </span></p>
-</div></body></content>

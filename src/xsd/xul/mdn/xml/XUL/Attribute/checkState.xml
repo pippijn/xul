@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="checkState"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl> <dt><span class="script">template.XULAttr("checkState")</span></dt> <dd>Type: <em>integer</em>, values <code>0</code>, <code>1</code>, or <code>2</code></dd> <dd>This attribute may be used to create three state buttons, numbered 0, 1 and 2. When in state 0 or 1, pressing the button will switch to the opposite state. When in state 2, pressing the button will switch to state 0. This means that the button acts like a checkbox except that there is a third state which must be set manually by adjusting the check state. If you wish to have different behavior for how the states are adjusted, set the <span class="script">template.XULAttr("autoCheck")</span> attribute to <code>false</code> and adjust the state with a script. The <span class="script">template.XULAttr("type")</span> attribute must be set to <code>checkbox</code> for buttons with a check state. Constants for the possible values for this attribute are in the <span class="script">interface("nsIDOMXULButtonElement")</span> interface.</dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/checkState", "pl": "pl/XUL/Atrybut/checkState" } ) </span></p>
-</div></body></content>

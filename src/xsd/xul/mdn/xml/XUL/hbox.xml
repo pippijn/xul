@@ -1,8 +1,0 @@
-<content type="application/x.deki0805+xml" title="hbox"><body xmlns:eval="http://mindtouch.com/2007/dekiscript"><div class="noinclude"><span class="script">XULRefElem()</span></div><p>A container element which can contain any number of child elements. This is equivalent to the <code><span class="script">XULElem("box")</span></code> element.</p><p>More information is available in the <a href="/en/XUL_Tutorial/The_Box_Model" title="en/XUL_Tutorial/The_Box_Model">XUL tutorial</a>.</p><h3>Example</h3><pre>
-&lt;!-- Two button on the right --&gt;
-&lt;hbox&gt;
-  &lt;spacer flex="1"/&gt;
-  &lt;button label="Connect"/&gt;
-  &lt;button label="Ping"/&gt;
-&lt;/hbox&gt;
-</pre><h3>Attributes</h3><p><span class="script">XULAttrInheritedWide()</span></p><h3>Properties</h3><p><span class="script">XULPropInheritedWide()</span></p><h3>Methods</h3><p><span class="script">XULMethInheritedWide()</span></p><h3>Related</h3><dl><dt>Elements</dt><dd><span class="script">XULElem("box")</span>, <span class="script">XULElem("vbox")</span></dd></dl><div class="noinclude"><p><span class="script">wiki.languages( { "fr": "fr/XUL/hbox", "ja": "ja/XUL/hbox", "pl": "pl/XUL/hbox" } )</span></p></div></body></content>

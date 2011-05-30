@@ -1,7 +1,0 @@
-<content type="application/x.deki0805+xml" title="tree.onselect"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("tree.onselect", "onselect")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This event is sent to a <span class="script">template.XULElem("tree")</span> when a row is selected, or whenever the selection changes. The user can select multiple rows by holding down Shift or Control and clicking on a row. The <code>onselect</code> event will be sent for each item added to or removed from the selection. </dd></dl>
-<div class="noinclude">See the <a title="en/XUL_Tutorial/Tree_Selection" href="/en/XUL_Tutorial/Tree_Selection">tree selection</a> page on the tutorial for more information.</div>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/tree.onselect" } ) </span></p>
-</div></body></content>

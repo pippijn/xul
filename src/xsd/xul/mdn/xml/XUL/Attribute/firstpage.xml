@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="firstpage"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("firstpage")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> <code>true</code> if the <span class="script">template.XULElem("wizard")</span> is on the first page. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/firstpage", "pl": "pl/XUL/Atrybut/firstpage" } ) </span></p>
-</div></body></content>

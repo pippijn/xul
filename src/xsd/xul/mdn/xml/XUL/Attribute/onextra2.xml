@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="onextra2"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("onextra2")</span> </dt><dd> Type: <em>script code</em> </dd><dd> This should be set to code which is called when the user presses the extra2 button. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/onextra2", "pl": "pl/XUL/Atrybut/onextra2" } ) </span></p>
-</div></body></content>

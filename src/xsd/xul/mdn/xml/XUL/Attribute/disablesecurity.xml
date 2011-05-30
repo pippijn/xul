@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="disablesecurity"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefAttr()</span></div>
-<dl><dt> <span class="script">template.XULAttr("disablesecurity")</span> </dt><dd> Type: <em>boolean</em> </dd><dd> Set this attribute to <code>true</code> to disable the security UI for this browser. Omit this attribute off to enable it. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Attribute/disablesecurity", "pl": "pl/XUL/Atrybut/disablesecurity" } ) </span></p>
-</div></body></content>

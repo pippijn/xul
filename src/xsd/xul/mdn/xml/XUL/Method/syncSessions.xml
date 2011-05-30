@@ -1,6 +1,0 @@
-<content type="application/x.deki0805+xml" title="syncSessions"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefMeth()</span></div>
-<dl><dt> <span class="script">template.XULMeth2("syncSessions", "( autoCompleteElement )")</span> </dt><dd> Return type: <em>???</em> </dd><dd> Copy the sessions from another autocomplete element. </dd></dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "fr": "fr/XUL/M\u00e9thodes/syncSessions", "ja": "ja/XUL/Method/syncSessions", "pl": "pl/XUL/Metoda/syncSessions" } ) </span> </p>
-</div></body></content>

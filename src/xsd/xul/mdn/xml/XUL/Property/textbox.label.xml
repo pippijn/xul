@@ -1,8 +1,0 @@
-<content type="application/x.deki0805+xml" title="textbox.label"><body xmlns:eval="http://mindtouch.com/2007/dekiscript">
-<div class="noinclude"><span class="script">template.XULRefProp()</span></div>
-<dl> <dt><span class="script">template.XULProp("textbox.label", "label")</span></dt> <dd>Type: <em>string</em></dd> <dd>Sets the <a title="en/XUL/Attribute/textbox.label" href="/en/XUL/Attribute/textbox.label">label</a> attribute. Gets the <a title="en/XUL/Attribute/textbox.label" href="/en/XUL/Attribute/textbox.label">label</a> attribute if it is present and not empty. Otherwise it returns the <a title="en/XUL/Attribute/label.value" href="/en/XUL/Attribute/label.value">value</a> of the associated <a title="en/XUL/label" href="/en/XUL/label">label</a> element, if applicable. Otherwise it returns the <span class="script">template.XULProp("placeholder")</span> or <span class="script">template.XULProp("emptyText")</span> property. The getter is mostly useful for screen readers. <span class="script">note("Prior to Firefox 3, and always in Thunderbird and SeaMonkey, the label property of an autocomplete textbox returns its value, for compatibility with the " .. template.XULElem("menulist") .. " element.")</span></dd>
-</dl>
-<div class="noinclude">
-<p><span class="script"> wiki.languages( { "ja": "ja/XUL/Property/textbox.label" } ) </span></p>
-</div>
-</body></content>
