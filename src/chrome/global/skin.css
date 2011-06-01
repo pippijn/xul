@@ -24,8 +24,15 @@ table {
 	padding: 5px 26px;
 }
 
+
+.xul-groupbox {
+	width: 100%;
+}
 .xul-hbox > tr > td {
 	vertical-align: top;
+}
+.xul-hbox > tr > td > * {
+	width: 100%;
 }
 
 

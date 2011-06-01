@@ -10,8 +10,28 @@ match x:hbox {
 		<table class="xul-hbox" summary=""> {
 			copy-of @id;
 			<tr> {
+				var $totalflex = {
+					for-each (*[1]) {
+						call get-total-flex ();
+					}
+				}
+				if (count(*) != $totalflex) {
+					attribute "style" {
+						expr "width: 100%";
+					}
+				}
 				for-each (*) {
 					<td> {
+						attribute "style" {
+							var $flex = {
+								if (number(@flex)) {
+									expr @flex;
+								} else {
+									expr 1;
+								}
+							}
+							expr "width: " _ (100 div $totalflex * $flex) _ "%";
+						}
 						apply-templates .;
 					}
 				}
@@ -22,5 +42,27 @@ match x:hbox {
 		<div class="xul-hbox"> {
 			copy-of @id;
 		}
+	}
+}
+
+template get-total-flex () {
+	var $nextflex = {
+		for-each (following-sibling::*[1]) {
+			call get-total-flex ();
+		}
+	}
+
+	var $flex = {
+		if (@flex) {
+			expr @flex;
+		} else {
+			expr 1;
+		}
+	}
+
+	if (number($nextflex)) {
+		expr $nextflex + $flex;
+	} else {
+		expr $flex;
 	}
 }

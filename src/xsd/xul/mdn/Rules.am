@@ -1,8 +1,12 @@
 include MDN.am
 
-noinst_DATA += $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
+MDN = $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
 
-mdn: $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
+noinst_DATA += $(MDN)
+
+mdn: $(MDN)
+mdn-update: $(MDNUPDATE)
+	@echo "done"
 
 mdn-clean:
 	$(RM) $(MDNXML)
@@ -36,7 +40,14 @@ $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages $(CURDIR)/pageids.pm
 	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.post" >> $@;	\
 	done
 	echo >> $@
+	echo -n 'MDNUPDATE =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/xml/$$i.get" >> $@;	\
+	done
+	echo >> $@
 
+$(srcdir)/$(CURDIR)/xml/%.get: #$(CURDIR)/pageids.pm $(CURDIR)/update
+	@$(srcdir)/$(CURDIR)/update $* $@
 
 AM_V_GET = $(am__v_GET_$(V))
 am__v_GET_ = $(am__v_GET_$(AM_DEFAULT_VERBOSITY))

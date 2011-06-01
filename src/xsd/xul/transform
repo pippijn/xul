@@ -17,7 +17,7 @@ print "  ATTR  $OUT\n"
 
 $SIG{__DIE__} = sub {
    sleep 1;
-   print "http://developer.mozilla.org/en/", ($XML =~ m|mdn/(.+)\.xml|), "\n";
+   print "http://developer.mozilla.org/en/", ($XML =~ m|mdn/xml/(.+)\.xml|), "\n";
    unlink $OUT;
    exit 1
 };

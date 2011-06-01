@@ -1,7 +1,7 @@
-ATTRIBUTES	:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Attribute/*))
-ELEMENTS	:= $(patsubst mdn/xml/XUL/%,xml/Element/%,$(shell find mdn/xml/XUL -maxdepth 1 -type f))
-METHODS		:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Method/*))
-PROPERTIES	:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Property/*))
+ATTRIBUTES	:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Attribute/*.xml))
+ELEMENTS	:= $(patsubst mdn/xml/XUL/%,xml/Element/%,$(shell find mdn/xml/XUL -maxdepth 1 -name "*.xml"))
+METHODS		:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Method/*.xml))
+PROPERTIES	:= $(patsubst mdn/xml/XUL/%,xml/%,$(wildcard mdn/xml/XUL/Property/*.xml))
 
 XULELEMENT	:= xml/XULElement.xml
 
@@ -16,7 +16,7 @@ xulref.xml: attributes elements methods properties $(shell find xsd -type f) $(X
 	@echo "  CAT   " $@
 	@echo '<!DOCTYPE xulref SYSTEM "xsd/xulref.dtd">' > $@
 	@echo '<xulref xmlns="http://xul.xinutec.org/2011/xulref">' >> $@
-	@cat $(ATTRIBUTES) $(PROPERTIES) $(METHODS) $(ELEMENTS) $(XULELEMENT) >> $@
+	@cat _onselect.xml $(ATTRIBUTES) $(PROPERTIES) $(METHODS) $(ELEMENTS) $(XULELEMENT) >> $@
 	@echo '</xulref>' >> $@
 	@xmllint --output $@ --format $@
 	@xmllint --noout --valid --schema xsd/xulref.xsd $@ #|| $(RM) $@

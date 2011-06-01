@@ -1,4 +1,4 @@
-include jml/Tests.am
+#include jml/Tests.am
 include xul/Tests.am
 
 TEST_EXTENSIONS = .xul .jml .xml

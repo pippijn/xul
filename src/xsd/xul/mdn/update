@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+
+use common::sense;
+use constant {
+   URL    => 'https://developer.mozilla.org/@api/deki/pages/%s/feed?limit=1&format=raw',
+   FORMAT => '%Y%m%d%H%M%S',
+};
+
+use Dir::Self;
+my %pageids = do (__DIR__ . "/pageids.pm");
+
+use DateTime::Format::Strptime;
+my $strp = new DateTime::Format::Strptime (
+   pattern   => FORMAT,
+   locale    => 'en_US',
+   time_zone => 'UTC',
+   on_error  => 'croak',
+);
+
+my $PAGE = $ARGV[0] or die "Missing page name";
+my $XML  = $ARGV[1] or die "Missing target";
+
+$XML =~ s/\.get$/.xml/;
+
+sub mtime {
+   (stat $_[0])[9]
+}
+
+sub strmtime {
+   use Date::Format;
+   my @lt = gmtime mtime $_[0];
+   strftime FORMAT, @lt
+}
+
+my $URL = sprintf URL, $pageids{$PAGE}, time;
+
+my $mtime = strmtime $XML;
+my $otherts = `curl -s '$URL' | xmllint --xpath '/table/change/rc_timestamp/text()' -`;
+
+if ($mtime < $otherts) {
+   print "\n  GET    $XML\n";
+   system __DIR__ . "/download", $PAGE, $XML;
+}
+print ".";
+$mtime = $strp->parse_datetime ($otherts)->epoch;
+utime $mtime, $mtime, $XML;

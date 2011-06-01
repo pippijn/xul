@@ -2,11 +2,16 @@
 
 use common::sense;
 use constant {
-   URL => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified&comment=%s&title=%s',
+   URL => {
+      upload => 'https://developer.mozilla.org/@api/deki/pages/%s/contents?edittime=%s&abort=modified&comment=%s&title=%s',
+      feed   => 'https://developer.mozilla.org/@api/deki/pages/%s/feed?limit=1&format=raw',
+   },
    CMD => {
       body   => 'xmllint --xpath "/content/body/*" %s',
       title  => 'xmllint --xpath "/content/@title" %s',
-      upload => 'curl -s -n --data-binary "@-" "%s"',
+      feedts => 'xmllint --xpath "/table/change/rc_timestamp/text()" %s',
+      GET    => 'curl -s -n "%s"',
+      POST   => 'curl -s -n --data-binary "@-" "%s"',
    },
 };
 
@@ -16,7 +21,7 @@ sub mtime {
 
 sub strmtime {
    use Date::Format;
-   my @lt = localtime mtime $_[0];
+   my @lt = gmtime mtime $_[0];
    strftime '%Y%m%d%H%M%S', @lt
 }
 
@@ -32,8 +37,11 @@ sub popen {
 
 my $PAGE = $ARGV[0] or die 'missing page name';
 my $XML  = $ARGV[1] or die 'missing XML output file name';
+my $JML  = $XML;
 my $REF  = $XML;
 
+$JML =~ s/\.upload/jml/;
+$JML =~ s/\.xml$/.jml/;
 $REF =~ s/\.upload/xml/;
 
 $SIG{__DIE__} = sub { unlink $XML };
@@ -70,6 +78,13 @@ sub writeout {
    print $fh $_[1];
 }
 
+sub error {
+   my ($code, $title, $message) = @_;
+
+   print "Error $code:\n   Title:   $title\n   Message: $message\n";
+   die
+}
+
 if ($xmlout ne $refout) {
    if (0) {
       END { unlink "xmlout-$$", "refout-$$" }
@@ -86,9 +101,28 @@ if ($xmlout ne $refout) {
       my ($title) = (popen sprintf CMD->{title}, $XML) =~ /title="([^"]+)"/;
       my $body = sprintf CMD->{body}, $XML;
 
+      my $pageid = $pageids{$PAGE};
+
+      my $mtime = strmtime $JML;
+      my $otherts = do {
+         my $feedts = sprintf CMD->{feedts}, '-';
+         my $feedurl = sprintf URL->{feed}, $pageid;
+         my $GET = sprintf CMD->{GET}, $feedurl;
+
+         popen "$GET | $feedts"
+      };
+
+      die "conflict: A more recent edit was performed"
+         if $otherts >= $mtime;
+
       my $MSG = $ENV{COMMENT} or die 'missing commit message (envvar $COMMENT)';
-      my $URL = sprintf URL, $pageids{$PAGE}, strmtime ($XML), uri_escape ($MSG), uri_escape ($title);
-      my $upload = sprintf CMD->{upload}, $URL;
+      my $URL = sprintf URL->{upload}
+              , $pageid
+              , $mtime
+              , uri_escape ($MSG)
+              , uri_escape ($title)
+              ;
+      my $upload = sprintf CMD->{POST}, $URL;
 
       "$body | $upload"
    };
@@ -96,9 +130,8 @@ if ($xmlout ne $refout) {
    #print "exec: $CMD\n"; exit 1;
    #exec "echo", $CMD;
    for (popen $CMD) {
-      m|<error><status>(\d+)</status><title>(.*?)</title>| and die "Error $1: $2";
-      m|<edit status="success">| or die "Edit was not successful";
-      #print "$_\n";
+      m|<error><status>(\d+)</status><title>(.*?)</title><message>(.*?)</message>| and error $1, $2, $3;
+      m|<edit status="success">| or die "Edit was not successful: $_";
 
       # remove original so it's downloaded from the updated MDN again
       unlink $REF;

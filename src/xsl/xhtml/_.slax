@@ -15,8 +15,8 @@ match / {
 	<html> {
 		<head> {
 			<title> x:*/@title;
-			<link rel="stylesheet" type="text/css" href=$srcdir _ "/global/skin.css">;
-			<script type="text/javascript" src=$srcdir _ "/global/xul.js">;
+			<link rel="stylesheet" type="text/css" href=$srcdir _ "/chrome/global/skin.css">;
+			<script type="text/javascript" src=$srcdir _ "/chrome/global/xul.js">;
 		}
 		<body> {
 			apply-templates;

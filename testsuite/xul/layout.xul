@@ -2,8 +2,7 @@
 <!DOCTYPE window SYSTEM "xul.dtd">
 <window title="XUL Layout">
 
-	<script type="application/x-javascript"
-		src="chrome://global/content/dialogOverlay.js" />
+	<!--<script type="application/x-javascript" src="chrome://global/content/dialogOverlay.js" />-->
 
 	<html:h1>XUL Box Layout</html:h1>
 
