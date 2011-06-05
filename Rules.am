@@ -14,6 +14,8 @@ AM_CPPFLAGS		+= -D_GLIBCXX_DEBUG_PEDANTIC
 AM_CPPFLAGS		+= -D_GLIBCXX_CONCEPT_CHECKS
 AM_CPPFLAGS		+= -include config.h
 AM_CPPFLAGS		+= -I$(srcdir)/include
+AM_CPPFLAGS		+= -I$(srcdir)/include/basekit
+AM_CPPFLAGS		+= -I$(srcdir)/include/vertexdb
 
 AM_YFLAGS		+= -d
 
