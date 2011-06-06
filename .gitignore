@@ -12,6 +12,7 @@
 /configure
 /INSTALL
 /m4
+/configure.ac
 Makefile.am
 Makefile.in
 
