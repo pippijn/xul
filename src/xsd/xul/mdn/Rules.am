@@ -66,8 +66,8 @@ $(srcdir)/$(CURDIR)/jml/%.jml: src/compiler/xml2jml $(srcdir)/$(CURDIR)/xml/%.xm
 AM_V_JMLC = $(am__v_JMLC_$(V))
 am__v_JMLC_ = $(am__v_JMLC_$(AM_DEFAULT_VERBOSITY))
 am__v_JMLC_0 = @echo "  JMLC  " $@;
-$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml jmlc$(EXEEXT)
-	$(AM_V_JMLC)$(builddir)/jmlc$(EXEEXT) $< > $@
+$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml
+	$(AM_V_JMLC)jmlc$(EXEEXT) $< > $@
 
 AM_V_POST = $(am__v_POST_$(V))
 am__v_POST_ = $(am__v_POST_$(AM_DEFAULT_VERBOSITY))

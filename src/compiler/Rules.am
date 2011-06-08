@@ -1,4 +1,3 @@
-include jmlc/Rules.am
 include xsdproc/Rules.am
 
 BUILT_SOURCES += gozerc

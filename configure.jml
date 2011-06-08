@@ -3,12 +3,9 @@ project {
 	version: "0.1"
 	contact: "gozer@xinutec.org"
 
-	config_header: "config.h"
-
 	lang: "C++"
 
 	ac_prog {
-		li { CXX }
 		li { LEX }
 		li { YACC }
 	}
