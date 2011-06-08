@@ -6,7 +6,7 @@ ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 output-method xml {
 	encoding "ISO-8859-1";
 	doctype-public "-//W3C//DTD XHTML 1.0 Strict//EN";
-	doctype-system "../../../src/xsd/xhtml/xhtml1-strict.dtd";
+	doctype-system "@abs_top_srcdir@/src/xsd/xhtml/xhtml1-strict.dtd";
 }
 
 match / {

@@ -3,4 +3,4 @@ bin_PROGRAMS += xsdproc
 LOCAL_SOURCES =		\
 	xsdproc.cpp
 
-LOCAL_LDADD = $(XERCESC_LIBS)
+LOCAL_LDADD = $(XERCES_C_LIBS)

@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS	+= -Wno-portability -Wno-override
 AM_CXXFLAGS		+= -pipe -ggdb3
 AM_CXXFLAGS		+= $(LIBXML_CFLAGS)
 AM_CXXFLAGS		+= $(LIBXSLT_CFLAGS)
-AM_CXXFLAGS		+= $(XERCESC_CFLAGS)
+AM_CXXFLAGS		+= $(XERCES_C_CFLAGS)
 AM_LDFLAGS		+= -Wl,-z,defs,-z,nodlopen,-z,noexecstack,-z,now,-z,nodump
 
 AM_CPPFLAGS		+= -DSRCDIR='"$(realpath $(abs_srcdir)/src)"'

@@ -121,7 +121,6 @@ XHTML_SLAX_FILES =	\
 	where.slax	\
 	window.slax	\
 	wizard.slax	\
-	wizardpage.slax	\
-	_.slax
+	wizardpage.slax
 
 EXTRA_DIST += $(XHTML_SLAX_FILES)

@@ -1,16 +1,8 @@
-#include jml/Tests.am
 include xul/Tests.am
 
-TEST_EXTENSIONS = .xul .jml .xml
+TEST_EXTENSIONS = .xul
 
-JML_LOG_COMPILER = $(srcdir)/testsuite/jml/runtest $(builddir)/jmlc$(EXEEXT)
-XML_LOG_COMPILER = $(srcdir)/testsuite/jml/runtest $(builddir)/jmlc$(EXEEXT)
 XUL_LOG_COMPILER = $(srcdir)/testsuite/xul/runtest $(builddir)/gozerc$(EXEEXT)
-
-$(srcdir)/testsuite/jml/Tests.am: $(wildcard $(srcdir)/testsuite/jml/*.jml) $(sort $(shell find $(srcdir)/testsuite/jml/xml/ -name "*.xml"))
-	@echo -n 'TESTS +=' > $@
-	$(AM_V_GEN)for i in $^; do echo -n " $$i" | sed -e 's|$(srcdir)/||' >> $@; done
-	@echo >> $@
 
 $(srcdir)/testsuite/xul/Tests.am: $(sort $(wildcard $(srcdir)/testsuite/xul/*.xul))
 	@echo -n 'TESTS +=' > $@

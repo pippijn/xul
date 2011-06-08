@@ -25,5 +25,6 @@ project {
 
 	output {
 		li { "src/compiler/gozerc" }
+		li { "src/xsl/xhtml/_.slax" }
 	}
 }
