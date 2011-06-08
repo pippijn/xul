@@ -60,8 +60,8 @@ $(srcdir)/$(CURDIR)/xml/%.xml: #$(CURDIR)/pageids.pm $(CURDIR)/download
 AM_V_X2J = $(am__v_X2J_$(V))
 am__v_X2J_ = $(am__v_X2J_$(AM_DEFAULT_VERBOSITY))
 am__v_X2J_0 = @echo "  X2J   " $@;
-$(srcdir)/$(CURDIR)/jml/%.jml: src/compiler/xml2jml $(srcdir)/$(CURDIR)/xml/%.xml
-	$(AM_V_X2J)$+ $@
+$(srcdir)/$(CURDIR)/jml/%.jml: $(srcdir)/$(CURDIR)/xml/%.xml
+	$(AM_V_X2J)xml2jml $< $@
 
 AM_V_JMLC = $(am__v_JMLC_$(V))
 am__v_JMLC_ = $(am__v_JMLC_$(AM_DEFAULT_VERBOSITY))

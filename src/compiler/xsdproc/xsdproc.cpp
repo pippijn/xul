@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <cstdlib>
 
 #include <iostream>
@@ -68,6 +69,18 @@ int
 main (int argc, char *argv[])
 try
 {
+  if (argv[1])
+    if (!strcmp (argv[1], "--help"))
+      {
+        puts ("usage: xsdproc <input.xul|xhtml>");
+        return EXIT_SUCCESS;
+      }
+    else if (!strcmp (argv[1], "--version"))
+      {
+        puts (PACKAGE_NAME " v" PACKAGE_VERSION);
+        return EXIT_SUCCESS;
+      }
+
   if (argc < 4)
     return EXIT_FAILURE;
 
