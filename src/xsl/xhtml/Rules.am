@@ -124,3 +124,4 @@ XHTML_SLAX_FILES =	\
 	wizardpage.slax
 
 EXTRA_DIST += $(XHTML_SLAX_FILES)
+CLEANFILES += $(XHTML_SLAX_FILES:.slax=.xsl) $(CURDIR)/_.xsl

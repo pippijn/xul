@@ -1,6 +1,7 @@
 include xsdproc/Rules.am
 
 BUILT_SOURCES += gozerc
+CLEANFILES += gozerc
 
 gozerc: config.status src/compiler/gozerc.in
 	$(AM_V_GEN)./config.status src/compiler/gozerc
