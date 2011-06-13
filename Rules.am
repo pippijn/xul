@@ -19,9 +19,7 @@ AM_CPPFLAGS		+= -I$(srcdir)/include
 
 AM_YFLAGS		+= -d
 
-include include/Rules.am
-include src/Rules.am
-include testsuite/Rules.am
+include automake/stdinc.am
 
 distdir: $(DISTFILES)
 	@case `sed 15q $(srcdir)/NEWS` in \

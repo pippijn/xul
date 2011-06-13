@@ -49,29 +49,17 @@ $(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages $(CURDIR)/pageids.pm
 $(srcdir)/$(CURDIR)/xml/%.get: #$(CURDIR)/pageids.pm $(CURDIR)/update
 	@$(srcdir)/$(CURDIR)/update $* $@
 
-AM_V_GET = $(am__v_GET_$(V))
-am__v_GET_ = $(am__v_GET_$(AM_DEFAULT_VERBOSITY))
-am__v_GET_0 = @echo "  GET   " $@;
 $(srcdir)/$(CURDIR)/xml/%.xml: #$(CURDIR)/pageids.pm $(CURDIR)/download
 	$(AM_V_GET)$(srcdir)/$(CURDIR)/download $* $@
 #	$(AM_V_GET)$(lastword $+) $* $@
 #	@touch $@
 
-AM_V_X2J = $(am__v_X2J_$(V))
-am__v_X2J_ = $(am__v_X2J_$(AM_DEFAULT_VERBOSITY))
-am__v_X2J_0 = @echo "  X2J   " $@;
 $(srcdir)/$(CURDIR)/jml/%.jml: $(srcdir)/$(CURDIR)/xml/%.xml
 	$(AM_V_X2J)xml2jml $< $@
 
-AM_V_JMLC = $(am__v_JMLC_$(V))
-am__v_JMLC_ = $(am__v_JMLC_$(AM_DEFAULT_VERBOSITY))
-am__v_JMLC_0 = @echo "  JMLC  " $@;
 $(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml
 	$(AM_V_JMLC)jmlc$(EXEEXT) $< > $@
 
-AM_V_POST = $(am__v_POST_$(V))
-am__v_POST_ = $(am__v_POST_$(AM_DEFAULT_VERBOSITY))
-am__v_POST_0 = @echo "  POST  " $@;
 $(srcdir)/$(CURDIR)/.upload/%.post: $(srcdir)/$(CURDIR)/.upload/%.xml #$(CURDIR)/upload
 	$(AM_V_POST)$(srcdir)/$(CURDIR)/upload $* $<
 #	$(AM_V_POST)$(lastword $+) $* $<
