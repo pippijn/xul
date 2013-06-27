@@ -1,0 +1,5 @@
+char-encoding: utf8
+indent: yes
+input-xml: yes
+numeric-entities: yes
+quiet: yes

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window title="XUL Radios">
+
+	<script>
+		<![CDATA[
+		function setText (textID, val) {
+			document.getElementById(textID).value = val;
+		}
+		]]>
+	</script>
+
+	<html:h1>XUL Radio Buttons</html:h1>
+
+	<vbox flex="1" style="overflow: auto">
+		<hbox>
+
+			<groupbox flex="1">
+				<caption label="states" />
+				<description value="These show different states."/>
+				<radiogroup flex="1">
+					<radio label="Selected" selected="true"
+						oncommand="setText('state-text','Checked');" />
+					<radio label="Normal"   
+						oncommand="setText('state-text','Normal');" />
+					<radio label="Disabled" disabled="true" 
+						oncommand="setText('state-text','Disabled');" />
+				</radiogroup>
+				<separator flex="1" />
+				<description id="state-text" value="(no input)" />
+			</groupbox>
+
+			<groupbox flex="1">
+				<caption label="accesskeys" />
+				<description value="These have access keys."/>
+				<description value="(Even if they're not marked)"/>
+				<radiogroup flex="1">
+					<radio label="Animal" accesskey="A" 
+						oncommand="setText('accesskey-text','Animal');" />
+					<radio label="Bear"   accesskey="B" 
+						oncommand="setText('accesskey-text','Bear');" />
+					<radio label="Cat"    accesskey="C" 
+						oncommand="setText('accesskey-text','Cat');" />
+					<radio label="Dog"    accesskey="D" 
+						oncommand="setText('accesskey-text','Dog');" />
+					<radio label="Deer"   accesskey="E" 
+						oncommand="setText('accesskey-text','Deer');" />
+					<radio label="Fish"   accesskey="F" 
+						oncommand="setText('accesskey-text','Fish');" />
+				</radiogroup>
+				<separator flex="1" />
+				<description  id="accesskey-text" value="(no input)" />
+			</groupbox>
+
+		</hbox>
+
+		<hbox>
+
+			<groupbox flex="1">
+				<caption label="orientation" />
+				<description value="These radiobuttons show different orientations."/>
+				<radiogroup flex="1">
+					<radio label="Left"
+						oncommand="setText('or-text','A radiobutton to the left of the label');" />
+					<radio label="Right" dir="reverse" 
+						oncommand="setText('or-text','A radiobutton to the right of the label');"/>
+					<radio label="Above" orient="vertical" dir="normal" 
+						oncommand="setText('or-text','A radiobutton above the label');"/>
+					<radio label="Below" orient="vertical" dir="reverse" 
+						oncommand="setText('or-text','A radiobutton below the label');"/>
+					<radio 
+						oncommand="setText('or-text','A radiobutton with no label');" />
+					<radio
+						oncommand="setText('or-text','Another radiobutton with no label');" />
+				</radiogroup>
+				<separator flex="1" />
+				<description  id="or-text" value="(no input)" />
+			</groupbox>
+
+			<groupbox flex="1">
+				<caption label="images" />
+				<description value="These radiobuttons show images."/>
+				<radiogroup flex="1">
+					<radio label="Left"
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','A radiobutton to the left of the label');" />
+					<radio label="Right" dir="reverse" 
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','A radiobutton to the right of the label');"/>
+					<radio label="Above" orient="vertical" dir="normal" 
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','A radiobutton above the label');"/>
+					<radio label="Below" orient="vertical" dir="reverse" 
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','A radiobutton below the label');"/>
+					<radio 
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','A radiobutton with no label');" />
+					<radio
+						image="images/betty_boop.xbm" 
+						oncommand="setText('image-text','Another radiobutton with no label');" />
+				</radiogroup>
+				<separator flex="1" />
+				<description  id="image-text" value="(no input)" />
+			</groupbox>
+
+		</hbox>
+
+	</vbox>
+
+</window>

@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+
+use common::sense;
+use autodie 'system';
+
+sub notdir   { ($_[0] =~ /([^\/]+)$/)[0] }
+sub basename { ($_[0] =~ /(.+)\.[^.]+$/)[0] }
+sub mktemp   { $_[0] =~ m|(.+?)(?:\.[^./]+)?(\.[^./]+)$|; "$1.$_[1]$2" }
+
+my $compiler = $ARGV[0] or die;
+my $input    = $ARGV[1] or die;
+
+for (qw/xhtml xul/) {
+   system $compiler, $_, $input, "testsuite/xul/" . (basename notdir $input) . ".$_";
+}

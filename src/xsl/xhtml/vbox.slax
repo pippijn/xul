@@ -1,0 +1,18 @@
+version 1.1;
+
+ns html extension = "http://www.w3.org/1999/xhtml";
+ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+match x:vbox {
+	<table class="xul-vbox" summary=""> {
+		copy-of @id;
+
+		for-each (*) {
+			<tr> {
+				<td> {
+					apply-templates .;
+				}
+			}
+		}
+	}
+}

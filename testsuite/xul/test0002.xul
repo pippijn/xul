@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window id="rootWnd" title="Register Online!">
+
+	<description>Register Online!</description>
+	<vbox>
+		<description>Register Online!</description>
+		<hbox>
+			<image src="wall-create-account-button.png"/>
+			<description>Register Online!</description>
+		</hbox>
+		<groupbox align="start">
+			<caption label="Your Information"/>
+			<vbox>
+				<hbox>
+					<label control="your-fname" value="Enter first name:"/>
+					<textbox id="your-fname" value="Johan"/>
+				</hbox>
+				<hbox>
+					<label control="your-lname" value="Enter last name:"/>
+					<textbox id="your-lname" value="Hernandez"/>
+				</hbox>
+				<hbox>
+					<button oncommand="alert('save!')">
+						<description>Save</description>
+					</button>
+				</hbox>
+			</vbox>
+		</groupbox>
+	</vbox>
+
+</window>

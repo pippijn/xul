@@ -1,0 +1,13 @@
+include xul/Tests.am
+
+TESTS += $(XUL_TESTS)
+CLEANFILES += $(XUL_TESTS) $(XUL_TESTS:.xul=.xhtml)
+
+TEST_EXTENSIONS = .xul
+
+XUL_LOG_COMPILER = $(srcdir)/testsuite/xul/runtest $(builddir)/gozerc$(EXEEXT)
+
+$(srcdir)/testsuite/xul/Tests.am: $(sort $(wildcard $(srcdir)/testsuite/xul/*.xul))
+	@echo -n 'XUL_TESTS =' > $@
+	$(AM_V_GEN)for i in $^; do echo -n " $$i" | sed -e 's|$(srcdir)/||' >> $@; done
+	@echo >> $@

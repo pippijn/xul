@@ -1,0 +1,9 @@
+<!ATTLIST window
+	xmlns		CDATA	#FIXED "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html	CDATA	#FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:owl	CDATA	#FIXED "http://www.w3.org/2002/07/owl#"
+	xmlns:smil	CDATA	#FIXED "http://www.w3.org/2001/SMIL20/"
+	xmlns:xi	CDATA	#FIXED "http://www.w3.org/2001/XInclude"
+	xmlns:xlink	CDATA	#FIXED "http://www.w3.org/2000/10/xlink-ns"
+	xmlns:xml	CDATA	#FIXED "http://www.w3.org/XML/1998/namespace"
+>

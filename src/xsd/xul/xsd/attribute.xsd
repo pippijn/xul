@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
+
+	<xs:include schemaLocation="fragments/attrprop.xsd"/>
+
+	<xs:element name="attribute" type="attributeElementType"/>
+
+	<xs:complexType name="attributeElementType">
+		<xs:complexContent>
+			<xs:extension base="attrpropElementType">
+				<xs:attribute name="type" type="attributeType" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,138 @@
+version 1.1;
+
+ns x extension = "http://xul.xinutec.org/2011/xulref";
+ns xs = "http://www.w3.org/2001/XMLSchema";
+ns xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+output-method {
+	omit-xml-declaration "yes";
+	indent "yes";
+}
+
+key parent {
+	match x:element;
+	value @name;
+}
+
+match x:xulref {
+	<xs:schema targetNamespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"> {
+		<xs:group name="anyElementStructure"> {
+			<xs:choice> {
+				<xs:any namespace="http://www.w3.org/1999/xhtml"
+					processContents="strict">;
+				<xs:any namespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+					processContents="strict">;
+			}
+		}
+		<xs:simpleType name="character"> {
+			<xs:restriction base="xs:string"> {
+				<xs:length value="1">;
+			}
+		}
+		<xs:simpleType name="color"> {
+			<xs:restriction base="xs:string"> {
+				<xs:pattern value="#([0-9a-fA-F]{3}){1,2}">;
+			}
+		}
+		apply-templates {
+			sort name();
+			sort @name;
+		}
+	}
+}
+
+match x:attribute {
+	var $name = substring-after(@name, "-");
+
+	if (x:value) {
+		<xs:simpleType name=$name _ "Values"> {
+			<xs:restriction base="xs:token"> {
+				for-each (x:value) {
+					<xs:enumeration value=@name>;
+				}
+			}
+		}
+	}
+
+	var $type = {
+		if (@type == "integer") {
+			expr "xs:integer";
+		} else if (@type == "boolean") {
+			expr "xs:boolean";
+		} else if (@type == "unique id") {
+			expr "xs:ID";
+		} else if (@type == "id") {
+			expr "xs:IDREF";
+		} else if (@type == "character") {
+			expr "xul:character";
+		} else if (@type == "color string") {
+			expr "xul:color";
+		} else if (@type == "URI" || @type == "URL") {
+			expr "xs:anyURI";
+		} else if (@type == "one of the values below") {
+			if (!x:value) {
+				terminate "no values found for enumeration";
+			}
+			expr "xul:" _ $name _ "Values";
+		} else {
+			expr "xs:string";
+		}
+	}
+
+	<xs:attributeGroup name=$name> {
+		if (contains($name, ".")) {
+			<xs:attribute name=substring-after($name, ".") type=$type>;
+
+		} else {
+			<xs:attribute name=$name type=$type>;
+		}
+	}
+}
+
+match x:element {
+	if (@abstract == "false") {
+		/*message "processing " _ @name;*/
+		<xs:attributeGroup name=@name _ "AttributeGroup"> {
+			if (@inherits) {
+				comment "Inherited from " _ @inherits _ ":";
+				apply-templates key("parent", @inherits)/x:attr {
+					with $derived = @name;
+				}
+			}
+			comment "Own attributes:";
+			apply-templates {
+				sort @ref;
+			}
+		}
+		<xs:complexType name=@name _ "ElementStructure"> {
+			<xs:sequence> {
+				<xs:group ref="xul:anyElementStructure" minOccurs="0" maxOccurs="unbounded">;
+			}
+		}
+		<xs:complexType name=@name _ "ElementType" mixed="true"> {
+			<xs:complexContent> {
+				<xs:extension base="xul:" _ @name _ "ElementStructure"> {
+					<xs:attributeGroup ref="xul:" _ @name _ "AttributeGroup">;
+				}
+			}
+		}
+		<xs:element name=@name type="xul:" _ @name _ "ElementType">;
+	}
+}
+
+match x:attr {
+	param $derived;
+	var $ref = @ref;
+
+	if ($derived) {
+		/*message $derived _ ' inherits ' _ substring-after($ref, '-') _ ' from ' _ ../@name;*/
+		if (not(key("parent", $derived)/x:attr[@ref == $ref || substring-after(@ref, ".") == substring-after($ref, "-")])) {
+			<xs:attributeGroup ref="xul:" _ substring-after($ref, "-")>;
+		}
+	} else {
+		<xs:attributeGroup ref="xul:" _ substring-after($ref, "-")>;
+	}
+}
+
+match documentation { }
+match text() { }

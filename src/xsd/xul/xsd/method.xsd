@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://xul.xinutec.org/2011/xulref"
+	targetNamespace="http://xul.xinutec.org/2011/xulref">
+
+	<xs:include schemaLocation="fragments/documentation.xsd"/>
+	<xs:include schemaLocation="fragments/types.xsd"/>
+
+	<xs:element name="method">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="arg" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="documentation"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:ID" use="required"/>
+			<xs:attribute name="type" type="returnType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="arg">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

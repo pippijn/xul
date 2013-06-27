@@ -1,0 +1,7 @@
+include xul/Rules.am
+
+noinst_DATA +=				\
+	$(srcdir)/$(CURDIR)/xul.xsd
+
+$(srcdir)/$(CURDIR)/xul.xsd: $(shell find $(srcdir)/$(CURDIR)/xul -maxdepth 2 -type f)
+	@$(MAKE) -C $(basename $@)

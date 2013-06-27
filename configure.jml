@@ -1,0 +1,30 @@
+project {
+	name: "Gozer"
+	version: "0.1"
+	contact: "gozer@xinutec.org"
+
+	lang: "C++"
+
+	ac_prog {
+		li { LEX }
+		li { YACC }
+	}
+
+	pkgconfig {
+		package: "libxml-2.0"
+		version: "2.7.8"
+	}
+	pkgconfig {
+		package: "libxslt"
+		version: "1.1.26"
+	}
+	pkgconfig {
+		package: "xerces-c"
+		version: "3.1.1"
+	}
+
+	output {
+		li { "src/compiler/gozerc" }
+		li { "src/xsl/xhtml/_.slax" }
+	}
+}

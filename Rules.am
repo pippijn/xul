@@ -1,0 +1,72 @@
+include automake/init.am
+
+REPO			= /home/pippijn/code/git/lang/xul
+
+AUTOMAKE_OPTIONS	+= -Wno-portability -Wno-override
+
+AM_CXXFLAGS		+= -pipe -ggdb3
+AM_CXXFLAGS		+= $(LIBXML_CFLAGS)
+AM_CXXFLAGS		+= $(LIBXSLT_CFLAGS)
+AM_CXXFLAGS		+= $(XERCES_C_CFLAGS)
+AM_LDFLAGS		+= -Wl,-z,defs,-z,nodlopen,-z,noexecstack,-z,now,-z,nodump
+
+AM_CPPFLAGS		+= -DSRCDIR='"$(realpath $(abs_srcdir)/src)"'
+AM_CPPFLAGS		+= -D_GLIBCXX_DEBUG
+AM_CPPFLAGS		+= -D_GLIBCXX_DEBUG_PEDANTIC
+AM_CPPFLAGS		+= -D_GLIBCXX_CONCEPT_CHECKS
+AM_CPPFLAGS		+= -include config.h
+AM_CPPFLAGS		+= -I$(srcdir)/include
+
+AM_YFLAGS		+= -d
+
+include automake/stdinc.am
+
+distdir: $(DISTFILES)
+	@case `sed 15q $(srcdir)/NEWS` in \
+	*"$(VERSION)"*) : ;; \
+	*) \
+	  echo "NEWS not updated; not releasing" 1>&2; \
+	  exit 1;; \
+	esac
+	$(am__remove_distdir)
+	test -d "$(distdir)" || mkdir "$(distdir)"
+	@srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*]/\\\\&/g'`; \
+	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's/[].[^$$\\*]/\\\\&/g'`; \
+	list='$(DISTFILES)'; \
+	  dist_files=`for file in $$list; do echo $$file; done | \
+	  sed -e "s|^$$srcdirstrip/||;t" \
+	      -e "s|^$$topsrcdirstrip/|$(top_builddir)/|;t"`; \
+	case $$dist_files in \
+	  */*) $(MKDIR_P) `echo "$$dist_files" | \
+			   sed '/\//!d;s|^|$(distdir)/|;s,/[^/]*$$,,' | \
+			   sort -u` ;; \
+	esac; \
+	for file in $$dist_files; do \
+	  if test -f $$file || test -d $$file; then d=.; else d=$(srcdir); fi; \
+	  if test -d $$d/$$file; then \
+	    dir=`echo "/$$file" | sed -e 's,/[^/]*$$,,'`; \
+	    if test -d "$(distdir)/$$file"; then \
+	      find "$(distdir)/$$file" -type d ! -perm -700 -exec chmod u+rwx {} \;; \
+	    fi; \
+	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
+	      cp -fpR $(srcdir)/$$file "$(distdir)$$dir" || exit 1; \
+	      find "$(distdir)/$$file" -type d ! -perm -700 -exec chmod u+rwx {} \;; \
+	    fi; \
+	    cp -fpR $$d/$$file "$(distdir)$$dir" || exit 1; \
+	  else \
+	    test -f "$(distdir)/$$file" \
+	    || cp -p $$d/$$file "$(distdir)/$$file" \
+	    || exit 1; \
+	  fi; \
+	done
+#	{{{ Added this part
+	git archive --remote "$(REPO)" HEAD | $(AMTAR) x -C "$(distdir)"
+	cp -a "$(srcdir)/src" "$(distdir)"
+#	}}}
+	-test -n "$(am__skip_mode_fix)" \
+	|| find "$(distdir)" -type d ! -perm -755 \
+		-exec chmod u+rwx,go+rx {} \; -o \
+	  ! -type d ! -perm -444 -links 1 -exec chmod a+r {} \; -o \
+	  ! -type d ! -perm -400 -exec chmod a+r {} \; -o \
+	  ! -type d ! -perm -444 -exec $(install_sh) -c -m a+r {} {} \; \
+	|| chmod -R a+r "$(distdir)"

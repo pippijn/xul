@@ -1,0 +1,26 @@
+include xhtml/Rules.am
+include xul/Rules.am
+
+noinst_DATA +=			\
+	$(CURDIR)/xhtml.xsl	\
+	$(CURDIR)/xul.xsl
+CLEANFILES +=			\
+	$(CURDIR)/xhtml.xsl	\
+	$(CURDIR)/xul.xsl
+
+$(CURDIR)/xhtml.xsl: $(patsubst $(srcdir)/%.slax,$(builddir)/%.xsl,$(wildcard $(srcdir)/$(CURDIR)/xhtml/*.slax)) $(CURDIR)/xhtml/_.xsl
+	@echo '<?xml version="1.0"?>' > $@
+	@echo '<!DOCTYPE stylesheet SYSTEM "xsl.dtd">' >> $@
+	@echo '<xsl:stylesheet version="1.0">' >> $@
+	$(AM_V_CAT)for i in $(basename $@)/*.xsl; do echo "   <xsl:include href='xhtml/`basename $$i`'/>" >> $@; done
+	@echo '</xsl:stylesheet>' >> $@
+
+$(CURDIR)/xul.xsl: $(patsubst $(srcdir)/%.slax,$(builddir)/%.xsl,$(wildcard $(srcdir)/$(CURDIR)/xul/*.slax))
+	@echo '<?xml version="1.0"?>' > $@
+	@echo '<!DOCTYPE stylesheet SYSTEM "xsl.dtd">' >> $@
+	@echo '<xsl:stylesheet version="1.0">' >> $@
+	$(AM_V_CAT)for i in $(basename $@)/*; do echo "   <xsl:include href='xul/`basename $$i`'/>" >> $@; done
+	@echo '</xsl:stylesheet>' >> $@
+
+.slax.xsl:
+	$(AM_V_SLAX)$(MKDIR_P) $(@D) && slaxproc -o $@ -x $<

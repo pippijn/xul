@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window title="XUL Colorpickers">
+
+	<script>
+		<![CDATA[
+		function setText () {
+			var color = document.getElementById("my-colorpicker").color;
+			document.getElementById("colorpicked-text").value = color;
+		}
+		]]>
+	</script>
+
+	<html:h1>XUL Colorpickers</html:h1>
+
+	<vbox flex="1" style="overflow: auto">
+		<hbox >
+
+			<groupbox>
+				<caption label="default colorpicker" />
+				<colorpicker id="my-colorpicker" onselect="setText();" />
+				<label id="colorpicked-text" value="(no input yet)" />
+			</groupbox>
+
+			<groupbox>
+				<caption label="button type" />
+				<description value="Press the button" />
+				<description value="and doubleclick" />
+				<description value="to select a color" />
+				<colorpicker  type="button"  />
+			</groupbox>
+
+		</hbox>
+	</vbox>
+</window>

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window title="XUL Toolbars, Menubars and Statusbars">
+
+	<script>
+		<![CDATA[
+		function colorize (newStyle) {
+			document.getElementById("canvas").setAttribute("style", newStyle);
+		}
+
+		function imagize (btnID, imageID) {
+			if (document.getElementById(btnID).getAttribute("checked"))
+				document.getElementById(imageID).setAttribute("hidden", "false");
+			else
+				document.getElementById(imageID).setAttribute("hidden", "true");
+		}
+		]]>
+	</script>
+
+	<html:h1>XUL Toolbars, Menubars and Statusbars</html:h1>
+
+	<vbox flex="1" style="overflow: auto">
+		<groupbox > 
+			<caption label="non-functioning tool and menu bars" />
+			<toolbox id="non-functioning-toolbox1">
+
+				<toolbar id="a-toolbar" >
+					<toolbaritem><label value="This is a toolbar:" /></toolbaritem>
+					<toolbarseparator />
+					<toolbarbutton label="Button" accesskey="B" oncommand="alert('Ouch!');"/>
+					<toolbarbutton label="Check" type="checkbox" />
+					<toolbarbutton label="Disabled" disabled="true"/>
+					<toolbarbutton label="Image" image="images/betty_boop.xbm"/>
+				</toolbar>
+
+				<toolbar id="another-toolbar" >
+					<toolbaritem><label value="This is another toolbar:" /></toolbaritem>
+					<toolbarseparator />
+					<toolbarbutton label="Radio1" type="radio" group="radio" />
+					<toolbarbutton label="Radio2" type="radio" group="radio" />
+					<toolbarbutton label="Radio3" type="radio" group="radio" />
+				</toolbar>
+
+				<menubar id="my-menubar">
+					<label value="This is a menubar"/>
+					<toolbarseparator />
+					<menu label="Radio" accesskey="R" >
+						<menupopup>
+							<menuitem type="radio" name="radio" label="Radio1" />
+							<menuitem type="radio" name="radio" label="Radio2" />
+							<menuitem type="radio" name="radio" label="Radio2" />
+						</menupopup>
+					</menu>
+					<menu label="Checkbox" accesskey="C">
+						<menupopup>
+							<menuitem type="checkbox" label="Check1" />
+							<menuitem type="checkbox" label="Check2" />
+							<menuitem type="checkbox" label="Check3" />
+						</menupopup>
+					</menu>
+					<menu label="Cascading" accesskey="a">
+						<menupopup>
+							<menu label="More" >
+								<menupopup>
+									<menuitem label="A" />
+									<menuitem label="B" />
+									<menuitem label="C" />
+									<menuseparator />
+									<menu label="More" >
+										<menupopup>
+											<menuitem label="1" />
+											<menuitem label="2" />
+											<menuitem label="3" />
+										</menupopup>
+									</menu>
+								</menupopup>
+							</menu>
+							<menuseparator />
+							<menuitem label="X" />
+							<menuitem label="Y" />
+							<menuitem label="Z" />
+						</menupopup>
+					</menu>
+					<menu label="Images" accesskey="I" >
+						<menupopup>
+							<menuitem label="Left" 
+								class="menuitem-iconic" image="images/betty_boop.xbm" />
+							<menuitem label="Right" dir="reverse"
+								class="menuitem-iconic" image="images/betty_boop.xbm" />
+							<menuitem label="None" />
+						</menupopup>
+					</menu>
+					<spacer flex="1" />
+					<menu label="Help" accesskey="H">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+				</menubar>
+
+				<menubar id="back-menubar" dir="reverse">
+					<menu label="Menubar" >
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="with">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="its">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="grippy">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<spacer flex="1"/>
+					<menu label="here->">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+				</menubar>
+
+				<menubar id="another-menubar" grippyhidden="true">
+					<menu label="Menubar">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="with">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="its">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="grippy">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+					<menu label="hidden">
+						<menupopup>
+							<menuitem label="This is help" />
+						</menupopup>
+					</menu>
+				</menubar>
+			</toolbox>
+		</groupbox>
+
+		<groupbox flex="1" > 
+			<caption label="functioning tool and menu bars" />
+			<commandset>
+				<command id="make_red" oncommand="colorize('background-color:red');"/>
+				<command id="make_yellow" oncommand="colorize('background-color:yellow');"/>
+				<command id="make_green" oncommand="colorize('background-color:green');"/>
+				<command id="make_cyan" oncommand="colorize('background-color:cyan');"/>
+				<command id="make_blue" oncommand="colorize('background-color:blue');"/>
+				<command id="make_magenta" oncommand="colorize('background-color:magenta');"/>
+			</commandset>
+			<commandset>
+				<command id="show_betty" oncommand="imagize('ib2','betty-image');"/>
+				<command id="show_chick" oncommand="imagize('ic2','chick-image');"/>
+				<command id="show_bchick" oncommand="imagize('ibc2','blindchick-image');"/>
+			</commandset>
+			<toolbox id="non-functioning-toolbox2">
+
+				<toolbar id="working-toolbar" >
+					<toolbarbutton label="Color:" />
+					<toolbarbutton type="radio" group="color" image="images/red_apple.png" 
+						oncommand="colorize('background-color:red');" />
+					<toolbarbutton type="radio" group="color" image="images/yellow_apple.png" 
+						oncommand="colorize('background-color:yellow');"/>
+					<toolbarbutton type="radio" group="color" image="images/green_apple.png" 
+						oncommand="colorize('background-color:green');"/>
+					<toolbarbutton type="radio" group="color" image="images/cyan_apple.png" 
+						oncommand="colorize('background-color:cyan');" />
+					<toolbarbutton type="radio" group="color" image="images/blue_apple.png" 
+						oncommand="colorize('background-color:blue');" />
+					<toolbarbutton type="radio" group="color" image="images/magenta_apple.png" 
+						oncommand="colorize('background-color:magenta');" />
+				</toolbar>
+				<menubar id="working-menubar">
+					<menu label="Color" accesskey="o">
+						<menupopup>
+							<menuitem type="radio" name="color1" label="Red" command="make_red" />
+							<menuitem type="radio" name="color1" label="Yellow" command="make_yellow"/>
+							<menuitem type="radio" name="color1" label="Green" command="make_green" />
+							<menuitem type="radio" name="color1" label="Cyan" command="make_cyan" />
+							<menuitem type="radio" name="color1" label="Blue" command="make_blue" />
+							<menuitem type="radio" name="color1" label="Magenta" command="make_magenta" />
+						</menupopup>
+					</menu>
+					<menu label="Image" accesskey="i">
+						<menupopup>
+							<menuitem id="ib2" type="checkbox" label="Betty" 
+								checked="true"  
+								command="show_betty"/>
+							<menuitem id="ic2" type="checkbox" label="Chick"  
+								checked="true"  
+								command="show_chick"/>
+							<menuitem id="ibc2" type="checkbox" label="Blind Chicken" 
+								checked="true"  
+								command="show_bchick"/>
+						</menupopup>
+					</menu>
+				</menubar>
+			</toolbox>
+
+			<box flex="1" id="canvas" align="center">
+				<spacer flex="1" />
+				<image id="betty-image"      src="images/betty_boop.xbm"  />
+				<spacer flex="1" />
+				<image id="chick-image"      src="images/chick.png"       />
+				<spacer flex="1" />
+				<image id="blindchick-image" src="images/BC-R.jpg"         />
+				<spacer flex="1" />
+			</box>
+		</groupbox>
+
+	</vbox>
+
+	<statusbar>
+		<statusbarpanel  label="This is a statusbarpanel." />
+		<statusbarpanel  label="As is this." />
+		<statusbarpanel  label="And also this...." flex="1" />
+		<statusbarpanel  label="Click Me!" onclick="alert('Ouch');" />
+	</statusbar>
+
+</window>

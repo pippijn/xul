@@ -1,0 +1,13 @@
+version 1.1;
+
+include "error.xsl";
+
+template ENOENT ($what) {
+	call error() {
+		with $what = {
+			expr "Could not find ";
+			expr $what;
+			expr ".";
+		}
+	}
+}

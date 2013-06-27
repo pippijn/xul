@@ -1,0 +1,41 @@
+@import url("reset.css");
+
+body {
+	background-color: #dbdad5;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin-top: 23px;
+	margin-bottom: 23px;
+	font-size: 30px;
+}
+
+td, tr {
+	padding: 1px;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+.xul-button {
+	padding: 5px 26px;
+}
+
+
+.xul-groupbox {
+	width: 100%;
+}
+.xul-hbox > tr > td {
+	vertical-align: top;
+}
+.xul-hbox > tr > td > * {
+	width: 100%;
+}
+
+
+.xul-caption {
+	font-weight: bold;
+}

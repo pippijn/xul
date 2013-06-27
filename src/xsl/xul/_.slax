@@ -1,0 +1,20 @@
+version 1.1;
+
+output-method xml {
+	encoding "ISO-8859-1";
+}
+
+match / {
+	if (!processing-instruction("xml-stylesheet")) {
+		processing-instruction "xml-stylesheet" {
+			expr "href=\"chrome://global/skin\" type=\"text/css\"";
+		}
+	}
+	apply-templates;
+}
+
+match @* | node() {
+	copy-node {
+		apply-templates @* | node();
+	}
+}

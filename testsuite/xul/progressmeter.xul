@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window title="XUL Progressmeters">
+
+	<script>
+		<![CDATA[
+		function addProgress () {
+			var progmeter = document.getElementById("my-progressmeter");
+			var progress = parseInt(progmeter.value) + 10;
+			progmeter.value = progress;
+		}
+		]]>
+	</script>
+
+	<html:h1>XUL Progressmeters</html:h1>
+
+	<vbox flex="1" style="overflow: auto">
+		<hbox >
+
+			<groupbox>
+				<caption label="determined" />
+				<progressmeter id="my-progressmeter" mode="determined" value="10" />
+				<button label="Hit me to advance" oncommand="addProgress();" />
+			</groupbox>
+
+			<groupbox>
+				<caption label="undetermined" />
+				<progressmeter mode="undetermined" />
+			</groupbox>
+
+		</hbox>
+	</vbox>
+</window>
+

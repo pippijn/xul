@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+use common::sense;
+
+use Dir::Self;
+my %pageids = do (__DIR__ . "/pageids.pm");
+
+print "$_\n" for sort keys %pageids

@@ -1,0 +1,19 @@
+version 1.1;
+
+ns html extension = "http://www.w3.org/1999/xhtml";
+ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+match x:button {
+	<button class="xul-button"> {
+		copy-of @id;
+		attribute "onclick" {
+			expr @oncommand;
+		}
+		expr @label | x:description/text();
+		if (x:label) {
+			<span> {
+				apply-templates;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+version 1.1;
+
+ns html extension = "http://www.w3.org/1999/xhtml";
+ns x extension = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+output-method xml {
+	encoding "ISO-8859-1";
+	doctype-public "-//W3C//DTD XHTML 1.0 Strict//EN";
+	doctype-system "@abs_top_srcdir@/src/xsd/xhtml/xhtml1-strict.dtd";
+}
+
+match / {
+	<html> {
+		<head> {
+			<title> x:*/@title;
+			<link rel="stylesheet" type="text/css" href=$srcdir _ "/chrome/global/skin.css">;
+			<script type="text/javascript" src=$srcdir _ "/chrome/global/xul.js">;
+		}
+		<body> {
+			apply-templates;
+		}
+	}
+}
+
+match html:* {
+	element name() {
+		ns-template "";
+		copy-of @*;
+		apply-templates;
+	}
+}

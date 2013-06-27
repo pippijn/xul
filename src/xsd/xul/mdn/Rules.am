@@ -1,0 +1,66 @@
+include MDN.am
+
+MDN = $(MDNXML) $(MDNJML) $(MDNUPLOAD) $(MDNPOST)
+
+noinst_DATA += $(MDN)
+
+mdn: $(MDN)
+mdn-update: $(MDNUPDATE)
+	@echo "done"
+
+mdn-clean:
+	$(RM) $(MDNXML)
+	$(RM) $(MDNJML)
+	$(RM) $(MDNUPLOAD)
+	$(RM) $(MDNPOST)
+
+$(srcdir)/$(CURDIR)/MDN.am: $(CURDIR)/pages $(CURDIR)/pageids.pm
+	echo -n 'MDNBASE =' > $@
+	for i in `$<`; do		\
+	    echo -n " $$i" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNXML =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/xml/$$i.xml" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNJML =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/jml/$$i.jml" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNUPLOAD =' >> $@
+	for i in `$<`; do						\
+	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.xml" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNPOST =' >> $@
+	for i in `$<`; do						\
+	    echo -n " \$$(srcdir)/$(CURDIR)/.upload/$$i.post" >> $@;	\
+	done
+	echo >> $@
+	echo -n 'MDNUPDATE =' >> $@
+	for i in `$<`; do					\
+	    echo -n " \$$(srcdir)/$(CURDIR)/xml/$$i.get" >> $@;	\
+	done
+	echo >> $@
+
+$(srcdir)/$(CURDIR)/xml/%.get: #$(CURDIR)/pageids.pm $(CURDIR)/update
+	@$(srcdir)/$(CURDIR)/update $* $@
+
+$(srcdir)/$(CURDIR)/xml/%.xml: #$(CURDIR)/pageids.pm $(CURDIR)/download
+	$(AM_V_GET)$(srcdir)/$(CURDIR)/download $* $@
+#	$(AM_V_GET)$(lastword $+) $* $@
+#	@touch $@
+
+$(srcdir)/$(CURDIR)/jml/%.jml: $(srcdir)/$(CURDIR)/xml/%.xml
+	$(AM_V_X2J)xml2jml $< $@
+
+$(srcdir)/$(CURDIR)/.upload/%.xml: $(srcdir)/$(CURDIR)/jml/%.jml
+	$(AM_V_JMLC)jmlc$(EXEEXT) $< > $@
+
+$(srcdir)/$(CURDIR)/.upload/%.post: $(srcdir)/$(CURDIR)/.upload/%.xml #$(CURDIR)/upload
+	$(AM_V_POST)$(srcdir)/$(CURDIR)/upload $* $<
+#	$(AM_V_POST)$(lastword $+) $* $<
+	@touch $@

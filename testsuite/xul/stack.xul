@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "xul.dtd">
+<window title="XUL Stacks and Decks">
+
+	<script>
+		<![CDATA[
+		function setDeck (index) {
+			document.getElementById("my-deck").setAttribute("selectedIndex", index);
+		}
+		]]>
+	</script>
+
+	<html:h1>XUL Stacks and Decks</html:h1>
+
+	<vbox flex="1" style="overflow: auto">
+
+		<hbox>
+			<groupbox > 
+				<caption label="stack" />
+				<stack >
+					<image id="betty-image-stack"      src="images/betty_boop.xbm"  />
+					<image src="images/BC-R.jpg"  />
+					<label value="Chicks" style="font-weight:bold" top="80" />
+					<button image="images/chick.png"  left="60" top="60"
+						style="height: 30px; width:25px; background-color: #663333;"/>
+				</stack>
+			</groupbox>
+
+			<groupbox > 
+				<caption label="deck" />
+				<deck id="my-deck">
+					<image id="betty-image-deck"      src="images/betty_boop.xbm"  />
+					<image id="blindchick-image" src="images/BC-R.jpg"        />
+					<label value="Chicks" style="font-weight:bold" top="80" />
+					<button image="images/chick.png"  left="60" top="60"
+						style="height: 30px; width:25px; background-color: #663333;"/>
+				</deck>
+				<radiogroup flex="1" orient="horizontal" >
+					<radio label="0" oncommand="setDeck('0');" /> 
+					<radio label="1" oncommand="setDeck('1');" /> 
+					<radio label="2" oncommand="setDeck('2');" /> 
+					<radio label="3" oncommand="setDeck('3');" /> 
+				</radiogroup>
+			</groupbox>
+
+		</hbox>
+	</vbox>
+</window>

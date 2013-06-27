@@ -1,0 +1,3 @@
+include compiler/Rules.am
+include xsd/Rules.am
+include xsl/Rules.am
